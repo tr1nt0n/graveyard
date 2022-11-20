@@ -96,11 +96,11 @@ trinton.make_music(
 
 # sc file
 
-trinton.make_sc_file(
-    score=score,
-    tempo=((1, 4), 50),
-    current_directory="/Users/trintonprater/scores/graveyard/graveyard/etc/microtones",
-)
+# trinton.make_sc_file(
+#     score=score,
+#     tempo=((1, 4), 50),
+#     current_directory="/Users/trintonprater/scores/graveyard/graveyard/etc/microtones",
+# )
 
 # markups
 

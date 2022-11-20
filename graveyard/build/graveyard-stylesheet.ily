@@ -10,9 +10,9 @@
 \include "/Users/trintonprater/abjad-ext-microtones/abjadext/microtones/lilypond/ekmelos-ji-accidental-markups.ily"
 
 \header {
-    dedication = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {"to Tracy, Ginnie, Morgan, and Gavin" \fontsize #0.25 \with-color #white "."}
+    dedication = \markup \fontsize #3 \center-column {\line \override #'(font-name . "Bodoni72 Book Italic") { { to } \override #'(font-name . "Bodoni72 Book") { Tracy } } \fontsize #0.25 \with-color #white "."}
     title = \markup \override #'(font-name . "Bodoni72 Book") \fontsize #12 \center-column { \line { G r a v e y a r d \hspace #3 D i r t } \fontsize #0.01 \with-color #white "."}
-    subtitle = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {"for electric guitar, viola, and accordion" \fontsize #0.01 \with-color #white "."}
+    subtitle = \markup \fontsize #3 \center-column { \line { \override #'(font-name . "Bodoni72 Book Italic") { for } \override #'(font-name . "Bodoni72 Book") { electric guitar, viola, } \override #'(font-name . "Bodoni72 Book Italic") { and } \override #'(font-name . "Bodoni72 Book") { accordion } } \fontsize #0.01 \with-color #white "."}
     composer = \markup \override #'(font-name . "Bodoni72") \fontsize #3 {"Trinton Hlynn (*2000)"}
 }
 
