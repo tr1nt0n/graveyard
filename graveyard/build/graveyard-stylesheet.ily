@@ -168,13 +168,16 @@
 
         \clef varpercussion
 
-        % \RemoveAllEmptyStaves
+        \RemoveAllEmptyStaves
+
+        \alias Staff
     }
 
     \context {
         \Staff
         \name FingerStaff
         \type Engraver_group
+        \remove System_start_delimiter_engraver
 
         \override Accidental.stencil = ##f
 
@@ -182,13 +185,16 @@
 
         \clef percussion
 
-        % \RemoveAllEmptyStaves
+        \RemoveAllEmptyStaves
+
+        \alias Staff
     }
 
     \context {
         \StaffGroup
         \accepts RightHandStaff
         \accepts FingerStaff
+        \remove System_start_delimiter_engraver
     }
 
     \context {

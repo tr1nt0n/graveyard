@@ -49,7 +49,39 @@ def graveyard_score(time_signatures):
 
     return score
 
+
+# immutables
+
+all_voice_names = eval(
+    """[
+        "guitar 1 voice",
+        "guitar 2 voice",
+        "guitar 3 voice",
+        "viola 1 voice",
+        "viola 2 voice",
+        "accordion 1 voice",
+        "accordion 2 voice",
+    ]"""
+)
+
+main_voice_names = eval(
+    """[
+        "guitar 3 voice",
+        "viola 2 voice",
+        "accordion 1 voice",
+    ]"""
+)
+
+first_voice_names = eval(
+    """[
+        "guitar 1 voice",
+        "viola 1 voice",
+        "accordion 1 voice",
+    ]"""
+)
+
 # notation tools
+
 
 def noteheads_only():
     def only_noteheads(argument):
@@ -79,7 +111,83 @@ def noteheads_only():
 
     return only_noteheads
 
+
+def invisible_tuplet_brackets():
+    def command(argument):
+        for tuplet in abjad.select.tuplets(argument):
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    "\once \override TupletBracket.stencil = ##f", "before"
+                ),
+                tuplet,
+            )
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    "\once \override TupletNumber.stencil = ##f", "before"
+                ),
+                tuplet,
+            )
+
+    return command
+
+
+# markups
+
+all_instrument_names = [
+    abjad.InstrumentName(
+        context="GrandStaff",
+        markup=abjad.Markup(
+            '\markup \override #\'(font-name . "Bodoni72 Book Italic") { Electric Guitar }'
+        ),
+    ),
+    abjad.InstrumentName(
+        context="GrandStaff",
+        markup=abjad.Markup(
+            '\markup \override #\'(font-name . "Bodoni72 Book Italic") { Viola }'
+        ),
+    ),
+    abjad.InstrumentName(
+        context="GrandStaff",
+        markup=abjad.Markup(
+            '\markup \override #\'(font-name . "Bodoni72 Book Italic") { Accordion }'
+        ),
+    ),
+]
+
+all_short_instrument_names = [
+    abjad.ShortInstrumentName(
+        context="GrandStaff",
+        markup=abjad.Markup(
+            '\markup \override #\'(font-name . "Bodoni72 Book Italic") { e. git. }'
+        ),
+    ),
+    abjad.ShortInstrumentName(
+        context="GrandStaff",
+        markup=abjad.Markup(
+            '\markup \override #\'(font-name . "Bodoni72 Book Italic") { vla. }'
+        ),
+    ),
+    abjad.ShortInstrumentName(
+        context="GrandStaff",
+        markup=abjad.Markup(
+            '\markup \override #\'(font-name . "Bodoni72 Book Italic") { acc. }'
+        ),
+    ),
+]
+
+
+def write_instrument_names(score):
+    for voice_name, markup in zip(first_voice_names, all_instrument_names):
+        trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
+
+
+def write_short_instrument_names(score):
+    for voice_name, markup in zip(first_voice_names, all_short_instrument_names):
+        trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
+
+
 # fermate
+
 
 def fermata_measures(score, measures, fermata="ufermata", last_measure=False):
     for voice_name in [
