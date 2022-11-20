@@ -1,0 +1,80 @@
+\documentclass[11pt]{report}
+
+\usepackage[T1]{fontenc}
+\usepackage[papersize={9in, 12in}]{geometry}
+\usepackage{tikz}
+\usepackage{xltxtra,fontspec,xunicode}
+\usetikzlibrary{calc}
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\setromanfont[Numbers=Uppercase]{Bodoni 72 Book}
+\newlength{\drop}
+\parindent=0pt
+
+\begin{document}
+    \begin{titlepage}
+
+        \begin{tikzpicture}[remember picture, overlay]
+            \draw[line width = 1.6pt]
+                ($(current page.north west) + (1in,-1in)$)
+                rectangle
+                ($(current page.south east) + (-1in,1in)$);
+            \draw[line width = 0.4pt]
+                ($(current page.north west) + (1in,-1in) + (2.8pt,-2.8pt)$)
+                rectangle
+                ($(current page.south east) + (-1in,1in) + (-2.8pt,2.8pt)$);
+        \end{tikzpicture}
+
+        \drop=0.1\textheight
+        \centering
+
+        \vspace*{8\baselineskip}
+
+        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+        \rule{\textwidth}{0.4pt}\\[\baselineskip]
+        {
+            \fontsize{1.75cm}{1em}\selectfont
+            G r a v e y a r d \hspace{2mm} D i r t
+        }
+        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+        \rule{\textwidth}{1.6pt}\\[\baselineskip]
+
+        \vspace*{0.5\baselineskip}
+
+        {
+            \itshape
+            for
+        }
+        {
+            \large
+            Electric Guitar, Viola,
+        }
+       {
+            \itshape
+            and
+        }
+        {
+            \large
+            Accordion
+            \par
+        }
+
+        \vspace*{20\baselineskip}
+
+        {
+            \Large
+            T R I N T O N \hspace{2mm} H L Y N N
+            \par
+        }
+
+        \vspace*{2\baselineskip}
+
+        {
+            \Large
+            2022 - 2023
+        }
+
+        \vfill
+
+    \end{titlepage}
+\end{document}
