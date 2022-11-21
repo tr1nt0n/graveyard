@@ -159,64 +159,54 @@
                     {
                         % BEFORE:
                         % COMMANDS:
-                        \once \override TupletBracket.stencil = ##f
-                        \once \override TupletNumber.stencil = ##f
-                        % OPEN_BRACKETS:
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 1/1
-                        {
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Beam.stencil = ##f
-                            \once \override Dots.stencil = ##f
-                            \once \override Flag.stencil = ##f
-                            \once \override NoteHead.duration-log = -1
-                            \once \override Stem.stencil = ##f
-                            % OPENING:
-                            % COMMANDS:
-                            \clef "altovarC"
-                            c4.
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Beam.stencil = ##f
-                            \once \override Dots.stencil = ##f
-                            \once \override Flag.stencil = ##f
-                            \once \override NoteHead.duration-log = -1
-                            \once \override Stem.stencil = ##f
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \markup { \abjad-natural  }
-                            g4.
-                            % AFTER:
-                            % MARKUP:
-                            ^ \markup \center-align { \concat { +2 } }
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Beam.stencil = ##f
-                            \once \override Dots.stencil = ##f
-                            \once \override Flag.stencil = ##f
-                            \once \override NoteHead.duration-log = -1
-                            \once \override Stem.stencil = ##f
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \markup { \abjad-natural  }
-                            d'4.
-                            % AFTER:
-                            % MARKUP:
-                            ^ \markup \center-align { \concat { +4 } }
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Beam.stencil = ##f
-                            \once \override Dots.stencil = ##f
-                            \once \override Flag.stencil = ##f
-                            \once \override NoteHead.duration-log = -1
-                            \once \override Stem.stencil = ##f
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \markup { \abjad-natural  }
-                            a'4.
-                            % AFTER:
-                            % MARKUP:
-                            ^ \markup \center-align { \concat { +6 } }
-                        % CLOSE_BRACKETS:
-                        }
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = -1
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "altovarC"
+                        c4.
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = -1
+                        \once \override Stem.stencil = ##f
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        g4.
+                        % AFTER:
+                        % MARKUP:
+                        ^ \markup \center-align { \concat { +2 } }
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = -1
+                        \once \override Stem.stencil = ##f
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        d'4.
+                        % AFTER:
+                        % MARKUP:
+                        ^ \markup \center-align { \concat { +4 } }
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = -1
+                        \once \override Stem.stencil = ##f
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        a'4.
+                        % AFTER:
+                        % MARKUP:
+                        ^ \markup \center-align { \concat { +6 } }
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
