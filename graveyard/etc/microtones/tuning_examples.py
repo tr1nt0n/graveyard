@@ -49,7 +49,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([2, 3, 4, 5])
     ),
     library.noteheads_only(),
-    voice=score["guitar 3 voice"],
+    voice=score["guitar 4 voice"],
 )
 
 trinton.make_music(

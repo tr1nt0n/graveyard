@@ -19,13 +19,14 @@ def graveyard_score(time_signatures):
             abjad.Guitar(),
             abjad.Guitar(),
             abjad.Guitar(),
+            abjad.Guitar(),
             abjad.Viola(),
             abjad.Viola(),
             abjad.Accordion(),
             abjad.Accordion(),
         ],
         groups=[
-            3,
+            4,
             2,
             2,
         ],
@@ -33,6 +34,7 @@ def graveyard_score(time_signatures):
             [
                 "FingerStaff",
                 "RightHandStaff",
+                "FingerTappingStaff",
                 "Staff",
             ],
             [
@@ -57,6 +59,7 @@ all_voice_names = eval(
         "guitar 1 voice",
         "guitar 2 voice",
         "guitar 3 voice",
+        "guitar 4 voice",
         "viola 1 voice",
         "viola 2 voice",
         "accordion 1 voice",
@@ -66,7 +69,7 @@ all_voice_names = eval(
 
 main_voice_names = eval(
     """[
-        "guitar 3 voice",
+        "guitar 4 voice",
         "viola 2 voice",
         "accordion 1 voice",
     ]"""
@@ -194,6 +197,7 @@ def fermata_measures(score, measures, fermata="ufermata", last_measure=False):
         "guitar 1 voice",
         "guitar 2 voice",
         "guitar 3 voice",
+        "guitar 4 voice",
         "viola 1 voice",
         "viola 2 voice",
         "accordion 1 voice",

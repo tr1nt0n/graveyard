@@ -191,9 +191,24 @@
     }
 
     \context {
-        \StaffGroup
+        \Staff
+        \name FingerTappingStaff
+        \type Engraver_group
+
+        \RemoveAllEmptyStaves
+
+        \alias Staff
+    }
+
+    \context{
+        \GrandStaff
         \accepts RightHandStaff
         \accepts FingerStaff
+        \accepts FingerTappingStaff
+    }
+
+    \context {
+        \StaffGroup
         \remove System_start_delimiter_engraver
     }
 

@@ -43,10 +43,21 @@
                 % CLOSE_BRACKETS:
                 }
                 % OPEN_BRACKETS:
-                \context Staff = "guitar 3 staff"
+                \context FingerTappingStaff = "guitar 3 staff"
                 {
                     % OPEN_BRACKETS:
                     \context Voice = "guitar 3 voice"
+                    {
+                        s1 * 3/2
+                    % CLOSE_BRACKETS:
+                    }
+                % CLOSE_BRACKETS:
+                }
+                % OPEN_BRACKETS:
+                \context Staff = "guitar 4 staff"
+                {
+                    % OPEN_BRACKETS:
+                    \context Voice = "guitar 4 voice"
                     {
                         % BEFORE:
                         % COMMANDS:
