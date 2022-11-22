@@ -137,11 +137,11 @@ trinton.make_music(
 
 # sc file
 
-trinton.make_sc_file(
-    score=score,
-    tempo=((1, 4), 70),
-    current_directory="/Users/trintonprater/scores/graveyard/graveyard/etc/pitch_sequences",
-)
+# trinton.make_sc_file(
+#     score=score,
+#     tempo=((1, 4), 70),
+#     current_directory="/Users/trintonprater/scores/graveyard/graveyard/etc/pitch_sequences",
+# )
 
 # markups
 
@@ -155,7 +155,7 @@ trinton.render_file(
     score=score,
     segment_path="/Users/trintonprater/scores/graveyard/graveyard/etc/pitch_sequences",
     build_path="/Users/trintonprater/scores/graveyard/graveyard/build",
-    segment_name="transforms",
+    segment_name="pitch_sequence",
     includes=[
         "/Users/trintonprater/scores/graveyard/graveyard/build/graveyard-stylesheet.ily",
         "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
