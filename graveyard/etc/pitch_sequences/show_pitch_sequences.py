@@ -41,7 +41,10 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.attachment_command(
-        attachments=[abjad.Markup(r"\markup \fontsize #6 { Sequence }")],
+        attachments=[
+            abjad.Markup(r"\markup \fontsize #6 { Sequence }"),
+            abjad.Clef("altovarC"),
+        ],
         selector=trinton.select_leaves_by_index([0]),
         direction=abjad.UP,
     ),

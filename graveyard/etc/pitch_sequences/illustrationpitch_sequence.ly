@@ -191,6 +191,9 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
+                            % OPENING:
+                            % COMMANDS:
+                            \clef "altovarC"
                             d'!16.
                             % AFTER:
                             % MARKUP:
