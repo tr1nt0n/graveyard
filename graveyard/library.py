@@ -115,6 +115,35 @@ compound_melodies = eval(
     ]"""
 )
 
+xen_pitches = eval(
+    """[
+        evans.ETPitch(
+            fundamental="a'",
+            repeating_ratio="9/2",
+            number_of_divisions=7,
+            scale_degree=_,
+            with_quarter_tones=True,
+        )
+        for _ in transforms.final_chord_sequence
+    ]"""
+)
+xen_diads = eval("""evans.Sequence(xen_pitches).grouper([2 for _ in xen_pitches])""")
+
+# harmony tools
+
+
+def smooth_voice_leading():
+    def smooth(argument):
+        for tie in abjad.select.logical_ties(argument):
+            head = tie[0].note_heads[0]
+            if head.written_pitch.number > 20:
+                abjad.mutate.transpose(tie, -12)
+            if head.written_pitch.number < 6:
+                abjad.mutate.transpose(tie, 12)
+
+    return smooth
+
+
 # notation tools
 
 

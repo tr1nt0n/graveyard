@@ -7,6 +7,8 @@ from abjadext import rmakers
 from abjadext import microtones
 from graveyard import library
 
+# runs
+
 # stage 0
 
 # first hexachord = [0, 1, 2, 5, 6, 8]
@@ -131,3 +133,59 @@ for _ in sequences_a:
         pass
     else:
         sequences.append(_)
+
+# chords
+
+initial_chords = evans.Sequence([0, 3, 4, 7])
+
+transform_1 = initial_chords.alpha(category=2)
+
+transform_2 = initial_chords.alpha(category=1)
+
+transform_3 = transform_1.alpha(category=1)
+
+transform_4 = transform_2.alpha(category=2)
+
+initial_transforms = [
+    initial_chords,
+    transform_1,
+    transform_2,
+    transform_3,
+    transform_4,
+]
+
+initial_chord_sequence = []
+
+for transform in initial_transforms:
+    for pitch in transform:
+        initial_chord_sequence.append(pitch)
+
+alpha = evans.Sequence(reversed(initial_chord_sequence)).alpha(category=2)
+
+non_transposed_final_chord_sequence = []
+
+for _ in initial_chord_sequence:
+    non_transposed_final_chord_sequence.append(_)
+
+for _ in alpha:
+    non_transposed_final_chord_sequence.append(_)
+
+groups = evans.Sequence(non_transposed_final_chord_sequence).grouper(
+    [2 for _ in non_transposed_final_chord_sequence]
+)
+
+final_chord_sequence = []
+
+for group in groups:
+    if abs(group[0] - group[1]) > 4:
+        if group[0] > group[1]:
+            new_first = group[0] - 7
+            final_chord_sequence.append(new_first)
+            final_chord_sequence.append(group[1])
+        else:
+            new_first = group[1] - 7
+            final_chord_sequence.append(new_first)
+            final_chord_sequence.append(group[0])
+    else:
+        final_chord_sequence.append(group[0])
+        final_chord_sequence.append(group[1])

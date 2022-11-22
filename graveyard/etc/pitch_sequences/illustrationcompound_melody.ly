@@ -60,6 +60,10 @@
                     % OPEN_BRACKETS:
                     \context Voice = "guitar 1 voice"
                     {
+                        % BEFORE:
+                        % COMMANDS:
+                        \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Electric Guitar }
+                        \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { e. git. }
                         s1 * 1
                         s1 * 1
                         s1 * 1
@@ -141,6 +145,10 @@
                     % OPEN_BRACKETS:
                     \context Voice = "viola 1 voice"
                     {
+                        % BEFORE:
+                        % COMMANDS:
+                        \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Viola }
+                        \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { vla. }
                         s1 * 1
                         s1 * 1
                         s1 * 1
@@ -1858,6 +1866,10 @@
                     % OPEN_BRACKETS:
                     \context Voice = "accordion 1 voice"
                     {
+                        % BEFORE:
+                        % COMMANDS:
+                        \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Accordion }
+                        \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { acc. }
                         s1 * 1
                         s1 * 1
                         s1 * 1

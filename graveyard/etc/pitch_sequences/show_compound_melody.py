@@ -109,6 +109,13 @@ for measure, string in zip(
 #     current_directory="/Users/trintonprater/scores/graveyard/graveyard/etc/pitch_sequences",
 # )
 
+# markups
+
+library.write_instrument_names(score=score)
+
+library.write_short_instrument_names(score=score)
+
+
 # render file
 
 trinton.render_file(
