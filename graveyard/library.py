@@ -134,6 +134,42 @@ def invisible_tuplet_brackets():
     return command
 
 
+def imbrication_command(pitches):
+    def imbricate(argument):
+        trinton.imbrication(
+            selections=argument,
+            pitches=pitches,
+            name="v1",
+            direction=abjad.UP,
+            articulation="marcato",
+            beam=True,
+            allow_unused_pitches=True,
+        )
+
+        selector = trinton.select_logical_ties_by_index(
+            [
+                1,
+                2,
+                3,
+                5,
+                6,
+                7,
+                8,
+                10,
+                11,
+                12,
+                14,
+                15,
+            ]
+        )
+        selections = selector(argument)
+        groups = abjad.select.partition_by_counts(selections, [3, 4, 3, 2])
+        for group in groups:
+            abjad.slur(group)
+
+    return imbricate
+
+
 # markups
 
 all_instrument_names = [

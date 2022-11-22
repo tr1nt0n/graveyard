@@ -40,6 +40,10 @@
             % COMMANDS:
             \time 8/4
             s1 * 2
+            % OPENING:
+            % COMMANDS:
+            \time 9/8
+            s1 * 9/8
         % CLOSE_BRACKETS:
         }
         % OPEN_BRACKETS:
@@ -67,6 +71,7 @@
                         s1 * 2
                         s1 * 2
                         s1 * 2
+                        s1 * 9/8
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -86,6 +91,7 @@
                         s1 * 2
                         s1 * 2
                         s1 * 2
+                        s1 * 9/8
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -105,6 +111,7 @@
                         s1 * 2
                         s1 * 2
                         s1 * 2
+                        s1 * 9/8
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -124,6 +131,7 @@
                         s1 * 2
                         s1 * 2
                         s1 * 2
+                        s1 * 9/8
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -152,6 +160,7 @@
                         s1 * 2
                         s1 * 2
                         s1 * 2
+                        s1 * 9/8
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -177,6 +186,9 @@
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
                             d'!16.
+                            % AFTER:
+                            % MARKUP:
+                            ^ \markup \fontsize #6 { Sequence }
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -184,7 +196,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bf'!16.
+                            bf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -200,7 +212,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -216,7 +228,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            gqs'!16.
+                            gqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -224,7 +236,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bqs'!16.
+                            bqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -232,7 +244,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -240,7 +252,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            cqs''!16.
+                            cqs'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -256,7 +268,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bf'!16.
+                            bf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -272,7 +284,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            a'!16.
+                            a!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -352,7 +364,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -368,7 +380,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -408,7 +420,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -424,7 +436,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -496,7 +508,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            gqs'!16.
+                            gqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -512,7 +524,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -528,7 +540,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            a'!16.
+                            a!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -536,7 +548,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -544,7 +556,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bf'!16.
+                            bf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -552,7 +564,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -592,7 +604,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -608,7 +620,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -680,7 +692,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -696,7 +708,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -712,7 +724,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bqf'!16.
+                            bqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -728,7 +740,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -808,7 +820,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            b'!16.
+                            b!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -824,7 +836,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            cqs''!16.
+                            cqs'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -833,54 +845,6 @@
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
                             gqf'!16.
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Beam.stencil = ##f
-                            \once \override Dots.stencil = ##f
-                            \once \override Flag.stencil = ##f
-                            \once \override NoteHead.duration-log = 2
-                            \once \override Stem.stencil = ##f
-                            dqs''!16.
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Beam.stencil = ##f
-                            \once \override Dots.stencil = ##f
-                            \once \override Flag.stencil = ##f
-                            \once \override NoteHead.duration-log = 2
-                            \once \override Stem.stencil = ##f
-                            bqf'!16.
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Beam.stencil = ##f
-                            \once \override Dots.stencil = ##f
-                            \once \override Flag.stencil = ##f
-                            \once \override NoteHead.duration-log = 2
-                            \once \override Stem.stencil = ##f
-                            dqf''!16.
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Beam.stencil = ##f
-                            \once \override Dots.stencil = ##f
-                            \once \override Flag.stencil = ##f
-                            \once \override NoteHead.duration-log = 2
-                            \once \override Stem.stencil = ##f
-                            aqs'!16.
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Beam.stencil = ##f
-                            \once \override Dots.stencil = ##f
-                            \once \override Flag.stencil = ##f
-                            \once \override NoteHead.duration-log = 2
-                            \once \override Stem.stencil = ##f
-                            dqf'!16.
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Beam.stencil = ##f
-                            \once \override Dots.stencil = ##f
-                            \once \override Flag.stencil = ##f
-                            \once \override NoteHead.duration-log = 2
-                            \once \override Stem.stencil = ##f
-                            b'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -896,7 +860,55 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            c''!16.
+                            bqf!16.
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Beam.stencil = ##f
+                            \once \override Dots.stencil = ##f
+                            \once \override Flag.stencil = ##f
+                            \once \override NoteHead.duration-log = 2
+                            \once \override Stem.stencil = ##f
+                            dqf'!16.
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Beam.stencil = ##f
+                            \once \override Dots.stencil = ##f
+                            \once \override Flag.stencil = ##f
+                            \once \override NoteHead.duration-log = 2
+                            \once \override Stem.stencil = ##f
+                            aqs!16.
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Beam.stencil = ##f
+                            \once \override Dots.stencil = ##f
+                            \once \override Flag.stencil = ##f
+                            \once \override NoteHead.duration-log = 2
+                            \once \override Stem.stencil = ##f
+                            dqf'!16.
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Beam.stencil = ##f
+                            \once \override Dots.stencil = ##f
+                            \once \override Flag.stencil = ##f
+                            \once \override NoteHead.duration-log = 2
+                            \once \override Stem.stencil = ##f
+                            b!16.
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Beam.stencil = ##f
+                            \once \override Dots.stencil = ##f
+                            \once \override Flag.stencil = ##f
+                            \once \override NoteHead.duration-log = 2
+                            \once \override Stem.stencil = ##f
+                            dqs'!16.
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Beam.stencil = ##f
+                            \once \override Dots.stencil = ##f
+                            \once \override Flag.stencil = ##f
+                            \once \override NoteHead.duration-log = 2
+                            \once \override Stem.stencil = ##f
+                            c'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -928,7 +940,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -944,7 +956,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -960,7 +972,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bqf'!16.
+                            bqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -968,7 +980,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            cs''!16.
+                            cs'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -976,7 +988,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -984,7 +996,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bqs'!16.
+                            bqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1000,7 +1012,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            cs''!16.
+                            cs'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1016,7 +1028,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            d''!16.
+                            d'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1096,7 +1108,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1112,7 +1124,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            gqs'!16.
+                            gqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1120,7 +1132,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1128,7 +1140,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1136,7 +1148,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1144,7 +1156,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bf'!16.
+                            bf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1152,7 +1164,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1168,7 +1180,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1248,7 +1260,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bqf'!16.
+                            bqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1256,7 +1268,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1264,7 +1276,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1272,7 +1284,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1280,7 +1292,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bf'!16.
+                            bf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1288,7 +1300,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1296,7 +1308,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bf'!16.
+                            bf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1304,7 +1316,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1312,7 +1324,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1320,7 +1332,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1328,7 +1340,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bqf'!16.
+                            bqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1408,7 +1420,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1424,7 +1436,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1432,7 +1444,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bf'!16.
+                            bf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1440,7 +1452,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1448,7 +1460,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1464,7 +1476,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            gqs'!16.
+                            gqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1480,7 +1492,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1560,7 +1572,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            d''!16.
+                            d'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1576,7 +1588,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            cs''!16.
+                            cs'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1584,7 +1596,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1592,7 +1604,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bqs'!16.
+                            bqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1600,7 +1612,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bqf'!16.
+                            bqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1608,7 +1620,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            cs''!16.
+                            cs'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1616,7 +1628,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1632,7 +1644,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1680,7 +1692,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            c''!16.
+                            c'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1696,7 +1708,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            b'!16.
+                            b!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1704,7 +1716,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            dqf''!16.
+                            dqf'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1712,7 +1724,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1720,7 +1732,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            dqs''!16.
+                            dqs'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1728,7 +1740,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bqf'!16.
+                            bqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1736,7 +1748,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            cqs''!16.
+                            cqs'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1752,7 +1764,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            b'!16.
+                            b!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1816,7 +1828,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1832,7 +1844,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bqf'!16.
+                            bqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1848,7 +1860,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1864,7 +1876,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1944,7 +1956,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -1960,7 +1972,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2008,7 +2020,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bf'!16.
+                            bf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2024,7 +2036,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            a'!16.
+                            a!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2032,7 +2044,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2040,7 +2052,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2048,7 +2060,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2056,7 +2068,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            gqs'!16.
+                            gqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2128,7 +2140,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2144,7 +2156,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            g'!16.
+                            g!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2216,7 +2228,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2232,7 +2244,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            af'!16.
+                            af!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2312,7 +2324,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            a'!16.
+                            a!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2320,7 +2332,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqf'!16.
+                            aqf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2328,7 +2340,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bf'!16.
+                            bf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2336,7 +2348,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            gqs'!16.
+                            gqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2344,7 +2356,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            cqs''!16.
+                            cqs'!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2352,7 +2364,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            aqs'!16.
+                            aqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2360,7 +2372,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bqs'!16.
+                            bqs!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2368,7 +2380,7 @@
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
                             \once \override Stem.stencil = ##f
-                            bf'!16.
+                            bf!16.
                             % BEFORE:
                             % COMMANDS:
                             \once \override Beam.stencil = ##f
@@ -2379,6 +2391,81 @@
                             bqs!16.
                         % CLOSE_BRACKETS:
                         }
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        <gqs! aqf! aqs! bf! bqs! cqs'! cs'! d'! eqf'! eqs'!>8
+                        % AFTER:
+                        % MARKUP:
+                        ^ \markup \fontsize #6 { Sequence ( partitioned, trimmed ) }
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        <g! gqs! af! aqf! a! bf! dqs'! ef'! eqs'! fqs'! gqf'!>8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        <g! af! aqs! bqf! bqs! eqf'! eqs'! f'! fs'!>8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        <af! aqs! bqf! bqs! cs'! dqf'! d'! dqs'! ef'! eqs'!>8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        <g! af! bf! b! c'! dqf'! dqs'! eqf'! f'! fs'! gqf'!>8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        <gqs! af! aqf! aqs! bf! cs'! dqf'! d'! dqs'! eqf'! eqs'!>8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        <g! af! b! c'! dqf'! dqs'! ef'! eqf'! e'! eqs'!>8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        <af! aqf! bqs! cs'! d'! eqf'! eqs'! f'! fs'!>8
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        <g! af! cs'! dqf'! d'! dqs'! ef'! eqs'! f'! fqs'! gqf'!>8
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -2407,6 +2494,7 @@
                         s1 * 2
                         s1 * 2
                         s1 * 2
+                        s1 * 9/8
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -2426,6 +2514,7 @@
                         s1 * 2
                         s1 * 2
                         s1 * 2
+                        s1 * 9/8
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:

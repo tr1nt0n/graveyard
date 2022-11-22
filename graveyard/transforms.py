@@ -7,24 +7,6 @@ from abjadext import rmakers
 from abjadext import microtones
 from graveyard import library
 
-# from graveyard import ts
-
-# score
-
-score = library.graveyard_score(
-    [
-        (8, 4),
-        (8, 4),
-        (8, 4),
-        (8, 4),
-        (8, 4),
-        (8, 4),
-        (8, 4),
-        (8, 4),
-        (8, 4),
-    ]
-)
-
 # stage 0
 
 # first hexachord = [0, 1, 2, 5, 6, 8]
@@ -113,51 +95,39 @@ sequence_c = evans.Sequence(trinton.remove_adjacent(sequence_c))
 final_sequence = []
 
 for n1, n2 in zip(sequence_c, retrograde):
+    if n1 >= 7:
+        n1 = n1 - 12
+    if n2 >= 7:
+        n2 = n2 - 12
     final_sequence.append(n1)
     final_sequence.append(n2)
 
-final_sequence = evans.Sequence(trinton.remove_adjacent(final_sequence))
+final_sequence = trinton.remove_adjacent(final_sequence)
 
-tuplet = [1 for _ in final_sequence]
+# partitioning
 
-tuplet = tuple(tuplet)
-
-trinton.make_music(
-    lambda _: trinton.select_target(_, (1, 9)),
-    evans.RhythmHandler(evans.tuplet([tuplet])),
-    evans.PitchHandler(final_sequence),
-    trinton.noteheads_only(),
-    library.invisible_tuplet_brackets(),
-    trinton.force_accidentals_command(
-        selector=trinton.pleaves(),
-    ),
-    voice=score["viola 2 voice"],
-    preprocessor=trinton.fuse_preprocessor((9,)),
-)
-
-# sc file
-
-# trinton.make_sc_file(
-#     score=score,
-#     tempo=((1, 4), 70),
-#     current_directory="/Users/trintonprater/scores/graveyard/graveyard/etc/pitch_sequences",
-# )
-
-# markups
-
-library.write_instrument_names(score=score)
-
-library.write_short_instrument_names(score=score)
-
-# show file
-
-trinton.render_file(
-    score=score,
-    segment_path="/Users/trintonprater/scores/graveyard/graveyard/etc/pitch_sequences",
-    build_path="/Users/trintonprater/scores/graveyard/graveyard/build",
-    segment_name="pitch_sequence",
-    includes=[
-        "/Users/trintonprater/scores/graveyard/graveyard/build/graveyard-stylesheet.ily",
-        "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
+partitioned_sequence = abjad.sequence.partition_by_counts(
+    sequence=final_sequence,
+    counts=[
+        12,
     ],
+    cyclic=True,
 )
+
+# trimming
+
+sequences_a = []
+
+for _ in partitioned_sequence:
+    if partitioned_sequence.index(_) % 5 == 1:
+        pass
+    else:
+        sequences_a.append(_)
+
+sequences = []
+
+for _ in sequences_a:
+    if sequences_a.index(_) % 2 == 1:
+        pass
+    else:
+        sequences.append(_)
