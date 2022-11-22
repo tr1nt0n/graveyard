@@ -26,7 +26,6 @@ score = library.graveyard_score(
 # show melodies
 
 for melody, measure in zip(library.compound_melodies, list(range(1, 10))):
-
     trinton.make_music(
         lambda _: trinton.select_target(_, (measure,)),
         evans.RhythmHandler(

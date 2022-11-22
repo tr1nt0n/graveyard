@@ -87,29 +87,11 @@ first_voice_names = eval(
 compound_melodies = eval(
     """[
         evans.CompoundMelody(
-            foreground=[
-                12,
-                14,
-                13,
-                11,
-                13,
-                14,
-                10,
-            ],
+            foreground=transforms.foreground_sequences[_],
             background=transforms.sequences[_],
             foreground_partitions=[1],
-            background_partitions=[3, 4],
+            background_partitions=transforms.background_partitions[_],
             force_matching_lengths=False,
-            repartition_counts=[
-                1,
-                3,
-                1,
-                4,
-                1,
-                3,
-                1,
-                4,
-            ],
         )
         for _ in list(range(0, 9))
     ]"""
@@ -204,29 +186,24 @@ def imbrication_command(pitches):
             direction=abjad.UP,
             articulation="marcato",
             beam=True,
-            allow_unused_pitches=True,
         )
 
-        selector = trinton.select_logical_ties_by_index(
-            [
-                1,
-                2,
-                3,
-                5,
-                6,
-                7,
-                8,
-                10,
-                11,
-                12,
-                14,
-                15,
-            ]
-        )
-        selections = selector(argument)
-        groups = abjad.select.partition_by_counts(selections, [3, 4, 3, 2])
-        for group in groups:
-            abjad.slur(group)
+        leaves = abjad.select.leaves(argument)
+
+        all_but_last_leaves = abjad.select.exclude(leaves, [-1, -2])
+
+        for leaf in all_but_last_leaves:
+            with_next_leaf = abjad.select.with_next_leaf(leaf)
+
+            if leaf.written_pitch.number >= 10:
+                abjad.attach(abjad.StartSlur(), with_next_leaf[1])
+            elif with_next_leaf[1].written_pitch.number >= 10:
+                abjad.attach(abjad.StopSlur(), with_next_leaf[0])
+
+        if leaves[-2].written_pitch.number >= 10:
+            pass
+        else:
+            abjad.attach(abjad.StopSlur(), leaves[-1])
 
     return imbricate
 

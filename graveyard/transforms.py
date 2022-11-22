@@ -134,6 +134,75 @@ for _ in sequences_a:
     else:
         sequences.append(_)
 
+# foreground
+
+foreground_sequences = [
+    [
+        12,
+        14,
+        13,
+        11,
+        13,
+        14,
+        10,
+    ]
+    for _ in list(range(0, 9))
+]
+
+foreground_sequences = evans.Sequence(foreground_sequences).flatten()
+
+foreground_sequences = evans.Sequence(foreground_sequences).grouper(
+    [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+    ]
+)
+
+# compound partitions
+
+background_partitions = [
+    [3, 4],
+    [
+        4,
+        3,
+    ],
+    [
+        2,
+        3,
+        4,
+        3,
+    ],
+    [
+        2,
+        4,
+        3,
+        3,
+    ],
+    [
+        3,
+        2,
+        4,
+    ],
+    [
+        3,
+        4,
+    ],
+    [
+        4,
+        2,
+        3,
+    ],
+    [4, 3],
+    [3, 4],
+]
+
 # chords
 
 initial_chords = evans.Sequence([0, 3, 4, 7])

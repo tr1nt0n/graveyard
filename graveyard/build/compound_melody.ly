@@ -362,7 +362,7 @@
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "altovarC"
-                                c''16
+                                cs''16
                                 % AFTER:
                                 % MARKUP:
                                 ^ \markup \fontsize #6 { Pitch Cell 2 }
@@ -386,6 +386,11 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 fqs'16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                gqf'16
                                 % AFTER:
                                 % SPANNER_STOPS:
                                 )
@@ -398,15 +403,10 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                gqf'16
+                                gqs16
                                 % AFTER:
                                 % SPANNER_STARTS:
                                 (
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                gqs16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -424,7 +424,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                cs''16
+                                bf'16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -443,30 +443,25 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 af16
-                                % AFTER:
-                                % SPANNER_STOPS:
-                                )
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                b'16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 bf16
                                 % AFTER:
-                                % SPANNER_STARTS:
-                                (
+                                % SPANNER_STOPS:
+                                )
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c''16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 0
                                 g16
                                 % AFTER:
-                                % SPANNER_STOPS:
-                                )
                                 % STOP_BEAM:
                                 ]
                             % CLOSE_BRACKETS:
@@ -484,12 +479,13 @@
                                 \set stemLeftBeamCount = 0
                                 \set stemRightBeamCount = 2
                                 \voiceOne
-                                c''16
+                                cs''16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
                                 % START_BEAM:
                                 [
+                                s16
                                 s16
                                 s16
                                 s16
@@ -504,27 +500,26 @@
                                 s16
                                 s16
                                 s16
-                                s16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                cs''16
+                                bf'16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
                                 s16
                                 s16
                                 s16
+                                s16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                b'16
+                                c''16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                s16
                                 s16
                                 % AFTER:
                                 % STOP_BEAM:
@@ -549,7 +544,7 @@
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "altovarC"
-                                c''16
+                                d''16
                                 % AFTER:
                                 % MARKUP:
                                 ^ \markup \fontsize #6 { Pitch Cell 3 }
@@ -568,42 +563,6 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 bqs16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                f'16
-                                % AFTER:
-                                % SPANNER_STOPS:
-                                )
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d''16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g16
-                                % AFTER:
-                                % SPANNER_STARTS:
-                                (
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                eqs'16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                af16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                eqf'16
                                 % AFTER:
                                 % SPANNER_STOPS:
                                 )
@@ -616,7 +575,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                bqf16
+                                f'16
                                 % AFTER:
                                 % SPANNER_STARTS:
                                 (
@@ -624,12 +583,12 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                eqs'16
+                                g16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                aqs16
+                                eqs'16
                                 % AFTER:
                                 % SPANNER_STOPS:
                                 )
@@ -642,10 +601,46 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                eqf'16
+                                af16
                                 % AFTER:
                                 % SPANNER_STARTS:
                                 (
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                eqf'16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                bqf16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                eqs'16
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                )
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                cs''16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                aqs16
+                                % AFTER:
+                                % SPANNER_STARTS:
+                                (
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                eqf'16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -671,25 +666,12 @@
                                 \set stemLeftBeamCount = 0
                                 \set stemRightBeamCount = 2
                                 \voiceOne
-                                c''16
+                                d''16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
                                 % START_BEAM:
                                 [
-                                s16
-                                s16
-                                s16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d''16
-                                % AFTER:
-                                % ARTICULATIONS:
-                                - \marcato
-                                s16
-                                s16
                                 s16
                                 s16
                                 % BEFORE:
@@ -711,6 +693,19 @@
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
+                                s16
+                                s16
+                                s16
+                                s16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                cs''16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                s16
                                 s16
                                 s16
                                 % AFTER:
@@ -736,7 +731,7 @@
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "altovarC"
-                                c''16
+                                d''16
                                 % AFTER:
                                 % MARKUP:
                                 ^ \markup \fontsize #6 { Pitch Cell 4 }
@@ -755,11 +750,63 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 eqs'16
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                )
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                bf'16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 bqf16
+                                % AFTER:
+                                % SPANNER_STARTS:
+                                (
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                cs'16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                aqs16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                bqs16
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                )
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c''16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                dqf'16
+                                % AFTER:
+                                % SPANNER_STARTS:
+                                (
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                cs'16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                dqs'16
                                 % AFTER:
                                 % SPANNER_STOPS:
                                 )
@@ -772,67 +819,15 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                cs'16
-                                % AFTER:
-                                % SPANNER_STARTS:
-                                (
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                aqs16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                bqs16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                dqf'16
-                                % AFTER:
-                                % SPANNER_STOPS:
-                                )
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                cs''16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                cs'16
-                                % AFTER:
-                                % SPANNER_STARTS:
-                                (
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                dqs'16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
                                 d'16
                                 % AFTER:
-                                % SPANNER_STOPS:
-                                )
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                b'16
+                                % SPANNER_STARTS:
+                                (
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 ef'16
-                                % AFTER:
-                                % SPANNER_STARTS:
-                                (
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -858,12 +853,34 @@
                                 \set stemLeftBeamCount = 0
                                 \set stemRightBeamCount = 2
                                 \voiceOne
-                                c''16
+                                d''16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
                                 % START_BEAM:
                                 [
+                                s16
+                                s16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                bf'16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                s16
+                                s16
+                                s16
+                                s16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c''16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
                                 s16
                                 s16
                                 s16
@@ -876,28 +893,6 @@
                                 % ARTICULATIONS:
                                 - \marcato
                                 s16
-                                s16
-                                s16
-                                s16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                cs''16
-                                % AFTER:
-                                % ARTICULATIONS:
-                                - \marcato
-                                s16
-                                s16
-                                s16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                b'16
-                                % AFTER:
-                                % ARTICULATIONS:
-                                - \marcato
                                 s16
                                 s16
                                 % AFTER:
@@ -923,7 +918,7 @@
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "altovarC"
-                                c''16
+                                cs''16
                                 % AFTER:
                                 % MARKUP:
                                 ^ \markup \fontsize #6 { Pitch Cell 5 }
@@ -954,7 +949,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d''16
+                                b'16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -968,16 +963,6 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                b16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                fs'16
                                 % AFTER:
                                 % SPANNER_STOPS:
                                 )
@@ -990,7 +975,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                dqf'16
+                                b16
                                 % AFTER:
                                 % SPANNER_STARTS:
                                 (
@@ -998,12 +983,17 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                f'16
+                                fs'16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                dqs'16
+                                dqf'16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16
                                 % AFTER:
                                 % SPANNER_STOPS:
                                 )
@@ -1011,15 +1001,20 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                b'16
+                                d''16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                dqs'16
+                                % AFTER:
+                                % SPANNER_STARTS:
+                                (
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 eqf'16
-                                % AFTER:
-                                % SPANNER_STARTS:
-                                (
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -1045,7 +1040,7 @@
                                 \set stemLeftBeamCount = 0
                                 \set stemRightBeamCount = 2
                                 \voiceOne
-                                c''16
+                                cs''16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
@@ -1058,12 +1053,10 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d''16
+                                b'16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                s16
-                                s16
                                 s16
                                 s16
                                 % BEFORE:
@@ -1077,14 +1070,16 @@
                                 s16
                                 s16
                                 s16
+                                s16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                b'16
+                                d''16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
+                                s16
                                 s16
                                 s16
                                 % AFTER:
@@ -1110,7 +1105,7 @@
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "altovarC"
-                                c''16
+                                bf'16
                                 % AFTER:
                                 % MARKUP:
                                 ^ \markup \fontsize #6 { Pitch Cell 6 }
@@ -1141,7 +1136,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d''16
+                                c''16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -1172,7 +1167,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                cs''16
+                                d''16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -1198,7 +1193,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                b'16
+                                cs''16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -1232,12 +1227,24 @@
                                 \set stemLeftBeamCount = 0
                                 \set stemRightBeamCount = 2
                                 \voiceOne
-                                c''16
+                                bf'16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
                                 % START_BEAM:
                                 [
+                                s16
+                                s16
+                                s16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c''16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                s16
                                 s16
                                 s16
                                 s16
@@ -1252,23 +1259,11 @@
                                 s16
                                 s16
                                 s16
-                                s16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 cs''16
-                                % AFTER:
-                                % ARTICULATIONS:
-                                - \marcato
-                                s16
-                                s16
-                                s16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                b'16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
@@ -1297,7 +1292,7 @@
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "altovarC"
-                                c''16
+                                b'16
                                 % AFTER:
                                 % MARKUP:
                                 ^ \markup \fontsize #6 { Pitch Cell 7 }
@@ -1321,37 +1316,11 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g16
-                                % AFTER:
-                                % SPANNER_STOPS:
-                                )
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d''16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 eqf'16
-                                % AFTER:
-                                % SPANNER_STARTS:
-                                (
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                eqs'16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                e'16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                ef'16
                                 % AFTER:
                                 % SPANNER_STOPS:
                                 )
@@ -1364,7 +1333,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                dqs'16
+                                eqs'16
                                 % AFTER:
                                 % SPANNER_STARTS:
                                 (
@@ -1372,12 +1341,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                c'16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                dqf'16
+                                e'16
                                 % AFTER:
                                 % SPANNER_STOPS:
                                 )
@@ -1385,15 +1349,46 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                b'16
+                                d''16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                ef'16
+                                % AFTER:
+                                % SPANNER_STARTS:
+                                (
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                dqs'16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                )
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                bf'16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                dqf'16
+                                % AFTER:
+                                % SPANNER_STARTS:
+                                (
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 b16
-                                % AFTER:
-                                % SPANNER_STARTS:
-                                (
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -1419,23 +1414,12 @@
                                 \set stemLeftBeamCount = 0
                                 \set stemRightBeamCount = 2
                                 \voiceOne
-                                c''16
+                                b'16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
                                 % START_BEAM:
                                 [
-                                s16
-                                s16
-                                s16
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d''16
-                                % AFTER:
-                                % ARTICULATIONS:
-                                - \marcato
                                 s16
                                 s16
                                 s16
@@ -1450,15 +1434,26 @@
                                 - \marcato
                                 s16
                                 s16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d''16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \marcato
+                                s16
+                                s16
                                 s16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                b'16
+                                bf'16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
+                                s16
                                 s16
                                 s16
                                 % AFTER:
@@ -1508,6 +1503,11 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 fs'16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                bqs16
                                 % AFTER:
                                 % SPANNER_STOPS:
                                 )
@@ -1520,15 +1520,10 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                bqs16
+                                cs'16
                                 % AFTER:
                                 % SPANNER_STARTS:
                                 (
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                cs'16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -1565,6 +1560,11 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 fs'16
+                                % BEFORE:
+                                % COMMANDS:
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                eqf'16
                                 % AFTER:
                                 % SPANNER_STOPS:
                                 )
@@ -1576,19 +1576,9 @@
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                eqf'16
-                                % AFTER:
-                                % SPANNER_STARTS:
-                                (
-                                % BEFORE:
-                                % COMMANDS:
-                                \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 0
                                 f'16
                                 % AFTER:
-                                % SPANNER_STOPS:
-                                )
                                 % STOP_BEAM:
                                 ]
                             % CLOSE_BRACKETS:
@@ -1615,6 +1605,7 @@
                                 s16
                                 s16
                                 s16
+                                s16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -1623,7 +1614,6 @@
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                s16
                                 s16
                                 s16
                                 s16
@@ -1638,6 +1628,7 @@
                                 s16
                                 s16
                                 s16
+                                s16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -1646,7 +1637,6 @@
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
-                                s16
                                 s16
                                 % AFTER:
                                 % STOP_BEAM:
@@ -1671,7 +1661,7 @@
                                 % OPENING:
                                 % COMMANDS:
                                 \clef "altovarC"
-                                c''16
+                                cs''16
                                 % AFTER:
                                 % MARKUP:
                                 ^ \markup \fontsize #6 { Pitch Cell 9 }
@@ -1733,7 +1723,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                cs''16
+                                bf'16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -1759,7 +1749,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                b'16
+                                c''16
                                 % BEFORE:
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
@@ -1793,7 +1783,7 @@
                                 \set stemLeftBeamCount = 0
                                 \set stemRightBeamCount = 2
                                 \voiceOne
-                                c''16
+                                cs''16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
@@ -1818,7 +1808,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                cs''16
+                                bf'16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
@@ -1829,7 +1819,7 @@
                                 % COMMANDS:
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                b'16
+                                c''16
                                 % AFTER:
                                 % ARTICULATIONS:
                                 - \marcato
