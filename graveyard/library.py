@@ -8,6 +8,7 @@ import random
 import quicktions
 from abjadext import rmakers
 from abjadext import microtones
+from graveyard import transforms
 from itertools import cycle
 
 # score
@@ -80,6 +81,37 @@ first_voice_names = eval(
         "guitar 1 voice",
         "viola 1 voice",
         "accordion 1 voice",
+    ]"""
+)
+
+compound_melodies = eval(
+    """[
+        evans.CompoundMelody(
+            foreground=[
+                12,
+                14,
+                13,
+                11,
+                13,
+                14,
+                10,
+            ],
+            background=transforms.sequences[_],
+            foreground_partitions=[1],
+            background_partitions=[3, 4],
+            force_matching_lengths=False,
+            repartition_counts=[
+                1,
+                3,
+                1,
+                4,
+                1,
+                3,
+                1,
+                4,
+            ],
+        )
+        for _ in list(range(0, 9))
     ]"""
 )
 

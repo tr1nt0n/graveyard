@@ -6,7 +6,6 @@ import trinton
 from abjadext import rmakers
 from abjadext import microtones
 from graveyard import library
-from graveyard import compound_melody
 
 # compound_melodies
 
@@ -26,7 +25,7 @@ score = library.graveyard_score(
 
 # show melodies
 
-for melody, measure in zip(compound_melody.melodies, list(range(1, 10))):
+for melody, measure in zip(library.compound_melodies, list(range(1, 10))):
 
     trinton.make_music(
         lambda _: trinton.select_target(_, (measure,)),
@@ -57,7 +56,7 @@ for melody, measure in zip(compound_melody.melodies, list(range(1, 10))):
         ),
         evans.PitchHandler(evans.Sequence(melody).flatten()),
         abjad.beam,
-        library.imbrication_command(pitches=[float(_) for _ in melody._foreground]),
+        library.imbrication_command(pitches=melody._foreground),
         trinton.treat_tuplets(),
         trinton.attachment_command(
             attachments=[abjad.Clef("altovarC")],
