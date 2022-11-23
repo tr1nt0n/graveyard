@@ -188,12 +188,17 @@ def imbrication_command(pitches):
             beam=True,
         )
 
-        leaves = abjad.select.leaves(argument)
+        leaves = abjad.select.leaves(argument, pitched=True)
 
-        all_but_last_leaves = abjad.select.exclude(leaves, [-1, -2])
+        all_but_last_leaves = abjad.select.exclude(
+            leaves,
+            [-1, -2],
+        )
 
         for leaf in all_but_last_leaves:
-            with_next_leaf = abjad.select.with_next_leaf(leaf)
+            with_next_leaf = abjad.select.with_next_leaf(
+                leaf,
+            )
 
             if leaf.written_pitch.number >= 10:
                 abjad.attach(abjad.StartSlur(), with_next_leaf[1])

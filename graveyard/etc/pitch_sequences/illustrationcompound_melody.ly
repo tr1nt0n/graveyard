@@ -1,6 +1,6 @@
 \version "2.23.14"
 \language "english"
-\include "/Users/trintonprater/scores/graveyard/graveyard/build/graveyard-stylesheet.ily"
+\include "/Users/trintonprater/scores/graveyard/graveyard/build/tests-stylesheet.ily"
 \include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
 \score
 {

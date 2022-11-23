@@ -123,7 +123,7 @@ trinton.render_file(
     build_path="/Users/trintonprater/scores/graveyard/graveyard/build",
     segment_name="compound_melody",
     includes=[
-        "/Users/trintonprater/scores/graveyard/graveyard/build/graveyard-stylesheet.ily",
+        "/Users/trintonprater/scores/graveyard/graveyard/build/tests-stylesheet.ily",
         "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
     ],
 )
