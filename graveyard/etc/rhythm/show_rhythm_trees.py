@@ -31,7 +31,7 @@ for i in list(range(9)):
     trinton.make_music(
         lambda _: trinton.select_target(_, (i + 1,)),
         evans.PitchHandler(library.compound_melodies[i]),
-        trinton.beam_groups(beam_rests=False),
+        trinton.beam_groups(),
         library.imbrication_command(pitches=library.compound_melodies[i]._foreground),
         trinton.attachment_command(
             attachments=[abjad.Markup(rf"\markup \fontsize #6 {{ Segment {i + 1} }}")],

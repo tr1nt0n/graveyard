@@ -179,8 +179,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     \voiceTwo
                                     % OPENING:
                                     % COMMANDS:
@@ -192,23 +190,11 @@
                                     ^ \markup \fontsize #6 { Segment 1 }
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     d'16
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     bf16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 1
                                     cs'16
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -218,31 +204,15 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 4 0))
                                     \times 7/8
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 1
                                         d''8.
                                         % AFTER:
                                         % START_BEAM:
                                         [
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
                                         aqs16
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         (
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
                                         bqs16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
                                         gqs8.
                                     % CLOSE_BRACKETS:
                                     }
@@ -252,57 +222,25 @@
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
                                 \times 4/7
                                 {
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     bqs8
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     cs''8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     aqf8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     cqs'8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 2
                                     eqs'16.
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     b'16.
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     bf16.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     eqf'16.
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -327,8 +265,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     \voiceOne
                                     % OPENING:
                                     % COMMANDS:
@@ -413,8 +349,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     \voiceTwo
                                     cs''8
                                     % AFTER:
@@ -422,56 +356,28 @@
                                     ^ \markup \fontsize #6 { Segment 2 }
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     dqs'8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     gqf'8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     fqs'8
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 4 0))
                                     \times 5/8
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 1
                                         gqf'8
                                         % AFTER:
                                         % SPANNER_STOPS:
                                         )
                                         % START_BEAM:
                                         [
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
                                         d''8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
                                         gqs8
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         (
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
                                         eqs'8
                                     % CLOSE_BRACKETS:
                                     }
@@ -481,54 +387,22 @@
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
                                 \times 2/3
                                 {
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     aqf8
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     bf'8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     ef'8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     a8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 2
                                     af16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     bf16
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     c''16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     g16
                                     % AFTER:
                                     % STOP_BEAM:
@@ -551,8 +425,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     \voiceOne
                                     cs''8
                                     % AFTER:
@@ -635,8 +507,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     \voiceTwo
                                     d''8
                                     % AFTER:
@@ -645,52 +515,24 @@
                                     ^ \markup \fontsize #6 { Segment 3 }
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     fs'8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     bqs8
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     cs''8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 3
                                     f'32.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 3
                                     g32.
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 3
                                     eqs'32.
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 1
                                     b'32.
                                 % CLOSE_BRACKETS:
                                 }
@@ -698,54 +540,22 @@
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 3 0))
                                 \times 4/5
                                 {
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     af8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     eqf'8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     bqf8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     eqs'8
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 3
                                     cs''32
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 3
                                     aqs32
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 3
                                     eqf'32
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 0
                                     bqs32
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -844,8 +654,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     \voiceTwo
                                     d''16
                                     % AFTER:
@@ -854,18 +662,10 @@
                                     ^ \markup \fontsize #6 { Segment 4 }
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     af16
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     eqs'16
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -873,30 +673,14 @@
                                     % STOP_BEAM:
                                     ]
                                     bf'4..
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 3
                                     bqf32
                                     % AFTER:
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 2
                                     cs'32
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     aqs16.
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 2
                                     bqs32
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -907,15 +691,7 @@
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 4 0))
                                 \times 8/13
                                 {
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     c''16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     dqf'16
                                     % AFTER:
                                     % STOP_BEAM:
@@ -923,10 +699,6 @@
                                     % SPANNER_STARTS:
                                     (
                                     cs'4..
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     dqs'8.
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -937,28 +709,12 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
                                     \times 2/3
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 4
                                         d''64
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         d'32.
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         (
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 4
                                         ef'64
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 4
-                                        \set stemRightBeamCount = 0
                                         cs'64
                                         % AFTER:
                                         % SPANNER_STOPS:
@@ -1016,10 +772,6 @@
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) (ly:make-duration 4 0))
                                 \times 8/13
                                 {
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     c''16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1067,8 +819,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     \voiceTwo
                                     cs''16
                                     % AFTER:
@@ -1078,18 +828,10 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     bf8.
                                     % AFTER:
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 2
                                     af16
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -1098,34 +840,18 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
                                     \times 2/3
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 3
                                         b'32.
                                         % AFTER:
                                         % START_BEAM:
                                         [
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 4
                                         c'64
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         (
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 4
-                                        \set stemRightBeamCount = 4
                                         g64
                                         % AFTER:
                                         % SPANNER_STOPS:
                                         )
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 4
-                                        \set stemRightBeamCount = 0
                                         cs''64
                                         % AFTER:
                                         % STOP_BEAM:
@@ -1142,49 +868,21 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     fs'8.
                                     % AFTER:
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 2
                                     dqf'16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     f'16
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 3
                                     d''32.
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 3
                                     dqs'32.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 3
                                     eqf'32.
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 3
-                                    \set stemRightBeamCount = 0
                                     gqf'32.
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -1209,8 +907,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     \voiceOne
                                     cs''16
                                     % AFTER:
@@ -1289,8 +985,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     \voiceTwo
                                     bf'8.
                                     % AFTER:
@@ -1299,23 +993,11 @@
                                     ^ \markup \fontsize #6 { Segment 6 }
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 2
                                     af16
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 1
                                     bf16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     aqf8.
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -1324,31 +1006,15 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 6 0))
                                     \times 4/5
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 5
                                         c''128
                                         % AFTER:
                                         % START_BEAM:
                                         [
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 5
-                                        \set stemRightBeamCount = 5
                                         aqs128
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         (
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 5
-                                        \set stemRightBeamCount = 3
                                         eqf'128
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 3
                                         gqs32..
                                     % CLOSE_BRACKETS:
                                     }
@@ -1358,18 +1024,10 @@
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
                                 \times 4/7
                                 {
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     eqs'8
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 0
                                     d''8
                                     % AFTER:
                                     % STOP_BEAM:
@@ -1378,10 +1036,6 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     d'8
                                     % AFTER:
                                     % START_BEAM:
@@ -1390,31 +1044,15 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                                     \times 2/3
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 4
                                         dqs'64
                                         % AFTER:
                                         % SPANNER_STOPS:
                                         )
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 4
-                                        \set stemRightBeamCount = 2
                                         cs''64
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
                                         cs'16..
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         (
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 0
                                         dqf'32.
                                         % AFTER:
                                         % SPANNER_STOPS:
@@ -1441,8 +1079,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     \voiceOne
                                     bf'8.
                                     % AFTER:
@@ -1479,10 +1115,6 @@
                                 \times 4/7
                                 {
                                     s8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 0
                                     d''8
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1531,8 +1163,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     \voiceTwo
                                     b'8
                                     % AFTER:
@@ -1542,54 +1172,32 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     eqs'8
                                     % AFTER:
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     g8
                                     % OPEN_BRACKETS:
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                                     \times 2/3
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 4
                                         eqf'64
                                         % AFTER:
                                         % SPANNER_STOPS:
                                         )
                                         % START_BEAM:
                                         [
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 2
                                         cs''16..
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 3
                                         eqs'32.
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         (
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 4
-                                        \set stemRightBeamCount = 3
                                         e'64
                                         % AFTER:
                                         % SPANNER_STOPS:
                                         )
+                                        % STOP_BEAM:
+                                        ]
                                     % CLOSE_BRACKETS:
                                     }
                                 % CLOSE_BRACKETS:
@@ -1599,25 +1207,13 @@
                                 \times 4/7
                                 {
                                     d''4.
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     ef'8
                                     % AFTER:
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     dqs'8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     c'8
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -1626,28 +1222,12 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                                     \times 2/3
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
                                         bf'16..
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 3
                                         dqf'32.
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         (
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 3
-                                        \set stemRightBeamCount = 4
                                         b64
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 4
-                                        \set stemRightBeamCount = 0
                                         dqf'64
                                         % AFTER:
                                         % SPANNER_STOPS:
@@ -1674,8 +1254,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     \voiceOne
                                     b'8
                                     % AFTER:
@@ -1757,8 +1335,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     \voiceTwo
                                     c''16
                                     % AFTER:
@@ -1767,56 +1343,28 @@
                                     ^ \markup \fontsize #6 { Segment 8 }
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     f'16
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     cs'16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 1
                                     fs'16
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 4 0))
                                     \times 7/8
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 1
                                         bqs8.
                                         % AFTER:
                                         % SPANNER_STOPS:
                                         )
                                         % START_BEAM:
                                         [
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 2
                                         d''16
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 2
-                                        \set stemRightBeamCount = 1
                                         cs'16
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         (
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
                                         af8.
                                     % CLOSE_BRACKETS:
                                     }
@@ -1826,54 +1374,22 @@
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
                                 \times 4/7
                                 {
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     d'8
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     cs''8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     aqf8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     eqs'8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 2
                                     fs'16.
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     eqf'16.
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     b'16.
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     f'16.
                                     % AFTER:
                                     % STOP_BEAM:
@@ -1896,8 +1412,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 2
                                     \voiceOne
                                     c''16
                                     % AFTER:
@@ -1980,8 +1494,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     \voiceTwo
                                     cs''8
                                     % AFTER:
@@ -1989,23 +1501,11 @@
                                     ^ \markup \fontsize #6 { Segment 9 }
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     eqs'8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     fqs'8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     ef'8
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -2015,31 +1515,15 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 4 0))
                                     \times 5/8
                                     {
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 0
-                                        \set stemRightBeamCount = 1
                                         d''8
                                         % AFTER:
                                         % START_BEAM:
                                         [
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
                                         dqs'8
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         (
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
                                         af8
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \set stemLeftBeamCount = 1
-                                        \set stemRightBeamCount = 1
                                         dqf'8
                                     % CLOSE_BRACKETS:
                                     }
@@ -2049,57 +1533,25 @@
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
                                 \times 2/3
                                 {
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     g8
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     bf'8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     d'8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 1
                                     gqf'8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 1
-                                    \set stemRightBeamCount = 2
                                     cs'16
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     c''16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 2
                                     fqs'16
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     (
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set stemLeftBeamCount = 2
-                                    \set stemRightBeamCount = 0
                                     f'16
                                     % AFTER:
                                     % SPANNER_STOPS:
@@ -2124,8 +1576,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set stemLeftBeamCount = 0
-                                    \set stemRightBeamCount = 1
                                     \voiceOne
                                     cs''8
                                     % AFTER:
