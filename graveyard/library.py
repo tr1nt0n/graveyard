@@ -111,6 +111,58 @@ xen_pitches = eval(
 )
 xen_diads = eval("""evans.Sequence(xen_pitches).grouper([2 for _ in xen_pitches])""")
 
+tempi = eval(
+    """[
+    abjad.Markup(
+        r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1 #"44" } }'
+    ),
+    abjad.Markup(
+        r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1 #"66" } }'
+    ),
+    abjad.Markup(
+        r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1 #"77" } }'
+    ),
+    abjad.Markup(
+        r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1 #"99" } }'
+    ),
+    abjad.Markup(
+        r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1 #"121" } }'
+    ),
+]"""
+)
+
+# commands
+
+
+def change_lines(
+    lines,
+    selector,
+    clef="treble",
+):
+    def change(argument):
+        selections = selector(argument)
+        for selection in selections:
+            abjad.attach(abjad.Clef(clef), selection)
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    rf"\staff-line-count {lines}",
+                    site="absolute_before",
+                ),
+                selection,
+            )
+
+    return change
+
+
+def boxed_markup(string, selector):
+    literal = abjad.LilyPondLiteral(rf'\boxed-markup "{string}" 1', "after")
+    command = trinton.attachment_command(
+        attachments=[literal],
+        selector=selector,
+    )
+    return command
+
+
 # harmony tools
 
 
