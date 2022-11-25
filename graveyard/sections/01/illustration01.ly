@@ -395,6 +395,9 @@
                                         <c c'>32
                                         <c c'>16.
                                         <c c'>32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ffff
                                         <c c'>32
                                         <c c'>16.
                                         <c c'>32
@@ -406,8 +409,6 @@
                                         <c c'>32
                                         <c c'>16.
                                         % AFTER:
-                                        % ARTICULATIONS:
-                                        \ffff
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -451,11 +452,24 @@
                                         \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { acc. }
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :32
                                         % ARTICULATIONS:
                                         - \tenuto
                                         % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
                                         - \tweak circled-tip ##t
                                         \<
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -488,8 +502,16 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :8
                                         % ARTICULATIONS:
                                         - \tenuto
                                         <c'' fs'' b'' cs'''>2
@@ -533,8 +555,22 @@
                                         \clef "bass"
                                         <d, a>2
                                         % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :32
                                         % ARTICULATIONS:
                                         - \tenuto
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
                                         <d, a>2
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -567,8 +603,16 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
                                         <d, a>2
                                         % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :8
                                         % ARTICULATIONS:
                                         - \tenuto
                                         <d, a>2

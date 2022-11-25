@@ -181,7 +181,7 @@ trinton.make_music(
             [
                 0,
                 0,
-                -1,
+                -11,
             ],
             pitched=True,
         ),
@@ -231,6 +231,18 @@ for voice_name in ["accordion 1 voice", "accordion 2 voice"]:
             attachments=[abjad.Articulation("tenuto")],
             selector=trinton.pleaves(),
         ),
+        trinton.tremolo_lines(
+            selector=trinton.select_leaves_by_index(
+                [
+                    0,
+                    -4,
+                ]
+            ),
+            lines=[
+                3,
+                1,
+            ],
+        ),
         voice=score[voice_name],
         preprocessor=trinton.fuse_preprocessor((2,)),
     )
@@ -253,6 +265,27 @@ trinton.make_music(
     ),
     voice=score["accordion 2 voice"],
 )
+
+for voice_name in ["accordion 1 voice", "accordion 2 voice"]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (1, 2)),
+        trinton.glissando_command(
+            selector=trinton.ranged_selector(
+                ranges=[
+                    range(0, 10),
+                ],
+                nested=True,
+            ),
+            tweaks=[
+                abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
+                abjad.Tweak(r"- \tweak arrow-length #2"),
+                abjad.Tweak(r"- \tweak arrow-width #0.5"),
+                abjad.Tweak(r"- \tweak thickness #2"),
+            ],
+        ),
+        voice=score[voice_name],
+        preprocessor=trinton.fuse_preprocessor((2,)),
+    )
 
 # globals
 
