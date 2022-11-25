@@ -186,14 +186,13 @@ trinton.make_music(
             pitched=True,
         ),
     ),
-    library.boxed_markup(
+    trinton.hooked_spanner_command(
         string="fast bow, full bows as possible",
         selector=trinton.select_leaves_by_index(
-            [
-                0,
-            ],
+            [0, -1],
             pitched=True,
         ),
+        padding=7.25,
     ),
     voice=score["viola 2 voice"],
     preprocessor=trinton.fuse_preprocessor((2,)),

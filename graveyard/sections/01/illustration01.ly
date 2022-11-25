@@ -294,8 +294,10 @@
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \<
-                                        % COMMANDS:
-                                        \boxed-markup "fast bow, full bows as possible" 1
+                                        - \tweak padding #7.25
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "fast bow, full bows as possible" } \hspace #0.5 }
+                                        \startTextSpan
                                         <c c'>32
                                         <c c'>16.
                                         <c c'>32
@@ -409,6 +411,8 @@
                                         <c c'>32
                                         <c c'>16.
                                         % AFTER:
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
