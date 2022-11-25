@@ -58,20 +58,20 @@ trinton.make_music(
         ],
     ),
     trinton.arrow_spanner_command(
-        l_string="n. rasg.",
-        r_string="kn. rasg.",
+        l_string="n. rasg., pont.",
+        r_string="kn. rasg., tast.",
         selector=trinton.select_leaves_by_index([0, 1]),
         padding=4.5,
     ),
     trinton.arrow_spanner_command(
         l_string=".",
-        r_string="n. rasg.",
+        r_string="n. rasg., pont.",
         selector=trinton.select_leaves_by_index([1, 2, 3, -1]),
         padding=4.5,
     ),
     trinton.arrow_spanner_command(
         l_string=".",
-        r_string="kn. rasg.",
+        r_string="kn. rasg., tast.",
         selector=trinton.select_leaves_by_index(
             [
                 2,

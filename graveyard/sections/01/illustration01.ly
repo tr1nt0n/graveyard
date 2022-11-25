@@ -143,8 +143,8 @@
                                         \<
                                         - \tweak padding #4.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "n. rasg." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { kn. rasg. }
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "n. rasg., pont." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { kn. rasg., tast. }
                                         \startTextSpan
                                         e2
                                         % AFTER:
@@ -161,7 +161,7 @@
                                         - \tweak padding #4.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { n. rasg. }
+                                        - \tweak bound-details.right.text \markup \upright { n. rasg., pont. }
                                         \startTextSpan
                                         e2
                                         % AFTER:
@@ -178,7 +178,7 @@
                                         - \tweak padding #4.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { kn. rasg. }
+                                        - \tweak bound-details.right.text \markup \upright { kn. rasg., tast. }
                                         \startTextSpan
                                         e2
                                         % AFTER:
@@ -195,7 +195,7 @@
                                         - \tweak padding #4.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { n. rasg. }
+                                        - \tweak bound-details.right.text \markup \upright { n. rasg., pont. }
                                         \startTextSpan
                                         % OPENING:
                                         % COMMANDS:
