@@ -366,5 +366,11 @@ def fermata_measures(score, measures, fermata="ufermata", last_measure=False):
             abjad.LilyPondLiteral(
                 r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
             ),
+            abjad.LilyPondLiteral(
+                r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
+            ),
+            abjad.LilyPondLiteral(
+                r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "before"
+            ),
         ],
     )

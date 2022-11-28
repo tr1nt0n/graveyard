@@ -36,7 +36,7 @@ a_stage3 = a_stage2.alpha(category=2)
 
 b_stage3 = b_stage2.alpha(category=1)
 
-sequences = [
+initial_sequences = [
     a_stage1,
     b_stage1,
     a_stage2,
@@ -47,7 +47,7 @@ sequences = [
 
 initial_sequence = []
 
-it = iter(sequences)
+it = iter(initial_sequences)
 
 tups = [*zip(it, it)]
 

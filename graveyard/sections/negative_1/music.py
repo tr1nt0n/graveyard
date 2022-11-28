@@ -10,7 +10,19 @@ from graveyard import library
 
 # score
 
-score = library.graveyard_score([(6, 3), (7, 3)])
+score = library.graveyard_score([(6, 3), (7, 3), (1, 16), (3, 32)])
+
+# fermate
+
+library.fermata_measures(
+    score=score, measures=[0], fermata="uverylongfermata", last_measure=True
+)
+
+library.fermata_measures(
+    score=score,
+    measures=[-1],
+    # fermata="ushortfermata",
+)
 
 # guitar music commands
 
@@ -302,10 +314,44 @@ trinton.attach_multiple(
     score=score,
     voice="Global Context",
     leaves=[
+        0,
+    ],
+    attachments=[
+        abjad.BarLine(".|:", site="before"),
+        abjad.LilyPondLiteral(
+            r"\once \override Score.BarLine.transparent = ##f", "absolute_before"
+        ),
+        abjad.LilyPondLiteral(
+            r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "before"
+        ),
+    ],
+)
+
+trinton.attach_multiple(
+    score=score,
+    voice="Global Context",
+    leaves=[
+        2,
+    ],
+    attachments=[
+        abjad.BarLine(":|."),
+        abjad.LilyPondLiteral(
+            r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
+        ),
+        abjad.LilyPondLiteral(
+            r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
+        ),
+    ],
+)
+
+trinton.attach_multiple(
+    score=score,
+    voice="Global Context",
+    leaves=[
         -1,
     ],
     attachments=[
-        abjad.BarLine("||"),
+        abjad.BarLine("|."),
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
         ),
@@ -331,9 +377,9 @@ trinton.extract_parts(score)
 
 trinton.render_file(
     score=score,
-    segment_path="/Users/trintonprater/scores/graveyard/graveyard/sections/01",
+    segment_path="/Users/trintonprater/scores/graveyard/graveyard/sections/negative_1",
     build_path="/Users/trintonprater/scores/graveyard/graveyard/build",
-    segment_name="01",
+    segment_name="negative_1",
     includes=[
         "/Users/trintonprater/scores/graveyard/graveyard/build/graveyard-stylesheet.ily",
         "/Users/trintonprater/abjad/abjad/scm/abjad.ily",

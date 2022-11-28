@@ -20,6 +20,7 @@
             % AFTER:
             % COMMANDS:
             \bar "||"
+            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f

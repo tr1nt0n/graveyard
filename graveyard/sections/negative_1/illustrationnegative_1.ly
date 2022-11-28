@@ -10,6 +10,13 @@
         % OPEN_BRACKETS:
         \context TimeSignatureContext = "Global Context"
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            % BEFORE:
+            % COMMANDS:
+            \bar ".|:"
+            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % OPENING:
             % COMMANDS:
             #(ly:expect-warning "strange time signature found")
@@ -23,12 +30,49 @@
             #(ly:expect-warning "strange time signature found")
             \time 7/3
             s1 * 7/3
-            % AFTER:
+            % ABSOLUTE_BEFORE:
             % COMMANDS:
-            \bar "||"
+            \once \override Score.BarLine.transparent = ##f
+            % BEFORE:
+            % COMMANDS:
+            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override Score.TimeSignature.stencil = ##f
+            % OPENING:
+            % COMMANDS:
+            \time 1/16
+            s1 * 1/16
+            % AFTER:
+            % MARKUP:
+            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            % COMMANDS:
+            \bar ":|."
+            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            \once \override Score.BarLine.transparent = ##f
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            % BEFORE:
+            % COMMANDS:
+            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override Score.TimeSignature.stencil = ##f
+            % OPENING:
+            % COMMANDS:
+            \time 3/32
+            s1 * 3/32
+            % AFTER:
+            % MARKUP:
+            - \markup \huge \center-column { \musicglyph "scripts.uverylongfermata" } 
+            % COMMANDS:
+            \bar "|."
+            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
         }
@@ -65,6 +109,17 @@
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { e. git. }
                                     s1 * 2
                                     s1 * 7/3
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 3/32
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -84,6 +139,17 @@
                                 {
                                     s1 * 2
                                     s1 * 7/3
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 3/32
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -103,6 +169,17 @@
                                 {
                                     s1 * 2
                                     s1 * 7/3
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 3/32
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -228,6 +305,17 @@
                                         \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 3/32
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -263,6 +351,17 @@
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { vla. }
                                     s1 * 2
                                     s1 * 7/3
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 3/32
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -418,6 +517,17 @@
                                         ]
                                     % CLOSE_BRACKETS:
                                     }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 3/32
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -534,6 +644,17 @@
                                         \ffff
                                     % CLOSE_BRACKETS:
                                     }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 3/32
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -634,6 +755,17 @@
                                         - \tenuto
                                     % CLOSE_BRACKETS:
                                     }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 3/32
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
