@@ -84,6 +84,138 @@ for measure, i in zip(
         voice=score["viola 2 voice"],
     )
 
+for measure in [
+    2,
+    6,
+    8,
+    12,
+    18,
+]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        evans.RhythmHandler(
+            evans.tuplet(
+                [
+                    (
+                        1,
+                        1,
+                    )
+                ]
+            )
+        ),
+        trinton.treat_tuplets(),
+        evans.RewriteMeterCommand(boundary_depth=-2),
+        trinton.notehead_bracket_command(),
+        voice=score["viola 2 voice"],
+        beam_meter=True,
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        evans.RhythmHandler(evans.tuplet([(8, 7, 1)])),
+        trinton.treat_tuplets(),
+        evans.RewriteMeterCommand(boundary_depth=-2),
+        trinton.notehead_bracket_command(),
+        voice=score["viola 1 voice"],
+    )
+
+for measure in [
+    4,
+    10,
+    14,
+    16,
+]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        evans.RhythmHandler(
+            evans.tuplet(
+                [
+                    (
+                        1,
+                        1,
+                        1,
+                    )
+                ]
+            )
+        ),
+        trinton.treat_tuplets(),
+        evans.RewriteMeterCommand(boundary_depth=-2),
+        trinton.notehead_bracket_command(),
+        voice=score["viola 2 voice"],
+    )
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (2,)),
+    evans.RhythmHandler(evans.talea([6, 2, 3, 1], 16)),
+    trinton.treat_tuplets(),
+    evans.PitchHandler([9, -1, -5, -9]),
+    trinton.glissando_command(
+        selector=trinton.ranged_selector(
+            ranges=[
+                range(0, 2),
+                range(1, 4),
+            ],
+            nested=True,
+        ),
+        zero_padding=True,
+    ),
+    trinton.continuous_spanner_command(
+        strings=trinton.return_fraction_string_list([(0, 9), (3, 9), (1, 9)]),
+        selector=trinton.select_leaves_by_index([0, 1, 1, -1]),
+        padding=11.5,
+        full_string=True,
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Dynamic("ffff"),
+            abjad.StartHairpin("--"),
+            abjad.Articulation("downbow"),
+            abjad.Articulation("upbow"),
+            abjad.StartSlur(),
+            abjad.StopHairpin(),
+            abjad.StopSlur(),
+        ],
+        selector=trinton.select_leaves_by_index([0, 0, 0, 1, 1, -1, -1]),
+    ),
+    abjad.beam,
+    voice=score["viola 1 voice"],
+)
+
+for measure, index in zip(
+    [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+    ],
+    [
+        0,
+        2,
+        5,
+        7,
+        9,
+        12,
+        14,
+        17,
+        20,
+    ],
+):
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        evans.PitchHandler(trinton.rotated_sequence(library.xen_diads, index)),
+        library.smooth_voice_leading(),
+        trinton.attachment_command(
+            attachments=[abjad.Clef("treble")],
+            selector=trinton.select_leaves_by_index([0]),
+        ),
+        voice=score["viola 2 voice"],
+    )
+
 # globals
 
 library.write_instrument_names(score=score)
@@ -101,6 +233,7 @@ for tempo, leaf in zip(
         voice=score["Global Context"],
         leaves=[leaf],
         attachment=library.tempi[tempo],
+        direction=abjad.UP,
     )
 
 trinton.make_music(

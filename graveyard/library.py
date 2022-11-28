@@ -131,6 +131,9 @@ tempi = eval(
 ]"""
 )
 
+for tempo in tempi:
+    abjad.bundle(tempo, r"- \tweak padding #6")
+
 # commands
 
 

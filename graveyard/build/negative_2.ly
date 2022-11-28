@@ -10,7 +10,7 @@
             s1 * 1
             % AFTER:
             % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"121" } }
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"121" } }
             % OPENING:
             % COMMANDS:
             \time 6/8
@@ -63,7 +63,7 @@
             s1 * 9/8
             % AFTER:
             % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"44" } }
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"44" } }
             % OPENING:
             % COMMANDS:
             \time 10/8
@@ -374,23 +374,121 @@
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Viola }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { vla. }
                                     s1 * 1
-                                    s1 * 3/4
+                                    a'4.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \downbow
+                                    \ffff
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    b8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \upbow
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 9 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 1 9 \hspace #0.5 }
+                                    \startTextSpan
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    g8.
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    ef16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 11/8
                                     s1 * 7/8
                                     s1 * 5/4
-                                    s1 * 9/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 9) (ly:make-duration 3 0))
+                                    \times 9/16
+                                    {
+                                        c'1
+                                        c'2..
+                                        c'8
+                                    % CLOSE_BRACKETS:
+                                    }
                                     s1 * 7/8
-                                    s1 * 3/2
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 1 0))
+                                    \times 12/16
+                                    {
+                                        c'1
+                                        c'2..
+                                        c'8
+                                    % CLOSE_BRACKETS:
+                                    }
                                     s1 * 1
                                     s1 * 3/4
                                     s1 * 9/8
-                                    s1 * 5/4
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 2 0))
+                                    \times 10/16
+                                    {
+                                        c'1
+                                        c'2..
+                                        c'8
+                                    % CLOSE_BRACKETS:
+                                    }
                                     s1 * 1
                                     s1 * 13/8
                                     s1 * 9/8
                                     s1 * 7/8
                                     s1 * 1
-                                    s1 * 7/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 3 0))
+                                    \times 14/16
+                                    {
+                                        c'2
+                                        c'4..
+                                        c'16
+                                    % CLOSE_BRACKETS:
+                                    }
                                     s1 * 11/8
                                     s1 * 1
                                     % BEFORE:
@@ -584,7 +682,11 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
-                                    s1 * 3/4
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    <a' af''>4.
+                                    <c'' b''>4.
                                     % OPEN_BRACKETS:
                                     <<
                                         % OPEN_BRACKETS:
@@ -751,7 +853,19 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
-                                    s1 * 7/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 3 0))
+                                    \times 7/6
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        <bf' fqs''>4
+                                        <cqs'' af''>4
+                                        <cqs'' eqs''>4
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % OPEN_BRACKETS:
                                     <<
                                         % OPEN_BRACKETS:
@@ -898,7 +1012,18 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
-                                    s1 * 9/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 9) (ly:make-duration 3 0))
+                                    \times 9/8
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        <eqf'' gqs''>2
+                                        <dqf'' a''>2
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % OPEN_BRACKETS:
                                     <<
                                         % OPEN_BRACKETS:
@@ -1071,7 +1196,11 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
-                                    s1 * 3/2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    <eqs'' eqs''>2.
+                                    <cqs'' eqs''>2.
                                     % OPEN_BRACKETS:
                                     <<
                                         % OPEN_BRACKETS:
@@ -1237,7 +1366,16 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
-                                    s1 * 3/4
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    <eqf'' gqs''>4
+                                    <eqf'' gqs''>8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    <eqf'' gqs''>8
+                                    <cqs'' eqs''>4
                                     % OPEN_BRACKETS:
                                     <<
                                         % OPEN_BRACKETS:
@@ -1421,7 +1559,18 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
-                                    s1 * 5/4
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 2 0))
+                                    \times 15/12
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        <cqs'' af''>2
+                                        <fqs'' fqs''>2
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % OPEN_BRACKETS:
                                     <<
                                         % OPEN_BRACKETS:
@@ -1597,7 +1746,19 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
-                                    s1 * 13/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 13) (ly:make-duration 3 0))
+                                    \times 91/84
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        <eqf'' gqs''>2
+                                        <cqs'' eqs''>2
+                                        <c'' b''>2
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % OPEN_BRACKETS:
                                     <<
                                         % OPEN_BRACKETS:
@@ -1764,7 +1925,19 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
-                                    s1 * 7/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 3 0))
+                                    \times 7/6
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        <eqs'' af''>4
+                                        <cqs'' af''>4
+                                        <bf' fqs''>4
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % OPEN_BRACKETS:
                                     <<
                                         % OPEN_BRACKETS:
@@ -1934,7 +2107,30 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
-                                    s1 * 7/8
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    <a' af''>4.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <a' af''>16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <c'' b''>8.
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    <c'' b''>4
                                     s1 * 11/8
                                     s1 * 1
                                     % BEFORE:
