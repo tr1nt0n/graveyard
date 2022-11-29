@@ -384,8 +384,14 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \downbow
+                                    - \downbow
                                     \ffff
                                     % SPANNER_STARTS:
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
                                     - \abjad-zero-padding-glissando
                                     \glissando
                                     - \tweak padding #11.5
@@ -404,7 +410,7 @@
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
-                                    b8
+                                    g'8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \upbow
@@ -427,14 +433,14 @@
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
-                                    g8.
+                                    d'8.
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
-                                    ef16
+                                    a16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
@@ -444,57 +450,266 @@
                                     % STOP_BEAM:
                                     ]
                                     s1 * 11/8
-                                    s1 * 7/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 7) (ly:make-duration 3 0))
+                                    \times 7/12
+                                    {
+                                        a2
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \downbow
+                                        \ffff
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #15
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 \hspace #0.5 } \hspace #0.5 }
+                                        \startTextSpan
+                                        - \tweak stencil #constante-hairpin
+                                        \<
+                                        fs'2
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \upbow
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #15
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 9 \hspace #0.5 } \hspace #0.5 }
+                                        \startTextSpan
+                                        e'4.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \downbow
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #15
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 9 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 7 9 \hspace #0.5 }
+                                        \startTextSpan
+                                        g8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
                                     s1 * 5/4
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 9) (ly:make-duration 3 0))
-                                    \times 9/16
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 9) (ly:make-duration 3 0))
+                                    \times 9/8
                                     {
-                                        c'1
-                                        c'2..
-                                        c'8
+                                        a'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \upbow
+                                        \ffff
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #14.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 7 \hspace #0.5 } \hspace #0.5 }
+                                        \startTextSpan
+                                        \>
+                                        ef'8
+                                        % AFTER:
+                                        % STOP_BEAM:
+                                        ]
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        g'4
+                                        % AFTER:
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #14.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 6 7 \hspace #0.5 } \hspace #0.5 }
+                                        \startTextSpan
+                                        g4.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \downbow
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #14.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 7 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 7 7 \hspace #0.5 }
+                                        \startTextSpan
+                                        a'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
                                     % CLOSE_BRACKETS:
                                     }
                                     s1 * 7/8
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 1 0))
-                                    \times 12/16
-                                    {
-                                        c'1
-                                        c'2..
-                                        c'8
-                                    % CLOSE_BRACKETS:
-                                    }
+                                    ef'8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \downbow
+                                    \mf
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 2 5 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    \>
+                                    a'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \upbow
+                                    \p
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 5 5 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 0 5 \hspace #0.5 }
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    a'16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
+                                    f'8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \downbow
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 5 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    f'8
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 5 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 5 5 \hspace #0.5 }
+                                    \startTextSpan
+                                    \<
+                                    bf16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    af4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \upbow
+                                    \ff
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 7 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    f'8
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 7 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 1 7 \hspace #0.5 }
+                                    \startTextSpan
+                                    \<
+                                    f16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    a'4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \downbow
+                                    \ffff
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 2 9 \hspace #0.5 }
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ef16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
                                     s1 * 1
                                     s1 * 3/4
                                     s1 * 9/8
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 2 0))
-                                    \times 10/16
-                                    {
-                                        c'1
-                                        c'2..
-                                        c'8
-                                    % CLOSE_BRACKETS:
-                                    }
+                                    s1 * 5/4
                                     s1 * 1
                                     s1 * 13/8
                                     s1 * 9/8
                                     s1 * 7/8
                                     s1 * 1
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 3 0))
-                                    \times 14/16
-                                    {
-                                        c'2
-                                        c'4..
-                                        c'16
-                                    % CLOSE_BRACKETS:
-                                    }
+                                    s1 * 7/8
                                     s1 * 11/8
                                     s1 * 1
                                     % BEFORE:

@@ -110,15 +110,6 @@ for measure in [
         beam_meter=True,
     )
 
-    trinton.make_music(
-        lambda _: trinton.select_target(_, (measure,)),
-        evans.RhythmHandler(evans.tuplet([(8, 7, 1)])),
-        trinton.treat_tuplets(),
-        evans.RewriteMeterCommand(boundary_depth=-2),
-        trinton.notehead_bracket_command(),
-        voice=score["viola 1 voice"],
-    )
-
 for measure in [
     4,
     10,
@@ -148,7 +139,7 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (2,)),
     evans.RhythmHandler(evans.talea([6, 2, 3, 1], 16)),
     trinton.treat_tuplets(),
-    evans.PitchHandler([9, -1, -5, -9]),
+    evans.PitchHandler([9, 7, 2, -3]),
     trinton.glissando_command(
         selector=trinton.ranged_selector(
             ranges=[
@@ -215,6 +206,272 @@ for measure, index in zip(
         ),
         voice=score["viola 2 voice"],
     )
+
+# viola RH music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (2,)),
+    evans.RhythmHandler(evans.talea([6, 2, 3, 1], 16)),
+    trinton.treat_tuplets(),
+    evans.PitchHandler([9, 7, 2, -3]),
+    trinton.glissando_command(
+        selector=trinton.ranged_selector(
+            ranges=[
+                range(0, 2),
+                range(1, 4),
+            ],
+            nested=True,
+        ),
+        zero_padding=True,
+    ),
+    trinton.continuous_spanner_command(
+        strings=trinton.return_fraction_string_list([(0, 9), (3, 9), (1, 9)]),
+        selector=trinton.select_leaves_by_index([0, 1, 1, -1]),
+        padding=11.5,
+        full_string=True,
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Dynamic("ffff"),
+            abjad.StartHairpin("--"),
+            abjad.Articulation("downbow"),
+            abjad.Articulation("upbow"),
+            abjad.StartSlur(),
+            abjad.StopHairpin(),
+            abjad.StopSlur(),
+        ],
+        selector=trinton.select_leaves_by_index([0, 0, 0, 1, 1, -1, -1]),
+    ),
+    abjad.beam,
+    voice=score["viola 1 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (4,)),
+    evans.RhythmHandler(evans.tuplet([(4, 4, 3, 1)])),
+    trinton.treat_tuplets(),
+    evans.PitchHandler([-3, 6, 4, -5]),
+    trinton.attachment_command(
+        attachments=[abjad.Glissando(zero_padding=True)],
+        selector=trinton.select_leaves_by_index([0, 1, 2]),
+    ),
+    trinton.continuous_spanner_command(
+        strings=trinton.return_fraction_string_list([(0, 9), (4, 9), (1, 9), (7, 9)]),
+        selector=trinton.select_leaves_by_index([0, 1, 1, 2, 2, -1]),
+        padding=15,
+        full_string=True,
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Dynamic("ffff"),
+            abjad.StartHairpin("--"),
+            abjad.Articulation("downbow"),
+            abjad.Articulation("upbow"),
+            abjad.Articulation("downbow"),
+            abjad.StartSlur(),
+            abjad.StopHairpin(),
+            abjad.StopSlur(),
+        ],
+        selector=trinton.select_leaves_by_index([0, 0, 0, 1, 2, 2, -1, -1]),
+    ),
+    trinton.notehead_bracket_command(),
+    voice=score["viola 1 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (6,)),
+    evans.RhythmHandler(evans.tuplet([(1, 1, 2, 3, 1)])),
+    trinton.treat_tuplets(),
+    evans.PitchHandler([9, 3, 7, -5, 9]),
+    trinton.attachment_command(
+        attachments=[abjad.Glissando(zero_padding=True)],
+        selector=trinton.select_leaves_by_index([0, 1, 2, 3]),
+    ),
+    trinton.continuous_spanner_command(
+        strings=trinton.return_fraction_string_list(
+            [
+                (7, 7),
+                (6, 7),
+                (3, 7),
+                (7, 7),
+            ]
+        ),
+        selector=trinton.select_leaves_by_index([0, 2, 2, 3, 3, -1]),
+        padding=14.5,
+        full_string=True,
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Dynamic("ffff"),
+            abjad.StartHairpin(">"),
+            abjad.Dynamic("ff"),
+            abjad.StartSlur(),
+            abjad.StopSlur(),
+            abjad.StartSlur(),
+            abjad.StopSlur(),
+            abjad.Articulation("upbow"),
+            abjad.Articulation("downbow"),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                0,
+                -1,
+                0,
+                2,
+                3,
+                -1,
+                0,
+                3,
+            ]
+        ),
+    ),
+    trinton.notehead_bracket_command(),
+    abjad.beam,
+    voice=score["viola 1 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (8,)),
+    evans.RhythmHandler(evans.talea([3, 2, 1, 3, 2, 1, 4, 2, 1, 4, 1], 16)),
+    trinton.treat_tuplets(),
+    evans.PitchHandler(
+        [
+            3,
+            9,
+            9,
+            5,
+            5,
+            -2,
+            -4,
+            5,
+            -7,
+            9,
+            -9,
+        ]
+    ),
+    trinton.attachment_command(
+        attachments=[abjad.Glissando(zero_padding=True)],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                1,
+                3,
+                4,
+                6,
+                7,
+                9,
+            ]
+        ),
+    ),
+    trinton.continuous_spanner_command(
+        strings=trinton.return_fraction_string_list(
+            [
+                (2, 5),
+                (5, 5),
+                (0, 5),
+            ]
+        ),
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                1,
+                2,
+            ]
+        ),
+        padding=11.5,
+        full_string=True,
+    ),
+    trinton.continuous_spanner_command(
+        strings=trinton.return_fraction_string_list([(0, 5), (4, 5), (5, 5)]),
+        selector=trinton.select_leaves_by_index([3, 4, 5]),
+        padding=11.5,
+        full_string=True,
+    ),
+    trinton.continuous_spanner_command(
+        strings=trinton.return_fraction_string_list(
+            [
+                (
+                    7,
+                    7,
+                ),
+                (4, 7),
+                (1, 7),
+            ]
+        ),
+        selector=trinton.select_leaves_by_index(
+            [
+                6,
+                7,
+                8,
+            ]
+        ),
+        padding=11.5,
+        full_string=True,
+    ),
+    trinton.continuous_spanner_command(
+        strings=trinton.return_fraction_string_list([(0, 9), (2, 9)]),
+        selector=trinton.select_leaves_by_index([9, 10]),
+        padding=11.5,
+        full_string=True,
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.StartSlur(),
+            abjad.StopSlur(),
+            abjad.StartSlur(),
+            abjad.StopSlur(),
+            abjad.StartSlur(),
+            abjad.StopSlur(),
+            abjad.StartSlur(),
+            abjad.StopSlur(),
+            abjad.Dynamic("mf"),
+            abjad.StartHairpin(">"),
+            abjad.Dynamic("p"),
+            abjad.StartHairpin("--"),
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("ff"),
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("ffff"),
+            abjad.StartHairpin("--"),
+            abjad.StopHairpin(),
+            abjad.Articulation("downbow"),
+            abjad.Articulation("upbow"),
+            abjad.Articulation("downbow"),
+            abjad.Articulation("upbow"),
+            abjad.Articulation("downbow"),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                1,
+                2,
+                3,
+                5,
+                6,
+                8,
+                9,
+                -1,
+                0,
+                0,
+                1,
+                1,
+                4,
+                6,
+                7,
+                -2,
+                -2,
+                -1,
+                0,
+                1,
+                3,
+                6,
+                9,
+            ]
+        ),
+    ),
+    abjad.beam,
+    voice=score["viola 1 voice"],
+)
 
 # globals
 

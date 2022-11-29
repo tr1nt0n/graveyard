@@ -106,6 +106,7 @@
         \override StemTremolo.slope = 0.5
 
         \override TextScript.font-name = "Bodoni72 Book"
+        \override TextSpanner.font-name = "Bodoni72 Book"
 
         \override Tie.stencil = #flare-tie
         \override Tie.height-limit = 6
