@@ -120,11 +120,12 @@
         \override TupletBracket.layer = 2
         \override TupletBracket.whiteout-style = #'outline
         \override TupletBracket.whiteout = 1
-        \override TupletNumber.font-size = 1.5
+        \override TupletNumber.font-size = 2
         \override TupletNumber.layer = 3
         \override TupletNumber.whiteout-style = #'outline
         \override TupletNumber.whiteout = 1
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
+        \override TupletNumber.font-name = "Bodoni72 Book Italic"
         \override TupletBracket.stencil =
             #(lambda (grob)
                (let* ((pos (ly:grob-property grob 'positions))

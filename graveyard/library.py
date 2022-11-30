@@ -181,6 +181,15 @@ def smooth_voice_leading():
     return smooth
 
 
+def transpose_by_selection(transpositions, selector):
+    def transpose(argument):
+        selections = selector(argument)
+        for transposition, selection in zip(transpositions, selections):
+            abjad.mutate.transpose(selection, transposition)
+
+    return transpose
+
+
 # notation tools
 
 

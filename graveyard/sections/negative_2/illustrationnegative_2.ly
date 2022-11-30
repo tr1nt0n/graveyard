@@ -446,10 +446,10 @@
                                     s1 * 11/8
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 7) (ly:make-duration 3 0))
-                                    \times 7/12
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 3 0))
+                                    \times 14/12
                                     {
-                                        a2
+                                        a4
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \downbow
@@ -463,7 +463,7 @@
                                         \startTextSpan
                                         - \tweak stencil #constante-hairpin
                                         \<
-                                        fs'2
+                                        fs'4
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \upbow
@@ -476,12 +476,14 @@
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 9 \hspace #0.5 } \hspace #0.5 }
                                         \startTextSpan
-                                        e'4.
+                                        e'8.
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \downbow
                                         % SPANNER_STOPS:
                                         \stopTextSpan
+                                        % START_BEAM:
+                                        [
                                         % SPANNER_STARTS:
                                         (
                                         - \abjad-zero-padding-glissando
@@ -491,13 +493,15 @@
                                         - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 9 \hspace #0.5 } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \concat { \upright \fraction 7 9 \hspace #0.5 }
                                         \startTextSpan
-                                        g8
+                                        g16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \!
                                         % SPANNER_STOPS:
                                         )
                                         \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
                                     % CLOSE_BRACKETS:
                                     }
                                     s1 * 5/4
@@ -787,10 +791,10 @@
                                     s1 * 9/8
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 2 0))
-                                    \times 10/16
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 2 0))
+                                    \times 20/16
                                     {
-                                        af2
+                                        af4
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \upbow
@@ -805,7 +809,7 @@
                                         \startTextSpan
                                         - \tweak stencil #constante-hairpin
                                         \<
-                                        bf2
+                                        bf4
                                         % AFTER:
                                         % SPANNER_STOPS:
                                         )
@@ -817,7 +821,7 @@
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 9 \hspace #0.5 } \hspace #0.5 }
                                         \startTextSpan
-                                        d'2..
+                                        d'4..
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \downbow
@@ -835,7 +839,7 @@
                                         \startTextSpan
                                         - \tweak stencil #constante-hairpin
                                         \<
-                                        fs'8
+                                        fs'16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \!
@@ -845,11 +849,393 @@
                                     % CLOSE_BRACKETS:
                                     }
                                     s1 * 1
-                                    s1 * 13/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 13) (ly:make-duration 3 0))
+                                    \times 26/24
+                                    {
+                                        fs16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \downbow
+                                        \ff
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #13.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 7 \hspace #0.5 } \hspace #0.5 }
+                                        \startTextSpan
+                                        - \tweak stencil #constante-hairpin
+                                        \<
+                                        fs'8
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        c'16
+                                        % AFTER:
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #13.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 7 \hspace #0.5 } \hspace #0.5 }
+                                        \startTextSpan
+                                        \>
+                                        fs'16
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        fs8.
+                                        % AFTER:
+                                        % SPANNER_STOPS:
+                                        )
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        bf16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \upbow
+                                        \mf
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #13.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 7 \hspace #0.5 } \hspace #0.5 }
+                                        \startTextSpan
+                                        \<
+                                        c'16
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        f8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \fff
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        \>
+                                        g'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #13.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 6 7 \hspace #0.5 } \hspace #0.5 }
+                                        \startTextSpan
+                                        ef'16
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        g'16
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        ef'16
+                                        % AFTER:
+                                        % SPANNER_STOPS:
+                                        )
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        a'8.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        - \downbow
+                                        \ffff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        - \tweak padding #13.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 7 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 2 7 \hspace #0.5 }
+                                        \startTextSpan
+                                        f16
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        ef'8
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        c'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
                                     s1 * 9/8
-                                    s1 * 7/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 3 0))
+                                    \times 14/12
+                                    {
+                                        e'4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \downbow
+                                        \mp
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #14.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 5 \hspace #0.5 } \hspace #0.5 }
+                                        \startTextSpan
+                                        - \tweak stencil #constante-hairpin
+                                        \<
+                                        e'4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \upbow
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % SPANNER_STARTS:
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #14.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 5 \hspace #0.5 } \hspace #0.5 }
+                                        \startTextSpan
+                                        e'8.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \downbow
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        - \tweak padding #14.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 5 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 5 5 \hspace #0.5 }
+                                        \startTextSpan
+                                        af16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
                                     s1 * 1
-                                    s1 * 7/8
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \downbow
+                                    \ppp
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    \<
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \upbow
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \downbow
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \upbow
+                                    \p
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    \>
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \downbow
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \upbow
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \downbow
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \upbow
+                                    \ppp
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    \<
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \downbow
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \upbow
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \downbow
+                                    \p
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    \>
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \upbow
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    \startTextSpan
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \downbow
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 3 3 \hspace #0.5 }
+                                    \startTextSpan
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    fs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \upbow
+                                    \ppp
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 11/8
                                     s1 * 1
                                     % BEFORE:
@@ -893,17 +1279,32 @@
                                                 \clef "altovarC"
                                                 c''16
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
+                                                % MARKUP:
+                                                - \markup \override #'(font-name . "Bodoni72 Book Italic") { Solo, molto espressivo }
                                                 % START_BEAM:
                                                 [
                                                 d'16
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
+                                                ^ \staccato
                                                 % SPANNER_STARTS:
                                                 (
+                                                \>
                                                 bf16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \staccato
                                                 cs'16
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \mp
                                                 % SPANNER_STOPS:
                                                 )
+                                                % SPANNER_STARTS:
+                                                \glissando
                                                 % OPEN_BRACKETS:
                                                 \tweak text #tuplet-number::calc-fraction-text
                                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 4 0))
@@ -911,14 +1312,26 @@
                                                 {
                                                     d''8.
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \fff
                                                     % START_BEAM:
                                                     [
-                                                    aqs16
+                                                    aqs'16
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \mp
+                                                    ^ \staccato
                                                     % SPANNER_STARTS:
                                                     (
+                                                    \<
                                                     bqs16
+                                                    % AFTER:
+                                                    % ARTICULATIONS:
+                                                    ^ \staccato
                                                     gqs8.
+                                                    % AFTER:
+                                                    % STEM_TREMOLOS:
+                                                    :64
                                                 % CLOSE_BRACKETS:
                                                 }
                                             % CLOSE_BRACKETS:
@@ -931,23 +1344,41 @@
                                                 % AFTER:
                                                 % SPANNER_STOPS:
                                                 )
+                                                % SPANNER_STARTS:
+                                                \glissando
                                                 cs''8
-                                                aqf8
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
+                                                aqf'8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \mp
                                                 % SPANNER_STARTS:
                                                 (
+                                                - \tweak stencil #constante-hairpin
+                                                \<
                                                 cqs'8
                                                 eqs'16.
                                                 % AFTER:
                                                 % SPANNER_STOPS:
                                                 )
                                                 b'16.
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
                                                 bf16.
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \p
                                                 % SPANNER_STARTS:
                                                 (
-                                                eqf'16.
+                                                \<
+                                                \glissando
+                                                eqf16.
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \ff
                                                 % SPANNER_STOPS:
                                                 )
                                                 % STOP_BEAM:
@@ -1066,31 +1497,72 @@
                                                 \clef "altovarC"
                                                 cs''8
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
                                                 % START_BEAM:
                                                 [
                                                 dqs'8
                                                 % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :64
+                                                % ARTICULATIONS:
+                                                \f
                                                 % SPANNER_STARTS:
                                                 (
-                                                gqf'8
-                                                fqs'8
+                                                - \tweak arrow-length #2
+                                                - \tweak arrow-width #0.5
+                                                - \tweak bound-details.right.arrow ##t
+                                                - \tweak thickness #2
+                                                \glissando
+                                                \>
+                                                gqf8
+                                                % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :32
+                                                % SPANNER_STARTS:
+                                                - \tweak arrow-length #2
+                                                - \tweak arrow-width #0.5
+                                                - \tweak bound-details.right.arrow ##t
+                                                - \tweak thickness #2
+                                                \glissando
+                                                fqs8
+                                                % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :16
                                                 % OPEN_BRACKETS:
                                                 \tweak text #tuplet-number::calc-fraction-text
                                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 4 0))
                                                 \times 5/8
                                                 {
-                                                    gqf'8
+                                                    gqf8
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \p
                                                     % SPANNER_STOPS:
                                                     )
                                                     % START_BEAM:
                                                     [
+                                                    % SPANNER_STARTS:
+                                                    \<
+                                                    \glissando
                                                     d''8
+                                                    % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \fff
+                                                    % SPANNER_STARTS:
+                                                    \>
+                                                    \glissando
                                                     gqs8
                                                     % AFTER:
                                                     % SPANNER_STARTS:
                                                     (
-                                                    eqs'8
+                                                    eqs8
+                                                    % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \p
+                                                    % SPANNER_STARTS:
+                                                    - \tweak stencil #constante-hairpin
+                                                    \<
                                                 % CLOSE_BRACKETS:
                                                 }
                                             % CLOSE_BRACKETS:
@@ -1104,20 +1576,51 @@
                                                 % AFTER:
                                                 % SPANNER_STOPS:
                                                 )
+                                                % SPANNER_STARTS:
+                                                \glissando
                                                 bf'8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
                                                 ef'8
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
                                                 % SPANNER_STARTS:
                                                 (
-                                                a8
-                                                af16
-                                                bf16
+                                                a'8
                                                 % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :16
+                                                % SPANNER_STARTS:
+                                                - \tweak arrow-length #2
+                                                - \tweak arrow-width #0.5
+                                                - \tweak bound-details.right.arrow ##t
+                                                - \tweak thickness #2
+                                                \glissando
+                                                af'16
+                                                % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :128
+                                                % ARTICULATIONS:
+                                                \ff
+                                                % SPANNER_STARTS:
+                                                \<
+                                                bf'16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \staccato
                                                 % SPANNER_STOPS:
                                                 )
                                                 c''16
-                                                g16
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
+                                                g'16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \mp
+                                                ^ \staccato
                                                 % STOP_BEAM:
                                                 ]
                                             % CLOSE_BRACKETS:
@@ -1244,27 +1747,57 @@
                                                 % COMMANDS:
                                                 \clef "altovarC"
                                                 d''4
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
+                                                % SPANNER_STARTS:
+                                                - \tweak stencil #constante-hairpin
+                                                \<
                                                 fs'4
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
                                                 % SPANNER_STARTS:
                                                 (
+                                                - \tweak stencil #constante-hairpin
+                                                \<
                                                 bqs4
                                                 % AFTER:
                                                 % SPANNER_STOPS:
                                                 )
                                                 cs''4
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \fp
+                                                % SPANNER_STARTS:
+                                                \<
                                                 f'16.
                                                 % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :128
+                                                % ARTICULATIONS:
+                                                \ff
                                                 % START_BEAM:
                                                 [
                                                 % SPANNER_STARTS:
                                                 (
-                                                g16.
+                                                - \tweak circled-tip ##t
+                                                - \tweak stencil #abjad-flared-hairpin
+                                                \>
+                                                g'16.
+                                                % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :128
                                                 eqs'16.
                                                 % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :128
                                                 % SPANNER_STOPS:
                                                 )
                                                 b'16.
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
                                             % CLOSE_BRACKETS:
                                             }
                                             % OPEN_BRACKETS:
@@ -1273,22 +1806,49 @@
                                             {
                                                 af8
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
+                                                ^ \accent
                                                 % SPANNER_STARTS:
                                                 (
-                                                eqf'8
+                                                - \tweak stencil #constante-hairpin
+                                                \<
+                                                \glissando
+                                                eqf8
+                                                % AFTER:
+                                                % SPANNER_STARTS:
+                                                \glissando
                                                 bqf8
-                                                eqs'8
+                                                % AFTER:
+                                                % SPANNER_STARTS:
+                                                \glissando
+                                                eqs8
                                                 % AFTER:
                                                 % SPANNER_STOPS:
                                                 )
                                                 cs''32
-                                                aqs32
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
+                                                % SPANNER_STARTS:
+                                                - \tweak circled-tip ##t
+                                                - \tweak stencil #abjad-flared-hairpin
+                                                \>
+                                                aqs'32
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \staccato
                                                 % SPANNER_STARTS:
                                                 (
                                                 eqf'32
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \staccato
                                                 bqs32
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \!
+                                                ^ \staccato
                                                 % SPANNER_STOPS:
                                                 )
                                                 % STOP_BEAM:
@@ -1403,9 +1963,15 @@
                                                 \clef "altovarC"
                                                 d''16
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
                                                 % START_BEAM:
                                                 [
-                                                af16
+                                                % SPANNER_STARTS:
+                                                - \tweak circled-tip ##t
+                                                - \tweak stencil #abjad-flared-hairpin
+                                                \>
+                                                af'16
                                                 % AFTER:
                                                 % SPANNER_STARTS:
                                                 (
@@ -1416,14 +1982,29 @@
                                                 % STOP_BEAM:
                                                 ]
                                                 bf'4..
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
+                                                % SPANNER_STARTS:
+                                                - \tweak stencil #constante-hairpin
+                                                \<
                                                 bqf32
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \mp
+                                                ^ \staccato
                                                 % START_BEAM:
                                                 [
                                                 % SPANNER_STARTS:
                                                 (
                                                 cs'32
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \staccato
                                                 aqs16.
+                                                % AFTER:
+                                                % SPANNER_STARTS:
+                                                \<
                                                 bqs32
                                                 % AFTER:
                                                 % SPANNER_STOPS:
@@ -1436,31 +2017,68 @@
                                             \times 7/13
                                             {
                                                 c''16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
                                                 dqf'16
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \staccato
                                                 % STOP_BEAM:
                                                 ]
                                                 % SPANNER_STARTS:
                                                 (
-                                                cs'4..
+                                                cs4..
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \fp
+                                                ^ \accent
+                                                % SPANNER_STARTS:
+                                                - \tweak padding #4
+                                                - \abjad-dashed-line-with-hook
+                                                - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                \startTextSpan
+                                                - \tweak stencil #abjad-flared-hairpin
+                                                \<
                                                 dqs'8.
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \mf
                                                 % SPANNER_STOPS:
                                                 )
+                                                \stopTextSpan
                                                 % START_BEAM:
                                                 [
+                                                % SPANNER_STARTS:
+                                                \<
+                                                \glissando
                                                 % OPEN_BRACKETS:
                                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
                                                 \times 2/3
                                                 {
                                                     d''64
-                                                    d'32.
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \fff
+                                                    % SPANNER_STARTS:
+                                                    - \tweak stencil #constante-hairpin
+                                                    \<
+                                                    d32.
+                                                    % AFTER:
+                                                    % ARTICULATIONS:
+                                                    ^ \staccato
                                                     % SPANNER_STARTS:
                                                     (
-                                                    ef'64
-                                                    cs'64
+                                                    ef64
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    ^ \staccato
+                                                    cs64
+                                                    % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \!
+                                                    ^ \accent
+                                                    ^ \staccato
                                                     % SPANNER_STOPS:
                                                     )
                                                     % STOP_BEAM:
@@ -1579,15 +2197,25 @@
                                                 % COMMANDS:
                                                 \clef "altovarC"
                                                 cs''16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
                                                 af4..
                                                 % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :32
+                                                % ARTICULATIONS:
+                                                \p
                                                 % SPANNER_STARTS:
                                                 (
+                                                \<
                                                 bf8.
                                                 % AFTER:
                                                 % START_BEAM:
                                                 [
-                                                af16
+                                                % SPANNER_STARTS:
+                                                \glissando
+                                                af'16
                                                 % AFTER:
                                                 % SPANNER_STOPS:
                                                 )
@@ -1597,13 +2225,18 @@
                                                 {
                                                     b'32.
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \fff
                                                     % START_BEAM:
                                                     [
+                                                    % SPANNER_STARTS:
+                                                    - \tweak stencil #constante-hairpin
+                                                    \<
                                                     c'64
                                                     % AFTER:
                                                     % SPANNER_STARTS:
                                                     (
-                                                    g64
+                                                    g'64
                                                     % AFTER:
                                                     % SPANNER_STOPS:
                                                     )
@@ -1616,24 +2249,53 @@
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 4 1))
                                             \times 4/5
                                             {
-                                                b8..
+                                                b'8..
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \pp
                                                 % SPANNER_STARTS:
                                                 (
+                                                - \tweak padding #5
+                                                - \abjad-dashed-line-with-hook
+                                                - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                \startTextSpan
+                                                - \tweak stencil #abjad-flared-hairpin
+                                                \<
+                                                \glissando
                                                 fs'16.
                                                 dqf'32
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
+                                                % SPANNER_STOPS:
+                                                \stopTextSpan
+                                                % SPANNER_STARTS:
+                                                \<
                                                 f'32
                                                 % AFTER:
                                                 % SPANNER_STOPS:
                                                 )
                                                 d''64.
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
                                                 dqs'64.
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \mp
+                                                ^ \staccato
                                                 % SPANNER_STARTS:
                                                 (
+                                                \<
                                                 eqf'64.
-                                                gqf'64.
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \staccato
+                                                gqf64.
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
+                                                ^ \tenuto
                                                 % SPANNER_STOPS:
                                                 )
                                                 % STOP_BEAM:
@@ -1754,8 +2416,14 @@
                                                 % COMMANDS:
                                                 \clef "altovarC"
                                                 bf'4.
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \ff
                                                 af8
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
+                                                ^ \accent
                                                 % START_BEAM:
                                                 [
                                                 % SPANNER_STARTS:
@@ -1766,22 +2434,46 @@
                                                 ]
                                                 aqf4.
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \p
                                                 % SPANNER_STOPS:
                                                 )
+                                                % SPANNER_STARTS:
+                                                - \tweak padding #5
+                                                - \abjad-dashed-line-with-hook
+                                                - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                \startTextSpan
+                                                \<
+                                                \glissando
                                                 % OPEN_BRACKETS:
                                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
                                                 \times 4/5
                                                 {
                                                     c''64
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \ff
+                                                    % SPANNER_STOPS:
+                                                    \stopTextSpan
                                                     % START_BEAM:
                                                     [
-                                                    aqs64
+                                                    % SPANNER_STARTS:
+                                                    - \tweak stencil #constante-hairpin
+                                                    \<
+                                                    aqs'64
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    ^ \staccato
                                                     % SPANNER_STARTS:
                                                     (
                                                     eqf'64
-                                                    gqs16..
+                                                    % AFTER:
+                                                    % ARTICULATIONS:
+                                                    ^ \staccato
+                                                    gqs'16..
+                                                    % AFTER:
+                                                    % SPANNER_STARTS:
+                                                    \>
                                                 % CLOSE_BRACKETS:
                                                 }
                                             % CLOSE_BRACKETS:
@@ -1792,18 +2484,37 @@
                                             {
                                                 eqs'8
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \mp
                                                 % SPANNER_STOPS:
                                                 )
+                                                % SPANNER_STARTS:
+                                                \<
+                                                \glissando
                                                 d''8
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \ff
                                                 % STOP_BEAM:
                                                 ]
+                                                % SPANNER_STARTS:
+                                                \>
+                                                \glissando
                                                 aqf4.
                                                 % AFTER:
                                                 % SPANNER_STARTS:
                                                 (
+                                                - \tweak padding #5
+                                                - \abjad-dashed-line-with-hook
+                                                - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                \startTextSpan
+                                                \glissando
                                                 d'8
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \mp
+                                                % SPANNER_STOPS:
+                                                \stopTextSpan
                                                 % START_BEAM:
                                                 [
                                                 % OPEN_BRACKETS:
@@ -1812,15 +2523,29 @@
                                                 {
                                                     dqs'64
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \f
+                                                    ^ \staccato
                                                     % SPANNER_STOPS:
                                                     )
                                                     cs''64
+                                                    % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \fff
                                                     cs'16..
                                                     % AFTER:
+                                                    % STEM_TREMOLOS:
+                                                    :128
+                                                    % ARTICULATIONS:
+                                                    \p
                                                     % SPANNER_STARTS:
                                                     (
+                                                    - \tweak circled-tip ##t
+                                                    \>
                                                     dqf'32.
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \!
                                                     % SPANNER_STOPS:
                                                     )
                                                     % STOP_BEAM:
@@ -1948,21 +2673,38 @@
                                                 % COMMANDS:
                                                 \clef "altovarC"
                                                 b'8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \ff
                                                 af4.
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \p
                                                 % SPANNER_STARTS:
                                                 (
-                                                eqs'8
+                                                \<
+                                                \glissando
+                                                eqs8
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \mf
                                                 % START_BEAM:
                                                 [
                                                 g8
+                                                % AFTER:
+                                                % SPANNER_STARTS:
+                                                - \tweak stencil #abjad-flared-hairpin
+                                                \<
+                                                \glissando
                                                 % OPEN_BRACKETS:
                                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                                                 \times 2/3
                                                 {
                                                     eqf'64
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \ff
+                                                    ^ \staccato
                                                     % SPANNER_STOPS:
                                                     )
                                                     % START_BEAM:
@@ -1970,10 +2712,14 @@
                                                     cs''16..
                                                     eqs'32.
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    ^ \staccato
                                                     % SPANNER_STARTS:
                                                     (
                                                     e'64
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    ^ \staccato
                                                     % SPANNER_STOPS:
                                                     )
                                                     % STOP_BEAM:
@@ -1987,29 +2733,58 @@
                                             \times 4/7
                                             {
                                                 d''4.
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
+                                                % SPANNER_STARTS:
+                                                - \tweak stencil #constante-hairpin
+                                                \<
                                                 ef'8
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \p
                                                 % START_BEAM:
                                                 [
                                                 % SPANNER_STARTS:
                                                 (
+                                                \>
                                                 dqs'8
                                                 c'8
                                                 % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :64
+                                                % ARTICULATIONS:
+                                                \ppp
                                                 % SPANNER_STOPS:
                                                 )
+                                                % SPANNER_STARTS:
+                                                \<
                                                 % OPEN_BRACKETS:
                                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
                                                 \times 2/3
                                                 {
                                                     bf'16..
+                                                    % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \ff
+                                                    % SPANNER_STARTS:
+                                                    - \tweak stencil #constante-hairpin
+                                                    \<
                                                     dqf'32.
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    ^ \tenuto
                                                     % SPANNER_STARTS:
                                                     (
                                                     b64
+                                                    % AFTER:
+                                                    % ARTICULATIONS:
+                                                    ^ \staccato
                                                     dqf'64
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \!
+                                                    ^ \staccato
                                                     % SPANNER_STOPS:
                                                     )
                                                     % STOP_BEAM:
@@ -2138,14 +2913,30 @@
                                                 \clef "altovarC"
                                                 c''16
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
                                                 % START_BEAM:
                                                 [
+                                                % SPANNER_STARTS:
+                                                - \tweak stencil #constante-hairpin
+                                                \<
                                                 f'16
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \accent
+                                                ^ \staccato
                                                 % SPANNER_STARTS:
                                                 (
                                                 cs'16
-                                                fs'16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \accent
+                                                ^ \staccato
+                                                fs16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \accent
+                                                ^ \staccato
                                                 % OPEN_BRACKETS:
                                                 \tweak text #tuplet-number::calc-fraction-text
                                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 4 0))
@@ -2153,16 +2944,35 @@
                                                 {
                                                     bqs8.
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \pp
                                                     % SPANNER_STOPS:
                                                     )
                                                     % START_BEAM:
                                                     [
                                                     d''16
-                                                    cs'16
+                                                    % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \f
+                                                    % SPANNER_STARTS:
+                                                    - \tweak stencil #constante-hairpin
+                                                    \<
+                                                    cs''16
                                                     % AFTER:
                                                     % SPANNER_STARTS:
                                                     (
-                                                    af8.
+                                                    af'8.
+                                                    % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \mp
+                                                    % SPANNER_STARTS:
+                                                    - \tweak circled-tip ##t
+                                                    \>
+                                                    - \tweak padding #5
+                                                    - \abjad-dashed-line-with-hook
+                                                    - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                    \startTextSpan
+                                                    \glissando
                                                 % CLOSE_BRACKETS:
                                                 }
                                             % CLOSE_BRACKETS:
@@ -2176,20 +2986,44 @@
                                                 % AFTER:
                                                 % SPANNER_STOPS:
                                                 )
+                                                \stopTextSpan
                                                 cs''8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
                                                 aqf8
                                                 % AFTER:
                                                 % SPANNER_STARTS:
                                                 (
-                                                eqs'8
-                                                fs'16.
-                                                eqf'16.
+                                                - \tweak circled-tip ##t
+                                                \<
+                                                - \tweak padding #5
+                                                - \abjad-dashed-line-with-hook
+                                                - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                \startTextSpan
+                                                \glissando
+                                                eqs8
+                                                % AFTER:
+                                                % SPANNER_STARTS:
+                                                \glissando
+                                                fs16.
+                                                % AFTER:
+                                                % SPANNER_STARTS:
+                                                \glissando
+                                                eqf16.
                                                 % AFTER:
                                                 % SPANNER_STOPS:
                                                 )
+                                                \stopTextSpan
                                                 b'16.
-                                                f'16.
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
+                                                f16.
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \ppp
+                                                ^ \staccato
                                                 % STOP_BEAM:
                                                 ]
                                             % CLOSE_BRACKETS:
@@ -2317,15 +3151,25 @@
                                                 \clef "altovarC"
                                                 cs''8
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
                                                 % START_BEAM:
                                                 [
-                                                eqs'8
+                                                eqs8
                                                 % AFTER:
                                                 % SPANNER_STARTS:
                                                 (
-                                                fqs'8
-                                                ef'8
+                                                - \tweak circled-tip ##t
+                                                \<
+                                                \glissando
+                                                fqs8
                                                 % AFTER:
+                                                % SPANNER_STARTS:
+                                                \glissando
+                                                ef8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \mp
                                                 % SPANNER_STOPS:
                                                 )
                                                 % OPEN_BRACKETS:
@@ -2335,14 +3179,26 @@
                                                 {
                                                     d''8
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \ff
                                                     % START_BEAM:
                                                     [
-                                                    dqs'8
+                                                    dqs8
                                                     % AFTER:
+                                                    % ARTICULATIONS:
+                                                    \mp
                                                     % SPANNER_STARTS:
                                                     (
+                                                    \<
+                                                    \glissando
                                                     af8
-                                                    dqf'8
+                                                    % AFTER:
+                                                    % SPANNER_STARTS:
+                                                    \glissando
+                                                    dqf8
+                                                    % AFTER:
+                                                    % SPANNER_STARTS:
+                                                    \glissando
                                                 % CLOSE_BRACKETS:
                                                 }
                                             % CLOSE_BRACKETS:
@@ -2356,22 +3212,42 @@
                                                 % SPANNER_STOPS:
                                                 )
                                                 bf'16
-                                                d'16
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
+                                                d''16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
+                                                ^ \staccato
                                                 % SPANNER_STARTS:
                                                 (
-                                                gqf'16
-                                                cs'32
+                                                gqf''16
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \staccato
+                                                cs''32
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \staccato
                                                 % SPANNER_STOPS:
                                                 )
                                                 c''32
-                                                fqs'32
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                \fff
+                                                fqs''32
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \f
+                                                ^ \staccato
                                                 % SPANNER_STARTS:
                                                 (
-                                                f'32
+                                                f''32
                                                 % AFTER:
+                                                % ARTICULATIONS:
+                                                ^ \accent
+                                                ^ \staccato
                                                 % SPANNER_STOPS:
                                                 )
                                                 % STOP_BEAM:
