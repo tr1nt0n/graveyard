@@ -277,6 +277,20 @@ def imbrication_command(pitches):
     return imbricate
 
 
+def clean_up_cents():
+    def clean(argument):
+        ties = abjad.select.logical_ties(argument)
+        for tie in ties:
+            if len(tie) < 2:
+                pass
+            else:
+                leaves = abjad.select.exclude(abjad.select.leaves(tie), [0])
+                for leaf in leaves:
+                    abjad.detach(abjad.Markup, leaf)
+
+    return clean
+
+
 # markups
 
 all_instrument_names = [
