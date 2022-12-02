@@ -179,7 +179,6 @@
         \Staff
         \name FingerStaff
         \type Engraver_group
-        \remove System_start_delimiter_engraver
 
         \override Accidental.stencil = ##f
 
@@ -204,6 +203,7 @@
 
     \context{
         \GrandStaff
+        % \remove Time_signature_engraver
         \accepts RightHandStaff
         \accepts FingerStaff
         \accepts FingerTappingStaff
@@ -211,11 +211,13 @@
 
     \context {
         \StaffGroup
+        % \remove Time_signature_engraver
         \remove System_start_delimiter_engraver
     }
 
     \context {
         \Voice
+        % \remove Time_signature_engraver
         \remove Forbid_line_break_engraver
         \override Accidental.font-size = 1
     }

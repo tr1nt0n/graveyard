@@ -193,33 +193,43 @@ def transpose_by_selection(transpositions, selector):
 # notation tools
 
 
-def noteheads_only():
-    def only_noteheads(argument):
-        for leaf in abjad.select.leaves(argument):
-            abjad.attach(
-                abjad.LilyPondLiteral(r"\once \override Stem.stencil = ##f", "before"),
-                leaf,
-            )
-            abjad.attach(
-                abjad.LilyPondLiteral(r"\once \override Beam.stencil = ##f", "before"),
-                leaf,
-            )
-            abjad.attach(
-                abjad.LilyPondLiteral(r"\once \override Flag.stencil = ##f", "before"),
-                leaf,
-            )
-            abjad.attach(
-                abjad.LilyPondLiteral(r"\once \override Dots.stencil = ##f", "before"),
-                leaf,
-            )
-            abjad.attach(
-                abjad.LilyPondLiteral(
-                    r"\once \override NoteHead.duration-log = -1", "before"
-                ),
-                leaf,
-            )
+def left_beam(selector=None):
+    def beam(argument):
+        if selector is not None:
+            for tuplet in selector(argument):
+                abjad.override(tuplet[0]).Beam.grow_direction = abjad.LEFT
+        else:
+            for tuplet in abjad.select.tuplets(argument):
+                abjad.override(tuplet[0]).Beam.grow_direction = abjad.LEFT
 
-    return only_noteheads
+    return beam
+
+
+def right_beam(selector=None):
+    def beam(argument):
+        if selector is not None:
+            for tuplet in selector(argument):
+                abjad.override(tuplet[0]).Beam.grow_direction = abjad.RIGHT
+        else:
+            for tuplet in abjad.select.tuplets(argument):
+                abjad.override(tuplet[0]).Beam.grow_direction = abjad.RIGHT
+
+    return beam
+
+
+def fret_diagram(selector, fret_lists):
+    def orientations(argument):
+        selections = selector(argument)
+
+        selections = abjad.select.chords(selections)
+
+        for chord, fret_list in zip(selections, fret_lists):
+            markup = abjad.Markup(
+                rf"""\markup \override #'(size . 1.5) {{ \fret-diagram "6-{fret_list[0]};5-{fret_list[1]};4-{fret_list[2]};3-{fret_list[3]};2-{fret_list[4]};1-{fret_list[5]};" }}"""
+            )
+            abjad.attach(markup, chord, direction=abjad.UP)
+
+    return orientations
 
 
 def invisible_tuplet_brackets():

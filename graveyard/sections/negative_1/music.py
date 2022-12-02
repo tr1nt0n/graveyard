@@ -53,7 +53,7 @@ trinton.make_music(
     library.change_lines(
         lines="6",
         selector=trinton.select_leaves_by_index([0]),
-        clef="varpercussion",
+        clef="percussion",
     ),
     trinton.glissando_command(
         selector=trinton.ranged_selector(
