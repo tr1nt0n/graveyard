@@ -4818,33 +4818,239 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "accordion 1 voice"
                                 {
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Accordion }
-                                    \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { acc. }
-                                    s1 * 1
-                                    s1 * 3/4
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 2 0))
+                                    \times 14/16
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Accordion }
+                                        \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { acc. }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        f1
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \fp
+                                        % SPANNER_STARTS:
+                                        \<
+                                        \glissando
+                                        eqs2..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ff
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        \glissando
+                                        f8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                    % CLOSE_BRACKETS:
+                                    }
                                     s1 * 11/8
-                                    s1 * 7/8
-                                    s1 * 5/4
+                                    r8
+                                    a8
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    \glissando
+                                    aqf16..
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    \glissando
+                                    a64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    )
+                                    % STOP_BEAM:
+                                    ]
+                                    r2
+                                    r4.
+                                    r4
+                                    r8
+                                    af8
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    \glissando
+                                    gqs16..
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    \glissando
+                                    af64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    )
+                                    % STOP_BEAM:
+                                    ]
+                                    r4
                                     s1 * 9/8
                                     s1 * 7/8
                                     s1 * 3/2
-                                    s1 * 1
-                                    s1 * 3/4
+                                    r2.
+                                    r8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 3 0))
+                                    \times 10/16
+                                    {
+                                        fs2
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        \glissando
+                                        fqs4..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \pp
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        \glissando
+                                        fs16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        )
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    r4
                                     s1 * 9/8
-                                    s1 * 5/4
-                                    s1 * 1
+                                    r4.
+                                    r4
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 3 0))
+                                    \times 20/24
+                                    {
+                                        f4
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        \glissando
+                                        eqs4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \pp
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        \glissando
+                                        f8..
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        \glissando
+                                        eqs32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        )
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    r2
+                                    r16
+                                    cs'16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    \glissando
+                                    cqs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \>
+                                    \glissando
+                                    cs'32..
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \glissando
+                                    cqs'128
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    )
+                                    % STOP_BEAM:
+                                    ]
+                                    r4
                                     s1 * 13/8
                                     s1 * 9/8
                                     s1 * 7/8
                                     s1 * 1
-                                    s1 * 7/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 3 0))
+                                    \times 14/16
+                                    {
+                                        f2
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        \glissando
+                                        eqs4..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \pp
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        \glissando
+                                        f16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                    % CLOSE_BRACKETS:
+                                    }
                                     r8.
                                     % BEFORE:
                                     % COMMANDS:
                                     \arpeggioArrowUp
                                     \ottava 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
                                     <g'' a'' c''' d''' f'''>16
                                     % AFTER:
                                     % STEM_TREMOLOS:
@@ -4959,24 +5165,64 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
-                                    s1 * 1
-                                    s1 * 3/4
+                                    f1
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    (
+                                    ~
+                                    f2.
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
                                     s1 * 11/8
-                                    s1 * 7/8
-                                    s1 * 5/4
+                                    r8
+                                    a4
+                                    r2
+                                    r4.
+                                    r4
+                                    r8
+                                    af4
+                                    r4
                                     s1 * 9/8
                                     s1 * 7/8
                                     s1 * 3/2
-                                    s1 * 1
-                                    s1 * 3/4
+                                    r2.
+                                    r8
+                                    fs8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    fs4.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    fs8
+                                    r4
                                     s1 * 9/8
-                                    s1 * 5/4
-                                    s1 * 1
+                                    r4.
+                                    r4
+                                    f4.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    f4
+                                    r2
+                                    r16
+                                    cs'8.
+                                    r4
                                     s1 * 13/8
                                     s1 * 9/8
                                     s1 * 7/8
                                     s1 * 1
-                                    s1 * 7/8
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    f2..
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    % SPANNER_STARTS:
+                                    (
                                     % OPEN_BRACKETS:
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
                                     \times 2/3

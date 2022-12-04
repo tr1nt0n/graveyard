@@ -2586,9 +2586,385 @@ trinton.make_music(
 # accordion music commands
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (1,)),
+    lambda _: trinton.select_target(_, (1, 2)),
+    evans.RhythmHandler(evans.tuplet([(8, 7, 1)])),
+    evans.PitchHandler(
+        [
+            -7,
+            -7.5,
+            -7,
+        ]
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Clef("bass"),
+            abjad.Glissando(),
+            abjad.Glissando(),
+            abjad.Dynamic("fp"),
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("ff"),
+            abjad.StartHairpin(">o"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                2,
+            ],
+            pitched=True,
+        ),
+    ),
+    trinton.notehead_bracket_command(),
+    voice=score["accordion 1 voice"],
+    preprocessor=trinton.fuse_preprocessor((2,)),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 2)),
+    evans.RhythmHandler(rmakers.note),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler([-7]),
     trinton.linear_attachment_command(
         attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    voice=score["accordion 2 voice"],
+    preprocessor=trinton.fuse_preprocessor((2,)),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (4,)),
+    evans.RhythmHandler(evans.tuplet([(8, 7, 1)], treat_tuplets=False)),
+    trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
+    trinton.treat_tuplets(),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        [
+            -3,
+            -3.5,
+            -3,
+        ]
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Glissando(),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("p"),
+            abjad.Glissando(),
+            abjad.StartHairpin(">o"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index([0, 0, 1, 1, 1, -1], pitched=True),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    trinton.beam_groups(),
+    voice=score["accordion 1 voice"],
+    preprocessor=trinton.fuse_eighths_preprocessor((1, 2, 4)),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (4,)),
+    evans.RhythmHandler(rmakers.note),
+    trinton.force_rest(selector=trinton.select_logical_ties_by_index([0, -1])),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        [
+            -3,
+        ]
+    ),
+    voice=score["accordion 2 voice"],
+    preprocessor=trinton.fuse_eighths_preprocessor((1, 2, 4)),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (5,)),
+    evans.RhythmHandler(evans.tuplet([(8, 7, 1)], treat_tuplets=False)),
+    trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
+    trinton.treat_tuplets(),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        [
+            -4,
+            -4.5,
+            -4,
+        ]
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Glissando(),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("mf"),
+            abjad.Glissando(),
+            abjad.StartHairpin(">o"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index([0, 0, 1, 1, 1, -1], pitched=True),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    trinton.beam_groups(),
+    voice=score["accordion 1 voice"],
+    preprocessor=trinton.fuse_eighths_preprocessor(
+        (
+            6,
+            2,
+            2,
+        )
+    ),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (5,)),
+    evans.RhythmHandler(rmakers.note),
+    trinton.force_rest(selector=trinton.select_logical_ties_by_index([0, -1])),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        [
+            -4,
+        ]
+    ),
+    voice=score["accordion 2 voice"],
+    preprocessor=trinton.fuse_eighths_preprocessor((6, 2, 2)),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (9, 10)),
+    evans.RhythmHandler(evans.tuplet([(8, 7, 1)], treat_tuplets=False)),
+    trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
+    trinton.treat_tuplets(),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        [
+            -6,
+            -6.5,
+            -6,
+        ]
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Glissando(),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("pp"),
+            abjad.Glissando(),
+            abjad.StartHairpin(">o"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index([0, 0, 1, 1, 1, -1], pitched=True),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    trinton.notehead_bracket_command(),
+    voice=score["accordion 1 voice"],
+    preprocessor=trinton.fuse_eighths_preprocessor(
+        (
+            7,
+            5,
+            3,
+        )
+    ),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (9, 10)),
+    evans.RhythmHandler(rmakers.note),
+    trinton.force_rest(selector=trinton.select_logical_ties_by_index([0, -1])),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        [
+            -6,
+        ]
+    ),
+    voice=score["accordion 2 voice"],
+    preprocessor=trinton.fuse_eighths_preprocessor(
+        (
+            7,
+            5,
+            3,
+        )
+    ),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (12,)),
+    evans.RhythmHandler(evans.tuplet([(8, 8, 7, 1)], treat_tuplets=False)),
+    trinton.force_rest(
+        selector=trinton.select_tuplets_by_index(
+            [
+                0,
+            ]
+        )
+    ),
+    trinton.treat_tuplets(),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler([-7, -7.5]),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Glissando(),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("pp"),
+            abjad.Glissando(),
+            abjad.StartHairpin(">o"),
+            abjad.Glissando(),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index([0, 0, 1, 1, 1, 2, -1], pitched=True),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    trinton.notehead_bracket_command(),
+    trinton.beam_groups(),
+    voice=score["accordion 1 voice"],
+    preprocessor=trinton.fuse_eighths_preprocessor(
+        (
+            5,
+            5,
+        )
+    ),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (12,)),
+    evans.RhythmHandler(rmakers.note),
+    trinton.force_rest(
+        selector=trinton.select_logical_ties_by_index(
+            [
+                0,
+            ]
+        )
+    ),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        [
+            -7,
+        ]
+    ),
+    voice=score["accordion 2 voice"],
+    preprocessor=trinton.fuse_eighths_preprocessor(
+        (
+            5,
+            5,
+        )
+    ),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (13,)),
+    evans.RhythmHandler(evans.tuplet([(8, 8, 7, 1)], treat_tuplets=False)),
+    trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
+    trinton.treat_tuplets(),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler([1, 0.5]),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Glissando(),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("ff"),
+            abjad.Glissando(),
+            abjad.StartHairpin("|>o"),
+            abjad.Glissando(),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index([0, 0, 1, 1, 1, 2, -1], pitched=True),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    trinton.beam_groups(),
+    voice=score["accordion 1 voice"],
+    preprocessor=trinton.fuse_sixteenths_preprocessor(
+        (
+            9,
+            3,
+            4,
+        )
+    ),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (13,)),
+    evans.RhythmHandler(rmakers.note),
+    trinton.force_rest(selector=trinton.select_logical_ties_by_index([0, -1])),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        [
+            1,
+        ]
+    ),
+    voice=score["accordion 2 voice"],
+    preprocessor=trinton.fuse_sixteenths_preprocessor(
+        (
+            9,
+            3,
+            4,
+        )
+    ),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (18,)),
+    evans.RhythmHandler(evans.tuplet([(8, 7, 1)])),
+    evans.PitchHandler(
+        [
+            -7,
+            -7.5,
+            -7,
+        ]
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Glissando(),
+            abjad.Glissando(),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("pp"),
+            abjad.StartHairpin(">o"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                1,
+                0,
+                1,
+                1,
+                2,
+            ],
+            pitched=True,
+        ),
+    ),
+    trinton.notehead_bracket_command(),
+    voice=score["accordion 1 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (18,)),
+    evans.RhythmHandler(rmakers.note),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler([-7]),
+    trinton.linear_attachment_command(
+        attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
     voice=score["accordion 2 voice"],
 )
@@ -2612,6 +2988,10 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=cycle([abjad.Arpeggio(abjad.UP)]),
         selector=trinton.pleaves(),
+    ),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("treble")],
+        selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
     trinton.ottava_command(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True)
