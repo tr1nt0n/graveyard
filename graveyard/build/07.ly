@@ -20,7 +20,7 @@
             % MARKUP:
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"44" } }
             % COMMANDS:
-            \boxed-markup "back. ( ii )" 2.5
+            \boxed-markup "The Play of Thorns ( iii )" 3
             % OPENING:
             % COMMANDS:
             #(ly:expect-warning "strange time signature found")

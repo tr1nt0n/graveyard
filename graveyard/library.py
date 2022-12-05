@@ -136,18 +136,28 @@ for tempo in tempi:
 
 miniatures = [
     abjad.LilyPondLiteral(
-        r'\boxed-markup "The Play of Thorns" 2.5',
-        "after",
-    ),
-    abjad.LilyPondLiteral(
-        r'\boxed-markup "vogellos, wolkenlos, farblos" 2.5',
+        r'\boxed-markup "The Play of Thorns ( ii )" 3',
         "after",
     ),
     abjad.Markup(
-        r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #2.5 { \center-column { \line { Ich habe gelernt, } \line { meinen Körper zu hassen und alles, } \line { was er in dieser Welt braucht. } } }""",
+        r"""\markup \override #'(font-name . "Source Han Serif SC") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #4.5 { 蜕肤 }""",
+    ),
+    abjad.Markup(
+        r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { Ghosts push up through the soil, } \line { pale mushrooms } } }""",
     ),
     abjad.LilyPondLiteral(
-        r'\boxed-markup "back. ( ii )" 2.5',
+        r'\boxed-markup "sin pájaros, sin nubes, sin color" 3',
+        "after",
+    ),
+    abjad.LilyPondLiteral(
+        r'\boxed-markup "THERE ARE NO DRY BONES HERE" 3',
+        "after",
+    ),
+    abjad.Markup(
+        r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { Megtanultam gyűlölni a testemet és mindazt, } \line { amit ebben a világban megkövetel. } } }""",
+    ),
+    abjad.LilyPondLiteral(
+        r'\boxed-markup "The Play of Thorns ( iii )" 3',
         "after",
     ),
 ]

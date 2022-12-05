@@ -5,8 +5,7 @@
 #(ly:set-option 'relative-includes #t)
 
 \include "../library.ily"
-\include "/Users/trintonprater/evans/lilypond/evans-markups.ily"
-\include "/Users/trintonprater/evans/lilypond/evans-spanners.ily"
+\include "/Users/trintonprater/evans/lilypond/evans.ily"
 \include "/Users/trintonprater/abjad-ext-microtones/abjadext/microtones/lilypond/ekmelos-ji-accidental-markups.ily"
 
 \header {

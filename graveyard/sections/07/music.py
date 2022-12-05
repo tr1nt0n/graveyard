@@ -392,9 +392,9 @@ trinton.extract_parts(score)
 
 trinton.render_file(
     score=score,
-    segment_path="/Users/trintonprater/scores/graveyard/graveyard/sections/negative_1",
+    segment_path="/Users/trintonprater/scores/graveyard/graveyard/sections/07",
     build_path="/Users/trintonprater/scores/graveyard/graveyard/build",
-    segment_name="negative_1",
+    segment_name="07",
     includes=[
         "/Users/trintonprater/scores/graveyard/graveyard/build/graveyard-stylesheet.ily",
         "/Users/trintonprater/abjad/abjad/scm/abjad.ily",

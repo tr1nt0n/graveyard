@@ -1,3 +1,9 @@
+\version "2.23.14"
+\language "english"
+\include "/Users/trintonprater/scores/graveyard/graveyard/build/graveyard-stylesheet.ily"
+\include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
+\score
+{
     % OPEN_BRACKETS:
     \context Score = "Score"
     <<
@@ -10,7 +16,7 @@
             s1 * 1
             % AFTER:
             % MARKUP:
-            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #2.5 { \center-column { \line { Ich habe gelernt, } \line { meinen Körper zu hassen und alles, } \line { was er in dieser Welt braucht. } } }
+            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { Megtanultam gyűlölni a testemet és mindazt, } \line { amit ebben a világban megkövetel. } } }
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"121" } }
             % OPENING:
             % COMMANDS:
@@ -5466,3 +5472,4 @@
         }
     % CLOSE_BRACKETS:
     >>
+}

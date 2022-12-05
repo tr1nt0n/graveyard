@@ -6,8 +6,8 @@
 
 \score {
     {
-        % \include "01.ly"
-        \include "negative_2.ly"
-        \include "negative_1.ly"
+        \include "01.ly"
+        % \include "06.ly"
+        % \include "07.ly"
     }
 }
