@@ -2620,6 +2620,10 @@ trinton.make_music(
             pitched=True,
         ),
     ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
     trinton.notehead_bracket_command(),
     voice=score["accordion 1 voice"],
     preprocessor=trinton.fuse_preprocessor((2,)),
@@ -2632,10 +2636,6 @@ trinton.make_music(
     evans.PitchHandler([-7]),
     trinton.linear_attachment_command(
         attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
-    ),
-    trinton.linear_attachment_command(
-        attachments=[abjad.StartSlur(), abjad.StopSlur()],
-        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
     voice=score["accordion 2 voice"],
     preprocessor=trinton.fuse_preprocessor((2,)),
@@ -2930,6 +2930,10 @@ trinton.make_music(
         ]
     ),
     trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    trinton.linear_attachment_command(
         attachments=[
             abjad.Glissando(),
             abjad.Glissando(),
@@ -2961,10 +2965,6 @@ trinton.make_music(
     evans.PitchHandler([-7]),
     trinton.linear_attachment_command(
         attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
-    ),
-    trinton.linear_attachment_command(
-        attachments=[abjad.StartSlur(), abjad.StopSlur()],
-        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
     voice=score["accordion 2 voice"],
 )
@@ -3103,6 +3103,13 @@ for tempo, leaf in zip(
         attachment=library.tempi[tempo],
         direction=abjad.UP,
     )
+
+trinton.attach(
+    voice=score["Global Context"],
+    leaves=[0],
+    attachment=library.miniatures[-2],
+    direction=abjad.UP,
+)
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (5, 7)),

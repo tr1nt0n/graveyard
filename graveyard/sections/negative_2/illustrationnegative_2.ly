@@ -16,6 +16,7 @@
             s1 * 1
             % AFTER:
             % MARKUP:
+            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #2.5 { \center-column { \line { Ich habe gelernt, } \line { meinen Körper zu hassen und alles, } \line { was er in dieser Welt braucht. } } }
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"121" } }
             % OPENING:
             % COMMANDS:
@@ -4841,6 +4842,7 @@
                                         % ARTICULATIONS:
                                         \fp
                                         % SPANNER_STARTS:
+                                        (
                                         \<
                                         \glissando
                                         eqs2..
@@ -4855,6 +4857,8 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \!
+                                        % SPANNER_STOPS:
+                                        )
                                     % CLOSE_BRACKETS:
                                     }
                                     s1 * 11/8
@@ -5032,6 +5036,7 @@
                                         f2
                                         % AFTER:
                                         % SPANNER_STARTS:
+                                        (
                                         - \tweak circled-tip ##t
                                         \<
                                         \glissando
@@ -5047,6 +5052,8 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \!
+                                        % SPANNER_STOPS:
+                                        )
                                     % CLOSE_BRACKETS:
                                     }
                                     r8.
@@ -5174,12 +5181,8 @@
                                     f1
                                     % AFTER:
                                     % SPANNER_STARTS:
-                                    (
                                     ~
                                     f2.
-                                    % AFTER:
-                                    % SPANNER_STOPS:
-                                    )
                                     s1 * 11/8
                                     r8
                                     a4
@@ -5224,11 +5227,6 @@
                                     % COMMANDS:
                                     \clef "bass"
                                     f2..
-                                    % AFTER:
-                                    % SPANNER_STOPS:
-                                    )
-                                    % SPANNER_STARTS:
-                                    (
                                     % OPEN_BRACKETS:
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
                                     \times 2/3

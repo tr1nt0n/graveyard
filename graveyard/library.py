@@ -134,6 +134,24 @@ tempi = eval(
 for tempo in tempi:
     abjad.bundle(tempo, r"- \tweak padding #6")
 
+miniatures = [
+    abjad.LilyPondLiteral(
+        r'\boxed-markup "The Play of Thorns" 2.5',
+        "after",
+    ),
+    abjad.LilyPondLiteral(
+        r'\boxed-markup "vogellos, wolkenlos, farblos" 2.5',
+        "after",
+    ),
+    abjad.Markup(
+        r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #2.5 { \center-column { \line { Ich habe gelernt, } \line { meinen Körper zu hassen und alles, } \line { was er in dieser Welt braucht. } } }""",
+    ),
+    abjad.LilyPondLiteral(
+        r'\boxed-markup "back. ( ii )" 2.5',
+        "after",
+    ),
+]
+
 # commands
 
 
