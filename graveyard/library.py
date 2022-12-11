@@ -113,26 +113,26 @@ xen_diads = eval("""evans.Sequence(xen_pitches).grouper([2 for _ in xen_pitches]
 
 tempi = eval(
     """[
-    abjad.Markup(
-        r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1 #"44" } }'
-    ),
-    abjad.Markup(
-        r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1 #"66" } }'
-    ),
-    abjad.Markup(
-        r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1 #"77" } }'
-    ),
-    abjad.Markup(
-        r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1 #"99" } }'
-    ),
-    abjad.Markup(
-        r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1 #"121" } }'
-    ),
-]"""
+        abjad.Markup(
+            r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }'
+        ),
+        abjad.Markup(
+            r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1.5 #"66" } }'
+        ),
+        abjad.Markup(
+            r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }'
+        ),
+        abjad.Markup(
+            r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1.5 #"99" } }'
+        ),
+        abjad.Markup(
+            r'\markup { \\abs-fontsize #12 \concat { \\abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }'
+        ),
+    ]"""
 )
 
 for tempo in tempi:
-    abjad.bundle(tempo, r"- \tweak padding #6")
+    abjad.bundle(tempo, r"- \tweak staff-padding #8.5")
 
 miniatures = [
     abjad.LilyPondLiteral(
@@ -192,6 +192,36 @@ def boxed_markup(string, selector):
         selector=selector,
     )
     return command
+
+
+# attachment tools
+
+
+def polyrhythm_beams():
+    def attach(argument):
+        leaves = abjad.select.leaves(argument, pitched=True)
+        counts = [
+            [
+                2,
+                2,
+                3,
+                3,
+                2,
+                3,
+            ]
+            for _ in leaves
+        ]
+        counts = evans.Sequence(counts).flatten()
+        groups = abjad.sequence.partition_by_counts(
+            sequence=leaves,
+            counts=counts,
+            overhang=True,
+        )
+
+        for group in groups:
+            abjad.beam(group)
+
+    return attach
 
 
 # harmony tools

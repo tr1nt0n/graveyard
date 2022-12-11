@@ -69,3 +69,8 @@ boxed-markup = #(
 
 #(define flare-tie
   (flared-tie '((0 . 0)(0.06 . 0.1) (0.94 . 0.1) (1.0 . 0.0))))
+
+#(define ((trinton-blank-time-signature) grob)
+   (grob-interpret-markup grob
+          (markup #:override '(baseline-skip . 2.5) #:number
+                  (#:line ((#:fontsize 1 #:column ("X" "X")))))))

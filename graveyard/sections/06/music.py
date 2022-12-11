@@ -3114,8 +3114,8 @@ trinton.attach(
 trinton.make_music(
     lambda _: trinton.select_target(_, (5, 7)),
     trinton.arrow_spanner_command(
-        l_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"121" } }',
-        r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"77" } }',
+        l_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }',
+        r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }',
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=8.5,
         tempo=True,
@@ -3126,8 +3126,8 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (18, 19)),
     trinton.arrow_spanner_command(
-        l_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"44" } }',
-        r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"66" } }',
+        l_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }',
+        r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"66" } }',
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=8.5,
         tempo=True,
