@@ -3117,7 +3117,7 @@ trinton.make_music(
         l_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }',
         r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }',
         selector=trinton.select_leaves_by_index([0, -1]),
-        padding=8.5,
+        padding=9.5,
         tempo=True,
     ),
     voice=score["Global Context"],

@@ -30,7 +30,7 @@
             s1 * 5/4
             % AFTER:
             % SPANNER_STARTS:
-            - \tweak padding #8.5
+            - \tweak padding #9.5
             - \abjad-dashed-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
