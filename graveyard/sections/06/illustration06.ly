@@ -17,7 +17,7 @@
             % AFTER:
             % MARKUP:
             ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { Megtanultam gyűlölni a testemet és mindazt, } \line { amit ebben a világban megkövetel. } } }
-            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"121" } }
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
             % OPENING:
             % COMMANDS:
             \time 6/8
@@ -38,8 +38,8 @@
             % SPANNER_STARTS:
             - \tweak padding #8.5
             - \abjad-dashed-line-with-arrow
-            - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"121" } } \hspace #0.5 }
-            - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"77" } }
+            - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } } \hspace #0.5 }
+            - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
             \startTextSpan
             % OPENING:
             % COMMANDS:
@@ -70,7 +70,7 @@
             s1 * 9/8
             % AFTER:
             % MARKUP:
-            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"44" } }
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % OPENING:
             % COMMANDS:
             \time 10/8
@@ -103,8 +103,8 @@
             % SPANNER_STARTS:
             - \tweak padding #8.5
             - \abjad-dashed-line-with-arrow
-            - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"44" } } \hspace #0.5 }
-            - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"66" } }
+            - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } } \hspace #0.5 }
+            - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"66" } }
             \startTextSpan
             % ABSOLUTE_BEFORE:
             % COMMANDS:

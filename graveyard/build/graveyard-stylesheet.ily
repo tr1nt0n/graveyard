@@ -223,6 +223,7 @@
 }
 %
 \paper {
+    max-systems-per-page = 3
     system-separator-markup = \markup { \slashSeparator }
     system-system-spacing = #'((basic-distance . 16) (minimum-distance . 16) (padding . 2))
     indent = 20\mm

@@ -24,7 +24,7 @@
             s1 * 2
             % AFTER:
             % MARKUP:
-            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1 #"44" } }
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % COMMANDS:
             \boxed-markup "The Play of Thorns ( iii )" 3
             % OPENING:
