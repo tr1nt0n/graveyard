@@ -12,7 +12,7 @@
             % MARKUP:
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % COMMANDS:
-            \boxed-markup "THERE ARE NO DRY BONES HERE" 3
+            \boxed-markup "V. THERE ARE NO DRY BONES HERE" 3
             % OPENING:
             % COMMANDS:
             \time 3/8

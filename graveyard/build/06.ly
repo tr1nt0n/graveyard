@@ -10,7 +10,7 @@
             s1 * 1
             % AFTER:
             % MARKUP:
-            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { Megtanultam gyűlölni a testemet és mindazt, } \line { amit ebben a világban megkövetel. } } }
+            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { VI. Megtanultam gyűlölni a testemet és mindazt, } \line { amit ebben a világban megkövetel. } } }
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
             % OPENING:
             % COMMANDS:

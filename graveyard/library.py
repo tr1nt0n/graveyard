@@ -136,28 +136,28 @@ for tempo in tempi:
 
 miniatures = [
     abjad.LilyPondLiteral(
-        r'\boxed-markup "The Play of Thorns ( ii )" 3',
+        r'\boxed-markup "I. The Play of Thorns ( ii )" 3',
         "after",
     ),
     abjad.Markup(
-        r"""\markup \override #'(font-name . "Source Han Serif SC") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #4.5 { 蜕肤 }""",
+        r"""\markup \override #'(font-name . "Source Han Serif SC") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #4.5 { II. 蜕肤 }""",
     ),
     abjad.Markup(
-        r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { Ghosts push up through the soil, } \line { pale mushrooms } } }""",
+        r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { III. Ghosts push up through the soil, } \line { pale mushrooms } } }""",
     ),
     abjad.LilyPondLiteral(
-        r'\boxed-markup "sin pájaros, sin nubes, sin color" 3',
+        r'\boxed-markup "IV. sin pájaros, sin nubes, sin color" 3',
         "after",
     ),
     abjad.LilyPondLiteral(
-        r'\boxed-markup "THERE ARE NO DRY BONES HERE" 3',
+        r'\boxed-markup "V. THERE ARE NO DRY BONES HERE" 3',
         "after",
     ),
     abjad.Markup(
-        r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { Megtanultam gyűlölni a testemet és mindazt, } \line { amit ebben a világban megkövetel. } } }""",
+        r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { VI. Megtanultam gyűlölni a testemet és mindazt, } \line { amit ebben a világban megkövetel. } } }""",
     ),
     abjad.LilyPondLiteral(
-        r'\boxed-markup "The Play of Thorns ( iii )" 3',
+        r'\boxed-markup "VII. The Play of Thorns ( iii )" 3',
         "after",
     ),
 ]
