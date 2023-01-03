@@ -30,6 +30,7 @@
 		\consists Metronome_mark_engraver
 		\consists Text_engraver
 		\consists Text_spanner_engraver
+        \consists Measure_spanner_engraver
         \override MetronomeMark.stencil = ##f
 		\override TimeSignature.X-extent = #'(0 . -25)
         \override TimeSignature.Y-extent = #'(25 . 0)
@@ -91,6 +92,12 @@
         \override Glissando.breakable = ##t
 
         \override Hairpin.to-barline = ##f
+
+        \override MeasureSpanner.direction = #UP
+        \override MeasureSpanner.thickness = #1.5
+        \override MeasureSpanner.font-size = 7
+        \override MeasureSpanner.font-name = "Bodoni72 Book"
+        \override MeasureSpanner.padding = 9
 
         \override Staff.thickness = #0.5
 

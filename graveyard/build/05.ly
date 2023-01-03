@@ -162,6 +162,9 @@
             % COMMANDS:
             \time 5/8
             s1 * 5/8
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \tweak text "×9" \startMeasureSpanner
             % BEFORE:
             % COMMANDS:
             \bar ".|:"
@@ -171,9 +174,6 @@
             % COMMANDS:
             \time 7/16
             s1 * 7/16
-            % AFTER:
-            % MARKUP:
-            - \markup { \abs-fontsize #15 { \upright "×9" } }
             % OPENING:
             % COMMANDS:
             \time 8/16
@@ -185,6 +185,7 @@
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
+            \stopMeasureSpanner
             % OPENING:
             % COMMANDS:
             \time 7/16

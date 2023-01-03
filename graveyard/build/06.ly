@@ -103,6 +103,7 @@
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
+            \tweak text "×3" \startMeasureSpanner
             % BEFORE:
             % COMMANDS:
             \bar ".|:"
@@ -112,8 +113,6 @@
             \time 11/8
             s1 * 11/8
             % AFTER:
-            % MARKUP:
-            - \markup { \abs-fontsize #15 { \upright "×3" } }
             % SPANNER_STOPS:
             \stopTextSpan
             % OPENING:
@@ -127,6 +126,7 @@
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
+            \stopMeasureSpanner
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
