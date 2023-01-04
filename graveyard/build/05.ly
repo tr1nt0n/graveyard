@@ -174,6 +174,9 @@
             % COMMANDS:
             \time 7/16
             s1 * 7/16
+            % AFTER:
+            % MARKUP:
+            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #0 { \hspace #1.5 \center-column { \line { 4th time, stop chanting. } \line { 6th time, continue chanting. } \line { 7th time, stop drumming. } \line { 9th time, continue drumming. } } }
             % OPENING:
             % COMMANDS:
             \time 8/16
@@ -981,11 +984,16 @@
                                         \ff
                                         % START_BEAM:
                                         [
-                                        % SPANNER_STARTS:
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
                                         - \tweak padding #4
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { { \upright "Whisper chant" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \concat { { \upright "Shout chant" } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak padding #6
                                         - \abjad-dashed-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "while drumming, shout ad libitum" } \hspace #0.5 }
-                                        \startTextSpan
+                                        - \tweak bound-details.left.text \markup \concat { { \upright "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
+                                        \startTextSpanOne
                                         c'8
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1221,6 +1229,9 @@
                                     \fff
                                     % START_BEAM:
                                     [
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \stopTextSpanTwo
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1296,10 +1307,11 @@
                                     \mf
                                     c'16
                                     % AFTER:
-                                    % SPANNER_STOPS:
-                                    \stopTextSpan
                                     % STOP_BEAM:
                                     ]
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \stopTextSpanOne
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2285,11 +2297,16 @@
                                     \mp
                                     % STOP_BEAM:
                                     ]
-                                    % SPANNER_STARTS:
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
                                     - \tweak padding #4
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "Whisper chant" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { { \upright "Shout chant" } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak padding #6
                                     - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \upright { "while drumming, shout ad libitum" } \hspace #0.5 }
-                                    \startTextSpan
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
+                                    \startTextSpanOne
                                     c'8
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2590,6 +2607,9 @@
                                     \fff
                                     % START_BEAM:
                                     [
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \stopTextSpanTwo
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2665,10 +2685,11 @@
                                     \mf
                                     c'16
                                     % AFTER:
-                                    % SPANNER_STOPS:
-                                    \stopTextSpan
                                     % STOP_BEAM:
                                     ]
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \stopTextSpanOne
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -3851,11 +3872,16 @@
                                         \ff
                                         % START_BEAM:
                                         [
-                                        % SPANNER_STARTS:
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
                                         - \tweak padding #4
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { { \upright "Whisper chant" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \concat { { \upright "Shout chant" } \hspace #0.5 }\startTextSpanTwo
+                                        - \tweak padding #6
                                         - \abjad-dashed-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "while drumming, shout ad libitum" } \hspace #0.5 }
-                                        \startTextSpan
+                                        - \tweak bound-details.left.text \markup \concat { { \upright "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
+                                        \startTextSpanOne
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -4056,6 +4082,9 @@
                                     \fff
                                     % START_BEAM:
                                     [
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \stopTextSpanTwo
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -4131,10 +4160,11 @@
                                     \mf
                                     c'16
                                     % AFTER:
-                                    % SPANNER_STOPS:
-                                    \stopTextSpan
                                     % STOP_BEAM:
                                     ]
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \stopTextSpanOne
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override TupletBracket.stencil = ##f

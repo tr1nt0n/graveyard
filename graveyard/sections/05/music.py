@@ -714,9 +714,20 @@ for voice_name, leaf in zip(
 ):
     trinton.make_music(
         lambda _: trinton.select_target(_, (20, 28)),
-        trinton.hooked_spanner_command(
-            string="while drumming, shout ad libitum",
+        trinton.id_spanner_command(
             selector=trinton.select_leaves_by_index([leaf, -1]),
+            id="One",
+            left_text='While drumming, chant at any speed, \\"There are no dry bones here,\\" in your first language',
+            right_text=None,
+            style="dashed-line-with-hook",
+            padding=6,
+        ),
+        trinton.id_spanner_command(
+            selector=trinton.select_leaves_by_index([leaf, -15]),
+            id="Two",
+            left_text="Whisper chant",
+            right_text="Shout chant",
+            style="dashed-line-with-arrow",
             padding=4,
         ),
         voice=score[voice_name],
@@ -790,6 +801,24 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=8.5,
         tempo=True,
+    ),
+    voice=score["Global Context"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (27,)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.Markup(
+                r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #0 { \hspace #1.5 \center-column { \line { 4th time, stop chanting. } \line { 6th time, continue chanting. } \line { 7th time, stop drumming. } \line { 9th time, continue drumming. } } }""",
+            ),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+            ]
+        ),
+        direction=abjad.UP,
     ),
     voice=score["Global Context"],
 )
