@@ -11,7 +11,7 @@ from itertools import cycle
 
 # score
 
-score = library.graveyard_score(ts.section_negative_2_ts)
+score = library.graveyard_score(ts.section_6_ts)
 
 # fermate
 

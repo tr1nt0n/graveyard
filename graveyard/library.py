@@ -140,7 +140,7 @@ miniatures = [
         "after",
     ),
     abjad.Markup(
-        r"""\markup \override #'(font-name . "Source Han Serif SC") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #4.5 { II. 蜕肤 }""",
+        r"""\markup \override #'(font-name . "Source Han Serif SC") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #4.5 { \hspace #1 II.蜕肤 }""",
     ),
     abjad.Markup(
         r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { III. Ghosts push up through the soil, } \line { pale mushrooms } } }""",
