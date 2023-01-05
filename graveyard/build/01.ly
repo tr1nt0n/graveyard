@@ -11,8 +11,10 @@
             s1 * 2
             % AFTER:
             % MARKUP:
+            - \tweak padding #10
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % COMMANDS:
+            - \tweak padding #8
             \boxed-markup "I. The Play of Thorns ( ii )" 3
             % OPENING:
             % COMMANDS:
@@ -22,6 +24,7 @@
             % AFTER:
             % COMMANDS:
             \bar "||"
+            \break
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:

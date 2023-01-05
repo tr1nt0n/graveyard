@@ -10,8 +10,10 @@
             s1 * 7/8
             % AFTER:
             % MARKUP:
+            - \tweak padding #10
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % COMMANDS:
+            - \tweak padding #8
             \boxed-markup "V. THERE ARE NO DRY BONES HERE" 3
             % OPENING:
             % COMMANDS:
@@ -23,7 +25,8 @@
             s1 * 3/16
             % AFTER:
             % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
+            - \tweak padding #10
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -49,14 +52,16 @@
             s1 * 3/8
             % AFTER:
             % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
+            - \tweak padding #10
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % OPENING:
             % COMMANDS:
             \time 5/32
             s1 * 5/32
             % AFTER:
             % MARKUP:
-            - \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"66" } }
+            - \tweak padding #10
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"66" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -82,7 +87,7 @@
             s1 * 7/8
             % AFTER:
             % SPANNER_STARTS:
-            - \tweak padding #8.5
+            - \tweak padding #9
             - \abjad-dashed-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }

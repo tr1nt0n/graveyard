@@ -36,7 +36,7 @@ section_numerators = abjad.sequence.partition_by_counts(
     sequence=[_ for _ in numerator_sequence if _ > 2],
     counts=[
         34,
-        34,
+        33,
     ],
     overhang=True,
 )

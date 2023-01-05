@@ -745,11 +745,13 @@ library.write_short_instrument_names(score=score)
 
 for leaf, tempo in zip(
     [
+        0,
         2,
         4,
         5,
     ],
     [
+        0,
         2,
         0,
         1,
@@ -759,15 +761,8 @@ for leaf, tempo in zip(
         voice=score["Global Context"],
         leaves=[leaf],
         attachment=library.tempi[tempo],
-        # direction=abjad.UP,
+        direction=abjad.UP,
     )
-
-trinton.attach(
-    voice=score["Global Context"],
-    leaves=[0],
-    attachment=library.tempi[0],
-    direction=abjad.UP,
-)
 
 trinton.attach(
     voice=score["Global Context"],
@@ -799,7 +794,7 @@ trinton.make_music(
         l_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }',
         r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }',
         selector=trinton.select_leaves_by_index([0, -1]),
-        padding=8.5,
+        padding=9,
         tempo=True,
     ),
     voice=score["Global Context"],

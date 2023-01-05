@@ -131,8 +131,8 @@ tempi = eval(
     ]"""
 )
 
-for tempo in tempi:
-    abjad.bundle(tempo, r"- \tweak staff-padding #8.5")
+tempi = [abjad.bundle(tempo, r"- \tweak padding #10") for tempo in tempi]
+
 
 miniatures = [
     abjad.LilyPondLiteral(
@@ -140,7 +140,7 @@ miniatures = [
         "after",
     ),
     abjad.Markup(
-        r"""\markup \override #'(font-name . "Source Han Serif SC") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #4.5 { \hspace #1 II.蜕肤 }""",
+        r"""\markup \override #'(font-name . "Source Han Serif SC") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #4.5 { II.蜕肤 }""",
     ),
     abjad.Markup(
         r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { III. Ghosts push up through the soil, } \line { pale mushrooms } } }""",
@@ -160,6 +160,10 @@ miniatures = [
         r'\boxed-markup "VII. The Play of Thorns ( iii )" 3',
         "after",
     ),
+]
+
+miniatures = [
+    abjad.bundle(miniature, r"- \tweak padding #8") for miniature in miniatures
 ]
 
 # commands
@@ -357,6 +361,53 @@ def clean_up_cents():
                     abjad.detach(abjad.Markup, leaf)
 
     return clean
+
+
+def glissando(selector=None):
+    def call_glissando(argument):
+        if selector is not None:
+            leaves = selector(argument)
+            for group in leaves:
+                abjad.glissando(
+                    group,
+                    hide_middle_note_heads=True,
+                    allow_repeats=True,
+                    allow_ties=True,
+                )
+                middle_leaves = abjad.select.exclude(group, [0, -1])
+                for leaf in middle_leaves:
+                    abjad.attach(
+                        abjad.LilyPondLiteral(
+                            r"\once \override Dots.staff-position = #2", "before"
+                        ),
+                        leaf,
+                    )
+
+                for leaf in group:
+                    abjad.detach(abjad.Tie, leaf)
+        else:
+            leaves = abjad.select.leaves(argument, pitched=True)
+            abjad.glissando(
+                leaves,
+                hide_middle_note_heads=True,
+                allow_repeats=True,
+                allow_ties=True,
+            )
+
+            middle_leaves = abjad.select.exclude(leaves, [0, -1])
+
+            for leaf in middle_leaves:
+                abjad.attach(
+                    abjad.LilyPondLiteral(
+                        r"\once \override Dots.staff-position = #2", "before"
+                    ),
+                    leaf,
+                )
+
+            for leaf in leaves:
+                abjad.detach(abjad.Tie, leaf)
+
+    return call_glissando
 
 
 # markups

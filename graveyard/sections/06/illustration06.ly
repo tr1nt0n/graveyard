@@ -16,8 +16,10 @@
             s1 * 1
             % AFTER:
             % MARKUP:
-            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { VI. Megtanultam gyűlölni a testemet és mindazt, } \line { amit ebben a világban megkövetel. } } }
+            - \tweak padding #10
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
+            - \tweak padding #8
+            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { VI. Megtanultam gyűlölni a testemet és mindazt, } \line { amit ebben a világban megkövetel. } } }
             % OPENING:
             % COMMANDS:
             \time 6/8
@@ -70,6 +72,7 @@
             s1 * 9/8
             % AFTER:
             % MARKUP:
+            - \tweak padding #10
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % OPENING:
             % COMMANDS:
