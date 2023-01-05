@@ -451,18 +451,6 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
-# trinton.make_music(
-#     lambda _: trinton.select_target(_, (33, 36)),
-#     trinton.arrow_spanner_command(
-#         l_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }',
-#         r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }',
-#         selector=trinton.select_leaves_by_index([0, -1]),
-#         padding=9,
-#         tempo=True,
-#     ),
-#     voice=score["Global Context"],
-# )
-
 # make sc file
 
 # trinton.make_sc_file(
