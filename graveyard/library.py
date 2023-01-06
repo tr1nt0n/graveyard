@@ -111,6 +111,23 @@ xen_pitches = eval(
 )
 xen_diads = eval("""evans.Sequence(xen_pitches).grouper([2 for _ in xen_pitches])""")
 
+guitar_tone_row = eval(
+    """[
+        -7,
+        -8,
+        -6,
+        1,
+        -5,
+        -3,
+        -2,
+        0,
+        2,
+        -4,
+        3,
+        -1,
+    ]"""
+)
+
 tempi = eval(
     """[
         abjad.Markup(
@@ -201,6 +218,20 @@ def boxed_markup(string, selector):
 # attachment tools
 
 
+def viola_grace_attachments():
+    def attach(argument):
+        selections = abjad.select.leaves(argument, pitched=True, grace=True)
+        first = [_ for _ in selections if selections.index(_) % 3 == 0]
+        second = [_ for _ in selections if selections.index(_) % 3 == 1]
+        for _ in first:
+            abjad.attach(abjad.Glissando(), _)
+            abjad.attach(abjad.Articulation("downbow"), _)
+        for _ in second:
+            abjad.attach(abjad.Glissando(), _)
+
+    return attach
+
+
 def polyrhythm_beams():
     def attach(argument):
         leaves = abjad.select.leaves(argument, pitched=True)
@@ -252,7 +283,39 @@ def transpose_by_selection(transpositions, selector):
     return transpose
 
 
+def guitar_row(index=0):
+    return trinton.rotated_sequence(guitar_tone_row, index)
+
+
+# rhythm tools
+
+viola_grace_handler = evans.OnBeatGraceHandler(
+    number_of_attacks=[3],
+    durations=[
+        1,
+        2,
+        1,
+    ],
+    font_size=-4,
+    leaf_duration=(1, 100),
+    attack_number_forget=False,
+    durations_forget=False,
+    boolean_vector=[1],
+    vector_forget=False,
+    name="On Beat Grace Handler",
+)
+
+
 # notation tools
+
+
+def glissando_map(points=[0, 1, 1, 0]):
+    literal = abjad.LilyPondLiteral(
+        rf"\set glissandoMap = #'(({points[0]} . {points[1]}) ({points[2]} . {points[3]}))",
+        "before",
+    )
+
+    return literal
 
 
 def left_beam(selector=None):

@@ -414,6 +414,7 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \textSpannerDown
                                     a'32
                                     % AFTER:
@@ -430,7 +431,7 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
-                                    c'32
+                                    d'32
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
@@ -450,7 +451,7 @@
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
                                     \glissando
-                                    c'16.
+                                    d'16.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
@@ -470,7 +471,7 @@
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
                                     \glissando
-                                    c'8
+                                    d'8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
@@ -490,7 +491,7 @@
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
                                     \glissando
-                                    c'32
+                                    d'32
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
@@ -510,7 +511,7 @@
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
                                     \glissando
-                                    c'16
+                                    d'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
@@ -527,8 +528,155 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 9/16
-                                    s1 * 7/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-1
+                                    \textSpannerDown
+                                    a'32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ffff
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-up-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato, scratch" } \hspace #0.5 }
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    d'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    f'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    f'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    f'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    f'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    f'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    f'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    % COMMANDS:
+                                    \textSpannerUp
                                     s1 * 1/8
                                     s1 * 1/10
                                     s1 * 1/8
@@ -781,6 +929,7 @@
                                      )
                                      #-6
                                     \highest
+                                    \once \override TextSpanner.bound-details.right.padding = #-5
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
@@ -792,7 +941,9 @@
                                     - \tweak bound-details.left.text \markup \concat { \upright { "IV" } \hspace #0.5 }
                                     \startTextSpan
                                     \glissando
-                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -803,20 +954,18 @@
                                     % AFTER:
                                     % START_BEAM:
                                     [
-                                    % SPANNER_STARTS:
-                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     c'''8
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     c'''8.
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     c'''8
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Accidental.stencil = ##f
@@ -844,11 +993,173 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 9/16
-                                    s1 * 7/16
-                                    s1 * 1/8
-                                    s1 * 1/10
-                                    s1 * 1/8
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 5
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \fancy-gliss
+                                       #'(
+                                          (0 0 0.5 0.1 1 0)
+                                          (1 0 1.5 -0.1 2 0)
+                                          (2 0 2.5 0.5 3 0)
+                                          (3 0 3.5 -0.5 4 0)
+                                          (4 0 4.5 1 5 0)
+                                          (5 0 5.5 -1 6 0)
+                                          (6 0 6.5 0.5 7 0)
+                                          (7 0 7.5 -0.5 8 0)
+                                          (8 0 8.5 2 9 0)
+                                          (9 0 9.5 -2 10 0)
+                                          (10 0 10.5 0.5 11 0)
+                                          (11 0 11.5 -0.5 12 0)
+                                          (12 0 12.5 2 13 0)
+                                          (13 0 13.5 -2 14 0)
+                                          (14 0 14.5 0.1 15 0)
+                                          (15 0 15.5 -0.1 16 0)
+                                          (16 0 16.5 3 17 0)
+                                          (17 0 17.5 -3 18 0)
+                                          (18 0 18.5 2 19 0)
+                                          (19 0 19.5 -2 20 0)
+                                          (20 0 20.5 4 21 0)
+                                          (21 0 21.5 -4 22 0)
+                                          (22 0 22.5 2 23 0)
+                                          (23 0 23.5 -2 24 0)
+                                          (24 0 24.5 4 25 0)
+                                          (25 0 25.5 -4 26 0)
+                                          (26 0 26.5 2 27 0)
+                                          (27 0 27.5 -2 28 0)
+                                          (28 0 28.5 5 29 0)
+                                          (29 0 29.5 -5 30 0)
+                                          (30 0 30.5 2 31 0)
+                                          (31 0 31.5 -2 32 0)
+                                          (32 0 32.5 5 33 0)
+                                          (33 0 33.5 -5 34 0)
+                                          (34 0 34.5 2 35 0)
+                                          (35 0 35.5 -2 36 0)
+                                          (36 0 36.5 5 37 0)
+                                          (37 0 37.5 -5 38 0)
+                                          (38 0 38.5 2 39 0)
+                                          (39 0 39.5 -2 40 0)
+                                          (40 0 40.5 7 41 0)
+                                          (41 0 41.5 -7 42 0)
+                                          (42 0 42.5 5 43 0)
+                                          (43 0 43.5 -5 44 0)
+                                          (44 0 44.5 7 45 0)
+                                          (45 0 45.5 -7 46 0)
+                                          (46 0 46.5 5 47 0)
+                                          (47 0 47.5 -5 48 0)
+                                          (48 0 48.5 7 49 0)
+                                          (49 0 49.5 -7 50 0)
+                                          (50 0 50.5 3 51 0)
+                                          (51 0 51.5 -3 52 0)
+                                          (52 0 52.5 7 53 0)
+                                          (53 0 53.5 -7 54 0)
+                                          (54 0 54.5 3 55 0)
+                                          (55 0 55.5 -3 56 0)
+                                          (56 0 56.5 7 57 0)
+                                          (57 0 57.5 -7 58 0)
+                                          (58 0 58.5 3 59 0)
+                                          (59 0 59.5 -3 60 0)
+                                          (60 0 60.5 7 61 0)
+                                          (61 0 61.5 -7 62 0)
+                                          (62 0 62.5 5 63 0)
+                                          (63 0 63.5 -5 64 0)
+                                          (64 0 64.5 7 65 0)
+                                          (65 0 65.5 -7 66 0)
+                                          (66 0 66.5 3 67 0)
+                                          (67 0 67.5 -3 68 0)
+                                          (68 0 68.5 7 69 0)
+                                          (69 0 69.5 -7 70 0)
+                                          (70 0 70.5 5 71 0)
+                                          (71 0 71.5 -5 72 0)
+                                          (72 0 72.5 7 73 0)
+                                          (73 0 73.5 -7 74 0)
+                                          (74 0 74.5 2 75 0)
+                                          (75 0 75.5 -2 76 0)
+                                          (76 0 76.5 4 77 0)
+                                          (77 0 77.5 -4 78 0)
+                                          (78 0 78.5 0.5 79 0)
+                                          (79 0 79.5 -0.5 80 0)
+                                          (80 0 80.5 1 81 0)
+                                          (81 0 81.5 -1 82 0)
+                                          (82 0 82.5 0.5 83 0)
+                                          (83 0 83.5 -0.5 84 0)
+                                          (84 0 84.5 1 85 0)
+                                          (85 0 85.5 -1 86 0)
+                                          (86 0 86.5 0.1 87 0)
+                                          (87 0 87.5 -0.1 88 0)
+                                          (88 0 88.5 0.5 89 0)
+                                          (89 0 89.5 -0.5 90 0)
+                                     )
+                                     #-20
+                                    \highest
+                                    \once \override TextSpanner.bound-details.right.padding = #-20
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    c'''4.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #7.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "IV" } \hspace #0.5 }
+                                    \startTextSpan
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    c'''8.
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    % GROB_OVERRIDES:
+                                    \once \override NoteHead.transparent = ##t
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    c'''4..
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % COMMANDS:
+                                    \revert-noteheads
+                                    f8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \marcato
+                                    \f
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    % OPEN_BRACKETS:
+                                    \tweak edge-height #'(0.7 . 0)
+                                    \times 4/5
+                                    {
+                                        e8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \marcato
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    fs8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \marcato
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -930,6 +1241,7 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Viola }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { vla. }
                                     \textSpannerDown
@@ -963,17 +1275,7 @@
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
                                     \glissando
-                                    c'32
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    - \abjad-zero-padding-glissando
-                                    \glissando
-                                    ef'32
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    - \abjad-zero-padding-glissando
-                                    \glissando
-                                    c'32
+                                    d'32
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
@@ -988,12 +1290,22 @@
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
                                     \glissando
+                                    a'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    g'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
                                     a'16.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
                                     \glissando
-                                    g'8
+                                    d'8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
@@ -1003,17 +1315,27 @@
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
                                     \glissando
-                                    c'16.
+                                    e'16.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
                                     \glissando
-                                    ef'8
+                                    a'8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
                                     \glissando
-                                    c'32
+                                    g'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'32
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
@@ -1040,16 +1362,6 @@
                                     \glissando
                                     a'32
                                     % AFTER:
-                                    % SPANNER_STARTS:
-                                    - \abjad-zero-padding-glissando
-                                    \glissando
-                                    c'32
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    - \abjad-zero-padding-glissando
-                                    \glissando
-                                    ef'32
-                                    % AFTER:
                                     % ARTICULATIONS:
                                     \!
                                     % SPANNER_STOPS:
@@ -1065,8 +1377,90 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 9/16
-                                    s1 * 7/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-1
+                                    \textSpannerDown
+                                    a'8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ffff
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-up-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato, scratch" } \hspace #0.5 }
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    f'8.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    g'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    e'16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    fs'16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    e'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    f'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    g'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    e'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    fs'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    e'16.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'16.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    % COMMANDS:
+                                    \textSpannerUp
                                     s1 * 1/8
                                     s1 * 1/10
                                     s1 * 1/8
@@ -1244,7 +1638,9 @@
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     \glissando
-                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1255,20 +1651,18 @@
                                     % AFTER:
                                     % START_BEAM:
                                     [
-                                    % SPANNER_STARTS:
-                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     d''8
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     d''8.
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     d''8
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Accidental.stencil = ##f
@@ -1294,11 +1688,282 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 9/16
-                                    s1 * 7/16
-                                    s1 * 1/8
-                                    s1 * 1/10
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \fancy-gliss
+                                       #'(
+                                          (0 0 0.5 5 1 0)
+                                          (1 0 1.5 -5 2 0)
+                                          (2 0 2.5 3 3 0)
+                                          (3 0 3.5 -3 4 0)
+                                          (4 0 4.5 7 5 0)
+                                          (5 0 5.5 -7 6 0)
+                                          (6 0 6.5 5 7 0)
+                                          (7 0 7.5 -5 8 0)
+                                          (8 0 8.5 7 9 0)
+                                          (9 0 9.5 -7 10 0)
+                                          (10 0 10.5 3 11 0)
+                                          (11 0 11.5 -3 12 0)
+                                          (12 0 12.5 5 13 0)
+                                          (13 0 13.5 -5 14 0)
+                                          (14 0 14.5 3 15 0)
+                                          (15 0 15.5 -3 16 0)
+                                          (16 0 16.5 7 17 0)
+                                          (17 0 17.5 -7 18 0)
+                                          (18 0 18.5 3 19 0)
+                                          (19 0 19.5 -3 20 0)
+                                          (20 0 20.5 7 21 0)
+                                          (21 0 21.5 -7 22 0)
+                                          (22 0 22.5 3 23 0)
+                                          (23 0 23.5 -3 24 0)
+                                          (24 0 24.5 5 25 0)
+                                          (25 0 25.5 -5 26 0)
+                                          (26 0 26.5 3 27 0)
+                                          (27 0 27.5 -3 28 0)
+                                          (28 0 28.5 4 29 0)
+                                          (29 0 29.5 -4 30 0)
+                                          (30 0 30.5 2 31 0)
+                                          (31 0 31.5 -2 32 0)
+                                          (32 0 32.5 4 33 0)
+                                          (33 0 33.5 -4 34 0)
+                                          (34 0 34.5 2 35 0)
+                                          (35 0 35.5 -2 36 0)
+                                          (36 0 36.5 4 37 0)
+                                          (37 0 37.5 -4 38 0)
+                                          (38 0 38.5 1 39 0)
+                                          (39 0 39.5 -1 40 0)
+                                          (40 0 40.5 3 41 0)
+                                          (41 0 41.5 -3 42 0)
+                                          (42 0 42.5 1 43 0)
+                                          (43 0 43.5 -1 44 0)
+                                          (44 0 44.5 3 45 0)
+                                          (45 0 45.5 -3 46 0)
+                                          (46 0 46.5 1 47 0)
+                                          (47 0 47.5 -1 48 0)
+                                          (48 0 48.5 2 49 0)
+                                          (49 0 49.5 -2 50 0)
+                                          (50 0 50.5 1 51 0)
+                                          (51 0 51.5 -1 52 0)
+                                          (52 0 52.5 2 53 0)
+                                          (53 0 53.5 -2 54 0)
+                                          (54 0 54.5 0.5 55 0)
+                                          (55 0 55.5 -0.5 56 0)
+                                          (56 0 56.5 2 57 0)
+                                          (57 0 57.5 -2 58 0)
+                                          (58 0 58.5 0.5 59 0)
+                                          (59 0 59.5 -0.5 60 0)
+                                          (60 0 60.5 1 61 0)
+                                          (61 0 61.5 -1 62 0)
+                                          (62 0 62.5 0.1 63 0)
+                                          (63 0 63.5 -0.1 64 0)
+                                          (64 0 64.5 1 65 0)
+                                          (65 0 65.5 -1 66 0)
+                                          (66 0 66.5 7 67 0)
+                                          (67 0 67.5 -7 68 0)
+                                          (68 0 68.5 5 69 0)
+                                          (69 0 69.5 -5 70 0)
+                                          (70 0 70.5 7 71 0)
+                                          (71 0 71.5 -7 72 0)
+                                          (72 0 72.5 3 73 0)
+                                          (73 0 73.5 -3 74 0)
+                                          (74 0 74.5 7 75 0)
+                                          (75 0 75.5 -7 76 0)
+                                          (76 0 76.5 5 77 0)
+                                          (77 0 77.5 -5 78 0)
+                                          (78 0 78.5 7 79 0)
+                                          (79 0 79.5 -7 80 0)
+                                     )
+                                     #-20
+                                    \highest
+                                    d''4.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    d''8.
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    % GROB_OVERRIDES:
+                                    \once \override NoteHead.transparent = ##t
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    d''4..
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \revert-noteheads
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "On_Beat_Grace_Container"
+                                        {
+                                        % OPENING:
+                                            % COMMANDS:
+                                            \set fontSize = #-4
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \slash
+                                            \voiceOne
+                                            d''16 * 4/25
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \downbow
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            (
+                                            \glissando
+                                            c''8 * 2/25
+                                            % AFTER:
+                                            % SPANNER_STARTS:
+                                            \glissando
+                                            fqs''16 * 4/25
+                                            % AFTER:
+                                            % SPANNER_STOPS:
+                                            )
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "viola 2 voice"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceTwo
+                                            <d' d''>8
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \marcato
+                                            \f
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            - \tweak stencil #constante-hairpin
+                                            \<
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
+                                    % OPEN_BRACKETS:
+                                    \tweak edge-height #'(0.7 . 0)
+                                    \times 4/5
+                                    {
+                                        % OPEN_BRACKETS:
+                                        <<
+                                            % OPEN_BRACKETS:
+                                            \context Voice = "On_Beat_Grace_Container"
+                                            {
+                                            % OPENING:
+                                                % COMMANDS:
+                                                \set fontSize = #-4
+                                                % OPENING:
+                                                % COMMANDS:
+                                                \slash
+                                                \voiceOne
+                                                d''16 * 1/5
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \downbow
+                                                % START_BEAM:
+                                                [
+                                                % SPANNER_STARTS:
+                                                (
+                                                \glissando
+                                                c''8 * 1/10
+                                                % AFTER:
+                                                % SPANNER_STARTS:
+                                                \glissando
+                                                fqs''16 * 1/5
+                                                % AFTER:
+                                                % SPANNER_STOPS:
+                                                )
+                                                % STOP_BEAM:
+                                                ]
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \context Voice = "viola 2 voice"
+                                            {
+                                                % OPENING:
+                                                % COMMANDS:
+                                                \voiceTwo
+                                                <d' d''>8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \marcato
+                                            % CLOSE_BRACKETS:
+                                            }
+                                        % CLOSE_BRACKETS:
+                                        >>
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "On_Beat_Grace_Container"
+                                        {
+                                        % OPENING:
+                                            % COMMANDS:
+                                            \set fontSize = #-4
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \slash
+                                            \voiceOne
+                                            d''16 * 4/25
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \downbow
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            (
+                                            \glissando
+                                            c''8 * 2/25
+                                            % AFTER:
+                                            % SPANNER_STARTS:
+                                            \glissando
+                                            fqs''16 * 4/25
+                                            % AFTER:
+                                            % SPANNER_STOPS:
+                                            )
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "viola 2 voice"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceTwo
+                                            <d' d''>8
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \marcato
+                                            \!
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \oneVoice
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1542,11 +2207,133 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 9/16
-                                    s1 * 7/16
-                                    s1 * 1/8
-                                    s1 * 1/10
-                                    s1 * 1/8
+                                    <af''' a'''>4.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ffff
+                                    % SPANNER_STARTS:
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    <af''' a'''>16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % GROB_OVERRIDES:
+                                    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                                        {
+                                            \context Score = "Score"
+                                            \with
+                                            {
+                                                \override SpacingSpanner.spacing-increment = 0.5
+                                                proportionalNotationDuration = ##f
+                                            }
+                                            <<
+                                                \context RhythmicStaff = "Rhythmic_Staff"
+                                                \with
+                                                {
+                                                    \remove Time_signature_engraver
+                                                    \remove Staff_symbol_engraver
+                                                    \override Stem.direction = #up
+                                                    \override Stem.length = 5
+                                                    \override TupletBracket.bracket-visibility = ##t
+                                                    \override TupletBracket.direction = #up
+                                                    \override TupletBracket.minimum-length = 4
+                                                    \override TupletBracket.padding = 1.25
+                                                    \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                                    \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                                    \override TupletNumber.font-size = 0
+                                                    \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                                    tupletFullLength = ##t
+                                                }
+                                                {
+                                                    c'4.
+                                                }
+                                            >>
+                                            \layout
+                                            {
+                                                indent = 0
+                                                ragged-right = ##t
+                                            }
+                                        }
+                                    % OPEN_BRACKETS:
+                                    \times 1/1
+                                    {
+                                        % BEFORE:
+                                        % GROB_OVERRIDES:
+                                        \once \override Beam.grow-direction = #left
+                                        <af''' a'''>32 * 5/4
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        <af''' a'''>32 * 43/32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \>
+                                        <af''' a'''>32 * 51/32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        r32 * 65/32
+                                        <af''' a'''>32 * 85/32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        <af''' a'''>32 * 25/8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % GROB_REVERTS:
+                                    \revert TupletNumber.text
+                                    r8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \marcato
+                                    \f
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    % COMMANDS:
+                                    \boxed-markup "Bass Drum w/ drum stick" 1
+                                    % OPEN_BRACKETS:
+                                    \tweak edge-height #'(0.7 . 0)
+                                    \times 4/5
+                                    {
+                                        c'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \marcato
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \marcato
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
