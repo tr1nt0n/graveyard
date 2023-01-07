@@ -289,7 +289,7 @@ def guitar_row(index=0):
 
 # rhythm tools
 
-viola_grace_handler = evans.OnBeatGraceHandler(
+viola_grace_handler = trinton.OnBeatGraceHandler(
     number_of_attacks=[3],
     durations=[
         1,
