@@ -2992,8 +2992,8 @@
                                     c''8.
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    - \accent
                                     \ffff
+                                    ^ \accent
                                     % SPANNER_STARTS:
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -3030,7 +3030,7 @@
                                     c''16
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    - \accent
+                                    ^ \accent
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -3059,8 +3059,8 @@
                                     c''8
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    - \accent
                                     \fp
+                                    ^ \accent
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -3143,8 +3143,8 @@
                                     c''8
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    - \accent
                                     \ffff
+                                    ^ \accent
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -3189,8 +3189,8 @@
                                     c''16
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    - \accent
                                     \ffff
+                                    ^ \accent
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -3266,8 +3266,8 @@
                                     c''16
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    - \accent
                                     \fp
+                                    ^ \accent
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -3312,8 +3312,8 @@
                                     c''16
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    - \accent
                                     \ffff
+                                    ^ \accent
                                     % STOP_BEAM:
                                     ]
                                     % COMMANDS:
@@ -3340,7 +3340,7 @@
                                     - \tweak bound-details.right.arrow ##t
                                     - \tweak thickness #2
                                     \glissando
-                                    - \tweak padding #6
+                                    - \tweak padding #4
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
                                     \startTextSpan
@@ -3359,6 +3359,8 @@
                                     % AFTER:
                                     % STEM_TREMOLOS:
                                     :32
+                                    % START_BEAM:
+                                    [
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -3372,6 +3374,8 @@
                                     :32
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 3/16
                                     s1 * 13/16
                                     s1 * 9/16
@@ -4198,8 +4202,8 @@
                                     [
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
-                                    \<
-                                    - \tweak padding #6
+                                    ^ \<
+                                    - \tweak padding #10
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
                                     \startTextSpan
@@ -4212,7 +4216,7 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \tenuto
-                                    \pp
+                                    ^ \pp
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % STOP_BEAM:
@@ -4247,8 +4251,8 @@
                                     [
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
-                                    \<
-                                    - \tweak padding #4
+                                    ^ \<
+                                    - \tweak padding #6.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
                                     \startTextSpan
@@ -4259,7 +4263,7 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \tenuto
-                                    \pp
+                                    ^ \pp
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % STOP_BEAM:
@@ -4283,8 +4287,8 @@
                                     - \tenuto
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
-                                    \<
-                                    - \tweak padding #4
+                                    ^ \<
+                                    - \tweak padding #6.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
                                     \startTextSpan
@@ -4308,7 +4312,7 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \tenuto
-                                    \p
+                                    ^ \p
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % STOP_BEAM:

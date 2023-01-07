@@ -1328,6 +1328,7 @@ trinton.make_music(
                 14,
             ]
         ),
+        direction=abjad.UP,
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -1471,7 +1472,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string="tap",
-        padding=6,
+        padding=4,
         right_padding=4,
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
@@ -1520,6 +1521,7 @@ trinton.make_music(
         clef="percussion",
         selector=trinton.select_leaves_by_index([0]),
     ),
+    abjad.beam,
     voice=score["viola 2 voice"],
 )
 
@@ -1714,13 +1716,14 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string="air",
-        padding=6,
+        padding=10,
         right_padding=4,
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
     trinton.linear_attachment_command(
         attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("pp")],
         selector=trinton.select_leaves_by_index([0, -1]),
+        direction=abjad.UP,
     ),
     trinton.attachment_command(
         attachments=[abjad.Articulation("tenuto")],
@@ -1906,10 +1909,11 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("pp")],
         selector=trinton.select_leaves_by_index([0, -1]),
+        direction=abjad.UP,
     ),
     trinton.hooked_spanner_command(
         string="air",
-        padding=4,
+        padding=6.5,
         right_padding=3,
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
@@ -2089,10 +2093,11 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("p")],
         selector=trinton.select_leaves_by_index([0, -1]),
+        direction=abjad.UP,
     ),
     trinton.hooked_spanner_command(
         string="air",
-        padding=4,
+        padding=6.5,
         right_padding=3,
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
