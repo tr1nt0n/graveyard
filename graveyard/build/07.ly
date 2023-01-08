@@ -18,7 +18,7 @@
             s1 * 2
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % COMMANDS:
             - \tweak padding #8
@@ -226,6 +226,9 @@
                                         \startTextSpan
                                         - \tweak stencil #abjad-flared-hairpin
                                         \>
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -233,7 +236,13 @@
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
                                         % OPENING:
                                         % COMMANDS:
@@ -260,6 +269,9 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "kn. rasg., pont." } \hspace #0.5 }
                                         \startTextSpan
                                         \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -267,8 +279,17 @@
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
                                         % OPENING:
                                         % COMMANDS:
@@ -296,6 +317,9 @@
                                         \startTextSpan
                                         - \tweak stencil #constante-hairpin
                                         \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -475,6 +499,9 @@
                                                 % ABSOLUTE_BEFORE:
                                                 % COMMANDS:
                                                 \staff-line-count 4
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 % OPENING:
                                                 % COMMANDS:
                                                 \clef "percussion"
@@ -1673,6 +1700,9 @@
                                         - \tweak bound-details.right.arrow ##t
                                         - \tweak thickness #2
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1703,6 +1733,9 @@
                                         - \tweak thickness #2
                                         \glissando
                                         \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1804,6 +1837,9 @@
                                         - \tweak bound-details.right.arrow ##t
                                         - \tweak thickness #2
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1832,6 +1868,9 @@
                                         - \tweak bound-details.right.arrow ##t
                                         - \tweak thickness #2
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead

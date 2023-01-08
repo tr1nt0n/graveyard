@@ -16,10 +16,10 @@
             s1 * 1
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
-            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
             - \tweak padding #8
             ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { VI. Megtanultam gyűlölni a testemet és mindazt, } \line { amit ebben a világban megkövetel. } } }
+            - \tweak padding #8
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
             % OPENING:
             % COMMANDS:
             \time 6/8
@@ -72,7 +72,7 @@
             s1 * 9/8
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % OPENING:
             % COMMANDS:
@@ -104,7 +104,7 @@
             s1 * 7/8
             % AFTER:
             % SPANNER_STARTS:
-            - \tweak padding #8.5
+            - \tweak padding #9.5
             - \abjad-dashed-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"66" } }
@@ -1452,6 +1452,9 @@
                                     % SPANNER_STARTS:
                                     \<
                                     \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1492,6 +1495,9 @@
                                         % SPANNER_STARTS:
                                         \<
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1536,6 +1542,9 @@
                                         % SPANNER_STARTS:
                                         \<
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1577,6 +1586,9 @@
                                     % SPANNER_STARTS:
                                     \<
                                     \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1617,6 +1629,9 @@
                                         % SPANNER_STARTS:
                                         \<
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1658,6 +1673,9 @@
                                     % SPANNER_STARTS:
                                     \<
                                     \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -1764,6 +1782,9 @@
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 9 \hspace #0.5 } \hspace #0.5 }
                                     - \tweak bound-details.right.text \markup \concat { \upright \fraction 1 9 \hspace #0.5 }
                                     \startTextSpan
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2419,6 +2440,9 @@
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
                                     \<
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -2436,6 +2460,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2447,6 +2474,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2460,6 +2490,9 @@
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
                                     \>
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2471,6 +2504,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2482,6 +2518,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2493,6 +2532,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2506,6 +2548,9 @@
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
                                     \<
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2517,6 +2562,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2528,6 +2576,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2541,6 +2592,9 @@
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
                                     \>
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2552,6 +2606,9 @@
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     fs'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -3371,6 +3428,9 @@
                                                 ]
                                                 % SPANNER_STARTS:
                                                 (
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 cs4..
                                                 % AFTER:
                                                 % ARTICULATIONS:
@@ -3592,6 +3652,9 @@
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 4 1))
                                             \times 4/5
                                             {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 b'8..
                                                 % AFTER:
                                                 % ARTICULATIONS:
@@ -3775,6 +3838,9 @@
                                                 % AFTER:
                                                 % STOP_BEAM:
                                                 ]
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 aqf4.
                                                 % AFTER:
                                                 % ARTICULATIONS:
@@ -3843,6 +3909,9 @@
                                                 % SPANNER_STARTS:
                                                 \>
                                                 \glissando
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 aqf4.
                                                 % AFTER:
                                                 % SPANNER_STARTS:
@@ -4304,6 +4373,9 @@
                                                     % AFTER:
                                                     % SPANNER_STARTS:
                                                     (
+                                                    % BEFORE:
+                                                    % COMMANDS:
+                                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                                     af'8.
                                                     % AFTER:
                                                     % ARTICULATIONS:
@@ -4334,6 +4406,9 @@
                                                 % AFTER:
                                                 % ARTICULATIONS:
                                                 \f
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 aqf8
                                                 % AFTER:
                                                 % SPANNER_STARTS:
@@ -5063,6 +5138,7 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \arpeggioArrowUp
+                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \ottava 1
                                     % OPENING:
                                     % COMMANDS:
@@ -5243,6 +5319,9 @@
                                         % SPANNER_STARTS:
                                         \glissando
                                         ^ \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -5281,6 +5360,9 @@
                                         % SPANNER_STARTS:
                                         \glissando
                                         ^ \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -5314,6 +5396,9 @@
                                     % SPANNER_STARTS:
                                     \glissando
                                     ^ \<
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -5351,6 +5436,9 @@
                                         % SPANNER_STARTS:
                                         \glissando
                                         ^ \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -5389,6 +5477,9 @@
                                         % SPANNER_STARTS:
                                         \glissando
                                         ^ \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -5426,6 +5517,9 @@
                                         % SPANNER_STARTS:
                                         \glissando
                                         ^ \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead

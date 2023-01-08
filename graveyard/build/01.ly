@@ -11,7 +11,7 @@
             s1 * 2
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % COMMANDS:
             - \tweak padding #8
@@ -194,6 +194,9 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "kn. rasg., molto tast." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { n. rasg., molto pont. }
                                         \startTextSpan
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -201,12 +204,33 @@
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         e2
                                         % OPENING:
                                         % COMMANDS:
@@ -335,6 +359,9 @@
                                                 % ABSOLUTE_BEFORE:
                                                 % COMMANDS:
                                                 \staff-line-count 4
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 % OPENING:
                                                 % COMMANDS:
                                                 \clef "percussion"
@@ -1556,6 +1583,9 @@
                                         \glissando
                                         - \tweak circled-tip ##t
                                         \<
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1566,14 +1596,23 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1642,6 +1681,9 @@
                                         - \tweak bound-details.right.arrow ##t
                                         - \tweak thickness #2
                                         \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -1652,14 +1694,23 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         <d, a>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         <d, a>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
                                         <d, a>2
                                         % AFTER:
                                         % ARTICULATIONS:

@@ -10,7 +10,7 @@
             s1 * 7/8
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % COMMANDS:
             - \tweak padding #8
@@ -25,7 +25,7 @@
             s1 * 3/16
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -52,7 +52,7 @@
             s1 * 3/8
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % OPENING:
             % COMMANDS:
@@ -60,7 +60,7 @@
             s1 * 5/32
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"66" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -216,7 +216,7 @@
             s1 * 7/16
             % AFTER:
             % SPANNER_STARTS:
-            - \tweak padding #9
+            - \tweak padding #9.5
             - \abjad-dashed-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
@@ -982,14 +982,10 @@
                                         \mp
                                         % STOP_BEAM:
                                         ]
-                                        c'8
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \accent
-                                        \ff
-                                        % START_BEAM:
-                                        [
-                                        % ABSOLUTE_AFTER:
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override TextSpanner.bound-details.right.padding = #-6
+                                        % OPENING:
                                         % COMMANDS:
                                         - \tweak padding #4
                                         - \abjad-dashed-line-with-arrow
@@ -999,6 +995,13 @@
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { { \upright "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
                                         \startTextSpanOne
+                                        c'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \ff
+                                        % START_BEAM:
+                                        [
                                         c'8
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1227,25 +1230,12 @@
                                     % AFTER:
                                     % GROB_REVERTS:
                                     \revert TupletNumber.text
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
-                                    % START_BEAM:
-                                    [
-                                    % ABSOLUTE_AFTER:
+                                    % OPENING:
                                     % COMMANDS:
                                     \stopTextSpanTwo
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \mf
-                                    % STOP_BEAM:
-                                    ]
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
                                     - \accent
                                     \fff
                                     % START_BEAM:
@@ -1254,36 +1244,6 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \mf
-                                    % STOP_BEAM:
-                                    ]
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
-                                    % START_BEAM:
-                                    [
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \mf
-                                    c'16
-                                    % AFTER:
-                                    % STOP_BEAM:
-                                    ]
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
-                                    % START_BEAM:
-                                    [
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \mf
-                                    c'16
-                                    % AFTER:
                                     % STOP_BEAM:
                                     ]
                                     c'16
@@ -1314,9 +1274,52 @@
                                     % AFTER:
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    c'16
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % STOP_BEAM:
+                                    ]
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % OPENING:
                                     % COMMANDS:
                                     \stopTextSpanOne
+                                    c'16
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1505,6 +1508,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Beam.stencil = ##f
+                                        \once \override Dots.staff-position = #2
                                         \once \override Dots.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
@@ -1527,6 +1531,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Beam.stencil = ##f
+                                        \once \override Dots.staff-position = #2
                                         \once \override Dots.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
@@ -2296,13 +2301,10 @@
                                     \ff
                                     % START_BEAM:
                                     [
-                                    c'8
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \mp
-                                    % STOP_BEAM:
-                                    ]
-                                    % ABSOLUTE_AFTER:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-6
+                                    % OPENING:
                                     % COMMANDS:
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-arrow
@@ -2312,6 +2314,12 @@
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { { \upright "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
                                     \startTextSpanOne
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % STOP_BEAM:
+                                    ]
                                     c'8
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2605,25 +2613,12 @@
                                     % AFTER:
                                     % GROB_REVERTS:
                                     \revert TupletNumber.text
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
-                                    % START_BEAM:
-                                    [
-                                    % ABSOLUTE_AFTER:
+                                    % OPENING:
                                     % COMMANDS:
                                     \stopTextSpanTwo
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \mf
-                                    % STOP_BEAM:
-                                    ]
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
                                     - \accent
                                     \fff
                                     % START_BEAM:
@@ -2632,36 +2627,6 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \mf
-                                    % STOP_BEAM:
-                                    ]
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
-                                    % START_BEAM:
-                                    [
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \mf
-                                    c'16
-                                    % AFTER:
-                                    % STOP_BEAM:
-                                    ]
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
-                                    % START_BEAM:
-                                    [
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \mf
-                                    c'16
-                                    % AFTER:
                                     % STOP_BEAM:
                                     ]
                                     c'16
@@ -2692,9 +2657,52 @@
                                     % AFTER:
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    c'16
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % STOP_BEAM:
+                                    ]
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % OPENING:
                                     % COMMANDS:
                                     \stopTextSpanOne
+                                    c'16
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -3870,14 +3878,10 @@
                                         \mp
                                         % STOP_BEAM:
                                         ]
-                                        c'8
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \accent
-                                        \ff
-                                        % START_BEAM:
-                                        [
-                                        % ABSOLUTE_AFTER:
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override TextSpanner.bound-details.right.padding = #-6
+                                        % OPENING:
                                         % COMMANDS:
                                         - \tweak padding #4
                                         - \abjad-dashed-line-with-arrow
@@ -3887,6 +3891,13 @@
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { { \upright "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
                                         \startTextSpanOne
+                                        c'8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \ff
+                                        % START_BEAM:
+                                        [
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -4080,25 +4091,12 @@
                                     % AFTER:
                                     % GROB_REVERTS:
                                     \revert TupletNumber.text
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
-                                    % START_BEAM:
-                                    [
-                                    % ABSOLUTE_AFTER:
+                                    % OPENING:
                                     % COMMANDS:
                                     \stopTextSpanTwo
                                     c'16
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \mf
-                                    % STOP_BEAM:
-                                    ]
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
                                     - \accent
                                     \fff
                                     % START_BEAM:
@@ -4107,36 +4105,6 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \mf
-                                    % STOP_BEAM:
-                                    ]
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
-                                    % START_BEAM:
-                                    [
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \mf
-                                    c'16
-                                    % AFTER:
-                                    % STOP_BEAM:
-                                    ]
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
-                                    % START_BEAM:
-                                    [
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \mf
-                                    c'16
-                                    % AFTER:
                                     % STOP_BEAM:
                                     ]
                                     c'16
@@ -4167,9 +4135,52 @@
                                     % AFTER:
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_AFTER:
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    c'16
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % STOP_BEAM:
+                                    ]
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % OPENING:
                                     % COMMANDS:
                                     \stopTextSpanOne
+                                    c'16
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override TupletBracket.stencil = ##f
@@ -4196,6 +4207,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Beam.stencil = ##f
+                                        \once \override Dots.staff-position = #2
                                         \once \override Dots.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
@@ -4218,6 +4230,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Beam.stencil = ##f
+                                        \once \override Dots.staff-position = #2
                                         \once \override Dots.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
