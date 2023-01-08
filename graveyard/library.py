@@ -128,6 +128,28 @@ guitar_tone_row = eval(
     ]"""
 )
 
+guitar_accordion_talea = eval(
+    """[
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+    ]"""
+)
+
 tempi = eval(
     """[
         abjad.Markup(
@@ -148,7 +170,7 @@ tempi = eval(
     ]"""
 )
 
-tempi = [abjad.bundle(tempo, r"- \tweak padding #10") for tempo in tempi]
+tempi = [abjad.bundle(tempo, r"- \tweak padding #8") for tempo in tempi]
 
 
 miniatures = [

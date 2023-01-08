@@ -45,7 +45,7 @@
             s1 * 9/16
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"99" } }
             % OPENING:
             % COMMANDS:
@@ -90,7 +90,7 @@
             s1 * 1/4
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -118,7 +118,7 @@
             s1 * 1/10
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"99" } }
             % OPENING:
             % COMMANDS:
@@ -130,7 +130,7 @@
             s1 * 1/2
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
             % OPENING:
             % COMMANDS:
@@ -146,7 +146,7 @@
             s1 * 3/16
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
             % COMMANDS:
             \break
@@ -175,7 +175,7 @@
             s1 * 9/16
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
             % OPENING:
             % COMMANDS:
@@ -191,7 +191,7 @@
             s1 * 1/2
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
             % COMMANDS:
             \break
@@ -201,7 +201,7 @@
             s1 * 3/16
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
             % OPENING:
             % COMMANDS:
@@ -213,19 +213,22 @@
             s1 * 9/16
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
             % OPENING:
             % COMMANDS:
             \time 7/16
             s1 * 7/16
+            % AFTER:
+            % COMMANDS:
+            \break
             % OPENING:
             % COMMANDS:
             \time 5/16
             s1 * 5/16
             % AFTER:
             % SPANNER_STARTS:
-            - \tweak padding #9
+            - \tweak padding #9.5
             - \abjad-dashed-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
@@ -275,7 +278,7 @@
             s1 * 9/16
             % AFTER:
             % MARKUP:
-            - \tweak padding #10
+            - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"99" } }
             % OPENING:
             % COMMANDS:
@@ -958,9 +961,50 @@
                                     s1 * 5/8
                                     s1 * 1/2
                                     s1 * 3/16
-                                    s1 * 13/16
-                                    s1 * 9/16
-                                    s1 * 7/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.transparent = ##t
+                                    \once \override Rest.transparent = ##t
+                                    r4.
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-1
+                                    \textSpannerDown
+                                    a'8.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-up-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "vib." } \hspace #0.5 }
+                                    \startTextSpan
+                                    b4
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    d'4
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    e4..
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    g4
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % COMMANDS:
+                                    \textSpannerUp
                                     s1 * 5/16
                                     s1 * 3/8
                                     s1 * 1/2
@@ -1754,10 +1798,259 @@
                                     % STOP_BEAM:
                                     ]
                                     s1 * 1/2
-                                    s1 * 3/16
-                                    s1 * 13/16
-                                    s1 * 9/16
-                                    s1 * 7/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \fancy-gliss
+                                       #'(
+                                          (0 0 0.5 7 1 0)
+                                          (1 0 1.5 -7 2 0)
+                                          (2 0 2.5 3 3 0)
+                                          (3 0 3.5 -3 4 0)
+                                          (4 0 4.5 7 5 0)
+                                          (5 0 5.5 -7 6 0)
+                                          (6 0 6.5 3 7 0)
+                                          (7 0 7.5 -3 8 0)
+                                          (8 0 8.5 2 9 0)
+                                          (9 0 9.5 -2 10 0)
+                                          (10 0 10.5 1 11 0)
+                                          (11 0 11.5 -1 12 0)
+                                          (12 0 12.5 0.5 13 0)
+                                          (13 0 13.5 -0.5 14 0)
+                                     )
+                                     #0.5
+                                    \highest
+                                    \once \override TextSpanner.bound-details.right.padding = #-3
+                                    % OPENING:
+                                    % COMMANDS:
+                                    - \tweak padding #10
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { { \upright "scratch" } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak padding #12
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "bow, molto pont." } \hspace #0.5 }
+                                    \startTextSpanOne
+                                    <f' b' e'' a'' d''' f'''>8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \<
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    <f' b' e'' a'' d''' f'''>8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ffff
+                                    % SPANNER_STARTS:
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    \glissando
+                                    % COMMANDS:
+                                    \revert-noteheads
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
+                                    <f bf ef' af' cs'' f''>16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    \glissando
+                                    r8
+                                    r16
+                                    % BEFORE:
+                                    % GROB_OVERRIDES:
+                                    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                                        {
+                                            \context Score = "Score"
+                                            \with
+                                            {
+                                                \override SpacingSpanner.spacing-increment = 0.5
+                                                proportionalNotationDuration = ##f
+                                            }
+                                            <<
+                                                \context RhythmicStaff = "Rhythmic_Staff"
+                                                \with
+                                                {
+                                                    \remove Time_signature_engraver
+                                                    \remove Staff_symbol_engraver
+                                                    \override Stem.direction = #up
+                                                    \override Stem.length = 5
+                                                    \override TupletBracket.bracket-visibility = ##t
+                                                    \override TupletBracket.direction = #up
+                                                    \override TupletBracket.minimum-length = 4
+                                                    \override TupletBracket.padding = 1.25
+                                                    \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                                    \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                                    \override TupletNumber.font-size = 0
+                                                    \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                                    tupletFullLength = ##t
+                                                }
+                                                {
+                                                    c'4..
+                                                }
+                                            >>
+                                            \layout
+                                            {
+                                                indent = 0
+                                                ragged-right = ##t
+                                            }
+                                        }
+                                    % OPEN_BRACKETS:
+                                    \times 1/1
+                                    {
+                                        % BEFORE:
+                                        % GROB_OVERRIDES:
+                                        \once \override Beam.grow-direction = #right
+                                        e32 * 29/8
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        ^ \<
+                                        e32 * 103/32
+                                        e32 * 77/32
+                                        e32 * 29/16
+                                        e32 * 49/32
+                                        e32 * 45/32
+                                        % AFTER:
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % GROB_REVERTS:
+                                    \revert TupletNumber.text
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    e32
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    e32
+                                    e32
+                                    e32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    e16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    ^ \f
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak stencil #constante-hairpin
+                                    ^ \<
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    e32
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    e32
+                                    e16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    e32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    e32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    e32
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    e32
+                                    e32
+                                    e32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    ^ \>
+                                    ~
+                                    e32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    e32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    e32
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    e16.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    e32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    e32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    e32
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    e32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    e16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    e32
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    e32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
+                                    r16
                                     s1 * 5/16
                                     s1 * 3/8
                                     s1 * 1/2
@@ -3376,8 +3669,252 @@
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
-                                    s1 * 3/16
-                                    s1 * 13/16
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 5
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \fancy-gliss
+                                       #'(
+                                          (0 0 0.5 7 1 0)
+                                          (1 0 1.5 -7 2 0)
+                                          (2 0 2.5 6 3 0)
+                                          (3 0 3.5 -6 4 0)
+                                          (4 0 4.5 5 5 0)
+                                          (5 0 5.5 -5 6 0)
+                                          (6 0 6.5 4 7 0)
+                                          (7 0 7.5 -4 8 0)
+                                          (8 0 8.5 3 9 0)
+                                          (9 0 9.5 -3 10 0)
+                                          (10 0 10.5 2 11 0)
+                                          (11 0 11.5 -2 12 0)
+                                          (12 0 12.5 1 13 0)
+                                          (13 0 13.5 -1 14 0)
+                                          (14 0 14.5 0.5 15 0)
+                                          (15 0 15.5 -0.5 16 0)
+                                     )
+                                     #0.5
+                                    \highest
+                                    \once \override TextSpanner.bound-details.right.padding = #-3
+                                    % OPENING:
+                                    % COMMANDS:
+                                    - \tweak padding #7.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { { \upright "1/3 scratch" } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak padding #9.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
+                                    \startTextSpanOne
+                                    \clef "altovarC"
+                                    c''8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    ^ \accent
+                                    % SPANNER_STARTS:
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    \glissando
+                                    _ (
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c''16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \fancy-gliss
+                                       #'(
+                                          (0 0 0.5 0.5 1 0)
+                                          (1 0 1.5 -0.5 2 0)
+                                          (2 0 2.5 1 3 0)
+                                          (3 0 3.5 -1 4 0)
+                                          (4 0 4.5 2 5 0)
+                                          (5 0 5.5 -2 6 0)
+                                          (6 0 6.5 3 7 0)
+                                          (7 0 7.5 -3 8 0)
+                                          (8 0 8.5 4 9 0)
+                                          (9 0 9.5 -4 10 0)
+                                          (10 0 10.5 5 11 0)
+                                          (11 0 11.5 -5 12 0)
+                                          (12 0 12.5 6 13 0)
+                                          (13 0 13.5 -6 14 0)
+                                          (14 0 14.5 7 15 0)
+                                          (15 0 15.5 -7 16 0)
+                                     )
+                                     #0.5
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
+                                    c''8
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \fancy-gliss
+                                       #'(
+                                          (0 0 0.5 7 1 0)
+                                          (1 0 1.5 -7 2 0)
+                                          (2 0 2.5 6 3 0)
+                                          (3 0 3.5 -6 4 0)
+                                          (4 0 4.5 5 5 0)
+                                          (5 0 5.5 -5 6 0)
+                                          (6 0 6.5 4 7 0)
+                                          (7 0 7.5 -4 8 0)
+                                          (8 0 8.5 3 9 0)
+                                          (9 0 9.5 -3 10 0)
+                                          (10 0 10.5 2 11 0)
+                                          (11 0 11.5 -2 12 0)
+                                          (12 0 12.5 1 13 0)
+                                          (13 0 13.5 -1 14 0)
+                                          (14 0 14.5 0.5 15 0)
+                                          (15 0 15.5 -0.5 16 0)
+                                     )
+                                     #0.5
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    c''8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ffff
+                                    ^ \accent
+                                    % SPANNER_STARTS:
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \fancy-gliss
+                                       #'(
+                                          (0 0 0.5 0.5 1 0)
+                                          (1 0 1.5 -0.5 2 0)
+                                          (2 0 2.5 1 3 0)
+                                          (3 0 3.5 -1 4 0)
+                                          (4 0 4.5 2 5 0)
+                                          (5 0 5.5 -2 6 0)
+                                          (6 0 6.5 3 7 0)
+                                          (7 0 7.5 -3 8 0)
+                                          (8 0 8.5 4 9 0)
+                                          (9 0 9.5 -4 10 0)
+                                          (10 0 10.5 5 11 0)
+                                          (11 0 11.5 -5 12 0)
+                                          (12 0 12.5 6 13 0)
+                                          (13 0 13.5 -6 14 0)
+                                          (14 0 14.5 7 15 0)
+                                          (15 0 15.5 -7 16 0)
+                                     )
+                                     #0.5
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \stopTextSpanTwo
+                                    c''8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    ^ \accent
+                                    % SPANNER_STARTS:
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \fancy-gliss
+                                       #'(
+                                          (0 0 0.5 7 1 0)
+                                          (1 0 1.5 -7 2 0)
+                                          (2 0 2.5 6 3 0)
+                                          (3 0 3.5 -6 4 0)
+                                          (4 0 4.5 5 5 0)
+                                          (5 0 5.5 -5 6 0)
+                                          (6 0 6.5 4 7 0)
+                                          (7 0 7.5 -4 8 0)
+                                          (8 0 8.5 3 9 0)
+                                          (9 0 9.5 -3 10 0)
+                                          (10 0 10.5 2 11 0)
+                                          (11 0 11.5 -2 12 0)
+                                          (12 0 12.5 1 13 0)
+                                          (13 0 13.5 -1 14 0)
+                                          (14 0 14.5 0.5 15 0)
+                                          (15 0 15.5 -0.5 16 0)
+                                     )
+                                     #0.5
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    c''8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    ^ \accent
+                                    % SPANNER_STARTS:
+                                    \>
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override TextSpanner.bound-details.right.padding = #-3
+                                    % OPENING:
+                                    % COMMANDS:
+                                    - \tweak padding #7.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "molto vib." } \hspace #0.5 }
+                                    \startTextSpanTwo
+                                    c''8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    ^ \accent
+                                    % SPANNER_STARTS:
+                                    \glissando
+                                    _ (
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c''16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % COMMANDS:
+                                    \revert-noteheads
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
+                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
+                                    aqs'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ppp
+                                    % SPANNER_STOPS:
+                                    )
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 9/16
                                     s1 * 7/16
                                     s1 * 5/16
@@ -4127,8 +4664,176 @@
                                     % GROB_REVERTS:
                                     \revert TupletNumber.text
                                     s1 * 1/2
-                                    s1 * 3/16
-                                    s1 * 13/16
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    c'8.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % COMMANDS:
+                                    \boxed-markup "Zhongbo w/ bow" 1
+                                    % BEFORE:
+                                    % GROB_OVERRIDES:
+                                    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                                        {
+                                            \context Score = "Score"
+                                            \with
+                                            {
+                                                \override SpacingSpanner.spacing-increment = 0.5
+                                                proportionalNotationDuration = ##f
+                                            }
+                                            <<
+                                                \context RhythmicStaff = "Rhythmic_Staff"
+                                                \with
+                                                {
+                                                    \remove Time_signature_engraver
+                                                    \remove Staff_symbol_engraver
+                                                    \override Stem.direction = #up
+                                                    \override Stem.length = 5
+                                                    \override TupletBracket.bracket-visibility = ##t
+                                                    \override TupletBracket.direction = #up
+                                                    \override TupletBracket.minimum-length = 4
+                                                    \override TupletBracket.padding = 1.25
+                                                    \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                                    \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                                    \override TupletNumber.font-size = 0
+                                                    \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                                    tupletFullLength = ##t
+                                                }
+                                                {
+                                                    c'4
+                                                }
+                                            >>
+                                            \layout
+                                            {
+                                                indent = 0
+                                                ragged-right = ##t
+                                            }
+                                        }
+                                    % OPEN_BRACKETS:
+                                    \times 1/1
+                                    {
+                                        % BEFORE:
+                                        % GROB_OVERRIDES:
+                                        \once \override Beam.grow-direction = #right
+                                        r32 * 15/4
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        % ABSOLUTE_BEFORE:
+                                        % COMMANDS:
+                                        \staff-line-count 5
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        <af''' a'''>32 * 21/8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \<
+                                        % COMMANDS:
+                                        \boxed-markup "Accordion" 1
+                                        <af''' a'''>32 * 13/8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ffff
+                                        % STOP_BEAM:
+                                        ]
+                                        % SPANNER_STARTS:
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \>
+                                        ~
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % GROB_REVERTS:
+                                    \revert TupletNumber.text
+                                    % BEFORE:
+                                    % GROB_OVERRIDES:
+                                    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                                        {
+                                            \context Score = "Score"
+                                            \with
+                                            {
+                                                \override SpacingSpanner.spacing-increment = 0.5
+                                                proportionalNotationDuration = ##f
+                                            }
+                                            <<
+                                                \context RhythmicStaff = "Rhythmic_Staff"
+                                                \with
+                                                {
+                                                    \remove Time_signature_engraver
+                                                    \remove Staff_symbol_engraver
+                                                    \override Stem.direction = #up
+                                                    \override Stem.length = 5
+                                                    \override TupletBracket.bracket-visibility = ##t
+                                                    \override TupletBracket.direction = #up
+                                                    \override TupletBracket.minimum-length = 4
+                                                    \override TupletBracket.padding = 1.25
+                                                    \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                                    \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                                    \override TupletNumber.font-size = 0
+                                                    \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                                    tupletFullLength = ##t
+                                                }
+                                                {
+                                                    c'2
+                                                    ~
+                                                    c'16
+                                                }
+                                            >>
+                                            \layout
+                                            {
+                                                indent = 0
+                                                ragged-right = ##t
+                                            }
+                                        }
+                                    % OPEN_BRACKETS:
+                                    \times 1/1
+                                    {
+                                        % BEFORE:
+                                        % GROB_OVERRIDES:
+                                        \once \override Beam.grow-direction = #left
+                                        <af''' a'''>32 * 47/32
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        <af''' a'''>32 * 3/2
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        <af''' a'''>32 * 13/8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        r32 * 59/32
+                                        <af''' a'''>32 * 35/16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        r32 * 85/32
+                                        <af''' a'''>32 * 101/32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        \ppp
+                                        r32 * 57/16
+                                        % AFTER:
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % GROB_REVERTS:
+                                    \revert TupletNumber.text
                                     s1 * 9/16
                                     s1 * 7/16
                                     s1 * 5/16
