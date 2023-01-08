@@ -208,6 +208,33 @@ miniatures = [
 # commands
 
 
+def color_fingering(selector=None, index=0):
+    def fingering(argument):
+        if selector is not None:
+            selections = selector(selections)
+            selections = abjad.select.logical_ties(selections)
+        else:
+            selections = abjad.select.logical_ties(argument, pitched=True)
+
+        # fingerings = [abjad.ColorFingering(_) for _ in trinton.rotated_sequence([3, 1, 2, 3, 1], index)]
+
+        fingerings = [
+            abjad.Markup(
+                rf"\markup \fontsize #0.5 {{ \override #'(circle-padding . 0.25) \circle {_} }}"
+            )
+            for _ in trinton.rotated_sequence([3, 1, 2, 3, 1], index)
+        ]
+
+        # fingerings = [abjad.bundle(_, r'- \tweak font-name "Bodoni72 Bold"', r'- \tweak font-size #7',) for _ in fingerings]
+
+        fingerings = cycle(fingerings)
+
+        for selection, finger in zip(selections, fingerings):
+            abjad.attach(finger, selection[0], direction=abjad.UP)
+
+    return fingering
+
+
 def change_lines(
     lines,
     selector,
