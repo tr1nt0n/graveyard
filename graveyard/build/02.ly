@@ -2051,8 +2051,65 @@
                                     % STOP_BEAM:
                                     ]
                                     r16
-                                    s1 * 5/16
-                                    s1 * 3/8
+                                    r8
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 6
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-3
+                                    % OPENING:
+                                    % COMMANDS:
+                                    - \tweak padding #4.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/3 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { { \upright "norm." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak padding #6.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "bow, molto pont." } \hspace #0.5 }
+                                    \startTextSpanOne
+                                    \clef "percussion"
+                                    <e g b d' f' a'>16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \<
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    <e g b d' f' a'>8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <e g b d' f' a'>8.
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <e g b d' f' a'>8
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
+                                    <e g b d' f' a'>16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \f
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 1/2
                                     s1 * 5/16
                                     s1 * 1/2
@@ -2555,7 +2612,46 @@
                                     s1 * 9/16
                                     s1 * 7/16
                                     s1 * 5/16
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.transparent = ##t
+                                    \once \override Rest.transparent = ##t
+                                    r16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-1
+                                    \textSpannerDown
+                                    e32
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-up-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato" } \hspace #0.5 }
+                                    \startTextSpan
+                                    f'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    c'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    g'32
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    % COMMANDS:
+                                    \textSpannerUp
                                     s1 * 1/2
                                     s1 * 5/16
                                     s1 * 1/2
@@ -4019,11 +4115,279 @@
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
-                                    s1 * 5/16
-                                    s1 * 3/8
-                                    s1 * 1/2
-                                    s1 * 5/16
-                                    s1 * 1/2
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) (ly:make-duration 4 0))
+                                    \times 24/20
+                                    {
+                                        % ABSOLUTE_BEFORE:
+                                        % COMMANDS:
+                                        \staff-line-count 5
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \fancy-gliss
+                                           #'(
+                                              (0 0 0.5 7 1 0)
+                                              (1 0 1.5 -7 2 0)
+                                              (2 0 2.5 2 3 0)
+                                              (3 0 3.5 -2 4 0)
+                                         )
+                                         #0.5
+                                        \highest
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "altovarC"
+                                        c''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        ^ \accent
+                                        ^ \ffff
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak padding #10
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "1/3 scratch" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { norm. }
+                                        \startTextSpan
+                                        - \tweak stencil #constante-hairpin
+                                        ^ \<
+                                        \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \fancy-gliss
+                                           #'(
+                                              (0 0 0.5 5 1 0)
+                                              (1 0 1.5 -5 2 0)
+                                              (2 0 2.5 7 3 0)
+                                              (3 0 3.5 -7 4 0)
+                                         )
+                                         #0.5
+                                        c''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        ^ \accent
+                                        % SPANNER_STARTS:
+                                        \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \fancy-gliss
+                                           #'(
+                                              (0 0 0.5 2 1 0)
+                                              (1 0 1.5 -2 2 0)
+                                         )
+                                         #0.5
+                                        c''32.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        ^ \accent
+                                        % SPANNER_STARTS:
+                                        \glissando
+                                        ^ \>
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override NoteHead.no-ledgers = ##t
+                                        c''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        ^ \accent
+                                        % SPANNER_STARTS:
+                                        \glissando
+                                        _ (
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        c''64
+                                        % AFTER:
+                                        % COMMANDS:
+                                        \revert-noteheads
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        gqs16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        ^ \mp
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
+                                        % SPANNER_STARTS:
+                                        ^ \<
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    g8.
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    g8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    ^ \f
+                                    % STOP_BEAM:
+                                    ]
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-3
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    \tweak style #'cross
+                                    f'4
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :8
+                                    % ARTICULATIONS:
+                                    \pp
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #7
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                    \startTextSpan
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \tweak style #'cross
+                                    f'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    \tweak style #'cross
+                                    b16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    b8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :16
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    b8.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :16
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \tweak style #'cross
+                                    b16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    \tweak style #'cross
+                                    g16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    g8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :16
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \tweak style #'cross
+                                    g16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    \tweak style #'cross
+                                    d'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
+                                    \glissando
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \tweak style #'cross
+                                    d'16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
+                                    \tweak style #'cross
+                                    f'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    f'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
                                     s1 * 5/16
                                     s1 * 3/16
                                     s1 * 1/4
@@ -5034,8 +5398,93 @@
                                         ]
                                     % CLOSE_BRACKETS:
                                     }
-                                    s1 * 5/16
-                                    s1 * 3/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) (ly:make-duration 4 0))
+                                    \times 5/9
+                                    {
+                                        <af''' a'''>4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \mp
+                                        % SPANNER_STARTS:
+                                        \<
+                                        \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \override Staff.Stem.stemlet-length = 0.75
+                                        <af''' a'''>16
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        <af''' a'''>8.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \ffff
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        \revert Staff.Stem.stemlet-length
+                                        <af''' a'''>16
+                                        % AFTER:
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    r16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-4
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    c'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #8
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto flaut." } \hspace #0.5 }
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    % COMMANDS:
+                                    \boxed-markup "Zhongbo w/ bow" 1
+                                    c'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    r16
                                     s1 * 1/2
                                     s1 * 5/16
                                     s1 * 1/2
@@ -5278,9 +5727,112 @@
                                     s1 * 7/16
                                     s1 * 5/16
                                     s1 * 3/8
-                                    s1 * 1/2
-                                    s1 * 5/16
-                                    s1 * 1/2
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-3
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    ^ \<
+                                    - \tweak padding #10
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
+                                    \startTextSpan
+                                    % COMMANDS:
+                                    \boxed-markup "Accordion" 1
+                                    c'4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'8.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'8
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    ^ \p
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 5/16
                                     s1 * 3/16
                                     s1 * 1/4
