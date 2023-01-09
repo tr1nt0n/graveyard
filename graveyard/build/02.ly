@@ -2057,7 +2057,7 @@
                                     \staff-line-count 6
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-3
+                                    \once \override TextSpanner.bound-details.right.padding = #-2
                                     % OPENING:
                                     % COMMANDS:
                                     - \tweak padding #4.5
@@ -2113,7 +2113,53 @@
                                     s1 * 1/2
                                     s1 * 5/16
                                     s1 * 1/2
-                                    s1 * 5/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    - \tweak padding #4.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/3 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { { \upright "norm." } \hspace #0.5 }\startTextSpanTwo
+                                    - \tweak padding #6.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { { \upright "bow, molto pont." } \hspace #0.5 }
+                                    \startTextSpanOne
+                                    <e g b d' f' a'>8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    <e g b d' f' a'>16.
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
+                                    <e g b d' f' a'>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 3/16
                                     s1 * 1/4
                                     s1 * 5/8
@@ -2655,7 +2701,50 @@
                                     s1 * 1/2
                                     s1 * 5/16
                                     s1 * 1/2
-                                    s1 * 5/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override TextSpanner.bound-details.right.padding = #-4
+                                    \textSpannerDown
+                                    e32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-up-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato" } \hspace #0.5 }
+                                    \startTextSpan
+                                    c'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    g16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    e'32
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    % COMMANDS:
+                                    \textSpannerUp
+                                    r8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    r32
                                     s1 * 3/16
                                     s1 * 1/4
                                     s1 * 5/8
@@ -4388,7 +4477,18 @@
                                     :32
                                     % SPANNER_STOPS:
                                     \stopTextSpan
-                                    s1 * 5/16
+                                    f'8
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    f'32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    r32
+                                    r8
                                     s1 * 3/16
                                     s1 * 1/4
                                     s1 * 5/8

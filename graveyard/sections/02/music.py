@@ -989,7 +989,7 @@ trinton.make_music(
         left_text="bow, molto pont.",
         style="dashed-line-with-hook",
         padding=6.5,
-        right_padding=3,
+        right_padding=2,
     ),
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
@@ -1006,6 +1006,58 @@ trinton.make_music(
                 0,
                 -1,
             ],
+            pitched=True,
+        ),
+    ),
+    trinton.beam_groups(),
+    voice=score["guitar 4 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (33,)),
+    evans.RhythmHandler(
+        evans.talea(
+            [9, 1],
+            32,
+        )
+    ),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        [
+            [
+                -8,
+                -5,
+                -1,
+                2,
+                5,
+                9,
+            ],
+        ],
+    ),
+    library.glissando(),
+    trinton.id_spanner_command(
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        id="One",
+        left_text="bow, molto pont.",
+        style="dashed-line-with-hook",
+        padding=6.5,
+        right_padding=2,
+    ),
+    trinton.id_spanner_command(
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        id="Two",
+        left_text="1/3 scratch",
+        right_text="norm.",
+        padding=4.5,
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Dynamic("mf"),
+            abjad.StartHairpin("--"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [0, 0, -1],
             pitched=True,
         ),
     ),
@@ -2364,6 +2416,68 @@ trinton.make_music(
     ),
     voice=score["viola 2 voice"],
     beam_meter=True,
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(
+        _,
+        (33,),
+    ),
+    evans.RhythmHandler(evans.talea([5, 5], 32)),
+    trinton.force_rest(selector=trinton.select_leaves_by_index([-1, -2])),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        [
+            5,
+        ]
+    ),
+    trinton.beam_groups(),
+    voice=score["viola 2 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (33,)),
+    evans.RhythmHandler(
+        evans.talea(
+            [
+                1,
+                1,
+                2,
+                1,
+                5,
+            ],
+            32,
+        ),
+    ),
+    trinton.force_rest(selector=trinton.select_leaves_by_index([-1, -2])),
+    evans.PitchHandler(pitch_list=[-8, 0, -5, 4]),
+    trinton.attachment_command(
+        attachments=[abjad.Glissando(zero_padding=True)],
+        selector=trinton.pleaves(exclude=[-1]),
+    ),
+    trinton.hooked_spanner_command(
+        string="spazzolato",
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        padding=4,
+        right_padding=4,
+        direction="down",
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([-2, -1], pitched=True),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Dynamic("mf"),
+            abjad.StartHairpin(">o"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [0, 0, -2],
+        ),
+    ),
+    trinton.beam_groups(),
+    voice=score["viola 1 voice"],
 )
 
 # accordion music commands
