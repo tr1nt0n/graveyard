@@ -1850,7 +1850,7 @@ trinton.make_music(
             [
                 0,
                 7,
-                8,
+                9,
                 14,
             ],
             pitched=True,

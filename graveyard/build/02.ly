@@ -3859,11 +3859,6 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
-                                    - \tweak padding #9.5
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \upright { "tast." }
-                                    \startTextSpanOne
                                     \<
                                     % BEFORE:
                                     % COMMANDS:
@@ -3885,6 +3880,11 @@
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
+                                    - \tweak padding #9.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "tast." }
+                                    \startTextSpanOne
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     \glissando
