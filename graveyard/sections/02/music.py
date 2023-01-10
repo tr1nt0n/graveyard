@@ -1933,17 +1933,8 @@ trinton.make_music(
             abjad.StemTremolo(
                 32,
             ),
-            abjad.StemTremolo(
-                32,
-            ),
         ],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                1,
-                2,
-            ],
-        ),
+        selector=trinton.pleaves(exclude=[1]),
     ),
     trinton.glissando_command(
         selector=trinton.ranged_selector(

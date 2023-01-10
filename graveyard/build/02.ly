@@ -4048,8 +4048,6 @@
                                     \tweak style #'cross
                                     f'16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % START_BEAM:
                                     [
                                     % OPENING:
