@@ -256,10 +256,17 @@
             % COMMANDS:
             \time 5/16
             s1 * 5/16
+            % AFTER:
+            % COMMANDS:
+            \break
             % OPENING:
             % COMMANDS:
             \time 3/16
             s1 * 3/16
+            % AFTER:
+            % MARKUP:
+            - \tweak padding #8
+            ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
             % OPENING:
             % COMMANDS:
             \time 4/16
@@ -416,7 +423,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \textSpannerDown
                                     a'32
                                     % AFTER:
@@ -430,6 +436,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-up-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato, scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -532,7 +539,6 @@
                                     \stopStaff \startStaff
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \textSpannerDown
                                     a'32
                                     % AFTER:
@@ -546,6 +552,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-up-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato, scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -700,7 +707,6 @@
                                     s1 * 1/10
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \textSpannerDown
                                     g'8.
                                     % AFTER:
@@ -714,6 +720,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-up-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato, scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -873,7 +880,6 @@
                                     \stopStaff \startStaff
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \textSpannerDown
                                     d'16.
                                     % AFTER:
@@ -887,6 +893,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-up-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato, scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
@@ -968,7 +975,6 @@
                                     r4.
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \textSpannerDown
                                     a'8.
                                     % AFTER:
@@ -978,6 +984,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-up-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "vib." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     b4
                                     % AFTER:
@@ -1218,7 +1225,6 @@
                                      )
                                      #-6
                                     \highest
-                                    \once \override TextSpanner.bound-details.right.padding = #-5
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
@@ -1228,6 +1234,7 @@
                                     - \tweak padding #7.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "IV" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -5
                                     \startTextSpan
                                     \glissando
                                     % BEFORE:
@@ -1382,7 +1389,6 @@
                                      )
                                      #-20
                                     \highest
-                                    \once \override TextSpanner.bound-details.right.padding = #-20
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
@@ -1392,6 +1398,7 @@
                                     - \tweak padding #7.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "IV" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -20
                                     \startTextSpan
                                     \glissando
                                     % BEFORE:
@@ -1508,13 +1515,13 @@
                                      )
                                      #0.5
                                     \highest
-                                    \once \override TextSpanner.bound-details.right.padding = #-10
                                     c'''2.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \tweak padding #7.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "IV" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -10
                                     \startTextSpan
                                     \glissando
                                     % BEFORE:
@@ -1662,13 +1669,13 @@
                                      )
                                      #0.5
                                     \highest
-                                    \once \override TextSpanner.bound-details.right.padding = #-4
                                     c'''4.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \tweak padding #8
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "IV" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
                                     \startTextSpan
                                     \glissando
                                     % BEFORE:
@@ -1724,17 +1731,6 @@
                                      )
                                      #0.5
                                     \highest
-                                    \once \override TextSpanner.bound-details.right.padding = #-3
-                                    % OPENING:
-                                    % COMMANDS:
-                                    - \tweak padding #10
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scratch" } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }\startTextSpanTwo
-                                    - \tweak padding #12
-                                    - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "bow, molto pont." } \hspace #0.5 }
-                                    \startTextSpanOne
                                     <f' b' e'' a'' d''' f'''>8
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1742,6 +1738,16 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    - \tweak padding #10
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "1/2 scratch" }
+                                    \startTextSpanTwo
+                                    - \tweak padding #12
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "bow, molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
+                                    \startTextSpanOne
                                     \<
                                     \glissando
                                     % BEFORE:
@@ -1789,12 +1795,13 @@
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
-                                    \stopTextSpanOne
-                                    \stopTextSpanTwo
                                     <f bf ef' af' cs'' f''>16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \mf
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
                                     s1 * 1/2
@@ -1819,17 +1826,6 @@
                                      )
                                      #0.5
                                     \highest
-                                    \once \override TextSpanner.bound-details.right.padding = #-3
-                                    % OPENING:
-                                    % COMMANDS:
-                                    - \tweak padding #10
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scratch" } \hspace #0.5 }\startTextSpanTwo
-                                    - \tweak padding #12
-                                    - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "bow, molto pont." } \hspace #0.5 }
-                                    \startTextSpanOne
                                     <f' b' e'' a'' d''' f'''>8.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1837,6 +1833,16 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    - \tweak padding #10
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "1/2 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scratch" }
+                                    \startTextSpanTwo
+                                    - \tweak padding #12
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "bow, molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
+                                    \startTextSpanOne
                                     \<
                                     \glissando
                                     % BEFORE:
@@ -1852,14 +1858,13 @@
                                     \glissando
                                     % COMMANDS:
                                     \revert-noteheads
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \stopTextSpanOne
-                                    \stopTextSpanTwo
                                     <f bf ef' af' cs'' f''>16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -2055,19 +2060,8 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 6
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-2
                                     % OPENING:
                                     % COMMANDS:
-                                    - \tweak padding #4.5
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/3 scratch" } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "norm." } \hspace #0.5 }\startTextSpanTwo
-                                    - \tweak padding #6.5
-                                    - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "bow, molto pont." } \hspace #0.5 }
-                                    \startTextSpanOne
                                     \clef "percussion"
                                     <e g b d' f' a'>16
                                     % AFTER:
@@ -2076,6 +2070,16 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    - \tweak padding #4.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "1/3 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "norm." }
+                                    \startTextSpanTwo
+                                    - \tweak padding #6.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "bow, molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpanOne
                                     \<
                                     \glissando
                                     % BEFORE:
@@ -2102,30 +2106,18 @@
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
-                                    \stopTextSpanOne
-                                    \stopTextSpanTwo
                                     <e g b d' f' a'>16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \f
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
                                     s1 * 1/2
                                     s1 * 5/16
                                     s1 * 1/2
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    - \tweak padding #4.5
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/3 scratch" } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "norm." } \hspace #0.5 }\startTextSpanTwo
-                                    - \tweak padding #6.5
-                                    - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "bow, molto pont." } \hspace #0.5 }
-                                    \startTextSpanOne
                                     <e g b d' f' a'>8.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2133,6 +2125,16 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    - \tweak padding #4.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "1/3 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "norm." }
+                                    \startTextSpanTwo
+                                    - \tweak padding #6.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "bow, molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpanOne
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     \glissando
@@ -2152,22 +2154,226 @@
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
-                                    \stopTextSpanOne
-                                    \stopTextSpanTwo
                                     <e g b d' f' a'>32
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
                                     s1 * 3/16
                                     s1 * 1/4
                                     s1 * 5/8
                                     s1 * 3/16
-                                    s1 * 9/16
-                                    s1 * 7/16
-                                    s1 * 1/4
-                                    s1 * 3/4
+                                    <e g b d' f' a'>8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #4.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "1/3 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "norm." }
+                                    - \tweak bound-details.right.padding 2
+                                    \startTextSpanThree
+                                    - \tweak padding #6.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpanTwo
+                                    - \tweak padding #8.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "bow" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -6
+                                    \startTextSpanOne
+                                    \>
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    <e g b d' f' a'>8
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    <e g b d' f' a'>16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanThree
+                                    % STOP_BEAM:
+                                    ]
+                                    <e g b d' f' a'>8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \f
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #4.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "1/3 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "norm." }
+                                    - \tweak bound-details.right.padding 2
+                                    \startTextSpanThree
+                                    \>
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    <e g b d' f' a'>16
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    <e g b d' f' a'>16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanThree
+                                    % STOP_BEAM:
+                                    ]
+                                    <e g b d' f' a'>16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #4.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "1/3 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "norm." }
+                                    - \tweak bound-details.right.padding 2
+                                    \startTextSpanThree
+                                    \>
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    <e g b d' f' a'>4
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    <e g b d' f' a'>16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanThree
+                                    \stopTextSpanTwo
+                                    <e g b d' f' a'>8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #5.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "tast." }
+                                    \startTextSpanThree
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    <e g b d' f' a'>16
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    <e g b d' f' a'>16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanThree
+                                    % STOP_BEAM:
+                                    ]
+                                    <e g b d' f' a'>16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #5.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "tast." }
+                                    \startTextSpanThree
+                                    \>
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    <e g b d' f' a'>8.
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <e g b d' f' a'>16
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    <e g b d' f' a'>16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanThree
+                                    % STOP_BEAM:
+                                    ]
+                                    <e g b d' f' a'>16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    <e g b d' f' a'>8.
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
+                                    % STOP_BEAM:
+                                    ]
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -2199,7 +2405,6 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Viola }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { vla. }
                                     \textSpannerDown
@@ -2215,6 +2420,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-up-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato, scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -2337,7 +2543,6 @@
                                     \stopStaff \startStaff
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \textSpannerDown
                                     a'8.
                                     % AFTER:
@@ -2351,6 +2556,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-up-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato, scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -2440,7 +2646,6 @@
                                     s1 * 1/10
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \textSpannerDown
                                     a'32
                                     % AFTER:
@@ -2454,6 +2659,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-up-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -2665,7 +2871,6 @@
                                     r16
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \textSpannerDown
                                     e32
                                     % AFTER:
@@ -2677,6 +2882,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-up-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     f'8
                                     % AFTER:
@@ -2703,7 +2909,6 @@
                                     s1 * 1/2
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-4
                                     \textSpannerDown
                                     e32
                                     % AFTER:
@@ -2719,6 +2924,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-up-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
                                     \startTextSpan
                                     c'32
                                     % AFTER:
@@ -3458,14 +3664,6 @@
                                     \highest
                                     % OPENING:
                                     % COMMANDS:
-                                    - \tweak padding #7.5
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scratch" } \hspace #0.5 }\startTextSpanTwo
-                                    - \tweak padding #9.5
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "tast." } \hspace #0.5 }\startTextSpanOne
                                     \clef "altovarC"
                                     c''8.
                                     % AFTER:
@@ -3473,6 +3671,16 @@
                                     \ffff
                                     ^ \accent
                                     % SPANNER_STARTS:
+                                    - \tweak padding #7.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "1/2 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scratch" }
+                                    \startTextSpanTwo
+                                    - \tweak padding #9.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "tast." }
+                                    \startTextSpanOne
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     \glissando
@@ -3533,12 +3741,13 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
-                                    \stopTextSpanTwo
                                     c''8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \fp
                                     ^ \accent
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -3612,20 +3821,22 @@
                                     \highest
                                     % OPENING:
                                     % COMMANDS:
-                                    - \tweak padding #7.5
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scratch" } \hspace #0.5 }\startTextSpanTwo
                                     \revert Staff.Stem.stemlet-length
-                                    \stopTextSpanOne
                                     c''8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \ffff
                                     ^ \accent
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
+                                    - \tweak padding #7.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "1/2 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scratch" }
+                                    \startTextSpanTwo
                                     \>
                                     \glissando
                                     _ (
@@ -3634,10 +3845,6 @@
                                     \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                    - \tweak padding #9.5
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "tast." } \hspace #0.5 }\startTextSpanOne
                                     \hide NoteHead
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
@@ -3652,6 +3859,11 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    - \tweak padding #9.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "tast." }
+                                    \startTextSpanOne
                                     \<
                                     % BEFORE:
                                     % COMMANDS:
@@ -3663,12 +3875,13 @@
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
-                                    \stopTextSpanTwo
                                     c''16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \ffff
                                     ^ \accent
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -3736,10 +3949,6 @@
                                     \highest
                                     % OPENING:
                                     % COMMANDS:
-                                    - \tweak padding #7.5
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "1/2 scratch" } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "scratch" } \hspace #0.5 }\startTextSpanTwo
                                     \revert Staff.Stem.stemlet-length
                                     c''16
                                     % AFTER:
@@ -3749,6 +3958,11 @@
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
+                                    - \tweak padding #7.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "1/2 scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "scratch" }
+                                    \startTextSpanTwo
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     \glissando
@@ -3785,13 +3999,14 @@
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
-                                    \stopTextSpanOne
-                                    \stopTextSpanTwo
                                     c''16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \ffff
                                     ^ \accent
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
                                     % COMMANDS:
@@ -3799,9 +4014,6 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 4
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-4
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
@@ -3821,6 +4033,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
                                     \startTextSpan
                                     ~
                                     % BEFORE:
@@ -3880,17 +4093,8 @@
                                      )
                                      #0.5
                                     \highest
-                                    \once \override TextSpanner.bound-details.right.padding = #-3
                                     % OPENING:
                                     % COMMANDS:
-                                    - \tweak padding #7.5
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "scratch" } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "1/3 scratch" } \hspace #0.5 }\startTextSpanTwo
-                                    - \tweak padding #9.5
-                                    - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "molto pont." } \hspace #0.5 }
-                                    \startTextSpanOne
                                     \clef "altovarC"
                                     c''8.
                                     % AFTER:
@@ -3898,6 +4102,16 @@
                                     \mf
                                     ^ \accent
                                     % SPANNER_STARTS:
+                                    - \tweak padding #7.5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "1/3 scratch" }
+                                    \startTextSpanTwo
+                                    - \tweak padding #9.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto pont." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
+                                    \startTextSpanOne
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     \glissando
@@ -4010,13 +4224,12 @@
                                      )
                                      #0.5
                                     \once \override NoteHead.no-ledgers = ##t
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \stopTextSpanTwo
                                     c''8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     ^ \accent
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanTwo
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
@@ -4054,18 +4267,16 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override NoteHead.no-ledgers = ##t
-                                    \once \override TextSpanner.bound-details.right.padding = #-3
-                                    % OPENING:
-                                    % COMMANDS:
-                                    - \tweak padding #7.5
-                                    - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "molto vib." } \hspace #0.5 }
-                                    \startTextSpanTwo
                                     c''8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     ^ \accent
                                     % SPANNER_STARTS:
+                                    - \tweak padding #7.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "molto vib." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
+                                    \startTextSpanTwo
                                     \glissando
                                     _ (
                                     % BEFORE:
@@ -4092,22 +4303,19 @@
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
-                                    \stopTextSpanOne
-                                    \stopTextSpanTwo
                                     aqs'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
                                     % SPANNER_STOPS:
                                     )
+                                    \stopTextSpanOne
+                                    \stopTextSpanTwo
                                     % STOP_BEAM:
                                     ]
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 4
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-3
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
@@ -4122,6 +4330,7 @@
                                     - \tweak padding #7
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
                                     \startTextSpan
                                     \<
                                     ~
@@ -4330,9 +4539,6 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 4
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-3
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
@@ -4347,6 +4553,7 @@
                                     - \tweak padding #7
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
                                     \startTextSpan
                                     ~
                                     % OPENING:
@@ -4489,14 +4696,170 @@
                                     ]
                                     r32
                                     r8
-                                    s1 * 3/16
-                                    s1 * 1/4
-                                    s1 * 5/8
-                                    s1 * 3/16
-                                    s1 * 9/16
+                                    \tweak style #'cross
+                                    f'8.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :16
+                                    % ARTICULATIONS:
+                                    \pp
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #7
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
+                                    \startTextSpan
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \tweak style #'cross
+                                    f'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :16
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    \tweak style #'cross
+                                    b8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :16
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    b8.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :16
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    b8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :16
+                                    \tweak style #'cross
+                                    g8.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :16
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \tweak style #'cross
+                                    g16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    \tweak style #'cross
+                                    d'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
+                                    \glissando
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    \tweak style #'cross
+                                    d'16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
+                                    \tweak style #'cross
+                                    f'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    f'8.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    \tweak style #'cross
+                                    b4.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :16
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
                                     s1 * 7/16
-                                    s1 * 1/4
-                                    s1 * 3/4
+                                    r8.
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    c'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #8
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "full bows as possible" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    % COMMANDS:
+                                    \boxed-markup "Zhongbo w/ bow" 1
+                                    c'4.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    r16
+                                    r8.
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -5123,9 +5486,6 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 1
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
@@ -5139,6 +5499,7 @@
                                     - \tweak padding #8
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "molto flaut." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -5554,9 +5915,6 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 1
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-4
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
@@ -5570,6 +5928,7 @@
                                     - \tweak padding #8
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "molto flaut." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -5588,15 +5947,88 @@
                                     s1 * 1/2
                                     s1 * 5/16
                                     s1 * 1/2
-                                    s1 * 5/16
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 5
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    <af''' a'''>8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \mf
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    ~
+                                    <af''' a'''>32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    r32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    r8
                                     s1 * 3/16
                                     s1 * 1/4
                                     s1 * 5/8
                                     s1 * 3/16
                                     s1 * 9/16
-                                    s1 * 7/16
-                                    s1 * 1/4
-                                    s1 * 3/4
+                                    r8.
+                                    r16
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    c'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #8
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "full bows as possible" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    % COMMANDS:
+                                    \boxed-markup "Zhongbo w/ bow" 1
+                                    c'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'4
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'8.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    r4.
+                                    r8.
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -5639,9 +6071,6 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 1
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-4
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
@@ -5658,6 +6087,7 @@
                                     - \tweak padding #10
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
                                     \startTextSpan
                                     % COMMANDS:
                                     \boxed-markup "Accordion" 1
@@ -5688,9 +6118,6 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 1
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-3
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
@@ -5707,6 +6134,7 @@
                                     - \tweak padding #6.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
                                     \startTextSpan
                                     % OPENING:
                                     % COMMANDS:
@@ -5730,9 +6158,6 @@
                                     s1 * 9/16
                                     s1 * 1/4
                                     s1 * 5/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-3
                                     c'8
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -5743,6 +6168,7 @@
                                     - \tweak padding #6.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
                                     \startTextSpan
                                     c'4
                                     % AFTER:
@@ -5771,9 +6197,6 @@
                                     ]
                                     s1 * 3/16
                                     s1 * 13/16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-3
                                     % OPENING:
                                     % COMMANDS:
                                     \override Staff.Stem.stemlet-length = 0.75
@@ -5789,6 +6212,7 @@
                                     - \tweak padding #6.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
                                     \startTextSpan
                                     % OPENING:
                                     % COMMANDS:
@@ -5827,9 +6251,6 @@
                                     s1 * 7/16
                                     s1 * 5/16
                                     s1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-3
                                     c'8
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -5840,6 +6261,7 @@
                                     - \tweak padding #10
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
                                     \startTextSpan
                                     % COMMANDS:
                                     \boxed-markup "Accordion" 1
@@ -5934,10 +6356,85 @@
                                     % STOP_BEAM:
                                     ]
                                     s1 * 5/16
-                                    s1 * 3/16
-                                    s1 * 1/4
-                                    s1 * 5/8
-                                    s1 * 3/16
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    ^ \<
+                                    - \tweak padding #6
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -3
+                                    \startTextSpan
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'4
+                                    c'8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'8
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'8
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    ^ \p
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
                                     s1 * 9/16
                                     s1 * 7/16
                                     s1 * 1/4

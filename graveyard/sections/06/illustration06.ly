@@ -3428,9 +3428,6 @@
                                                 ]
                                                 % SPANNER_STARTS:
                                                 (
-                                                % BEFORE:
-                                                % COMMANDS:
-                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 cs4..
                                                 % AFTER:
                                                 % ARTICULATIONS:
@@ -3440,6 +3437,7 @@
                                                 - \tweak padding #4
                                                 - \abjad-dashed-line-with-hook
                                                 - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                - \tweak bound-details.right.padding -1
                                                 \startTextSpan
                                                 - \tweak stencil #abjad-flared-hairpin
                                                 \<
@@ -3652,9 +3650,6 @@
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 4 1))
                                             \times 4/5
                                             {
-                                                % BEFORE:
-                                                % COMMANDS:
-                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 b'8..
                                                 % AFTER:
                                                 % ARTICULATIONS:
@@ -3664,6 +3659,7 @@
                                                 - \tweak padding #5
                                                 - \abjad-dashed-line-with-hook
                                                 - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                - \tweak bound-details.right.padding -1
                                                 \startTextSpan
                                                 - \tweak stencil #abjad-flared-hairpin
                                                 \<
@@ -3838,9 +3834,6 @@
                                                 % AFTER:
                                                 % STOP_BEAM:
                                                 ]
-                                                % BEFORE:
-                                                % COMMANDS:
-                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 aqf4.
                                                 % AFTER:
                                                 % ARTICULATIONS:
@@ -3851,6 +3844,7 @@
                                                 - \tweak padding #5
                                                 - \abjad-dashed-line-with-hook
                                                 - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                - \tweak bound-details.right.padding -1
                                                 \startTextSpan
                                                 \<
                                                 \glissando
@@ -3909,9 +3903,6 @@
                                                 % SPANNER_STARTS:
                                                 \>
                                                 \glissando
-                                                % BEFORE:
-                                                % COMMANDS:
-                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 aqf4.
                                                 % AFTER:
                                                 % SPANNER_STARTS:
@@ -3919,6 +3910,7 @@
                                                 - \tweak padding #5
                                                 - \abjad-dashed-line-with-hook
                                                 - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                - \tweak bound-details.right.padding -1
                                                 \startTextSpan
                                                 \glissando
                                                 d'8
@@ -4373,9 +4365,6 @@
                                                     % AFTER:
                                                     % SPANNER_STARTS:
                                                     (
-                                                    % BEFORE:
-                                                    % COMMANDS:
-                                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                                     af'8.
                                                     % AFTER:
                                                     % ARTICULATIONS:
@@ -4386,6 +4375,7 @@
                                                     - \tweak padding #5
                                                     - \abjad-dashed-line-with-hook
                                                     - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                    - \tweak bound-details.right.padding -1
                                                     \startTextSpan
                                                     \glissando
                                                 % CLOSE_BRACKETS:
@@ -4406,9 +4396,6 @@
                                                 % AFTER:
                                                 % ARTICULATIONS:
                                                 \f
-                                                % BEFORE:
-                                                % COMMANDS:
-                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 aqf8
                                                 % AFTER:
                                                 % SPANNER_STARTS:
@@ -4418,6 +4405,7 @@
                                                 - \tweak padding #5
                                                 - \abjad-dashed-line-with-hook
                                                 - \tweak bound-details.left.text \markup \concat { \upright { "vib. moltissimo" } \hspace #0.5 }
+                                                - \tweak bound-details.right.padding -1
                                                 \startTextSpan
                                                 \glissando
                                                 eqs8
@@ -5138,7 +5126,6 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \arpeggioArrowUp
-                                    \once \override TextSpanner.bound-details.right.padding = #-1
                                     \ottava 1
                                     % OPENING:
                                     % COMMANDS:
@@ -5153,6 +5140,7 @@
                                     - \tweak padding #6
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "key trem." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text

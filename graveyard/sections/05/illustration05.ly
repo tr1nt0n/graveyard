@@ -988,19 +988,6 @@
                                         \mp
                                         % STOP_BEAM:
                                         ]
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override TextSpanner.bound-details.right.padding = #-6
-                                        % OPENING:
-                                        % COMMANDS:
-                                        - \tweak padding #4
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "Whisper chant" } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "Shout chant" } \hspace #0.5 }\startTextSpanTwo
-                                        - \tweak padding #6
-                                        - \abjad-dashed-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
-                                        \startTextSpanOne
                                         c'8
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1008,6 +995,17 @@
                                         \ff
                                         % START_BEAM:
                                         [
+                                        % SPANNER_STARTS:
+                                        - \tweak padding #4
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "Whisper chant" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "Shout chant" }
+                                        \startTextSpanTwo
+                                        - \tweak padding #6
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -2
+                                        \startTextSpanOne
                                         c'8
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1236,14 +1234,13 @@
                                     % AFTER:
                                     % GROB_REVERTS:
                                     \revert TupletNumber.text
-                                    % OPENING:
-                                    % COMMANDS:
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % SPANNER_STOPS:
                                     \stopTextSpanTwo
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
                                     % START_BEAM:
                                     [
                                     c'16
@@ -1319,11 +1316,10 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \mf
-                                    % OPENING:
-                                    % COMMANDS:
+                                    c'16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
                                     \stopTextSpanOne
-                                    c'16
-                                    % AFTER:
                                     % STOP_BEAM:
                                     ]
                                     c'16
@@ -2307,25 +2303,23 @@
                                     \ff
                                     % START_BEAM:
                                     [
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override TextSpanner.bound-details.right.padding = #-6
-                                    % OPENING:
-                                    % COMMANDS:
-                                    - \tweak padding #4
-                                    - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "Whisper chant" } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { { \upright "Shout chant" } \hspace #0.5 }\startTextSpanTwo
-                                    - \tweak padding #6
-                                    - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { { \upright "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
-                                    \startTextSpanOne
                                     c'8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \mp
                                     % STOP_BEAM:
                                     ]
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "Whisper chant" } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \upright { "Shout chant" }
+                                    \startTextSpanTwo
+                                    - \tweak padding #6
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpanOne
                                     c'8
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2619,14 +2613,13 @@
                                     % AFTER:
                                     % GROB_REVERTS:
                                     \revert TupletNumber.text
-                                    % OPENING:
-                                    % COMMANDS:
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % SPANNER_STOPS:
                                     \stopTextSpanTwo
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
                                     % START_BEAM:
                                     [
                                     c'16
@@ -2702,11 +2695,10 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \mf
-                                    % OPENING:
-                                    % COMMANDS:
+                                    c'16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
                                     \stopTextSpanOne
-                                    c'16
-                                    % AFTER:
                                     % STOP_BEAM:
                                     ]
                                     c'16
@@ -3884,19 +3876,6 @@
                                         \mp
                                         % STOP_BEAM:
                                         ]
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override TextSpanner.bound-details.right.padding = #-6
-                                        % OPENING:
-                                        % COMMANDS:
-                                        - \tweak padding #4
-                                        - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "Whisper chant" } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { { \upright "Shout chant" } \hspace #0.5 }\startTextSpanTwo
-                                        - \tweak padding #6
-                                        - \abjad-dashed-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { { \upright "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
-                                        \startTextSpanOne
                                         c'8
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -3904,6 +3883,17 @@
                                         \ff
                                         % START_BEAM:
                                         [
+                                        % SPANNER_STARTS:
+                                        - \tweak padding #4
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "Whisper chant" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "Shout chant" }
+                                        \startTextSpanTwo
+                                        - \tweak padding #6
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -2
+                                        \startTextSpanOne
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -4097,14 +4087,13 @@
                                     % AFTER:
                                     % GROB_REVERTS:
                                     \revert TupletNumber.text
-                                    % OPENING:
-                                    % COMMANDS:
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \fff
+                                    % SPANNER_STOPS:
                                     \stopTextSpanTwo
-                                    c'16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    \fff
                                     % START_BEAM:
                                     [
                                     c'16
@@ -4180,11 +4169,10 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \mf
-                                    % OPENING:
-                                    % COMMANDS:
+                                    c'16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
                                     \stopTextSpanOne
-                                    c'16
-                                    % AFTER:
                                     % STOP_BEAM:
                                     ]
                                     % BEFORE:

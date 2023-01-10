@@ -150,6 +150,7 @@ trinton.make_music(
         string="legno bat.",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         padding=8,
+        right_padding=6,
     ),
     trinton.change_notehead_command(
         notehead="cross",

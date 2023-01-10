@@ -721,7 +721,7 @@ for voice_name, leaf in zip(
             right_text=None,
             style="dashed-line-with-hook",
             padding=6,
-            right_padding=6,
+            right_padding=2,
         ),
         trinton.id_spanner_command(
             selector=trinton.select_leaves_by_index([leaf, -15]),

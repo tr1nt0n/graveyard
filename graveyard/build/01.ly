@@ -359,9 +359,6 @@
                                                 % ABSOLUTE_BEFORE:
                                                 % COMMANDS:
                                                 \staff-line-count 4
-                                                % BEFORE:
-                                                % COMMANDS:
-                                                \once \override TextSpanner.bound-details.right.padding = #-1
                                                 % OPENING:
                                                 % COMMANDS:
                                                 \clef "percussion"
@@ -375,6 +372,7 @@
                                                 - \tweak padding #8
                                                 - \abjad-dashed-line-with-hook
                                                 - \tweak bound-details.left.text \markup \concat { \upright { "legno bat." } \hspace #0.5 }
+                                                - \tweak bound-details.right.padding -6
                                                 \startTextSpan
                                             % CLOSE_BRACKETS:
                                             }
