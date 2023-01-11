@@ -28,7 +28,7 @@
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             % COMMANDS:
             - \tweak padding #8
-            \boxed-markup "VII. The Play of Thorns ( iii )" 3
+            \boxed-markup "VII. The Play of Thorns ( iii ) / WIEDER" 3
             % OPENING:
             % COMMANDS:
             #(ly:expect-warning "strange time signature found")
@@ -74,6 +74,7 @@
             - \markup \huge \center-column { \musicglyph "scripts.uverylongfermata" } 
             % COMMANDS:
             \bar "|."
+            \break
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \set Score.repeatCommands = #'((volta #f))

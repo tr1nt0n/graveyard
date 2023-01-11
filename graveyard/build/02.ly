@@ -302,6 +302,7 @@
             % AFTER:
             % COMMANDS:
             \bar "||"
+            \break
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:

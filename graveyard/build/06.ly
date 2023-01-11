@@ -146,6 +146,7 @@
             - \markup \huge \center-column { \musicglyph "scripts.ulongfermata" } 
             % COMMANDS:
             \bar "||"
+            \break
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:

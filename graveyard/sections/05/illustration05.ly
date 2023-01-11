@@ -265,6 +265,7 @@
             - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" } 
             % COMMANDS:
             \bar "||"
+            \break
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:

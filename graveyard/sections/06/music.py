@@ -3149,6 +3149,7 @@ trinton.attach_multiple(
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
         ),
+        abjad.LilyPondLiteral(r"\break", "after"),
     ],
 )
 

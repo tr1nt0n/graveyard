@@ -196,7 +196,7 @@ miniatures = [
         r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #3 { \center-column { \line { VI. Megtanultam gyűlölni a testemet és mindazt, } \line { amit ebben a világban megkövetel. } } }""",
     ),
     abjad.LilyPondLiteral(
-        r'\boxed-markup "VII. The Play of Thorns ( iii )" 3',
+        r'\boxed-markup "VII. The Play of Thorns ( iii ) / WIEDER" 3',
         "after",
     ),
 ]
