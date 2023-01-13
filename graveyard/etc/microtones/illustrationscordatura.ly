@@ -70,7 +70,18 @@
                         \once \override Beam.stencil = ##f
                         \once \override Dots.stencil = ##f
                         \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = -1
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        cs,4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
                         cs4
                         % BEFORE:
@@ -78,19 +89,11 @@
                         \once \override Beam.stencil = ##f
                         \once \override Dots.stencil = ##f
                         \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = -1
-                        \once \override Stem.stencil = ##f
-                        cs'4
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = -1
+                        \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-septimal-comma-down  }
-                        e'!4
+                        e!4
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \concat { -33 } }
@@ -99,11 +102,11 @@
                         \once \override Beam.stencil = ##f
                         \once \override Dots.stencil = ##f
                         \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = -1
+                        \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-up  }
-                        g'!4
+                        g!4
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \concat { -17 } }
@@ -112,11 +115,11 @@
                         \once \override Beam.stencil = ##f
                         \once \override Dots.stencil = ##f
                         \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = -1
+                        \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \two-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-up  }
-                        c''!4
+                        c'!4
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \concat { B+0 } }
@@ -125,11 +128,11 @@
                         \once \override Beam.stencil = ##f
                         \once \override Dots.stencil = ##f
                         \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = -1
+                        \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \two-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-up  }
-                        f''!4
+                        f'!4
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \concat { -49 } }
@@ -168,7 +171,7 @@
                         \once \override Beam.stencil = ##f
                         \once \override Dots.stencil = ##f
                         \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = -1
+                        \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
                         % OPENING:
                         % COMMANDS:
@@ -179,7 +182,7 @@
                         \once \override Beam.stencil = ##f
                         \once \override Dots.stencil = ##f
                         \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = -1
+                        \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
@@ -192,7 +195,7 @@
                         \once \override Beam.stencil = ##f
                         \once \override Dots.stencil = ##f
                         \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = -1
+                        \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
@@ -205,7 +208,7 @@
                         \once \override Beam.stencil = ##f
                         \once \override Dots.stencil = ##f
                         \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = -1
+                        \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }

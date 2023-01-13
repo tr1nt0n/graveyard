@@ -27,12 +27,12 @@ trinton.make_music(
     trinton.treat_tuplets(),
     evans.PitchHandler(
         [
+            -23,
             -11,
-            1,
-            1,
-            1,
-            1,
-            1,
+            -11,
+            -11,
+            -11,
+            -11,
         ]
     ),
     trinton.pitch_with_selector_command(
@@ -45,10 +45,16 @@ trinton.make_music(
         as_ratios=True,
         selector=trinton.select_leaves_by_index([2, 3, 4, 5]),
     ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.Clef("bass")
+        ],
+        selector=trinton.select_leaves_by_index([0])
+    ),
     trinton.force_accidentals_command(
         selector=trinton.select_leaves_by_index([2, 3, 4, 5])
     ),
-    library.noteheads_only(),
+    trinton.noteheads_only(),
     voice=score["guitar 4 voice"],
 )
 
@@ -81,7 +87,7 @@ trinton.make_music(
         as_ratios=True,
         selector=trinton.select_leaves_by_index([1, 2, 3]),
     ),
-    library.noteheads_only(),
+    trinton.noteheads_only(),
     library.invisible_tuplet_brackets(),
     trinton.attachment_command(
         attachments=[abjad.Clef("altovarC")],
@@ -96,11 +102,11 @@ trinton.make_music(
 
 # sc file
 
-# trinton.make_sc_file(
-#     score=score,
-#     tempo=((1, 4), 50),
-#     current_directory="/Users/trintonprater/scores/graveyard/graveyard/etc/microtones",
-# )
+trinton.make_sc_file(
+    score=score,
+    tempo=((1, 4), 50),
+    current_directory="/Users/trintonprater/scores/graveyard/graveyard/etc/microtones",
+)
 
 # markups
 

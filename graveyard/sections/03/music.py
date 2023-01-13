@@ -170,6 +170,60 @@ for measures, index in zip(
         voice=score["guitar 4 voice"],
     )
 
+trinton.make_music(
+    lambda _: trinton.select_target(_, (19,)),
+    evans.RhythmHandler(
+        evans.talea(library.guitar_accordion_talea, 32, extra_counts=[3]),
+    ),
+    trinton.force_rest(selector=trinton.select_leaves_by_index([0, 1, 2, 3,])),
+    evans.PitchHandler(pitch_list=[15]),
+    trinton.notehead_bracket_command(),
+    trinton.beam_groups(),
+    voice=score["guitar 4 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (19,)),
+    evans.RhythmHandler(
+        evans.talea([-4, 2, 2, 2, 2, 2,], 32, extra_counts=[3]),
+    ),
+    evans.PitchHandler(pitch_list=[7, 4, 5, 4,]),
+    trinton.attachment_command(
+        attachments=[abjad.LilyPondLiteral(r"\-", "after")],
+        selector=trinton.pleaves(),
+    ),
+    trinton.hooked_spanner_command(
+        string="vib.",
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        padding=4,
+        direction="down",
+    ),
+    trinton.notehead_bracket_command(),
+    trinton.beam_groups(),
+    voice=score["guitar 2 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (20,)),
+    evans.RhythmHandler(
+        evans.talea([-11], 32),
+    ),
+    trinton.invisible_rests(),
+    voice=score["guitar 2 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (20,)),
+    evans.RhythmHandler(
+        evans.even_division([64], extra_counts=[2])
+    ),
+    # trinton.force_rest(selector=trinton.ranged_selector(ranges=[range()])),
+    # evans.PitchHandler(pitch_list=library.guitar_runs(0)),
+    trinton.notehead_bracket_command(),
+    trinton.beam_groups(),
+    voice=score["guitar 4 voice"],
+)
+
 # viola music commands
 
 trinton.make_music(

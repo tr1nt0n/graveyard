@@ -416,8 +416,60 @@
                                     s1 * 1/4
                                     s1 * 1/10
                                     s1 * 1/10
-                                    s1 * 11/32
-                                    s1 * 11/32
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 14 11) (ly:make-duration 5 0))
+                                    \times 11/14
+                                    {
+                                        r8
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \textSpannerDown
+                                        g'16
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak padding #4
+                                        - \abjad-dashed-line-with-up-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "vib." } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -1
+                                        \startTextSpan
+                                        % COMMANDS:
+                                        \-
+                                        e'16
+                                        % AFTER:
+                                        % COMMANDS:
+                                        \-
+                                        f'16
+                                        % AFTER:
+                                        % COMMANDS:
+                                        \-
+                                        e'16
+                                        % AFTER:
+                                        % COMMANDS:
+                                        \-
+                                        g'16
+                                        % AFTER:
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
+                                        % COMMANDS:
+                                        \-
+                                        \textSpannerUp
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.transparent = ##t
+                                    \once \override Rest.transparent = ##t
+                                    r4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.transparent = ##t
+                                    \once \override Rest.transparent = ##t
+                                    r16.
                                     s1 * 1/16
                                     % BEFORE:
                                     % COMMANDS:
@@ -744,8 +796,65 @@
                                         ]
                                     % CLOSE_BRACKETS:
                                     }
-                                    s1 * 11/32
-                                    s1 * 11/32
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 14 11) (ly:make-duration 5 0))
+                                    \times 11/14
+                                    {
+                                        r8
+                                        ef''16
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        ef''32
+                                        ef''32
+                                        ef''16
+                                        ef''32
+                                        ef''32
+                                        ef''32
+                                        ef''32
+                                        % AFTER:
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 11) (ly:make-duration 5 0))
+                                    \times 22/24
+                                    {
+                                        c'64
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        c'64
+                                        % AFTER:
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
                                     s1 * 1/16
                                     % BEFORE:
                                     % COMMANDS:

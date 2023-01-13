@@ -134,6 +134,28 @@ for _ in sequences_a:
     else:
         sequences.append(_)
 
+# guitar runs
+
+flat = evans.Sequence(sequences).flatten()
+
+runs = []
+
+for _ in flat:
+    if isinstance(_, float):
+        if flat.index(_) % 2 == 0:
+            new_int = _ + 0.5
+            new_int = new_int + 24
+            runs.append(new_int)
+        else:
+            new_int = _ - 0.5
+            new_int = new_int + 24
+            runs.append(new_int)
+    else:
+        new_int = _ + 24
+        runs.append(new_int)
+
+print(runs)
+
 # foreground
 
 foreground_sequences = [

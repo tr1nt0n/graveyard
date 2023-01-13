@@ -159,10 +159,15 @@
         \Staff
         \name RightHandStaff
         \type Engraver_group
+        \consists Duration_line_engraver
 
         \override Accidental.stencil = ##f
 
         \override Dots.staff-position = #2
+
+        \override DurationLine.style = #'line
+        \override DurationLine.thickness = #3
+        \override DurationLine.X-offset = 0.40
 
         \override Glissando.bound-details.left.padding = #0.5
         \override Glissando.bound-details.right.padding = #0.5
