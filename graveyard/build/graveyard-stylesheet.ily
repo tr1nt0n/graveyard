@@ -142,6 +142,8 @@
                  (ly:grob-set-property! grob 'positions (cons new-pos new-pos))
                  (ly:tuplet-bracket::print grob)))
         % \override TupletBracket.direction = #up
+
+        \override VoltaBracketSpanner.padding = 8
     }
 
     \context {

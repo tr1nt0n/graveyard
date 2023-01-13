@@ -59,6 +59,39 @@ section_2_ts.insert(11, (1, 16))
 section_2_ts.insert(17, (1, 16))
 section_2_ts.insert(12, (1, 10))
 
+# section 3
+
+section_numerators = abjad.sequence.partition_by_counts(
+    sequence=[_ for _ in numerator_sequence if _ > 9],
+    counts=[
+        20,
+        20,
+    ],
+    overhang=True,
+)
+
+section_3_ts = trinton.make_ts_pair_list(
+    numerators=section_numerators[1],
+    denominators=cycle(
+        [
+            32,
+        ]
+    ),
+)
+
+section_3_ts.insert(5, (1, 16))
+section_3_ts.insert(10, (1, 8))
+section_3_ts.insert(11, (1, 10))
+section_3_ts.insert(12, (1, 8))
+section_3_ts.insert(13, (15, 32))
+section_3_ts.insert(14, (5, 16))
+section_3_ts.insert(15, (4, 16))
+section_3_ts.insert(16, (1, 10))
+section_3_ts.insert(17, (1, 10))
+section_3_ts.insert(20, (1, 16))
+section_3_ts.insert(21, (1, 16))
+section_3_ts.append((1, 16))
+
 # section 6
 
 section_numerators = abjad.sequence.partition_by_counts(
