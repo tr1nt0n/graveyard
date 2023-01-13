@@ -46,10 +46,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([2, 3, 4, 5]),
     ),
     trinton.attachment_command(
-        attachments=[
-            abjad.Clef("bass")
-        ],
-        selector=trinton.select_leaves_by_index([0])
+        attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
     ),
     trinton.force_accidentals_command(
         selector=trinton.select_leaves_by_index([2, 3, 4, 5])

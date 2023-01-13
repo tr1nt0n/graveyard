@@ -144,17 +144,17 @@ for _ in flat:
     if isinstance(_, float):
         if flat.index(_) % 2 == 0:
             new_int = _ + 0.5
-            new_int = new_int + 24
+            new_int = new_int + 29
             runs.append(new_int)
         else:
             new_int = _ - 0.5
-            new_int = new_int + 24
+            new_int = new_int + 29
             runs.append(new_int)
     else:
-        new_int = _ + 24
+        new_int = _ + 29
         runs.append(new_int)
 
-print(runs)
+runs = trinton.remove_adjacent(runs)
 
 # foreground
 

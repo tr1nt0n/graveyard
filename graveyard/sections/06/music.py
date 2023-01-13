@@ -87,7 +87,6 @@ trinton.make_music(
                 2,
                 13,
                 16,
-                17,
             ]
         ]
     ),
@@ -192,7 +191,6 @@ trinton.make_music(
                 2,
                 13,
                 16,
-                17,
             ]
         ]
     ),
@@ -281,7 +279,7 @@ trinton.make_music(
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
-    evans.PitchHandler([[10, 14, 21, 23]]),
+    evans.PitchHandler([[10, 14, 20, 23]]),
     library.fret_diagram(
         selector=trinton.select_leaves_by_index([0], pitched=True),
         fret_lists=[
@@ -378,7 +376,6 @@ trinton.make_music(
                 2,
                 13,
                 16,
-                17,
             ]
         ]
     ),
@@ -474,7 +471,7 @@ trinton.make_music(
                 2,
                 12,
                 16,
-                18,
+                17,
             ]
         ]
     ),
@@ -553,7 +550,7 @@ trinton.make_music(
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
-    evans.PitchHandler([[10, 14, 21, 23]]),
+    evans.PitchHandler([[10, 14, 20, 23]]),
     library.fret_diagram(
         selector=trinton.select_leaves_by_index([0], pitched=True),
         fret_lists=[
@@ -642,7 +639,6 @@ trinton.make_music(
                 2,
                 13,
                 16,
-                17,
             ]
         ]
     ),

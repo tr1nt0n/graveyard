@@ -336,6 +336,10 @@ def guitar_row(index=0):
     return trinton.rotated_sequence(guitar_tone_row, index)
 
 
+def guitar_runs(index=0):
+    return trinton.rotated_sequence(transforms.runs, index)
+
+
 # rhythm tools
 
 viola_grace_handler = trinton.OnBeatGraceHandler(

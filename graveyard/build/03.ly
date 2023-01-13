@@ -433,7 +433,7 @@
                                         - \tweak padding #4
                                         - \abjad-dashed-line-with-up-hook
                                         - \tweak bound-details.left.text \markup \concat { \upright { "vib." } \hspace #0.5 }
-                                        - \tweak bound-details.right.padding -1
+                                        - \tweak bound-details.right.padding -7
                                         \startTextSpan
                                         % COMMANDS:
                                         \-
@@ -804,11 +804,19 @@
                                         r8
                                         ef''16
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
                                         % START_BEAM:
                                         [
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        ^ \<
                                         ef''32
                                         ef''32
                                         ef''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \accent
                                         ef''32
                                         ef''32
                                         ef''32
@@ -823,36 +831,57 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 11) (ly:make-duration 5 0))
                                     \times 22/24
                                     {
-                                        c'64
+                                        % ABSOLUTE_BEFORE:
+                                        % COMMANDS:
+                                        \set suggestAccidentals = ##t
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \ottava 1
+                                        g'''64
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        ^ \pp
                                         % START_BEAM:
                                         [
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
-                                        c'64
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \tweak circled-tip ##t
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        ^ \>
+                                        - \tweak padding #12
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -1
+                                        \startTextSpan
+                                        ef'''64
+                                        fs'''64
+                                        d'''64
+                                        f'''64
+                                        c'''64
+                                        f'''64
+                                        cs'''64
+                                        fs'''64
+                                        a'''64
+                                        ef'''64
+                                        af'''64
+                                        b'''64
+                                        c'''64
+                                        a'''64
                                         % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \ottava 0
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
+                                        \set suggestAccidentals = ##f
+                                        r8
+                                        r64
                                     % CLOSE_BRACKETS:
                                     }
                                     s1 * 1/16

@@ -1171,7 +1171,7 @@
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
-                                        <cs' d' cs'' e'' f''>\breve.
+                                        <cs' d' cs'' e''>\breve.
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-4;4-o;3-6;2-5;1-o;" }
@@ -1189,7 +1189,7 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        <cs' d' cs'' e'' f''>16
+                                        <cs' d' cs'' e''>16
                                     % CLOSE_BRACKETS:
                                     }
                                     r2..
@@ -1208,7 +1208,7 @@
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
-                                        <cs' d' cs'' e'' f''>2.
+                                        <cs' d' cs'' e''>2.
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-4;4-o;3-6;2-5;1-o;" }
@@ -1226,7 +1226,7 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        <cs' d' cs'' e'' f''>64
+                                        <cs' d' cs'' e''>64
                                     % CLOSE_BRACKETS:
                                     }
                                     r4.
@@ -1248,7 +1248,7 @@
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
-                                        <bf' d'' a'' b''>8.
+                                        <bf' d'' af'' b''>8.
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-x;4-8;3-7;2-9;1-7;" }
@@ -1266,7 +1266,7 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        <bf' d'' a'' b''>256
+                                        <bf' d'' af'' b''>256
                                     % CLOSE_BRACKETS:
                                     }
                                     r8
@@ -1288,7 +1288,7 @@
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
-                                        <cs' d' cs'' e'' f''>4.
+                                        <cs' d' cs'' e''>4.
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-4;4-o;3-6;2-5;1-o;" }
@@ -1306,7 +1306,7 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        <cs' d' cs'' e'' f''>128
+                                        <cs' d' cs'' e''>128
                                     % CLOSE_BRACKETS:
                                     }
                                     r8
@@ -1327,7 +1327,7 @@
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
-                                        <e d' e' c'' e'' fs''>4.
+                                        <e d' e' c'' e'' f''>4.
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \override #'(size . 1.5) { \fret-diagram "6-o;5-7;4-o;3-5;2-6;1-o;" }
@@ -1345,7 +1345,7 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        <e d' e' c'' e'' fs''>128
+                                        <e d' e' c'' e'' f''>128
                                     % CLOSE_BRACKETS:
                                     }
                                     r4
@@ -1367,7 +1367,7 @@
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
-                                        <bf' d'' a'' b''>4.
+                                        <bf' d'' af'' b''>4.
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-x;4-8;3-7;2-9;1-7;" }
@@ -1385,7 +1385,7 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        <bf' d'' a'' b''>128
+                                        <bf' d'' af'' b''>128
                                     % CLOSE_BRACKETS:
                                     }
                                     r2.
@@ -1407,7 +1407,7 @@
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
-                                        <cs' d' cs'' e'' f''>1.
+                                        <cs' d' cs'' e''>1.
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-4;4-o;3-6;2-5;1-o;" }
@@ -1425,7 +1425,7 @@
                                         \once \override Stem.stencil = ##f
                                         % GROB_OVERRIDES:
                                         \once \override NoteHead.transparent = ##t
-                                        <cs' d' cs'' e'' f''>32
+                                        <cs' d' cs'' e''>32
                                     % CLOSE_BRACKETS:
                                     }
                                     % ABSOLUTE_BEFORE:

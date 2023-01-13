@@ -175,8 +175,26 @@ trinton.make_music(
     evans.RhythmHandler(
         evans.talea(library.guitar_accordion_talea, 32, extra_counts=[3]),
     ),
-    trinton.force_rest(selector=trinton.select_leaves_by_index([0, 1, 2, 3,])),
+    trinton.force_rest(
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                1,
+                2,
+                3,
+            ]
+        )
+    ),
     evans.PitchHandler(pitch_list=[15]),
+    trinton.attachment_command(
+        attachments=[abjad.Articulation(">")],
+        selector=trinton.select_leaves_by_index([0, 3], pitched=True),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartHairpin("o<")],
+        selector=trinton.select_leaves_by_index([0], pitched=True),
+        direction=abjad.UP,
+    ),
     trinton.notehead_bracket_command(),
     trinton.beam_groups(),
     voice=score["guitar 4 voice"],
@@ -185,9 +203,27 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (19,)),
     evans.RhythmHandler(
-        evans.talea([-4, 2, 2, 2, 2, 2,], 32, extra_counts=[3]),
+        evans.talea(
+            [
+                -4,
+                2,
+                2,
+                2,
+                2,
+                2,
+            ],
+            32,
+            extra_counts=[3],
+        ),
     ),
-    evans.PitchHandler(pitch_list=[7, 4, 5, 4,]),
+    evans.PitchHandler(
+        pitch_list=[
+            7,
+            4,
+            5,
+            4,
+        ]
+    ),
     trinton.attachment_command(
         attachments=[abjad.LilyPondLiteral(r"\-", "after")],
         selector=trinton.pleaves(),
@@ -196,6 +232,7 @@ trinton.make_music(
         string="vib.",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         padding=4,
+        right_padding=7,
         direction="down",
     ),
     trinton.notehead_bracket_command(),
@@ -214,11 +251,33 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (20,)),
-    evans.RhythmHandler(
-        evans.even_division([64], extra_counts=[2])
+    evans.RhythmHandler(evans.even_division([64], extra_counts=[2])),
+    trinton.force_rest(selector=trinton.ranged_selector(ranges=[range(15, 24)])),
+    evans.PitchHandler(pitch_list=library.guitar_runs(0)),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Dynamic("pp"),
+            abjad.StartHairpin("|>o"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
+        direction=abjad.UP,
     ),
-    # trinton.force_rest(selector=trinton.ranged_selector(ranges=[range()])),
-    # evans.PitchHandler(pitch_list=library.guitar_runs(0)),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    trinton.hooked_spanner_command(
+        string="tap",
+        padding=12,
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    trinton.ficta_command(
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True)
+    ),
+    trinton.ottava_command(
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True)
+    ),
     trinton.notehead_bracket_command(),
     trinton.beam_groups(),
     voice=score["guitar 4 voice"],
