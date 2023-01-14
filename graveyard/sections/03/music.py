@@ -1340,7 +1340,7 @@ trinton.make_music(
         attachments=[
             abjad.StemTremolo(256),
             abjad.StemTremolo(16),
-            abjad.StemTremolo(32),
+            abjad.StemTremolo(64),
         ],
         selector=trinton.select_leaves_by_index(
             [

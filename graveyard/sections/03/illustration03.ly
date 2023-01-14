@@ -2992,7 +2992,7 @@
                                         c'8
                                         % AFTER:
                                         % STEM_TREMOLOS:
-                                        :32
+                                        :64
                                         % ARTICULATIONS:
                                         - \accent
                                         \sfp
