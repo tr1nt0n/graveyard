@@ -1005,6 +1005,8 @@
                                         % SPANNER_STOPS:
                                         )
                                         \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
                                         % COMMANDS:
                                         \ottava 0
                                         % ABSOLUTE_AFTER:
@@ -1016,6 +1018,8 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     ^ \mp
+                                    % START_BEAM:
+                                    [
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin

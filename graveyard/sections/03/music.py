@@ -338,7 +338,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 25], pitched=True)
     ),
     trinton.notehead_bracket_command(),
-    trinton.beam_groups(),
+    trinton.beam_durations([(3, 8)]),
     voice=score["guitar 4 voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((6, 6, 5)),
 )
