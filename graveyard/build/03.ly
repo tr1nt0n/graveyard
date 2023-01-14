@@ -258,6 +258,9 @@
             % COMMANDS:
             \time 10/32
             s1 * 5/16
+            % AFTER:
+            % SPANNER_STOPS:
+            \stopTextSpan
             % OPENING:
             % COMMANDS:
             \time 12/32
@@ -266,9 +269,6 @@
             % COMMANDS:
             \time 10/32
             s1 * 5/16
-            % AFTER:
-            % SPANNER_STOPS:
-            \stopTextSpan
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -482,8 +482,65 @@
                                     s1 * 5/16
                                     s1 * 3/8
                                     s1 * 5/16
-                                    s1 * 11/32
-                                    s1 * 13/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.transparent = ##t
+                                    \once \override Rest.transparent = ##t
+                                    r16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \textSpannerDown
+                                    f'16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-up-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "vib." } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
+                                    \startTextSpan
+                                    % COMMANDS:
+                                    \-
+                                    e'32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \-
+                                    g'32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \-
+                                    e'16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \-
+                                    f'16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \-
+                                    e'16.
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \-
+                                    g'32
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    % COMMANDS:
+                                    \-
+                                    \textSpannerUp
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.transparent = ##t
+                                    \once \override Rest.transparent = ##t
+                                    r4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.transparent = ##t
+                                    \once \override Rest.transparent = ##t
+                                    r16
                                     s1 * 5/16
                                     s1 * 3/8
                                     s1 * 5/16
@@ -895,12 +952,164 @@
                                     s1 * 13/32
                                     s1 * 5/16
                                     s1 * 3/8
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 5 0))
+                                    \times 12/13
+                                    {
+                                        % ABSOLUTE_BEFORE:
+                                        % COMMANDS:
+                                        \set suggestAccidentals = ##t
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \ottava 1
+                                        cs'''64
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \tweak circled-tip ##t
+                                        ^ \<
+                                        - \tweak padding #12
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -1
+                                        \startTextSpan
+                                        af'''64
+                                        d'''64
+                                        cs'''64
+                                        ef'''64
+                                        c'''64
+                                        b'''64
+                                        f'''64
+                                        bf'''64
+                                        c'''64
+                                        a'''64
+                                        cs'''64
+                                        af'''64
+                                        ef'''64
+                                        a'''64
+                                        d'''64
+                                        af'''64
+                                        f'''64
+                                        cs'''64
+                                        a'''64
+                                        ef'''64
+                                        fs'''64
+                                        d'''64
+                                        f'''64
+                                        g'''64
+                                        fs'''64
+                                        % AFTER:
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
+                                        % COMMANDS:
+                                        \ottava 0
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
+                                        \set suggestAccidentals = ##f
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    cs''32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    ^ \mp
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    ^ \>
+                                    cs''32
+                                    cs''32
+                                    cs''32
+                                    cs''32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % SPANNER_STARTS:
+                                    ~
+                                    cs''32
+                                    cs''32
+                                    cs''32
+                                    cs''32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % SPANNER_STARTS:
+                                    ~
+                                    cs''32
+                                    cs''32
+                                    cs''32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
+                                    r4
+                                    r16
                                     s1 * 5/16
-                                    s1 * 11/32
-                                    s1 * 13/32
-                                    s1 * 5/16
-                                    s1 * 3/8
-                                    s1 * 5/16
+                                    r16.
+                                    r16
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    c'32
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :256
+                                    % ARTICULATIONS:
+                                    \ppp
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #7.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "full bows as possible" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    \<
+                                    ~
+                                    % COMMANDS:
+                                    \boxed-markup "Zhongbo w/ bow" 1
+                                    c'8.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % ARTICULATIONS:
+                                    \f
+                                    % SPANNER_STARTS:
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    c'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % ARTICULATIONS:
+                                    \!
+                                    \laissezVibrer
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1901,15 +2110,272 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 13/32
-                                    s1 * 5/16
-                                    s1 * 3/8
-                                    s1 * 5/16
-                                    s1 * 11/32
-                                    s1 * 13/32
-                                    s1 * 5/16
-                                    s1 * 3/8
-                                    s1 * 5/16
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \mp
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #3
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "body" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \pp
+                                    % STOP_BEAM:
+                                    ]
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \mp
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \pp
+                                    c'16
+                                    c'16
+                                    c'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'32
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \mp
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \pp
+                                    % STOP_BEAM:
+                                    ]
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \mp
+                                    % START_BEAM:
+                                    [
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \pp
+                                    c'32
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 11) (ly:make-duration 4 0))
+                                    \times 11/12
+                                    {
+                                        % ABSOLUTE_BEFORE:
+                                        % COMMANDS:
+                                        \staff-line-count 4
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "percussion"
+                                        \tweak style #'cross
+                                        f'4
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :16
+                                        % ARTICULATIONS:
+                                        \mp
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        - \tweak padding #5
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -5
+                                        \startTextSpan
+                                        g4.
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :32
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \sfp
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \<
+                                        \tweak style #'cross
+                                        d'8
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :16
+                                        % ARTICULATIONS:
+                                        \mf
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    c'16.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \pp
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #3
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "body" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    \<
+                                    ~
+                                    c'32
+                                    c'32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    c'32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % STOP_BEAM:
+                                    ]
+                                    c'32
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'32
+                                    c'32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    c'32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % STOP_BEAM:
+                                    ]
+                                    c'8
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    c'32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    c'32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    % STOP_BEAM:
+                                    ]
+                                    c'8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 4
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    \tweak style #'cross
+                                    d'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % ARTICULATIONS:
+                                    \p
+                                    % SPANNER_STARTS:
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    \tweak style #'cross
+                                    d'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    d'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    d'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    d'4.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    d'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    d'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    r16.
+                                    r16
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -2178,14 +2644,116 @@
                                     % COMMANDS:
                                     \stopStaff \startStaff
                                     s1 * 13/32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #6.5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "bellow" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
+                                    \startTextSpan
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    c'32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    \f
+                                    % STOP_BEAM:
+                                    ]
+                                    r32
+                                    c'8..
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    ~
+                                    c'4.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
                                     s1 * 5/16
-                                    s1 * 3/8
-                                    s1 * 5/16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
                                     s1 * 11/32
                                     s1 * 13/32
-                                    s1 * 5/16
-                                    s1 * 3/8
-                                    s1 * 5/16
+                                    \tweak style #'cross
+                                    c'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % ARTICULATIONS:
+                                    \p
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #3
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "key" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    \tweak style #'cross
+                                    c'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    c'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    c'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    c'4.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    c'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    c'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    r16.
+                                    r16
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -2300,11 +2868,13 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
-                                    - \tweak padding #3
+                                    - \tweak padding #9
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -3
                                     \startTextSpan
+                                    % COMMANDS:
+                                    \boxed-markup "Accordion" 1
                                     c'8
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2346,14 +2916,194 @@
                                     % COMMANDS:
                                     \stopStaff \startStaff
                                     s1 * 13/32
-                                    s1 * 5/16
-                                    s1 * 3/8
-                                    s1 * 5/16
-                                    s1 * 11/32
-                                    s1 * 13/32
-                                    s1 * 5/16
-                                    s1 * 3/8
-                                    s1 * 5/16
+                                    r16.
+                                    r32
+                                    \tweak style #'cross
+                                    c'32
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :256
+                                    % ARTICULATIONS:
+                                    \fp
+                                    % SPANNER_STARTS:
+                                    - \tweak arrow-length #2
+                                    - \tweak arrow-width #0.5
+                                    - \tweak bound-details.right.arrow ##t
+                                    - \tweak thickness #2
+                                    \glissando
+                                    - \tweak padding #3
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "key" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -5
+                                    \startTextSpan
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    c'16.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    c'16
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 11) (ly:make-duration 4 0))
+                                    \times 11/12
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        \tweak style #'cross
+                                        c'4
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :16
+                                        % ARTICULATIONS:
+                                        \mp
+                                        % SPANNER_STARTS:
+                                        - \tweak arrow-length #2
+                                        - \tweak arrow-width #0.5
+                                        - \tweak bound-details.right.arrow ##t
+                                        - \tweak thickness #2
+                                        \glissando
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        \tweak style #'cross
+                                        c'8
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :32
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \sfp
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        c'4.
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        ^ \<
+                                        - \tweak padding #6.5
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "air" } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -3
+                                        \startTextSpan
+                                        \glissando
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 12) (ly:make-duration 4 0))
+                                    \times 12/11
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        c'4.
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        c'4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        ^ \ff
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        ^ \>
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        c'16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    \tweak style #'cross
+                                    c'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #3
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "key" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    ~
+                                    \tweak style #'cross
+                                    c'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    c'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    c'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    c'4.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    c'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STARTS:
+                                    ~
+                                    \tweak style #'cross
+                                    c'16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    r16.
+                                    r16
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff

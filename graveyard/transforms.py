@@ -141,7 +141,8 @@ flat = evans.Sequence(sequences).flatten()
 runs = []
 
 for _ in flat:
-    if isinstance(_, float):
+    int_string = str(_)
+    if int_string[-2:] == ".5":
         if flat.index(_) % 2 == 0:
             new_int = _ + 0.5
             new_int = new_int + 29
