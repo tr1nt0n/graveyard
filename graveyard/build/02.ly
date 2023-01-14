@@ -1732,7 +1732,7 @@
                                      )
                                      #0.5
                                     \highest
-                                    <f' b' e'' a'' d''' f'''>8
+                                    <f' b' e'' a'' c''' f'''>8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \f
@@ -1760,7 +1760,7 @@
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
-                                    <f' b' e'' a'' d''' f'''>16
+                                    <f' b' e'' a'' c''' f'''>16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \ffff
@@ -1773,7 +1773,7 @@
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
-                                    <f' b' e'' a'' d''' f'''>8
+                                    <f' b' e'' a'' c''' f'''>8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     \>
@@ -1789,14 +1789,14 @@
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
-                                    <f' b' e'' a'' d''' f'''>16
+                                    <f' b' e'' a'' c''' f'''>16
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
-                                    <f bf ef' af' cs'' f''>16
+                                    <f bf ef' af' c'' f''>16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \mf
@@ -1827,7 +1827,7 @@
                                      )
                                      #0.5
                                     \highest
-                                    <f' b' e'' a'' d''' f'''>8.
+                                    <f' b' e'' a'' c''' f'''>8.
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \mf
@@ -1849,7 +1849,7 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override NoteHead.no-ledgers = ##t
-                                    <f' b' e'' a'' d''' f'''>8
+                                    <f' b' e'' a'' c''' f'''>8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \ffff
@@ -1859,7 +1859,7 @@
                                     \glissando
                                     % COMMANDS:
                                     \revert-noteheads
-                                    <f bf ef' af' cs'' f''>16
+                                    <f bf ef' af' c'' f''>16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
