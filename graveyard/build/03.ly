@@ -188,8 +188,12 @@
             % COMMANDS:
             \time 11/32
             s1 * 11/32
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
@@ -200,6 +204,11 @@
             - \markup \huge \center-column { \musicglyph "scripts.ulongfermata" } 
             % SPANNER_STOPS:
             \stopTextSpan
+            % COMMANDS:
+            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -2658,7 +2667,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
-                                    - \tweak padding #6.5
+                                    - \tweak padding #3
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "bellow" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -4

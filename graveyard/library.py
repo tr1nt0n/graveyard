@@ -362,13 +362,32 @@ viola_grace_handler = trinton.OnBeatGraceHandler(
 # notation tools
 
 
-def glissando_map(points=[0, 1, 1, 0]):
-    literal = abjad.LilyPondLiteral(
-        rf"\set glissandoMap = #'(({points[0]} . {points[1]}) ({points[2]} . {points[3]}))",
-        "before",
-    )
+def tremolo_arrows(selector):
+    def attach(argument):
+        selections = selector(argument)
+        for selection in selections:
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    r"\once \override Stem.direction = #DOWN", "before"
+                ),
+                selection,
+            )
 
-    return literal
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    r"\once \override Glissando.bound-details.right.Y = #-2", "before"
+                ),
+                selection,
+            )
+
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    r"\once \override Glissando.bound-details.left.Y = #-2", "before"
+                ),
+                selection,
+            )
+
+    return attach
 
 
 def left_beam(selector=None):
@@ -609,6 +628,35 @@ def fermata_measures(score, measures, fermata="ufermata", last_measure=False):
             if last_measure is False:
                 abjad.attach(stop_command, all_measures[measure - 1][0])
 
+    trinton.attach_multiple(
+        score=score,
+        voice="Global Context",
+        leaves=[_ - 1 for _ in measures],
+        attachments=[
+            abjad.Markup(
+                rf'\markup \huge \center-column {{ \musicglyph "scripts.{fermata}" }} '
+            ),
+            abjad.LilyPondLiteral(
+                r"\once \override Score.TimeSignature.stencil = ##f",
+                "before",
+            ),
+            abjad.LilyPondLiteral(
+                r"\once \override Score.BarLine.transparent = ##f", "absolute_before"
+            ),
+            abjad.LilyPondLiteral(
+                r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
+            ),
+            abjad.LilyPondLiteral(
+                r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
+            ),
+            abjad.LilyPondLiteral(
+                r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "before"
+            ),
+        ],
+    )
+
+
+def filled_fermata_measures(score, measures, fermata="ufermata"):
     trinton.attach_multiple(
         score=score,
         voice="Global Context",

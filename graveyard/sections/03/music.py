@@ -1188,7 +1188,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string="bellow",
-        padding=6.5,
+        padding=3,
         right_padding=4,
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
@@ -1407,20 +1407,22 @@ trinton.attach_multiple(
     ],
 )
 
-trinton.attach_multiple(
-    score=score,
-    voice="Global Context",
-    leaves=[20],
-    attachments=[
-        abjad.Markup(
-            rf'\markup \huge \center-column {{ \musicglyph "scripts.ulongfermata" }} '
-        ),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.TimeSignature.stencil = ##f",
-            "before",
-        ),
-    ],
-)
+# trinton.attach_multiple(
+#     score=score,
+#     voice="Global Context",
+#     leaves=[20],
+#     attachments=[
+#         abjad.Markup(
+#             rf'\markup \huge \center-column {{ \musicglyph "scripts.ulongfermata" }} '
+#         ),
+#         abjad.LilyPondLiteral(
+#             r"\once \override Score.TimeSignature.stencil = ##f",
+#             "before",
+#         ),
+#     ],
+# )
+
+library.filled_fermata_measures(score=score, measures=[21], fermata="ulongfermata")
 
 trinton.attach_multiple(
     score=score,
