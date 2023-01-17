@@ -150,6 +150,32 @@ guitar_accordion_talea = eval(
     ]"""
 )
 
+RH_accordion_chords = [
+    ["bf''", "df'''", "ef'''"],
+    ["g''", "b''", "f'''"],
+    ["fs''", "cs'''", "g'''"],
+    ["cs'''", "fs'''", "gs'''"],
+    ["fs''", "cs'''", "e'''", "g'''"],
+    ["g''", "bf''", "cs'''", "g'''"],
+    ["ds'''", "fs'''", "a'''"],
+    ["g''", "af''", "ds'''", "e'''"],
+    ["fs''", "g''", "af''", "a''"],
+    ["g''", "bf''", "df'''", "g'''"],
+]
+
+LH_accordion_chords = [
+    ["f", "f'", "cs''"],
+    ["ef'", "fs''"],
+    ["d", "bf'"],
+    ["c''", "f''", "bf''"],
+    ["g'", "cs''"],
+    ["g", "cs''"],
+    "cs''",
+    ["c''", "e''"],
+    ["b'", "e''"],
+    ["e'", "b'"],
+]
+
 tempi = eval(
     """[
         abjad.Markup(
@@ -340,6 +366,11 @@ def guitar_runs(index=0):
     return trinton.rotated_sequence(transforms.runs, index)
 
 
+def accordion_chorale(hand, index=0):
+    _rh_to_lh = {"RH": RH_accordion_chords, "LH": LH_accordion_chords}
+    return trinton.rotated_sequence(_rh_to_lh[hand], index)
+
+
 # rhythm tools
 
 viola_grace_handler = trinton.OnBeatGraceHandler(
@@ -362,32 +393,26 @@ viola_grace_handler = trinton.OnBeatGraceHandler(
 # notation tools
 
 
-def tremolo_arrows(selector):
-    def attach(argument):
-        selections = selector(argument)
-        for selection in selections:
-            abjad.attach(
-                abjad.LilyPondLiteral(
-                    r"\once \override Stem.direction = #DOWN", "before"
-                ),
-                selection,
-            )
-
-            abjad.attach(
-                abjad.LilyPondLiteral(
-                    r"\once \override Glissando.bound-details.right.Y = #-2", "before"
-                ),
-                selection,
-            )
-
-            abjad.attach(
-                abjad.LilyPondLiteral(
-                    r"\once \override Glissando.bound-details.left.Y = #-2", "before"
-                ),
-                selection,
-            )
-
-    return attach
+# def tremolo_arrows(selector):
+#     def attach(argument):
+#         selections = selector(argument)
+#         for selection in selections:
+#
+#             abjad.attach(
+#                 abjad.LilyPondLiteral(
+#                     r"\once \override Glissando.left-bound-info", "before"
+#                 ),
+#                 selection,
+#             )
+#
+#             abjad.attach(
+#                 abjad.LilyPondLiteral(
+#                     r"\once \override Glissando.bound-details.left.Y = #-2", "before"
+#                 ),
+#                 selection,
+#             )
+#
+#     return attach
 
 
 def left_beam(selector=None):
