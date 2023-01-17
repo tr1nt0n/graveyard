@@ -1095,44 +1095,6 @@ trinton.make_music(
             ],
         ),
     ),
-    trinton.linear_attachment_command(
-        attachments=[
-            abjad.StemTremolo(64),
-            abjad.StemTremolo(32),
-            abjad.StemTremolo(16),
-            abjad.StemTremolo(16),
-            abjad.StemTremolo(
-                128,
-            ),
-        ],
-        selector=trinton.select_leaves_by_index(
-            [
-                1,
-                2,
-                3,
-                11,
-                12,
-            ]
-        ),
-    ),
-    trinton.attachment_command(
-        attachments=[
-            abjad.bundle(
-                abjad.Glissando(),
-                abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-                abjad.Tweak(r"- \tweak arrow-length #2"),
-                abjad.Tweak(r"- \tweak arrow-width #0.5"),
-                abjad.Tweak(r"- \tweak thickness #2"),
-            ),
-        ],
-        selector=trinton.select_leaves_by_index(
-            [
-                1,
-                2,
-                11,
-            ]
-        ),
-    ),
     trinton.attachment_command(
         attachments=[abjad.Glissando()],
         selector=trinton.select_leaves_by_index(
@@ -1142,6 +1104,20 @@ trinton.make_music(
                 8,
             ]
         ),
+    ),
+    trinton.arrow_spanner_command(
+        l_string="\\tremolo-stretto",
+        r_string="\\tremolo-largo",
+        selector=trinton.select_leaves_by_index([1, 3]),
+        padding=3.5,
+        tempo=True,
+    ),
+    trinton.arrow_spanner_command(
+        l_string="\\tremolo-largo",
+        r_string="\\tremolo-stretto",
+        selector=trinton.select_leaves_by_index([11, 12]),
+        padding=5,
+        tempo=True,
     ),
     trinton.attachment_command(
         attachments=[abjad.Articulation("staccato")],

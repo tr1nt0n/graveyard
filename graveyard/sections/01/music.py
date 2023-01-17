@@ -43,20 +43,6 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0]),
         clef="percussion",
     ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(3, 13),
-            ],
-            nested=True,
-        ),
-        tweaks=[
-            abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-            abjad.Tweak(r"- \tweak arrow-length #2"),
-            abjad.Tweak(r"- \tweak arrow-width #0.5"),
-            abjad.Tweak(r"- \tweak thickness #2"),
-        ],
-    ),
     trinton.continuous_spanner_command(
         strings=[
             "n. rasg., pont.",
@@ -66,59 +52,31 @@ trinton.make_music(
             "n. rasg., molto pont.",
         ],
         selector=trinton.select_leaves_by_index([0, 1, 1, 2, 2, 3, 3, -1]),
-        padding=4.5,
+        padding=8.5,
+        command="One",
     ),
-    trinton.tremolo_lines(
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                1,
-                2,
-                3,
-                -1,
-            ]
-        ),
-        lines=[
-            3,
-            1,
-            2,
-            1,
-            3,
+    trinton.continuous_spanner_command(
+        strings=[
+            "\\tremolo-stretto",
+            "\\tremolo-largo",
+            "\\tremolo-moderato",
+            "\\tremolo-largo",
+            "\\tremolo-stretto",
         ],
+        selector=trinton.select_leaves_by_index([0, 1, 1, 2, 2, 3, 3, -1]),
+        padding=4.5,
+        command="Two",
+        full_string=True,
     ),
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin("o<"),
             abjad.Dynamic("ffff"),
-            abjad.bundle(
-                abjad.Glissando(),
-                abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-                abjad.Tweak(r"- \tweak arrow-length #2"),
-                abjad.Tweak(r"- \tweak arrow-width #0.5"),
-                abjad.Tweak(r"- \tweak thickness #2"),
-            ),
-            abjad.bundle(
-                abjad.Glissando(),
-                abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-                abjad.Tweak(r"- \tweak arrow-length #2"),
-                abjad.Tweak(r"- \tweak arrow-width #0.5"),
-                abjad.Tweak(r"- \tweak thickness #2"),
-            ),
-            abjad.bundle(
-                abjad.Glissando(),
-                abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-                abjad.Tweak(r"- \tweak arrow-length #2"),
-                abjad.Tweak(r"- \tweak arrow-width #0.5"),
-                abjad.Tweak(r"- \tweak thickness #2"),
-            ),
         ],
         selector=trinton.select_leaves_by_index(
             [
                 0,
                 -1,
-                0,
-                1,
-                2,
             ]
         ),
     ),
@@ -213,19 +171,6 @@ for voice_name in ["accordion 1 voice", "accordion 2 voice"]:
             attachments=[abjad.Articulation("tenuto")],
             selector=trinton.pleaves(),
         ),
-        trinton.tremolo_lines(
-            selector=trinton.select_leaves_by_index(
-                [
-                    0,
-                    -4,
-                ],
-                pitched=True,
-            ),
-            lines=[
-                3,
-                1,
-            ],
-        ),
         voice=score[voice_name],
         preprocessor=trinton.fuse_preprocessor((2,)),
     )
@@ -237,6 +182,19 @@ trinton.make_music(
         attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("ffff")],
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
+    trinton.arrow_spanner_command(
+        l_string="\\tremolo-stretto",
+        r_string="\\tremolo-largo",
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                5,
+            ],
+            pitched=True,
+        ),
+        tempo=True,
+        padding=7,
+    ),
     voice=score["accordion 1 voice"],
 )
 
@@ -247,29 +205,42 @@ trinton.make_music(
         attachments=[abjad.Clef("bass")],
         selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
+    trinton.arrow_spanner_command(
+        l_string="\\tremolo-stretto",
+        r_string="\\tremolo-largo",
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                5,
+            ],
+            pitched=True,
+        ),
+        tempo=True,
+        padding=8.5,
+    ),
     voice=score["accordion 2 voice"],
 )
 
-for voice_name in ["accordion 1 voice", "accordion 2 voice"]:
-    trinton.make_music(
-        lambda _: trinton.select_target(_, (1, 2)),
-        trinton.glissando_command(
-            selector=trinton.ranged_selector(
-                ranges=[
-                    range(1, 7),
-                ],
-                nested=True,
-            ),
-            tweaks=[
-                abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-                abjad.Tweak(r"- \tweak arrow-length #2"),
-                abjad.Tweak(r"- \tweak arrow-width #0.5"),
-                abjad.Tweak(r"- \tweak thickness #2"),
-            ],
-        ),
-        voice=score[voice_name],
-        preprocessor=trinton.fuse_preprocessor((2,)),
-    )
+# for voice_name in ["accordion 1 voice", "accordion 2 voice"]:
+#     trinton.make_music(
+#         lambda _: trinton.select_target(_, (1, 2)),
+#         trinton.glissando_command(
+#             selector=trinton.ranged_selector(
+#                 ranges=[
+#                     range(1, 7),
+#                 ],
+#                 nested=True,
+#             ),
+#             tweaks=[
+#                 abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
+#                 abjad.Tweak(r"- \tweak arrow-length #2"),
+#                 abjad.Tweak(r"- \tweak arrow-width #0.5"),
+#                 abjad.Tweak(r"- \tweak thickness #2"),
+#             ],
+#         ),
+#         voice=score[voice_name],
+#         preprocessor=trinton.fuse_preprocessor((2,)),
+#     )
 
 # globals
 

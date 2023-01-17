@@ -1915,40 +1915,25 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string="tap",
-        padding=4,
+        padding=6,
         right_padding=4,
         selector=trinton.select_leaves_by_index([0, -1]),
+    ),
+    trinton.continuous_spanner_command(
+        strings=[
+            "\\tremolo-largo",
+            "\\tremolo-moderato",
+        ],
+        selector=trinton.select_leaves_by_index([0, -1]),
+        padding=4,
+        command="One",
+        full_string=True,
     ),
     trinton.attachment_command(
         attachments=[
             abjad.Dynamic("pp"),
         ],
         selector=trinton.select_leaves_by_index([0]),
-    ),
-    trinton.linear_attachment_command(
-        attachments=[
-            abjad.StemTremolo(
-                8,
-            ),
-            abjad.StemTremolo(
-                32,
-            ),
-        ],
-        selector=trinton.pleaves(exclude=[1]),
-    ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(0, 3),
-            ],
-            nested=True,
-        ),
-        tweaks=[
-            abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-            abjad.Tweak(r"- \tweak arrow-length #2"),
-            abjad.Tweak(r"- \tweak arrow-width #0.5"),
-            abjad.Tweak(r"- \tweak thickness #2"),
-        ],
     ),
     library.change_lines(
         lines=4,
@@ -2190,6 +2175,16 @@ trinton.make_music(
         right_padding=3,
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
+    trinton.continuous_spanner_command(
+        strings=[
+            "\\tremolo-largo",
+            "\\tremolo-moderato",
+        ],
+        selector=trinton.select_leaves_by_index([0, -1]),
+        padding=5,
+        command="One",
+        full_string=True,
+    ),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("ppp"),
@@ -2197,35 +2192,6 @@ trinton.make_music(
             abjad.Dynamic("p"),
         ],
         selector=trinton.select_logical_ties_by_index([0, 0, -1], first=True),
-    ),
-    trinton.linear_attachment_command(
-        attachments=[
-            abjad.StemTremolo(_)
-            for _ in [
-                16,
-                16,
-                32,
-                16,
-                16,
-                16,
-                64,
-            ]
-        ],
-        selector=trinton.pleaves(exclude=[-2]),
-    ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(5, 8),
-            ],
-            nested=True,
-        ),
-        tweaks=[
-            abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-            abjad.Tweak(r"- \tweak arrow-length #2"),
-            abjad.Tweak(r"- \tweak arrow-width #0.5"),
-            abjad.Tweak(r"- \tweak thickness #2"),
-        ],
     ),
     library.change_lines(
         lines=4,
@@ -2459,6 +2425,17 @@ trinton.make_music(
         right_padding=3,
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
+    trinton.continuous_spanner_command(
+        strings=[
+            "\\tremolo-largo",
+            "\\tremolo-moderato",
+        ],
+        selector=trinton.select_leaves_by_index([0, -2, -2, -1]),
+        padding=5,
+        command="One",
+        full_string=True,
+        end_hook=True,
+    ),
     trinton.attachment_command(
         attachments=[
             abjad.Dynamic("pp"),
@@ -2468,40 +2445,6 @@ trinton.make_music(
                 0,
             ],
         ),
-    ),
-    trinton.linear_attachment_command(
-        attachments=[
-            abjad.StemTremolo(_)
-            for _ in [
-                8,
-                32,
-                32,
-                16,
-                16,
-                32,
-                32,
-                16,
-                32,
-                32,
-                64,
-                32,
-            ]
-        ],
-        selector=trinton.pleaves(exclude=[-3]),
-    ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(9, 12),
-            ],
-            nested=True,
-        ),
-        tweaks=[
-            abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-            abjad.Tweak(r"- \tweak arrow-length #2"),
-            abjad.Tweak(r"- \tweak arrow-width #0.5"),
-            abjad.Tweak(r"- \tweak thickness #2"),
-        ],
     ),
     library.change_lines(
         lines=4,
@@ -2606,6 +2549,16 @@ trinton.make_music(
         right_padding=3,
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
+    trinton.continuous_spanner_command(
+        strings=[
+            "\\tremolo-largo",
+            "\\tremolo-moderato",
+        ],
+        selector=trinton.select_leaves_by_index([0, -1]),
+        padding=4,
+        command="One",
+        full_string=True,
+    ),
     trinton.attachment_command(
         attachments=[
             abjad.Dynamic("pp"),
@@ -2615,41 +2568,6 @@ trinton.make_music(
                 0,
             ],
         ),
-    ),
-    trinton.linear_attachment_command(
-        attachments=[
-            abjad.StemTremolo(_)
-            for _ in [
-                16,
-                16,
-                16,
-                16,
-                16,
-                16,
-                32,
-                32,
-                32,
-                32,
-                16,
-            ]
-        ],
-        selector=trinton.pleaves(
-            exclude=[-4],
-        ),
-    ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(7, 10),
-            ],
-            nested=True,
-        ),
-        tweaks=[
-            abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-            abjad.Tweak(r"- \tweak arrow-length #2"),
-            abjad.Tweak(r"- \tweak arrow-width #0.5"),
-            abjad.Tweak(r"- \tweak thickness #2"),
-        ],
     ),
     voice=score["viola 2 voice"],
     beam_meter=True,
@@ -2785,6 +2703,9 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([2, 3, 4, 7, 8]),
     ),
+    trinton.force_accidentals_command(
+        selector=trinton.pleaves(),
+    ),
     voice=score["accordion 1 voice"],
 )
 
@@ -2843,6 +2764,9 @@ trinton.make_music(
                 7,
             ]
         ),
+    ),
+    trinton.force_accidentals_command(
+        selector=trinton.pleaves(),
     ),
     voice=score["accordion 1 voice"],
     preprocessor=trinton.fuse_preprocessor((2,)),
@@ -3013,7 +2937,6 @@ trinton.make_music(
                 6,
                 10,
                 10,
-                # -1,
             ],
             pitched=True,
         ),
@@ -3044,6 +2967,9 @@ trinton.make_music(
             ],
             pitched=True,
         ),
+    ),
+    trinton.force_accidentals_command(
+        selector=trinton.pleaves(),
     ),
     voice=score["accordion 1 voice"],
     preprocessor=trinton.fuse_preprocessor((4,)),
@@ -3181,6 +3107,9 @@ trinton.make_music(
     ),
     trinton.pitch_with_selector_command(
         pitch_list=[[33, 32]],
+        selector=trinton.pleaves(exclude=[6, 7]),
+    ),
+    trinton.force_accidentals_command(
         selector=trinton.pleaves(exclude=[6, 7]),
     ),
     library.left_beam(
@@ -3340,6 +3269,9 @@ trinton.make_music(
             ]
         ),
     ),
+    trinton.force_accidentals_command(
+        selector=trinton.pleaves(),
+    ),
     library.change_lines(
         lines=5,
         selector=trinton.select_leaves_by_index([0], pitched=True),
@@ -3471,6 +3403,9 @@ trinton.make_music(
     trinton.pitch_with_selector_command(
         pitch_list=[[33, 32]], selector=trinton.pleaves(exclude=[-1, -2])
     ),
+    trinton.force_accidentals_command(
+        selector=trinton.pleaves(exclude=[-1, -2]),
+    ),
     library.glissando(
         selector=trinton.ranged_selector(
             ranges=[
@@ -3577,6 +3512,9 @@ trinton.make_music(
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler([[33, 32]]),
+    trinton.force_accidentals_command(
+        selector=trinton.pleaves(),
+    ),
     library.change_lines(lines=5, selector=trinton.select_leaves_by_index([0])),
     trinton.linear_attachment_command(
         attachments=[

@@ -2898,32 +2898,21 @@
                                                 [
                                                 dqs'8
                                                 % AFTER:
-                                                % STEM_TREMOLOS:
-                                                :64
                                                 % ARTICULATIONS:
                                                 \f
                                                 % SPANNER_STARTS:
                                                 (
-                                                - \tweak arrow-length #2
-                                                - \tweak arrow-width #0.5
-                                                - \tweak bound-details.right.arrow ##t
-                                                - \tweak thickness #2
-                                                \glissando
+                                                - \tweak padding #3.5
+                                                - \abjad-dashed-line-with-arrow
+                                                - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                                - \tweak bound-details.right.text \tremolo-largo
+                                                \startTextSpan
                                                 \>
                                                 gqf8
-                                                % AFTER:
-                                                % STEM_TREMOLOS:
-                                                :32
-                                                % SPANNER_STARTS:
-                                                - \tweak arrow-length #2
-                                                - \tweak arrow-width #0.5
-                                                - \tweak bound-details.right.arrow ##t
-                                                - \tweak thickness #2
-                                                \glissando
                                                 fqs8
                                                 % AFTER:
-                                                % STEM_TREMOLOS:
-                                                :16
+                                                % SPANNER_STOPS:
+                                                \stopTextSpan
                                                 % OPEN_BRACKETS:
                                                 \tweak text #tuplet-number::calc-fraction-text
                                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 4 0))
@@ -2985,20 +2974,18 @@
                                                 (
                                                 a'8
                                                 % AFTER:
-                                                % STEM_TREMOLOS:
-                                                :16
                                                 % SPANNER_STARTS:
-                                                - \tweak arrow-length #2
-                                                - \tweak arrow-width #0.5
-                                                - \tweak bound-details.right.arrow ##t
-                                                - \tweak thickness #2
-                                                \glissando
+                                                - \tweak padding #5
+                                                - \abjad-dashed-line-with-arrow
+                                                - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                                - \tweak bound-details.right.text \tremolo-stretto
+                                                \startTextSpan
                                                 af'16
                                                 % AFTER:
-                                                % STEM_TREMOLOS:
-                                                :128
                                                 % ARTICULATIONS:
                                                 \ff
+                                                % SPANNER_STOPS:
+                                                \stopTextSpan
                                                 % SPANNER_STARTS:
                                                 \<
                                                 bf'16

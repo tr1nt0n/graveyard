@@ -909,7 +909,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \ottava 1
-                                        g'''64
+                                        g'''!64
                                         % AFTER:
                                         % ARTICULATIONS:
                                         ^ \pp
@@ -925,20 +925,20 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -1
                                         \startTextSpan
-                                        ef'''64
-                                        fs'''64
-                                        d'''64
-                                        f'''64
-                                        c'''64
-                                        f'''64
-                                        cs'''64
-                                        fs'''64
-                                        a'''64
-                                        ef'''64
-                                        af'''64
-                                        b'''64
-                                        c'''64
-                                        a'''64
+                                        ef'''!64
+                                        fs'''!64
+                                        d'''!64
+                                        f'''!64
+                                        c'''!64
+                                        f'''!64
+                                        cs'''!64
+                                        fs'''!64
+                                        a'''!64
+                                        ef'''!64
+                                        af'''!64
+                                        b'''!64
+                                        c'''!64
+                                        a'''!64
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \!
@@ -978,7 +978,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \ottava 1
-                                        cs'''64
+                                        cs'''!64
                                         % AFTER:
                                         % START_BEAM:
                                         [
@@ -991,31 +991,31 @@
                                         - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -1
                                         \startTextSpan
-                                        af'''64
-                                        d'''64
-                                        cs'''64
-                                        ef'''64
-                                        c'''64
-                                        b'''64
-                                        f'''64
-                                        bf'''64
-                                        c'''64
-                                        a'''64
-                                        cs'''64
-                                        af'''64
-                                        ef'''64
-                                        a'''64
-                                        d'''64
-                                        af'''64
-                                        f'''64
-                                        cs'''64
-                                        a'''64
-                                        ef'''64
-                                        fs'''64
-                                        d'''64
-                                        f'''64
-                                        g'''64
-                                        fs'''64
+                                        af'''!64
+                                        d'''!64
+                                        cs'''!64
+                                        ef'''!64
+                                        c'''!64
+                                        b'''!64
+                                        f'''!64
+                                        bf'''!64
+                                        c'''!64
+                                        a'''!64
+                                        cs'''!64
+                                        af'''!64
+                                        ef'''!64
+                                        a'''!64
+                                        d'''!64
+                                        af'''!64
+                                        f'''!64
+                                        cs'''!64
+                                        a'''!64
+                                        ef'''!64
+                                        fs'''!64
+                                        d'''!64
+                                        f'''!64
+                                        g'''!64
+                                        fs'''!64
                                         % AFTER:
                                         % SPANNER_STOPS:
                                         )
@@ -1029,7 +1029,7 @@
                                         \set suggestAccidentals = ##f
                                     % CLOSE_BRACKETS:
                                     }
-                                    cs''32
+                                    cs''!32
                                     % AFTER:
                                     % ARTICULATIONS:
                                     ^ \mp
@@ -1292,17 +1292,14 @@
                                     \tweak style #'cross
                                     f'16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :64
                                     % ARTICULATIONS:
                                     \p
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
                                     - \tweak padding #4
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
+                                    \startTextSpanOne
+                                    - \tweak padding #6
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -4
@@ -1310,15 +1307,8 @@
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
                                     \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'cross
                                     f'32
@@ -1327,29 +1317,29 @@
                                     [
                                     % OPENING:
                                     % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
                                     \tweak style #'cross
                                     f'32
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :256
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2.5
+                                    \startTextSpanOne
                                     ~
                                     \tweak style #'cross
                                     f'8.
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :64
                                     % ARTICULATIONS:
                                     \!
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    \stopTextSpanOne
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1360,70 +1350,53 @@
                                     \tweak style #'cross
                                     f'16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % ARTICULATIONS:
                                     \pp
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
                                     - \tweak padding #10.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1
                                     \startTextSpan
+                                    - \tweak padding #7
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                    \startTextSpanOne
                                     \<
                                     f'32
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :128
                                     % ARTICULATIONS:
                                     \mp
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
+                                    - \tweak padding #7
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
+                                    \startTextSpanOne
                                     \>
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
                                     f'16
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
                                     f'64
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     \tweak style #'cross
                                     f'64
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :128
                                     % ARTICULATIONS:
                                     \pp
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #7
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                    \startTextSpanOne
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
@@ -1431,37 +1404,27 @@
                                     {
                                         b8
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :16
                                         % ARTICULATIONS:
                                         \pp
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
                                         \<
                                         \tweak style #'cross
                                         b8
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
                                         % ARTICULATIONS:
                                         \p
+                                        % SPANNER_STOPS:
+                                        \stopTextSpanOne
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
+                                        - \tweak padding #7
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                        \startTextSpanOne
                                         \>
                                         b8
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :16
                                         % ARTICULATIONS:
                                         \pp
                                         % STOP_BEAM:
@@ -1471,58 +1434,46 @@
                                     \tweak style #'cross
                                     g16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % ARTICULATIONS:
                                     \pp
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
+                                    - \tweak padding #7
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                    \startTextSpanOne
                                     \<
                                     g32
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :128
                                     % ARTICULATIONS:
                                     \mp
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
+                                    - \tweak padding #7
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
+                                    \startTextSpanOne
                                     \>
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
                                     g16
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     \tweak style #'cross
                                     g32
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :64
                                     % ARTICULATIONS:
                                     \pp
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #7
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                    \startTextSpanOne
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
@@ -1530,98 +1481,77 @@
                                     {
                                         g8
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :16
                                         % ARTICULATIONS:
                                         \pp
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
                                         \<
                                         \tweak style #'cross
                                         g8..
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
                                         % ARTICULATIONS:
                                         \p
+                                        % SPANNER_STOPS:
+                                        \stopTextSpanOne
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
+                                        - \tweak padding #7
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                        \startTextSpanOne
                                         \>
                                         g32
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
                                         % ARTICULATIONS:
                                         \pp
+                                        % SPANNER_STOPS:
+                                        \stopTextSpanOne
                                         % STOP_BEAM:
                                         ]
+                                        % SPANNER_STARTS:
+                                        - \tweak padding #7
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                        \startTextSpanOne
                                     % CLOSE_BRACKETS:
                                     }
                                     \tweak style #'cross
                                     d'16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % ARTICULATIONS:
                                     \pp
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
                                     \<
                                     d'32
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :128
                                     % ARTICULATIONS:
                                     \mp
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
+                                    - \tweak padding #7
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
+                                    \startTextSpanOne
                                     \>
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
                                     d'32
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     \tweak style #'cross
                                     d'16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % ARTICULATIONS:
                                     \pp
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #7
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                    \startTextSpanOne
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 5 0))
@@ -1629,41 +1559,33 @@
                                     {
                                         f'16
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
                                         % ARTICULATIONS:
                                         \pp
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
                                         \<
                                         \tweak style #'cross
                                         f'16.
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :128
                                         % ARTICULATIONS:
                                         \p
+                                        % SPANNER_STOPS:
+                                        \stopTextSpanOne
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
+                                        - \tweak padding #7
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                        - \tweak bound-details.right.text \tremolo-largo
+                                        \startTextSpanOne
                                         \>
                                         f'32
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
                                         % ARTICULATIONS:
                                         \pp
                                         % SPANNER_STOPS:
                                         \stopTextSpan
+                                        \stopTextSpanOne
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -2213,47 +2135,43 @@
                                         \tweak style #'cross
                                         f'4
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :16
                                         % ARTICULATIONS:
                                         \mp
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
                                         - \tweak circled-tip ##t
                                         \>
-                                        - \tweak padding #5
+                                        - \tweak padding #4
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
+                                        \startTextSpanOne
+                                        - \tweak padding #7
                                         - \abjad-dashed-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -5
                                         \startTextSpan
                                         g4.
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
                                         % ARTICULATIONS:
                                         - \accent
                                         \sfp
+                                        % SPANNER_STOPS:
+                                        \stopTextSpanOne
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
+                                        - \tweak padding #4
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                        - \tweak bound-details.right.text \tremolo-largo
+                                        \startTextSpanOne
                                         - \tweak stencil #abjad-flared-hairpin
                                         \<
                                         \tweak style #'cross
                                         d'8
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :16
                                         % ARTICULATIONS:
                                         \mf
                                         % SPANNER_STOPS:
                                         \stopTextSpan
+                                        \stopTextSpanOne
                                     % CLOSE_BRACKETS:
                                     }
                                     % ABSOLUTE_BEFORE:
@@ -2940,17 +2858,14 @@
                                     \tweak style #'cross
                                     c'32
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :256
                                     % ARTICULATIONS:
                                     \fp
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
                                     - \tweak padding #3
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                    \startTextSpanOne
+                                    - \tweak padding #5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "key" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -5
@@ -2958,59 +2873,42 @@
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
+                                    \tweak style #'cross
                                     c'16.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \tweak style #'cross
                                     c'16
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 11) (ly:make-duration 4 0))
                                     \times 11/12
                                     {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \tweak style #'cross
                                         c'4
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :16
                                         % ARTICULATIONS:
                                         \mp
+                                        % SPANNER_STOPS:
+                                        \stopTextSpanOne
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
                                         - \tweak circled-tip ##t
                                         \>
+                                        - \tweak padding #3
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
+                                        - \tweak bound-details.right.text \tremolo-stretto
+                                        \startTextSpanOne
                                         \tweak style #'cross
                                         c'8
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :64
                                         % ARTICULATIONS:
                                         - \accent
                                         \sfp
                                         % SPANNER_STOPS:
                                         \stopTextSpan
+                                        \stopTextSpanOne
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \>

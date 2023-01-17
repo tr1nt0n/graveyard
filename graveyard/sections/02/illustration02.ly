@@ -4027,49 +4027,31 @@
                                     \tweak style #'cross
                                     f'4
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :8
                                     % ARTICULATIONS:
                                     \pp
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
                                     - \tweak padding #4
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                    - \tweak bound-details.right.text \tremolo-moderato
+                                    \startTextSpanOne
+                                    - \tweak padding #6
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -4
                                     \startTextSpan
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
                                     \tweak style #'cross
                                     f'16
                                     % AFTER:
                                     % START_BEAM:
                                     [
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     \tweak style #'cross
                                     b8.
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
                                     % ABSOLUTE_BEFORE:
@@ -4327,11 +4309,14 @@
                                     \tweak style #'cross
                                     f'8.
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % ARTICULATIONS:
                                     \ppp
                                     % SPANNER_STARTS:
+                                    - \tweak padding #5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                    - \tweak bound-details.right.text \tremolo-moderato
+                                    \startTextSpanOne
                                     - \tweak padding #7
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
@@ -4345,8 +4330,6 @@
                                     \tweak style #'cross
                                     f'8
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % START_BEAM:
                                     [
                                     % OPENING:
@@ -4355,8 +4338,6 @@
                                     \tweak style #'cross
                                     b16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -4364,36 +4345,17 @@
                                     \tweak style #'cross
                                     b8.
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % SPANNER_STARTS:
                                     ~
                                     \tweak style #'cross
                                     b8.
-                                    % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     \tweak style #'cross
                                     g8
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
                                     \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'cross
                                     g16
@@ -4402,20 +4364,15 @@
                                     [
                                     % OPENING:
                                     % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
                                     \tweak style #'cross
                                     g16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :64
                                     % ARTICULATIONS:
                                     \p
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
                                     % OPEN_BRACKETS:
@@ -4550,11 +4507,13 @@
                                     \tweak style #'cross
                                     f'4
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :8
                                     % ARTICULATIONS:
                                     \pp
                                     % SPANNER_STARTS:
+                                    - \tweak padding #5
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                    \startTextSpanOne
                                     - \tweak padding #7
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
@@ -4567,8 +4526,6 @@
                                     \tweak style #'cross
                                     f'16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % START_BEAM:
                                     [
                                     % OPENING:
@@ -4577,8 +4534,6 @@
                                     \tweak style #'cross
                                     b16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -4586,15 +4541,11 @@
                                     \tweak style #'cross
                                     b8
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % SPANNER_STARTS:
                                     ~
                                     \tweak style #'cross
                                     b8.
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % SPANNER_STARTS:
                                     ~
                                     % OPENING:
@@ -4603,8 +4554,6 @@
                                     \tweak style #'cross
                                     b16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % START_BEAM:
                                     [
                                     % OPENING:
@@ -4613,25 +4562,18 @@
                                     \tweak style #'cross
                                     g16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
                                     ~
                                     \tweak style #'cross
                                     g8
-                                    % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % OPENING:
                                     % COMMANDS:
                                     \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'cross
                                     g16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % START_BEAM:
                                     [
                                     % OPENING:
@@ -4640,26 +4582,12 @@
                                     \tweak style #'cross
                                     d'16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
                                     \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'cross
                                     d'16
@@ -4668,27 +4596,27 @@
                                     [
                                     % OPENING:
                                     % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
                                     \tweak style #'cross
                                     f'16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :64
+                                    % SPANNER_STOPS:
+                                    \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
+                                    - \tweak padding #5
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2.5
+                                    \startTextSpanOne
                                     ~
                                     \tweak style #'cross
                                     f'8
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    \stopTextSpanOne
                                     f'8
                                     % AFTER:
                                     % START_BEAM:
@@ -4704,11 +4632,14 @@
                                     \tweak style #'cross
                                     f'8.
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % ARTICULATIONS:
                                     \pp
                                     % SPANNER_STARTS:
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                    - \tweak bound-details.right.text \tremolo-moderato
+                                    \startTextSpanOne
                                     - \tweak padding #7
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
@@ -4721,8 +4652,6 @@
                                     \tweak style #'cross
                                     f'8
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % START_BEAM:
                                     [
                                     % OPENING:
@@ -4731,8 +4660,6 @@
                                     \tweak style #'cross
                                     b8
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -4740,28 +4667,18 @@
                                     \tweak style #'cross
                                     b8.
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % SPANNER_STARTS:
                                     ~
                                     \tweak style #'cross
                                     b8
-                                    % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     \tweak style #'cross
                                     g8.
-                                    % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % OPENING:
                                     % COMMANDS:
                                     \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'cross
                                     g16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % START_BEAM:
                                     [
                                     % OPENING:
@@ -4770,26 +4687,12 @@
                                     \tweak style #'cross
                                     d'16
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
-                                    - \tweak arrow-length #2
-                                    - \tweak arrow-width #0.5
-                                    - \tweak bound-details.right.arrow ##t
-                                    - \tweak thickness #2
-                                    \glissando
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
                                     \override Staff.Stem.stemlet-length = 0.75
                                     \tweak style #'cross
                                     d'16
@@ -4798,32 +4701,22 @@
                                     [
                                     % OPENING:
                                     % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
                                     \tweak style #'cross
                                     f'8
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
                                     ~
                                     \tweak style #'cross
                                     f'8.
-                                    % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :32
                                     \tweak style #'cross
                                     b4.
                                     % AFTER:
-                                    % STEM_TREMOLOS:
-                                    :16
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    \stopTextSpanOne
                                     s1 * 7/16
                                     r8.
                                     % ABSOLUTE_BEFORE:
@@ -4898,7 +4791,7 @@
                                     % COMMANDS:
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Accordion }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { acc. }
-                                    <af''' a'''>4
+                                    <af'''! a'''!>4
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \fp
@@ -4950,7 +4843,7 @@
                                         % BEFORE:
                                         % GROB_OVERRIDES:
                                         \once \override Beam.grow-direction = #left
-                                        <af''' a'''>32 * 43/32
+                                        <af'''! a'''!>32 * 43/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -4959,15 +4852,15 @@
                                         [
                                         % SPANNER_STARTS:
                                         \>
-                                        <af''' a'''>32 * 49/32
+                                        <af'''! a'''!>32 * 49/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
-                                        <af''' a'''>32 * 17/8
+                                        <af'''! a'''!>32 * 17/8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
-                                        <af''' a'''>32 * 3
+                                        <af'''! a'''!>32 * 3
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \p
@@ -5029,11 +4922,11 @@
                                         % AFTER:
                                         % START_BEAM:
                                         [
-                                        <af''' a'''>32 * 21/8
+                                        <af'''! a'''!>32 * 21/8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
-                                        <af''' a'''>32 * 13/8
+                                        <af'''! a'''!>32 * 13/8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -5044,7 +4937,7 @@
                                     % AFTER:
                                     % GROB_REVERTS:
                                     \revert TupletNumber.text
-                                    <af''' a'''>16
+                                    <af'''! a'''!>16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \ffff
@@ -5058,7 +4951,7 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    <af''' a'''>4.
+                                    <af'''! a'''!>4.
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \ffff
@@ -5118,7 +5011,7 @@
                                         % AFTER:
                                         % START_BEAM:
                                         [
-                                        <af''' a'''>32 * 43/32
+                                        <af'''! a'''!>32 * 43/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -5126,16 +5019,16 @@
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
                                         \>
-                                        <af''' a'''>32 * 51/32
+                                        <af'''! a'''!>32 * 51/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
                                         r32 * 65/32
-                                        <af''' a'''>32 * 85/32
+                                        <af'''! a'''!>32 * 85/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
-                                        <af''' a'''>32 * 25/8
+                                        <af'''! a'''!>32 * 25/8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -5221,7 +5114,7 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
-                                    <af''' a'''>8
+                                    <af'''! a'''!>8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
@@ -5275,7 +5168,7 @@
                                         % BEFORE:
                                         % GROB_OVERRIDES:
                                         \once \override Beam.grow-direction = #left
-                                        <af''' a'''>32 * 5/4
+                                        <af'''! a'''!>32 * 5/4
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -5285,16 +5178,16 @@
                                         % SPANNER_STARTS:
                                         \>
                                         r32 * 43/32
-                                        <af''' a'''>32 * 51/32
+                                        <af'''! a'''!>32 * 51/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
-                                        <af''' a'''>32 * 65/32
+                                        <af'''! a'''!>32 * 65/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
                                         r32 * 85/32
-                                        <af''' a'''>32 * 25/8
+                                        <af'''! a'''!>32 * 25/8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \p
@@ -5359,16 +5252,16 @@
                                         [
                                         % SPANNER_STARTS:
                                         \<
-                                        <af''' a'''>32 * 99/32
+                                        <af'''! a'''!>32 * 99/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
                                         r32 * 69/32
-                                        <af''' a'''>32 * 13/8
+                                        <af'''! a'''!>32 * 13/8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
-                                        <af''' a'''>32 * 47/32
+                                        <af'''! a'''!>32 * 47/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -5379,7 +5272,7 @@
                                     % AFTER:
                                     % GROB_REVERTS:
                                     \revert TupletNumber.text
-                                    <af''' a'''>8
+                                    <af'''! a'''!>8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \ffff
@@ -5400,7 +5293,7 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    <af''' a'''>4..
+                                    <af'''! a'''!>4..
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
@@ -5454,7 +5347,7 @@
                                         % AFTER:
                                         % START_BEAM:
                                         [
-                                        <af''' a'''>32 * 43/32
+                                        <af'''! a'''!>32 * 43/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -5462,16 +5355,16 @@
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         \>
-                                        <af''' a'''>32 * 51/32
+                                        <af'''! a'''!>32 * 51/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
                                         r32 * 65/32
-                                        <af''' a'''>32 * 85/32
+                                        <af'''! a'''!>32 * 85/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
-                                        <af''' a'''>32 * 25/8
+                                        <af'''! a'''!>32 * 25/8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -5565,7 +5458,7 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "treble"
-                                        <af''' a'''>32 * 43/32
+                                        <af'''! a'''!>32 * 43/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -5578,12 +5471,12 @@
                                         \>
                                         % COMMANDS:
                                         \boxed-markup "Accordion" 1
-                                        <af''' a'''>32 * 49/32
+                                        <af'''! a'''!>32 * 49/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
                                         r32 * 17/8
-                                        <af''' a'''>32 * 3
+                                        <af'''! a'''!>32 * 3
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -5664,7 +5557,7 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "treble"
-                                        <af''' a'''>32 * 21/8
+                                        <af'''! a'''!>32 * 21/8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -5673,7 +5566,7 @@
                                         \<
                                         % COMMANDS:
                                         \boxed-markup "Accordion" 1
-                                        <af''' a'''>32 * 13/8
+                                        <af'''! a'''!>32 * 13/8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \ffff
@@ -5738,21 +5631,21 @@
                                         % AFTER:
                                         % START_BEAM:
                                         [
-                                        <af''' a'''>32 * 3/2
+                                        <af'''! a'''!>32 * 3/2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
-                                        <af''' a'''>32 * 13/8
+                                        <af'''! a'''!>32 * 13/8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
                                         r32 * 59/32
-                                        <af''' a'''>32 * 35/16
+                                        <af'''! a'''!>32 * 35/16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
                                         r32 * 85/32
-                                        <af''' a'''>32 * 101/32
+                                        <af'''! a'''!>32 * 101/32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \staccato
@@ -5869,7 +5762,7 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) (ly:make-duration 4 0))
                                     \times 5/9
                                     {
-                                        <af''' a'''>4
+                                        <af'''! a'''!>4
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \mp
@@ -5893,7 +5786,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Dots.staff-position = #2
-                                        <af''' a'''>8.
+                                        <af'''! a'''!>8.
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \ffff
@@ -5907,7 +5800,7 @@
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
                                         \revert Staff.Stem.stemlet-length
-                                        <af''' a'''>16
+                                        <af'''! a'''!>16
                                         % AFTER:
                                         % STOP_BEAM:
                                         ]
@@ -5958,7 +5851,7 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
-                                    <af''' a'''>8
+                                    <af'''! a'''!>8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent

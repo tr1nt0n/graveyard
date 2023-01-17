@@ -137,121 +137,76 @@
                                         \clef "percussion"
                                         e2
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
                                         - \tweak circled-tip ##t
                                         \<
                                         - \tweak padding #4.5
                                         - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                        \startTextSpanTwo
+                                        - \tweak padding #8.5
+                                        - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "n. rasg., pont." } \hspace #0.5 }
-                                        \startTextSpan
+                                        \startTextSpanOne
                                         e2
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :8
                                         % SPANNER_STOPS:
-                                        \stopTextSpan
+                                        \stopTextSpanOne
+                                        \stopTextSpanTwo
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
                                         - \tweak padding #4.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                        \startTextSpanTwo
+                                        - \tweak padding #8.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "kn. rasg., tast." } \hspace #0.5 }
-                                        \startTextSpan
+                                        \startTextSpanOne
                                         e2
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :16
                                         % SPANNER_STOPS:
-                                        \stopTextSpan
+                                        \stopTextSpanOne
+                                        \stopTextSpanTwo
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
                                         - \tweak padding #4.5
                                         - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
+                                        \startTextSpanTwo
+                                        - \tweak padding #8.5
+                                        - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "n. rasg., pont." } \hspace #0.5 }
-                                        \startTextSpan
+                                        \startTextSpanOne
                                         e2
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :8
                                         % SPANNER_STOPS:
-                                        \stopTextSpan
+                                        \stopTextSpanOne
+                                        \stopTextSpanTwo
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
                                         - \tweak padding #4.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                        - \tweak bound-details.right.text \tremolo-stretto
+                                        \startTextSpanTwo
+                                        - \tweak padding #8.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "kn. rasg., molto tast." } \hspace #0.5 }
                                         - \tweak bound-details.right.text \markup \upright { n. rasg., molto pont. }
-                                        \startTextSpan
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
+                                        \startTextSpanOne
                                         e2
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         e2
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         e2
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         e2
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         e2
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         e2
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         e2
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         e2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         e2
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
                                         % ARTICULATIONS:
                                         \ffff
                                         % SPANNER_STOPS:
-                                        \stopTextSpan
+                                        \stopTextSpanOne
+                                        \stopTextSpanTwo
                                     % CLOSE_BRACKETS:
                                     }
                                 % CLOSE_BRACKETS:
@@ -1575,64 +1530,38 @@
                                         r\breve
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
                                         % ARTICULATIONS:
                                         - \tenuto
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
                                         - \tweak circled-tip ##t
                                         \<
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
+                                        - \tweak padding #7
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                        - \tweak bound-details.right.text \tremolo-largo
+                                        \startTextSpan
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :8
                                         % ARTICULATIONS:
                                         - \tenuto
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         <c'' fs'' b'' cs'''>2
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -1675,62 +1604,36 @@
                                         \clef "bass"
                                         <d, a>2
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :32
                                         % ARTICULATIONS:
                                         - \tenuto
                                         % SPANNER_STARTS:
-                                        - \tweak arrow-length #2
-                                        - \tweak arrow-width #0.5
-                                        - \tweak bound-details.right.arrow ##t
-                                        - \tweak thickness #2
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
+                                        - \tweak padding #8.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                        - \tweak bound-details.right.text \tremolo-largo
+                                        \startTextSpan
                                         <d, a>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         <d, a>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         <d, a>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
                                         <d, a>2
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \tenuto
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         <d, a>2
                                         % AFTER:
-                                        % STEM_TREMOLOS:
-                                        :8
                                         % ARTICULATIONS:
                                         - \tenuto
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
                                         <d, a>2
                                         % AFTER:
                                         % ARTICULATIONS:

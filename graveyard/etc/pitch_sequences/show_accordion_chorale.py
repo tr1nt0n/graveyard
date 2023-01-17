@@ -54,11 +54,11 @@ trinton.make_music(
 
 # sc file
 
-trinton.make_sc_file(
-    score=score,
-    tempo=((1, 4), 10),
-    current_directory="/Users/trintonprater/scores/graveyard/graveyard/etc/pitch_sequences",
-)
+# trinton.make_sc_file(
+#     score=score,
+#     tempo=((1, 4), 10),
+#     current_directory="/Users/trintonprater/scores/graveyard/graveyard/etc/pitch_sequences",
+# )
 
 # markups
 

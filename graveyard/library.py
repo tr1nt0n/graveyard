@@ -242,16 +242,12 @@ def color_fingering(selector=None, index=0):
         else:
             selections = abjad.select.logical_ties(argument, pitched=True)
 
-        # fingerings = [abjad.ColorFingering(_) for _ in trinton.rotated_sequence([3, 1, 2, 3, 1], index)]
-
         fingerings = [
             abjad.Markup(
                 rf"\markup \fontsize #0.5 {{ \override #'(circle-padding . 0.25) \circle {_} }}"
             )
             for _ in trinton.rotated_sequence([3, 1, 2, 3, 1], index)
         ]
-
-        # fingerings = [abjad.bundle(_, r'- \tweak font-name "Bodoni72 Bold"', r'- \tweak font-size #7',) for _ in fingerings]
 
         fingerings = cycle(fingerings)
 
@@ -366,9 +362,16 @@ def guitar_runs(index=0):
     return trinton.rotated_sequence(transforms.runs, index)
 
 
-def accordion_chorale(hand, index=0):
+def accordion_chorale(hand, index=0, double=False):
     _rh_to_lh = {"RH": RH_accordion_chords, "LH": LH_accordion_chords}
-    return trinton.rotated_sequence(_rh_to_lh[hand], index)
+    if double is True:
+        chords = []
+        for _ in _rh_to_lh[hand]:
+            chords.append(_)
+            chords.append(_)
+        return trinton.rotated_sequence(chords, index)
+    else:
+        return trinton.rotated_sequence(_rh_to_lh[hand], index)
 
 
 # rhythm tools

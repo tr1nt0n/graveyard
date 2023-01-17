@@ -254,6 +254,9 @@ trinton.make_music(
     evans.RhythmHandler(evans.even_division([64], extra_counts=[2])),
     trinton.force_rest(selector=trinton.ranged_selector(ranges=[range(15, 24)])),
     evans.PitchHandler(pitch_list=library.guitar_runs(0)),
+    trinton.force_accidentals_command(
+        selector=trinton.pleaves(),
+    ),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("pp"),
@@ -305,6 +308,9 @@ trinton.make_music(
     ),
     trinton.pitch_with_selector_command(
         pitch_list=[13], selector=trinton.select_tuplets_by_index([1])
+    ),
+    trinton.force_accidentals_command(
+        selector=trinton.ranged_selector(ranges=[range(0, 27)]),
     ),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
@@ -435,44 +441,23 @@ trinton.make_music(
         clef="percussion",
         selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(1, 4),
-            ],
-            nested=True,
-        ),
-        tweaks=[
-            abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-            abjad.Tweak(r"- \tweak arrow-length #2"),
-            abjad.Tweak(r"- \tweak arrow-width #0.5"),
-            abjad.Tweak(r"- \tweak thickness #2"),
-        ],
-    ),
     trinton.hooked_spanner_command(
         string="tap",
-        padding=4,
+        padding=6,
         right_padding=4,
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    trinton.continuous_spanner_command(
+        strings=["\\tremolo-moderato", "\\tremolo-stretto"],
+        selector=trinton.select_leaves_by_index([0, -2, -2, -1], pitched=True),
+        padding=4,
+        command="One",
+        full_string=True,
+        end_hook=True,
     ),
     trinton.linear_attachment_command(
         attachments=[abjad.Dynamic("p"), abjad.StartHairpin("--"), abjad.StopHairpin()],
         selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
-    ),
-    trinton.linear_attachment_command(
-        attachments=[
-            abjad.StemTremolo(64),
-            abjad.StemTremolo(256),
-            abjad.StemTremolo(64),
-        ],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                2,
-                3,
-            ],
-            pitched=True,
-        ),
     ),
     voice=score["viola 2 voice"],
     beam_meter=True,
@@ -523,46 +508,6 @@ trinton.make_music(
             2,
         ),
     ),
-    trinton.attachment_command(
-        attachments=[
-            abjad.bundle(
-                abjad.Glissando(),
-                abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-                abjad.Tweak(r"- \tweak arrow-length #2"),
-                abjad.Tweak(r"- \tweak arrow-width #0.5"),
-                abjad.Tweak(r"- \tweak thickness #2"),
-            ),
-        ],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                5,
-                6,
-                8,
-                12,
-                13,
-                15,
-                19,
-                20,
-            ]
-        ),
-    ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(1, 5),
-                range(9, 12),
-                range(16, 19),
-            ],
-            nested=True,
-        ),
-        tweaks=[
-            abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-            abjad.Tweak(r"- \tweak arrow-length #2"),
-            abjad.Tweak(r"- \tweak arrow-width #0.5"),
-            abjad.Tweak(r"- \tweak thickness #2"),
-        ],
-    ),
     trinton.linear_attachment_command(
         attachments=cycle(
             [
@@ -592,31 +537,53 @@ trinton.make_music(
         padding=10.5,
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
-    trinton.linear_attachment_command(
-        attachments=[
-            abjad.StemTremolo(_)
-            for _ in [
-                32,
-                128,
-                128,
-                16,
-                64,
-                16,
-                32,
-                128,
-                64,
-                16,
-                64,
-                64,
-                32,
-                128,
-                32,
-                32,
-                128,
-                64,
-            ]
+    trinton.continuous_spanner_command(
+        strings=[
+            "\\tremolo-largo",
+            "\\tremolo-moderato",
+            "\\tremolo-largo",
+            "\\tremolo-stretto",
+            "\\tremolo-largo",
+            "\\tremolo-moderato",
+            "\\tremolo-largo",
+            "\\tremolo-stretto",
+            "\\tremolo-largo",
+            "\\tremolo-moderato",
+            "\\tremolo-largo",
+            "\\tremolo-stretto",
+            "\\tremolo-largo",
         ],
-        selector=trinton.select_logical_ties_by_index(list(range(0, 18)), first=True),
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                1,
+                1,
+                4,
+                4,
+                6,
+                6,
+                8,
+                8,
+                9,
+                9,
+                11,
+                11,
+                13,
+                13,
+                14,
+                14,
+                16,
+                16,
+                18,
+                18,
+                20,
+                20,
+                -1,
+            ]
+        ),
+        padding=7,
+        command="One",
+        full_string=True,
     ),
     trinton.beam_durations([(3, 16), (5, 16)]),
     trinton.notehead_bracket_command(),
@@ -837,21 +804,9 @@ trinton.make_music(
         clef="percussion",
         selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
-    trinton.attachment_command(
-        attachments=[
-            abjad.bundle(
-                abjad.Glissando(),
-                abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-                abjad.Tweak(r"- \tweak arrow-length #2"),
-                abjad.Tweak(r"- \tweak arrow-width #0.5"),
-                abjad.Tweak(r"- \tweak thickness #2"),
-            ),
-        ],
-        selector=trinton.pleaves(exclude=[-1]),
-    ),
     trinton.hooked_spanner_command(
         string="tap",
-        padding=5,
+        padding=7,
         right_padding=5,
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
@@ -866,13 +821,19 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, 1, 1, 1, -1]),
     ),
-    trinton.linear_attachment_command(
-        attachments=[
-            abjad.StemTremolo(16),
-            abjad.StemTremolo(32),
-            abjad.StemTremolo(16),
-        ],
-        selector=trinton.pleaves(),
+    trinton.continuous_spanner_command(
+        strings=["\\tremolo-moderato", "\\tremolo-stretto", "\\tremolo-largo"],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                1,
+                1,
+                2,
+            ]
+        ),
+        padding=4,
+        command="One",
+        full_string=True,
     ),
     abjad.beam,
     trinton.notehead_bracket_command(),
@@ -1248,9 +1209,20 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     trinton.hooked_spanner_command(
         string="key",
-        padding=3,
+        padding=5,
         right_padding=5,
         selector=trinton.select_leaves_by_index([0, 4], pitched=True),
+    ),
+    trinton.continuous_spanner_command(
+        strings=[
+            "\\tremolo-stretto",
+            "\\tremolo-moderato",
+            "\\tremolo-stretto",
+        ],
+        selector=trinton.select_leaves_by_index([0, 3, 3, 4], pitched=True),
+        padding=3,
+        command="One",
+        full_string=True,
     ),
     trinton.hooked_spanner_command(
         string="air",
@@ -1263,6 +1235,8 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index(
             [
                 0,
+                1,
+                2,
                 3,
                 4,
             ],
@@ -1272,36 +1246,10 @@ trinton.make_music(
     trinton.glissando_command(
         selector=trinton.ranged_selector(
             ranges=[
-                range(2, 6),
-            ],
-            nested=True,
-        ),
-        tweaks=[
-            abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-            abjad.Tweak(r"- \tweak arrow-length #2"),
-            abjad.Tweak(r"- \tweak arrow-width #0.5"),
-            abjad.Tweak(r"- \tweak thickness #2"),
-        ],
-    ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
                 range(7, 11),
             ],
             nested=True,
         ),
-    ),
-    trinton.attachment_command(
-        attachments=[
-            abjad.bundle(
-                abjad.Glissando(),
-                abjad.Tweak(r"- \tweak bound-details.right.arrow ##t"),
-                abjad.Tweak(r"- \tweak arrow-length #2"),
-                abjad.Tweak(r"- \tweak arrow-width #0.5"),
-                abjad.Tweak(r"- \tweak thickness #2"),
-            ),
-        ],
-        selector=trinton.select_leaves_by_index([3], pitched=True),
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -1335,21 +1283,6 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([5, 7, 7, -1], pitched=True),
         direction=abjad.UP,
-    ),
-    trinton.linear_attachment_command(
-        attachments=[
-            abjad.StemTremolo(256),
-            abjad.StemTremolo(16),
-            abjad.StemTremolo(64),
-        ],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                3,
-                4,
-            ],
-            pitched=True,
-        ),
     ),
     trinton.notehead_bracket_command(),
     voice=score["accordion 2 voice"],
