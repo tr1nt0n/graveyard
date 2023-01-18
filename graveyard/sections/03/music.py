@@ -1340,21 +1340,6 @@ trinton.attach_multiple(
     ],
 )
 
-# trinton.attach_multiple(
-#     score=score,
-#     voice="Global Context",
-#     leaves=[20],
-#     attachments=[
-#         abjad.Markup(
-#             rf'\markup \huge \center-column {{ \musicglyph "scripts.ulongfermata" }} '
-#         ),
-#         abjad.LilyPondLiteral(
-#             r"\once \override Score.TimeSignature.stencil = ##f",
-#             "before",
-#         ),
-#     ],
-# )
-
 library.filled_fermata_measures(score=score, measures=[21], fermata="ulongfermata")
 
 trinton.attach_multiple(
@@ -1414,18 +1399,6 @@ trinton.attach_multiple(
         ),
     ],
 )
-
-# trinton.attach_multiple(
-#     score=score,
-#     voice="Global Context",
-#     leaves=[18],
-#     attachments=[
-#         abjad.LilyPondLiteral(
-#             r"""\set Score.repeatCommands = #'((volta #f))""",
-#             site="absolute_before",
-#         ),
-#     ],
-# )
 
 trinton.attach_multiple(
     score=score,

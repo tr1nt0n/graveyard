@@ -20,8 +20,8 @@
             % OPENING:
             % COMMANDS:
             #(ly:expect-warning "strange time signature found")
-            \time 6/3
-            s1 * 2
+            \time 7/3
+            s1 * 7/3
             % AFTER:
             % MARKUP:
             - \tweak padding #8
@@ -32,8 +32,8 @@
             % OPENING:
             % COMMANDS:
             #(ly:expect-warning "strange time signature found")
-            \time 7/3
-            s1 * 7/3
+            \time 6/3
+            s1 * 2
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -115,8 +115,8 @@
                                     % COMMANDS:
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Electric Guitar }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { e. git. }
-                                    s1 * 2
                                     s1 * 7/3
+                                    s1 * 2
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -145,8 +145,8 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "guitar 2 voice"
                                 {
-                                    s1 * 2
                                     s1 * 7/3
+                                    s1 * 2
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -175,8 +175,8 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "guitar 3 voice"
                                 {
-                                    s1 * 2
                                     s1 * 7/3
+                                    s1 * 2
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -337,8 +337,8 @@
                                     % COMMANDS:
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Viola }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { vla. }
-                                    s1 * 2
                                     s1 * 7/3
+                                    s1 * 2
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff

@@ -10,7 +10,7 @@ from graveyard import library
 
 # score
 
-score = library.graveyard_score([(6, 3), (7, 3), (1, 16), (3, 32)])
+score = library.graveyard_score([(7, 3), (6, 3), (1, 16), (3, 32)])
 
 # fermate
 
