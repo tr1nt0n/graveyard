@@ -396,28 +396,6 @@ viola_grace_handler = trinton.OnBeatGraceHandler(
 # notation tools
 
 
-# def tremolo_arrows(selector):
-#     def attach(argument):
-#         selections = selector(argument)
-#         for selection in selections:
-#
-#             abjad.attach(
-#                 abjad.LilyPondLiteral(
-#                     r"\once \override Glissando.left-bound-info", "before"
-#                 ),
-#                 selection,
-#             )
-#
-#             abjad.attach(
-#                 abjad.LilyPondLiteral(
-#                     r"\once \override Glissando.bound-details.left.Y = #-2", "before"
-#                 ),
-#                 selection,
-#             )
-#
-#     return attach
-
-
 def left_beam(selector=None):
     def beam(argument):
         if selector is not None:

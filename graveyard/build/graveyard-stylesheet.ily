@@ -151,6 +151,12 @@
         \Staff
         fontSize = #-0.25
         \remove Time_signature_engraver
+        \consists Duration_line_engraver
+
+        \override DurationLine.style = #'line
+        \override DurationLine.thickness = #3
+        \override DurationLine.to-barline = ##t
+        \override DurationLine.breakable = ##t
 
         \override InstrumentName.self-alignment-X = #CENTER
         \override InstrumentName.font-name = "Bodoni72 Book"
@@ -160,14 +166,11 @@
         \Staff
         \name RightHandStaff
         \type Engraver_group
-        \consists Duration_line_engraver
 
         \override Accidental.stencil = ##f
 
         \override Dots.staff-position = #2
 
-        \override DurationLine.style = #'line
-        \override DurationLine.thickness = #3
         \override DurationLine.X-offset = 0.40
 
         \override Glissando.bound-details.left.padding = #0.5
