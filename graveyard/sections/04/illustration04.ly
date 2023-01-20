@@ -270,6 +270,9 @@
             % COMMANDS:
             \time 3/8
             s1 * 3/8
+            % AFTER:
+            % COMMANDS:
+            \break
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \tweak text "×3" \startMeasureSpanner
@@ -1298,7 +1301,7 @@
                                     ]
                                     % COMMANDS:
                                     \-
-                                    e'4
+                                    f'4
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \abjad-zero-padding-glissando
@@ -1368,9 +1371,85 @@
                                     % COMMANDS:
                                     \-
                                     \textSpannerUp
-                                    s1 * 1/2
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \textSpannerDown
+                                    d'32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ffff
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    - \tweak padding #4
+                                    - \abjad-dashed-line-with-up-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "spazzolato, scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    a'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    f'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    e'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'16.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    b16.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    g'16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    b32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    a'32
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \abjad-zero-padding-glissando
+                                    \glissando
+                                    b32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    % COMMANDS:
+                                    \textSpannerUp
                                     s1 * 5/8
                                     s1 * 5/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \breathe
                                     s1 * 3/8
                                     s1 * 1/16
                                     s1 * 1/16
@@ -2747,14 +2826,14 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
-                                    d'16
+                                    c'16
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
-                                    a'32
+                                    g'32
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -2861,12 +2940,167 @@
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \fancy-gliss
+                                       #'(
+                                          (0 0 0.5 7 1 0)
+                                          (1 0 1.5 -7 2 0)
+                                          (2 0 2.5 3 3 0)
+                                          (3 0 3.5 -3 4 0)
+                                          (4 0 4.5 7 5 0)
+                                          (5 0 5.5 -7 6 0)
+                                          (6 0 6.5 3 7 0)
+                                          (7 0 7.5 -3 8 0)
+                                          (8 0 8.5 7 9 0)
+                                          (9 0 9.5 -7 10 0)
+                                          (10 0 10.5 5 11 0)
+                                          (11 0 11.5 -5 12 0)
+                                          (12 0 12.5 7 13 0)
+                                          (13 0 13.5 -7 14 0)
+                                          (14 0 14.5 1 15 0)
+                                          (15 0 15.5 -1 16 0)
+                                          (16 0 16.5 2 17 0)
+                                          (17 0 17.5 -2 18 0)
+                                          (18 0 18.5 1 19 0)
+                                          (19 0 19.5 -1 20 0)
+                                          (20 0 20.5 3 21 0)
+                                          (21 0 21.5 -3 22 0)
+                                          (22 0 22.5 1 23 0)
+                                          (23 0 23.5 -1 24 0)
+                                          (24 0 24.5 1 25 0)
+                                          (25 0 25.5 -1 26 0)
+                                          (26 0 26.5 3 27 0)
+                                          (27 0 27.5 -3 28 0)
+                                          (28 0 28.5 7 29 0)
+                                          (29 0 29.5 -7 30 0)
+                                          (30 0 30.5 0.5 31 0)
+                                          (31 0 31.5 -0.5 32 0)
+                                          (32 0 32.5 1 33 0)
+                                          (33 0 33.5 -1 34 0)
+                                          (34 0 34.5 2 35 0)
+                                          (35 0 35.5 -2 36 0)
+                                          (36 0 36.5 3 37 0)
+                                          (37 0 37.5 -3 38 0)
+                                          (38 0 38.5 4 39 0)
+                                          (39 0 39.5 -4 40 0)
+                                          (40 0 40.5 5 41 0)
+                                          (41 0 41.5 -5 42 0)
+                                          (42 0 42.5 6 43 0)
+                                          (43 0 43.5 -6 44 0)
+                                          (44 0 44.5 7 45 0)
+                                          (45 0 45.5 -7 46 0)
+                                     )
+                                     #-4.5
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    c'''8
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #9
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "IV" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -5
+                                    \startTextSpan
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    c'''8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    c'''8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    % GROB_OVERRIDES:
+                                    \once \override NoteHead.transparent = ##t
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    c'''8
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
                                     % COMMANDS:
                                     \revert-noteheads
-                                    s1 * 1/2
                                     s1 * 5/8
                                     s1 * 5/8
-                                    s1 * 3/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \breathe
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \set suggestAccidentals = ##t
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \ottava 1
+                                    d'''!64
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    - \tweak padding #10
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    f'''!64
+                                    c'''!64
+                                    f'''!64
+                                    cs'''!64
+                                    fs'''!64
+                                    a'''!64
+                                    ef'''!64
+                                    af'''!64
+                                    b'''!64
+                                    c'''!64
+                                    a'''!64
+                                    cs'''!64
+                                    af'''!64
+                                    d'''!64
+                                    cs'''!64
+                                    ef'''!64
+                                    c'''!64
+                                    b'''!64
+                                    f'''!64
+                                    bf'''!64
+                                    c'''!64
+                                    a'''!64
+                                    cs'''!64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ffff
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    % COMMANDS:
+                                    \ottava 0
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \set suggestAccidentals = ##f
                                     s1 * 1/16
                                     s1 * 1/16
                                     s1 * 1/16
@@ -3082,9 +3316,51 @@
                                     \!
                                     s1 * 3/16
                                     s1 * 5/44
-                                    s1 * 7/32
-                                    s1 * 7/24
-                                    s1 * 5/32
+                                    c'8..
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    - \tweak padding #7
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "full bows as possible" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1
+                                    \startTextSpan
+                                    ~
+                                    % COMMANDS:
+                                    \boxed-markup "Zhongbo w/ bow" 1
+                                    % OPEN_BRACKETS:
+                                    \tweak edge-height #'(0.7 . 0)
+                                    \times 2/3
+                                    {
+                                        c'4..
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :32
+                                        % ARTICULATIONS:
+                                        \p
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        ~
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    c'8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'32
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :256
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
                                     s1 * 5/16
                                     s1 * 3/8
                                     s1 * 4/7
@@ -3094,19 +3370,531 @@
                                     s1 * 3/4
                                     s1 * 1/2
                                     s1 * 3/8
-                                    s1 * 1/2
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 5
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \fancy-gliss
+                                       #'(
+                                          (0 0 0.5 2 1 0)
+                                          (1 0 1.5 -2 2 0)
+                                          (2 0 2.5 1 3 0)
+                                          (3 0 3.5 -1 4 0)
+                                          (4 0 4.5 2 5 0)
+                                          (5 0 5.5 -2 6 0)
+                                          (6 0 6.5 1 7 0)
+                                          (7 0 7.5 -1 8 0)
+                                          (8 0 8.5 3 9 0)
+                                          (9 0 9.5 -3 10 0)
+                                          (10 0 10.5 1 11 0)
+                                          (11 0 11.5 -1 12 0)
+                                          (12 0 12.5 2 13 0)
+                                          (13 0 13.5 -2 14 0)
+                                          (14 0 14.5 7 15 0)
+                                          (15 0 15.5 -7 16 0)
+                                          (16 0 16.5 4 17 0)
+                                          (17 0 17.5 -4 18 0)
+                                          (18 0 18.5 7 19 0)
+                                          (19 0 19.5 -7 20 0)
+                                          (20 0 20.5 5 21 0)
+                                          (21 0 21.5 -5 22 0)
+                                          (22 0 22.5 1 23 0)
+                                          (23 0 23.5 -1 24 0)
+                                          (24 0 24.5 2 25 0)
+                                          (25 0 25.5 -2 26 0)
+                                          (26 0 26.5 7 27 0)
+                                          (27 0 27.5 -7 28 0)
+                                          (28 0 28.5 7 29 0)
+                                          (29 0 29.5 -7 30 0)
+                                          (30 0 30.5 6 31 0)
+                                          (31 0 31.5 -6 32 0)
+                                          (32 0 32.5 5 33 0)
+                                          (33 0 33.5 -5 34 0)
+                                          (34 0 34.5 4 35 0)
+                                          (35 0 35.5 -4 36 0)
+                                          (36 0 36.5 3 37 0)
+                                          (37 0 37.5 -3 38 0)
+                                          (38 0 38.5 2 39 0)
+                                          (39 0 39.5 -2 40 0)
+                                          (40 0 40.5 1 41 0)
+                                          (41 0 41.5 -1 42 0)
+                                          (42 0 42.5 0.5 43 0)
+                                          (43 0 43.5 -0.5 44 0)
+                                     )
+                                     #-4.5
+                                    \highest
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "altovarC"
+                                    c''8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ffff
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #10
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "scratch" } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -5
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    \glissando
+                                    % COMMANDS:
+                                    \boxed-markup "Viola" 1
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    c''8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    c''8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    % GROB_OVERRIDES:
+                                    \once \override NoteHead.transparent = ##t
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    c''8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    % COMMANDS:
+                                    \revert-noteheads
                                     s1 * 5/8
                                     s1 * 5/8
-                                    s1 * 3/8
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \breathe
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "On_Beat_Grace_Container"
+                                        {
+                                        % OPENING:
+                                            % COMMANDS:
+                                            \set fontSize = #-4
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \slash
+                                            \voiceOne
+                                            d''16 * 4/25
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \downbow
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            (
+                                            \glissando
+                                            c''8 * 2/25
+                                            % AFTER:
+                                            % SPANNER_STARTS:
+                                            \glissando
+                                            fqs''16 * 4/25
+                                            % AFTER:
+                                            % SPANNER_STOPS:
+                                            )
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "viola 2 voice Anchor"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceTwo
+                                            <d' d''>16
+                                            % AFTER:
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            - \tweak circled-tip ##t
+                                            \<
+                                            - \tweak padding #13
+                                            - \abjad-dashed-line-with-arrow
+                                            - \tweak bound-details.left.text \markup \concat { \upright { "norm." } \hspace #0.5 }
+                                            - \tweak bound-details.right.text \markup \upright { scratch }
+                                            \startTextSpan
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "On_Beat_Grace_Container"
+                                        {
+                                        % OPENING:
+                                            % COMMANDS:
+                                            \set fontSize = #-4
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \slash
+                                            \voiceOne
+                                            d''16 * 4/25
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \downbow
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            (
+                                            \glissando
+                                            c''8 * 2/25
+                                            % AFTER:
+                                            % SPANNER_STARTS:
+                                            \glissando
+                                            fqs''16 * 4/25
+                                            % AFTER:
+                                            % SPANNER_STOPS:
+                                            )
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "viola 2 voice Anchor"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceTwo
+                                            <d' d''>16
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "On_Beat_Grace_Container"
+                                        {
+                                        % OPENING:
+                                            % COMMANDS:
+                                            \set fontSize = #-4
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \slash
+                                            \voiceOne
+                                            d''16 * 4/25
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \downbow
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            (
+                                            \glissando
+                                            c''8 * 2/25
+                                            % AFTER:
+                                            % SPANNER_STARTS:
+                                            \glissando
+                                            fqs''16 * 4/25
+                                            % AFTER:
+                                            % SPANNER_STOPS:
+                                            )
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "viola 2 voice Anchor"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceTwo
+                                            <d' d''>16
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "On_Beat_Grace_Container"
+                                        {
+                                        % OPENING:
+                                            % COMMANDS:
+                                            \set fontSize = #-4
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \slash
+                                            \voiceOne
+                                            d''16 * 4/25
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \downbow
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            (
+                                            \glissando
+                                            c''8 * 2/25
+                                            % AFTER:
+                                            % SPANNER_STARTS:
+                                            \glissando
+                                            fqs''16 * 4/25
+                                            % AFTER:
+                                            % SPANNER_STOPS:
+                                            )
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "viola 2 voice Anchor"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceTwo
+                                            <d' d''>16
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "On_Beat_Grace_Container"
+                                        {
+                                        % OPENING:
+                                            % COMMANDS:
+                                            \set fontSize = #-4
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \slash
+                                            \voiceOne
+                                            d''16 * 4/25
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \downbow
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            (
+                                            \glissando
+                                            c''8 * 2/25
+                                            % AFTER:
+                                            % SPANNER_STARTS:
+                                            \glissando
+                                            fqs''16 * 4/25
+                                            % AFTER:
+                                            % SPANNER_STOPS:
+                                            )
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "viola 2 voice Anchor"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceTwo
+                                            <d' d''>16
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "On_Beat_Grace_Container"
+                                        {
+                                        % OPENING:
+                                            % COMMANDS:
+                                            \set fontSize = #-4
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \slash
+                                            \voiceOne
+                                            d''16 * 4/25
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \downbow
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            (
+                                            \glissando
+                                            c''8 * 2/25
+                                            % AFTER:
+                                            % SPANNER_STARTS:
+                                            \glissando
+                                            fqs''16 * 4/25
+                                            % AFTER:
+                                            % SPANNER_STOPS:
+                                            )
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "viola 2 voice Anchor"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceTwo
+                                            <d' d''>16
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            \ffff
+                                            % SPANNER_STOPS:
+                                            \stopTextSpan
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    - \staccato
+                                    \ffff
+                                    % SPANNER_STARTS:
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    % COMMANDS:
+                                    \boxed-markup "Bass Drum w/ drum stick" 1
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    - \staccato
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    - \staccato
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    - \staccato
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    - \staccato
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    - \staccato
+                                    \f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    - \staccato
+                                    \mf
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    - \staccato
+                                    \mp
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    c'16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \accent
+                                    - \staccato
+                                    \p
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -4611,19 +5399,213 @@
                                     % CLOSE_BRACKETS:
                                     }
                                     s1 * 3/8
-                                    s1 * 1/2
-                                    s1 * 5/8
-                                    s1 * 5/8
+                                    <af'''! a'''!>8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ffff
+                                    % BEFORE:
+                                    % GROB_OVERRIDES:
+                                    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                                        {
+                                            \context Score = "Score"
+                                            \with
+                                            {
+                                                \override SpacingSpanner.spacing-increment = 0.5
+                                                proportionalNotationDuration = ##f
+                                            }
+                                            <<
+                                                \context RhythmicStaff = "Rhythmic_Staff"
+                                                \with
+                                                {
+                                                    \remove Time_signature_engraver
+                                                    \remove Staff_symbol_engraver
+                                                    \override Stem.direction = #up
+                                                    \override Stem.length = 5
+                                                    \override TupletBracket.bracket-visibility = ##t
+                                                    \override TupletBracket.direction = #up
+                                                    \override TupletBracket.minimum-length = 4
+                                                    \override TupletBracket.padding = 1.25
+                                                    \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                                    \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                                    \override TupletNumber.font-size = 0
+                                                    \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                                    tupletFullLength = ##t
+                                                }
+                                                {
+                                                    c'4
+                                                }
+                                            >>
+                                            \layout
+                                            {
+                                                indent = 0
+                                                ragged-right = ##t
+                                            }
+                                        }
+                                    % OPEN_BRACKETS:
+                                    \times 1/1
+                                    {
+                                        % BEFORE:
+                                        % GROB_OVERRIDES:
+                                        \once \override Beam.grow-direction = #left
+                                        <af'''! a'''!>32 * 43/32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        \>
+                                        <af'''! a'''!>32 * 49/32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        <af'''! a'''!>32 * 17/8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        <af'''! a'''!>32 * 3
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \mf
+                                        % STOP_BEAM:
+                                        ]
+                                        % SPANNER_STARTS:
+                                        ~
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % GROB_REVERTS:
+                                    \revert TupletNumber.text
+                                    <af''' a'''>16
+                                    <g''! bf''! cs'''! g'''!>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % SPANNER_STARTS:
+                                    \>
+                                    <bf''! df'''! ef'''!>4.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mp
+                                    <bf''! df'''! ef'''!>4.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % SPANNER_STARTS:
+                                    \<
+                                    <g''! bf''! cs'''! g'''!>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \f
+                                    % COMMANDS:
+                                    \breathe
                                     s1 * 3/8
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
-                                    s1 * 1/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <g'''! a'''!>16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <g'''! a'''!>16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <af'''! a'''!>16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <g'''! af'''! a'''!>16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <af'''! a'''!>16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <g'''! af'''!>16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    af'''!16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <af'''! a'''!>16
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <g'''! af'''! a'''!>16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    )
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -4791,10 +5773,125 @@
                                     ~
                                     <g, g>2
                                     s1 * 3/8
-                                    s1 * 1/2
-                                    s1 * 5/8
-                                    s1 * 5/8
-                                    s1 * 3/8
+                                    <f, f>8.
+                                    % BEFORE:
+                                    % GROB_OVERRIDES:
+                                    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                                        {
+                                            \context Score = "Score"
+                                            \with
+                                            {
+                                                \override SpacingSpanner.spacing-increment = 0.5
+                                                proportionalNotationDuration = ##f
+                                            }
+                                            <<
+                                                \context RhythmicStaff = "Rhythmic_Staff"
+                                                \with
+                                                {
+                                                    \remove Time_signature_engraver
+                                                    \remove Staff_symbol_engraver
+                                                    \override Stem.direction = #up
+                                                    \override Stem.length = 5
+                                                    \override TupletBracket.bracket-visibility = ##t
+                                                    \override TupletBracket.direction = #up
+                                                    \override TupletBracket.minimum-length = 4
+                                                    \override TupletBracket.padding = 1.25
+                                                    \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                                    \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                                    \override TupletNumber.font-size = 0
+                                                    \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                                    tupletFullLength = ##t
+                                                }
+                                                {
+                                                    c'4
+                                                }
+                                            >>
+                                            \layout
+                                            {
+                                                indent = 0
+                                                ragged-right = ##t
+                                            }
+                                        }
+                                    % OPEN_BRACKETS:
+                                    \times 1/1
+                                    {
+                                        % BEFORE:
+                                        % GROB_OVERRIDES:
+                                        \once \override Beam.grow-direction = #left
+                                        <f, f>32 * 43/32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        % START_BEAM:
+                                        [
+                                        <f, f>32 * 49/32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        <f, f>32 * 17/8
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \staccato
+                                        <f, f>32 * 3
+                                        % AFTER:
+                                        % STOP_BEAM:
+                                        ]
+                                        % SPANNER_STARTS:
+                                        ~
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % GROB_REVERTS:
+                                    \revert TupletNumber.text
+                                    <f, f>16
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    <g! cs''!>4
+                                    <f! f'! cs''!>4.
+                                    <f! f'! cs''!>4.
+                                    <g! cs''!>4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \breathe
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 3 0))
+                                    \times 6/8
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        <f, f>4..
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        ^ \<
+                                        - \tweak padding #14.5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "senza vibrato" } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { bellow vibrato }
+                                        - \tweak bound-details.right.padding 6.5
+                                        \startTextSpan
+                                        \glissando
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <f, f>16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        ^ \ffff
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
                                     s1 * 1/16
                                     s1 * 1/16
                                     s1 * 1/16

@@ -1493,6 +1493,18 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+trinton.attach_multiple(
+    score=score,
+    voice="Global Context",
+    leaves=[
+        9,
+        17,
+    ],
+    attachments=[
+        abjad.LilyPondLiteral(r"\break", "after"),
+    ],
+)
+
 # make sc file
 
 # trinton.make_sc_file(

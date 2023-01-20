@@ -79,6 +79,12 @@
         \override Beam.beam-thickness = #0.75
         \override Beam.length-fraction = 1.5
 
+        \override BreathingSign.text = \markup {
+            \fontsize #7.5
+            \override #'(font-name . "ekmelos")
+            \char ##xe4D5
+        }
+
         \override Clef.layer = 2
         \override Clef.whiteout-style = #'outline
         \override Clef.whiteout = 1

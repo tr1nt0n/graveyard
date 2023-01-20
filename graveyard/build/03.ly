@@ -87,6 +87,9 @@
             % COMMANDS:
             \time 10/32
             s1 * 5/16
+            % AFTER:
+            % COMMANDS:
+            \break
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \tweak text "×5" \startMeasureSpanner
@@ -160,6 +163,7 @@
             % AFTER:
             % COMMANDS:
             \bar ":|."
+            \break
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:
