@@ -965,11 +965,14 @@ trinton.make_music(
 )
 
 for voice_name, leaf in zip(
-    library.main_voice_names,
+    [
+        "guitar 4 voice",
+        "viola 2 voice",
+    ],
     [
         29,
         3,
-        39,
+        # 39,
     ],
 ):
     trinton.make_music(
@@ -994,6 +997,43 @@ for voice_name, leaf in zip(
         voice=score[voice_name],
     )
 
+trinton.make_music(
+    lambda _: trinton.select_target(_, (20, 28)),
+    # trinton.continuous_spanner_command(
+    #     strings=[
+    #         r"""\markup { \center-column { \line { While drumming, chant at any speed, } \line { "\"There are no dry bones here,\"" } \line { in your first language } } }""",
+    #         r"""\markup { \center-column { \line { III. While drumming, chant at any speed, } \line { \"There are no dry bones here,\" } \line { in your first language } } }""",
+    #     ],
+    #     selector=trinton.select_leaves_by_index([39, -1]),
+    #     style="dashed-line-with-hook",
+    #     padding=9,
+    #     right_padding=2,
+    #     direction=None,
+    #     full_string=True,
+    #     command="One",
+    #     continuous=False,
+    # ),
+    trinton.id_spanner_command(
+        selector=trinton.select_leaves_by_index([39, -1]),
+        id="One",
+        left_text='While drumming, chant at any speed, \\"There are no dry bones here,\\" in your first language',
+        right_text=None,
+        style="dashed-line-with-hook",
+        padding=6,
+        right_padding=2,
+    ),
+    trinton.id_spanner_command(
+        selector=trinton.select_leaves_by_index([39, -15]),
+        id="Two",
+        left_text="Whisper chant",
+        right_text="Shout chant",
+        style="dashed-line-with-arrow",
+        padding=4,
+    ),
+    voice=score["accordion 1 voice"],
+)
+
+for voice_name in library.main_voice_names:
     abjad.override(
         abjad.select.tuplets(score[voice_name])[-1]
     ).TupletNumber.text = r'\markup { "37\"" }'

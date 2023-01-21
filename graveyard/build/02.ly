@@ -12,10 +12,15 @@
             % MARKUP:
             - \tweak padding #8
             ^ \markup \override #'(font-name . "Source Han Serif SC") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #4.5 { II.蜕肤 }
+            % COMMANDS:
+            \noBreak
             % OPENING:
             % COMMANDS:
             \time 10/16
             s1 * 5/8
+            % AFTER:
+            % COMMANDS:
+            \noBreak
             % OPENING:
             % COMMANDS:
             \time 3/16
@@ -47,6 +52,8 @@
             % MARKUP:
             - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"99" } }
+            % COMMANDS:
+            \noBreak
             % OPENING:
             % COMMANDS:
             \time 7/16
@@ -124,6 +131,9 @@
             % COMMANDS:
             \time 12/16
             s1 * 3/4
+            % AFTER:
+            % COMMANDS:
+            \noBreak
             % OPENING:
             % COMMANDS:
             \time 8/16
@@ -132,14 +142,22 @@
             % MARKUP:
             - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
+            % COMMANDS:
+            \noBreak
             % OPENING:
             % COMMANDS:
             \time 6/16
             s1 * 3/8
+            % AFTER:
+            % COMMANDS:
+            \noBreak
             % OPENING:
             % COMMANDS:
             \time 4/16
             s1 * 1/4
+            % AFTER:
+            % COMMANDS:
+            \noBreak
             % OPENING:
             % COMMANDS:
             \time 3/16
@@ -177,6 +195,8 @@
             % MARKUP:
             - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
+            % COMMANDS:
+            \noBreak
             % OPENING:
             % COMMANDS:
             \time 4/16
@@ -203,6 +223,8 @@
             % MARKUP:
             - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }
+            % COMMANDS:
+            \noBreak
             % OPENING:
             % COMMANDS:
             \time 13/16

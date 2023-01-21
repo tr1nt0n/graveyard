@@ -398,7 +398,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string="full bows as possible",
-        padding=7.5,
+        padding=10,
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
     trinton.linear_attachment_command(

@@ -3699,6 +3699,25 @@ trinton.attach_multiple(
     ],
 )
 
+trinton.attach_multiple(
+    score=score,
+    voice="Global Context",
+    leaves=[
+        0,
+        1,
+        4,
+        13,
+        14,
+        15,
+        16,
+        19,
+        23,
+    ],
+    attachments=[
+        abjad.LilyPondLiteral(r"\noBreak", "after"),
+    ],
+)
+
 # make sc file
 
 # trinton.make_sc_file(

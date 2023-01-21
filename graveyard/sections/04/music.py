@@ -1049,7 +1049,7 @@ trinton.make_music(
     trinton.hooked_spanner_command(
         string="full bows as possible",
         selector=trinton.select_leaves_by_index([0, -1]),
-        padding=7,
+        padding=10,
     ),
     library.boxed_markup(
         string="Zhongbo w/ bow", selector=trinton.select_leaves_by_index([0])

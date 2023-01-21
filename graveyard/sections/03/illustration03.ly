@@ -1087,7 +1087,7 @@
                                     % ARTICULATIONS:
                                     \ppp
                                     % SPANNER_STARTS:
-                                    - \tweak padding #7.5
+                                    - \tweak padding #10
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "full bows as possible" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1
