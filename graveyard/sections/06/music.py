@@ -55,6 +55,7 @@ trinton.make_music(
             5,
         ]
     ),
+    library.boxed_markup(string="Guitar", selector=trinton.select_leaves_by_index([0])),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("fff"),
@@ -954,6 +955,7 @@ trinton.make_music(
     library.change_lines(
         lines=5, clef="altovarC", selector=trinton.select_leaves_by_index([0])
     ),
+    library.boxed_markup(string="Viola", selector=trinton.select_leaves_by_index([0])),
     library.transpose_by_selection(
         transpositions=[
             12,
@@ -2573,6 +2575,9 @@ trinton.make_music(
     ),
     library.change_lines(
         lines=5, clef="bass", selector=trinton.select_leaves_by_index([0])
+    ),
+    library.boxed_markup(
+        string="Accordion", selector=trinton.select_leaves_by_index([0])
     ),
     trinton.linear_attachment_command(
         attachments=[

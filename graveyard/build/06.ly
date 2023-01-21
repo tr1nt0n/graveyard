@@ -200,6 +200,8 @@
                                         [
                                         % SPANNER_STARTS:
                                         \>
+                                        % COMMANDS:
+                                        \boxed-markup "Guitar" 1
                                         b32
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -2689,6 +2691,8 @@
                                                 - \markup \override #'(font-name . "Bodoni72 Book Italic") { Solo, molto espressivo }
                                                 % START_BEAM:
                                                 [
+                                                % COMMANDS:
+                                                \boxed-markup "Viola" 1
                                                 d'16
                                                 % AFTER:
                                                 % ARTICULATIONS:
@@ -4905,6 +4909,8 @@
                                         (
                                         \<
                                         \glissando
+                                        % COMMANDS:
+                                        \boxed-markup "Accordion" 1
                                         eqs2..
                                         % AFTER:
                                         % ARTICULATIONS:
