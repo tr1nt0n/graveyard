@@ -90,6 +90,7 @@ trinton.make_music(
             ]
         ]
     ),
+    library.change_lines(lines=5, selector=trinton.select_leaves_by_index([0])),
     library.fret_diagram(
         selector=trinton.select_leaves_by_index([0]),
         fret_lists=[
@@ -950,6 +951,9 @@ for measure, index in zip(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
+    library.change_lines(
+        lines=5, clef="altovarC", selector=trinton.select_leaves_by_index([0])
+    ),
     library.transpose_by_selection(
         transpositions=[
             12,
@@ -2567,9 +2571,11 @@ trinton.make_music(
             -7,
         ]
     ),
+    library.change_lines(
+        lines=5, clef="bass", selector=trinton.select_leaves_by_index([0])
+    ),
     trinton.linear_attachment_command(
         attachments=[
-            abjad.Clef("bass"),
             abjad.Glissando(),
             abjad.Glissando(),
             abjad.Dynamic("fp"),
@@ -2580,7 +2586,6 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index(
             [
-                0,
                 0,
                 1,
                 0,

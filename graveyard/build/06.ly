@@ -1164,6 +1164,9 @@
                                     % OPEN_BRACKETS:
                                     \times 4/7
                                     {
+                                        % ABSOLUTE_BEFORE:
+                                        % COMMANDS:
+                                        \staff-line-count 5
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override Beam.stencil = ##f
@@ -1171,6 +1174,9 @@
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
                                         <cs' d' cs'' e''>\breve.
                                         % AFTER:
                                         % MARKUP:
@@ -2666,6 +2672,9 @@
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 4 0))
                                             \times 8/11
                                             {
+                                                % ABSOLUTE_BEFORE:
+                                                % COMMANDS:
+                                                \staff-line-count 5
                                                 % BEFORE:
                                                 % COMMANDS:
                                                 \voiceTwo
@@ -4878,6 +4887,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 2 0))
                                     \times 14/16
                                     {
+                                        % ABSOLUTE_BEFORE:
+                                        % COMMANDS:
+                                        \staff-line-count 5
                                         % BEFORE:
                                         % COMMANDS:
                                         \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Accordion }

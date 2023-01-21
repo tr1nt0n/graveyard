@@ -456,7 +456,41 @@
                                     % COMMANDS:
                                     \stopStaff \startStaff
                                     s1 * 3/8
-                                    s1 * 5/32
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) (ly:make-duration 5 0))
+                                    \times 5/7
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \ottava 1
+                                        <a'' cs''' fs'''>16.
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \tweak padding #7
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "bend active strings behind left hand" } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -1
+                                        \startTextSpan
+                                        \glissando
+                                        <bf'' d''' g'''>16.
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        \glissando
+                                        <aqs'' dqf''' gqf'''>32
+                                        % AFTER:
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
+                                        % COMMANDS:
+                                        \ottava 0
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -520,7 +554,58 @@
                                 {
                                     s1 * 7/8
                                     s1 * 3/8
-                                    s1 * 3/16
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 4 0))
+                                    \times 3/4
+                                    {
+                                        % ABSOLUTE_BEFORE:
+                                        % COMMANDS:
+                                        \staff-line-count 6
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "percussion"
+                                        <e g b d' f' a'>8.
+                                        % AFTER:
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \<
+                                        - \tweak padding #5
+                                        - \abjad-dashed-line-with-arrow
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tast." } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \upright { "molto pont." }
+                                        - \tweak bound-details.right.padding 3
+                                        \startTextSpanTwo
+                                        - \tweak padding #7
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "bow" } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -2
+                                        \startTextSpanOne
+                                        \glissando
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <e g b d' f' a'>16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \f
+                                        % SPANNER_STOPS:
+                                        \stopTextSpanOne
+                                        \stopTextSpanTwo
+                                        % STOP_BEAM:
+                                        ]
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -529,7 +614,65 @@
                                     % COMMANDS:
                                     \stopStaff \startStaff
                                     s1 * 3/8
-                                    s1 * 5/32
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) (ly:make-duration 5 0))
+                                    \times 10/14
+                                    {
+                                        % ABSOLUTE_BEFORE:
+                                        % COMMANDS:
+                                        \set suggestAccidentals = ##t
+                                        \staff-line-count 5
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \ottava 1
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        af'''!64
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        ^ \f
+                                        % START_BEAM:
+                                        [
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \tweak circled-tip ##t
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        ^ \>
+                                        - \tweak padding #12.5
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -1
+                                        \startTextSpan
+                                        g'''!64
+                                        af'''!64
+                                        fs'''!64
+                                        cs'''!64
+                                        ef'''!64
+                                        cs'''!64
+                                        f'''!64
+                                        c'''!64
+                                        e'''!64
+                                        b'''!64
+                                        g'''!64
+                                        bf'''!64
+                                        af'''!64
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
+                                        % STOP_BEAM:
+                                        ]
+                                        % COMMANDS:
+                                        \ottava 0
+                                        % ABSOLUTE_AFTER:
+                                        % COMMANDS:
+                                        \set suggestAccidentals = ##f
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -3091,13 +3234,90 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "accordion 1 voice"
                                 {
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 3 0))
+                                    \times 7/6
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Accordion }
+                                        \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { acc. }
+                                        <g'''! af'''! a'''!>4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        ~
+                                        <g'''! a'''!>4
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        ~
+                                        <g'''!>4
+                                        % AFTER:
+                                        % SPANNER_STOPS:
+                                        )
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    s1 * 3/8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    <cs''>32
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \<
+                                    \glissando
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Accordion }
-                                    \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { acc. }
-                                    s1 * 7/8
-                                    s1 * 3/8
-                                    s1 * 3/16
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    <cs''>32
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <cs''>32
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <cs''>32
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    <cs''>16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \f
+                                    % MARKUP:
+                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
+                                    % STOP_BEAM:
+                                    ]
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -3106,7 +3326,36 @@
                                     % COMMANDS:
                                     \stopStaff \startStaff
                                     s1 * 3/8
-                                    s1 * 5/32
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) (ly:make-duration 5 0))
+                                    \times 5/7
+                                    {
+                                        <g'' bf'' cs''' g'''>8.
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \f
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        - \tweak stencil #abjad-flared-hairpin
+                                        \>
+                                        \glissando
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <g'' bf'' cs''' g'''>32
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -4280,7 +4529,10 @@
                                 {
                                     s1 * 7/8
                                     s1 * 3/8
-                                    s1 * 3/16
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    <cs cs'>8.
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -4289,7 +4541,31 @@
                                     % COMMANDS:
                                     \stopStaff \startStaff
                                     s1 * 3/8
-                                    s1 * 5/32
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) (ly:make-duration 5 0))
+                                    \times 5/7
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "treble"
+                                        <g cs''>8.
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        \glissando
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <g cs''>32
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
