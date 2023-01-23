@@ -33,8 +33,10 @@
 		\consists Text_spanner_engraver
         \consists Measure_spanner_engraver
         \override MetronomeMark.stencil = ##f
-        \override TimeSignature.stencil = ##f
-        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 11.5) (minimum-distance . 11.5) (padding . 10) (stretchability . 0))
+        \override TimeSignature.font-size = 6
+        \override TimeSignature.break-visibility = #end-of-line-invisible
+        \override TimeSignature.transparent = ##t
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 1) (minimum-distance . 1) (padding . 3) (stretchability . 0))
     }
 
     \context {
@@ -244,7 +246,7 @@
 }
 
 \paper {
-    min-systems-per-page = 5
+    min-systems-per-page = 4
     system-separator-markup = \markup { \slashSeparator }
     system-system-spacing = #'((basic-distance . 30) (minimum-distance . 30) (padding . 10) (stretchability . 28))
     indent = 20\mm
@@ -258,7 +260,7 @@
     evenHeaderMarkup = \markup ""
     oddFooterMarkup = \markup
         \fill-line {
-            "Graveyard Dirt - Trinton Hlynn"
+            ""
         \concat {
             \fontsize #3
                 \fromproperty #'page:page-number-string
@@ -271,6 +273,6 @@
                     \fontsize #3
                         \fromproperty #'page:page-number-string
                 }
-                "Graveyard Dirt - Trinton Hlynn"
+                ""
             }
 }
