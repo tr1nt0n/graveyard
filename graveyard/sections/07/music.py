@@ -54,7 +54,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0]),
         clef="percussion",
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=[
             "n. rasg., molto pont.",
             "kn. rasg., pont.",
@@ -65,7 +65,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 4, 4, 9, 9, 11, 11, -1]),
         padding=8.5,
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=[
             "\\tremolo-stretto",
             "\\tremolo-largo",
@@ -221,7 +221,7 @@ trinton.make_music(
 for voice_name in ["accordion 1 voice", "accordion 2 voice"]:
     trinton.make_music(
         lambda _: trinton.select_target(_, (1, 2)),
-        trinton.continuous_spanner_command(
+        trinton.spanner_command(
             strings=[
                 "\\tremolo-largo",
                 "\\tremolo-stretto",

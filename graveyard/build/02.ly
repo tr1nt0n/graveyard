@@ -4624,7 +4624,7 @@
                                     - \tweak padding #5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
-                                    - \tweak bound-details.right.padding -2.5
+                                    - \tweak bound-details.right.padding -1.5
                                     \startTextSpanOne
                                     ~
                                     \tweak style #'cross
@@ -5684,93 +5684,60 @@
                                         ef''32
                                         % AFTER:
                                         % ARTICULATIONS:
-                                        - \accent
-                                        \f
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
+                                        ^ \accent
+                                        ^ \f
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        (
                                         - \tweak circled-tip ##t
                                         - \tweak stencil #abjad-flared-hairpin
-                                        \>
-                                        \glissando
+                                        ^ \>
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
+                                        \change Staff = "accordion 2 staff"
                                         ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         ef''16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         ef''16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                        % OPENING:
+                                        % BEFORE:
                                         % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
+                                        \change Staff = "accordion 2 staff"
                                         ef''32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \!
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
+                                        % SPANNER_STOPS:
+                                        )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -6162,9 +6129,21 @@
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 5
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
                                     s1 * 7/16
                                     s1 * 5/16
                                     s1 * 3/8
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
                                     c'8
                                     % AFTER:
                                     % ARTICULATIONS:

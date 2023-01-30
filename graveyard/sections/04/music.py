@@ -1225,8 +1225,6 @@ trinton.make_music(
     library.boxed_markup(
         string="Accordion", selector=trinton.select_leaves_by_index([0])
     ),
-    library.color_fingering(),
-    library.glissando(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("fff"),
@@ -1235,7 +1233,16 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, -1]),
     ),
+    library.accordion_staff_switching(),
     voice=score["accordion 1 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1,)),
+    library.change_lines(
+        lines=5, clef="treble", selector=trinton.select_leaves_by_index([0])
+    ),
+    voice=score["accordion 2 voice"],
 )
 
 trinton.make_music(
@@ -1294,20 +1301,18 @@ trinton.make_music(
         pitch_list=[9], selector=trinton.select_tuplets_by_index([5])
     ),
     trinton.treat_tuplets(),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(0, 22),
-                range(22, 33),
-                range(33, 43),
-                range(43, 51),
-                range(51, 61),
-                range(61, 74),
-            ],
-            nested=True,
+    trinton.linear_attachment_command(
+        attachments=cycle(
+            [
+                abjad.StartSlur(),
+                abjad.StopSlur(),
+            ]
         ),
+        selector=trinton.select_leaves_by_index(
+            [0, 21, 22, 32, 33, 42, 43, 50, 51, 60, 61, 73]
+        ),
+        direction=abjad.DOWN,
     ),
-    library.color_fingering(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("sfp"),
@@ -1317,8 +1322,23 @@ trinton.make_music(
             abjad.StopHairpin(),
         ],
         selector=trinton.select_leaves_by_index([0, 0, 33, 33, -1]),
+        direction=abjad.UP,
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(r"\once \override TupletBracket.direction = #up")
+        ],
+        selector=trinton.select_tuplets_by_index(
+            [
+                0,
+                1,
+                2,
+                3,
+            ]
+        ),
     ),
     trinton.notehead_bracket_command(),
+    library.accordion_staff_switching(slur=False),
     voice=score["accordion 1 voice"],
     beam_meter=True,
     preprocessor=trinton.fuse_eighths_preprocessor(
@@ -1336,10 +1356,13 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (6, 8)),
     evans.RhythmHandler(evans.talea([-4, 3, 3, 2, 2, 3], 8)),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([["f", "f,"]]),
-    library.change_lines(
-        lines=5, clef="bass", selector=trinton.select_leaves_by_index([0], pitched=True)
+    evans.PitchHandler(
+        [
+            "f",
+        ]
     ),
+    library.accordion_stems(),
+    trinton.invisible_rests(),
     voice=score["accordion 2 voice"],
 )
 
@@ -1367,19 +1390,6 @@ trinton.make_music(
         ),
     ),
     voice=score["accordion 1 voice"],
-)
-
-trinton.make_music(
-    lambda _: trinton.select_target(_, (9,)),
-    trinton.attachment_command(
-        attachments=[abjad.Clef("treble")],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-            ]
-        ),
-    ),
-    voice=score["accordion 2 voice"],
 )
 
 trinton.make_music(
@@ -1559,8 +1569,6 @@ trinton.make_music(
     trinton.treat_tuplets(),
     trinton.notehead_bracket_command(),
     evans.PitchHandler([9]),
-    library.glissando(),
-    library.color_fingering(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin("o<"),
@@ -1570,6 +1578,17 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([1, 2, 2, -1]),
     ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(r"\once \override TupletBracket.direction = #up")
+        ],
+        selector=trinton.select_tuplets_by_index(
+            [
+                0,
+            ]
+        ),
+    ),
+    library.accordion_staff_switching(),
     voice=score["accordion 1 voice"],
     beam_meter=True,
     preprocessor=trinton.fuse_eighths_preprocessor((3, 3, 2, 2)),
@@ -1579,11 +1598,8 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (33, 34)),
     evans.RhythmHandler(evans.talea([-3, 7], 8)),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([["g", "g,"]]),
-    trinton.attachment_command(
-        attachments=[abjad.Clef("bass")],
-        selector=trinton.select_leaves_by_index([0], pitched=True),
-    ),
+    evans.PitchHandler(["g"]),
+    library.accordion_stems(),
     voice=score["accordion 2 voice"],
 )
 
@@ -1635,6 +1651,14 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 1, -2]),
     ),
     voice=score["accordion 1 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (36,)),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
+    ),
+    voice=score["accordion 2 voice"],
 )
 
 for voice_name, hand in zip(

@@ -742,13 +742,13 @@ trinton.make_music(
             ]
         ]
     ),
-    library.glissando(),
-    library.color_fingering(),
     trinton.linear_attachment_command(
         attachments=[abjad.StartHairpin("o<|"), abjad.Dynamic("f")],
         selector=trinton.select_leaves_by_index([0, -1]),
+        direction=abjad.UP,
     ),
     abjad.beam,
+    library.accordion_staff_switching(),
     voice=score["accordion 1 voice"],
 )
 
@@ -758,9 +758,10 @@ trinton.make_music(
         rmakers.note,
     ),
     trinton.attachment_command(
-        attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
+        attachments=[abjad.Clef("treble")], selector=trinton.select_leaves_by_index([0])
     ),
-    evans.PitchHandler([[-11, 1]]),
+    evans.PitchHandler([1]),
+    library.accordion_stems(),
     voice=score["accordion 2 voice"],
 )
 
@@ -999,19 +1000,12 @@ for voice_name, leaf in zip(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (20, 28)),
-    # trinton.continuous_spanner_command(
-    #     strings=[
-    #         r"""\markup { \center-column { \line { While drumming, chant at any speed, } \line { "\"There are no dry bones here,\"" } \line { in your first language } } }""",
-    #         r"""\markup { \center-column { \line { III. While drumming, chant at any speed, } \line { \"There are no dry bones here,\" } \line { in your first language } } }""",
-    #     ],
+    # trinton.hooked_spanner_command(
+    #     string=r"""\markup { \center-column { \line { While drumming, chant at any speed, } \line { "\"There are no dry bones here,\"" } \line { in your first language } } }""",
     #     selector=trinton.select_leaves_by_index([39, -1]),
-    #     style="dashed-line-with-hook",
     #     padding=9,
     #     right_padding=2,
-    #     direction=None,
     #     full_string=True,
-    #     command="One",
-    #     continuous=False,
     # ),
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index([39, -1]),

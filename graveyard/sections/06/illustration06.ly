@@ -1760,7 +1760,7 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 9 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -1847,7 +1847,7 @@
                                         \glissando
                                         - \tweak padding #15
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 9 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 9 \hspace #0.5 } \hspace #0.5 }
                                         \startTextSpan
                                         e'8.
                                         % AFTER:
@@ -1916,7 +1916,7 @@
                                         \glissando
                                         - \tweak padding #14.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 6 7 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 7 \hspace #0.5 } \hspace #0.5 }
                                         \startTextSpan
                                         g4.
                                         % AFTER:
@@ -1955,7 +1955,7 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 2 5 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 5 5 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
                                     \>
                                     a'8
@@ -1991,7 +1991,7 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 5 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 5 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
                                     f'8
                                     % AFTER:
@@ -2024,7 +2024,7 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 7 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 7 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
                                     f'8
                                     % AFTER:
@@ -2132,7 +2132,7 @@
                                     \glissando
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 9 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
                                     f'8.
                                     % AFTER:
@@ -2313,7 +2313,7 @@
                                         \glissando
                                         - \tweak padding #13.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 6 7 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 7 \hspace #0.5 } \hspace #0.5 }
                                         \startTextSpan
                                         ef'16
                                         % AFTER:
@@ -2403,7 +2403,7 @@
                                         \glissando
                                         - \tweak padding #14.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 5 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 5 \hspace #0.5 } \hspace #0.5 }
                                         \startTextSpan
                                         e'8.
                                         % AFTER:
@@ -2613,7 +2613,7 @@
                                     % SPANNER_STARTS:
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
                                     % BEFORE:
                                     % COMMANDS:

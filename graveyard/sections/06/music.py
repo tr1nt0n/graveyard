@@ -1894,7 +1894,7 @@ trinton.make_music(
         ),
         zero_padding=True,
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list([(0, 9), (3, 9), (1, 9)]),
         selector=trinton.select_leaves_by_index([0, 1, 1, -1]),
         padding=11.5,
@@ -1926,7 +1926,7 @@ trinton.make_music(
         attachments=[abjad.Glissando(zero_padding=True)],
         selector=trinton.select_leaves_by_index([0, 1, 2]),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list([(0, 9), (4, 9), (1, 9), (7, 9)]),
         selector=trinton.select_leaves_by_index([0, 1, 1, 2, 2, -1]),
         padding=15,
@@ -1959,7 +1959,7 @@ trinton.make_music(
         attachments=[abjad.Glissando(zero_padding=True)],
         selector=trinton.select_leaves_by_index([0, 1, 2, 3]),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list(
             [
                 (7, 7),
@@ -2036,7 +2036,7 @@ trinton.make_music(
             ]
         ),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list(
             [
                 (2, 5),
@@ -2055,13 +2055,13 @@ trinton.make_music(
         padding=11.5,
         full_string=True,
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list([(0, 5), (4, 5), (5, 5)]),
         selector=trinton.select_leaves_by_index([3, 4, 4, 5]),
         padding=11.5,
         full_string=True,
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list(
             [
                 (
@@ -2186,7 +2186,7 @@ trinton.make_music(
         padding=12,
         tempo=True,
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list(
             [(9, 9), (2, 9), (1, 9), (0, 9), (9, 9)]
         ),
@@ -2255,7 +2255,7 @@ trinton.make_music(
             ]
         ),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list(
             [(9, 9), (7, 9), (0, 9), (0, 9), (9, 9)]
         ),
@@ -2353,7 +2353,7 @@ trinton.make_music(
             ]
         ),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list(
             [
                 (0, 7),
@@ -2428,7 +2428,7 @@ trinton.make_music(
             ]
         ),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list([(0, 5), (4, 5), (1, 5), (5, 5)]),
         selector=trinton.select_leaves_by_index(
             [
@@ -2482,7 +2482,7 @@ trinton.make_music(
         ),
         zero_padding=True,
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list(
             [
                 (0, 3),

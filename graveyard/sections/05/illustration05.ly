@@ -3274,56 +3274,38 @@
                                     \!
                                     <cs''>32
                                     % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
-                                    \<
-                                    \glissando
+                                    ^ \<
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
+                                    \change Staff = "accordion 2 staff"
                                     <cs''>32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     <cs''>32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     <cs''>32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                    % OPENING:
+                                    % BEFORE:
                                     % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
+                                    \change Staff = "accordion 1 staff"
                                     <cs''>16
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \f
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
+                                    ^ \f
+                                    % SPANNER_STOPS:
+                                    )
                                     % STOP_BEAM:
                                     ]
+                                    % COMMANDS:
+                                    \change Staff = "accordion 1 staff"
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -4535,10 +4517,16 @@
                                 {
                                     s1 * 7/8
                                     s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stemDown
                                     % OPENING:
                                     % COMMANDS:
-                                    \clef "bass"
-                                    <cs cs'>8.
+                                    \clef "treble"
+                                    cs'8.
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stemNeutral
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff

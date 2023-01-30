@@ -43,7 +43,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0]),
         clef="percussion",
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=[
             "n. rasg., pont.",
             "kn. rasg., tast.",
@@ -55,7 +55,7 @@ trinton.make_music(
         padding=8.5,
         command="One",
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=[
             "\\tremolo-stretto",
             "\\tremolo-largo",

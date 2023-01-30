@@ -234,29 +234,6 @@ miniatures = [
 # commands
 
 
-def color_fingering(selector=None, index=0):
-    def fingering(argument):
-        if selector is not None:
-            selections = selector(selections)
-            selections = abjad.select.logical_ties(selections)
-        else:
-            selections = abjad.select.logical_ties(argument, pitched=True)
-
-        fingerings = [
-            abjad.Markup(
-                rf"\markup \fontsize #0.5 {{ \override #'(circle-padding . 0.25) \circle {_} }}"
-            )
-            for _ in trinton.rotated_sequence([3, 1, 2, 3, 1], index)
-        ]
-
-        fingerings = cycle(fingerings)
-
-        for selection, finger in zip(selections, fingerings):
-            abjad.attach(finger, selection[0], direction=abjad.UP)
-
-    return fingering
-
-
 def change_lines(
     lines,
     selector,
@@ -394,6 +371,53 @@ viola_grace_handler = trinton.OnBeatGraceHandler(
 
 
 # notation tools
+
+
+def accordion_staff_switching(selector=trinton.pleaves(), slur=True):
+    def switch(argument):
+        selections = selector(argument)
+        switch_lh = abjad.LilyPondLiteral(
+            r'\change Staff = "accordion 2 staff"', "before"
+        )
+        switch_rh = abjad.LilyPondLiteral(
+            r'\change Staff = "accordion 1 staff"', "before"
+        )
+        termination = abjad.LilyPondLiteral(
+            r'\change Staff = "accordion 1 staff"', "after"
+        )
+
+        if slur is True:
+
+            abjad.attach(abjad.StartSlur(), selections[0])
+
+            abjad.attach(abjad.StopSlur(), selections[-1])
+
+        all_but_first = abjad.select.exclude(selections, [0])
+
+        for sel in all_but_first:
+            if all_but_first.index(sel) % 2 == 0:
+                abjad.attach(switch_lh, sel)
+            else:
+                abjad.attach(switch_rh, sel)
+
+        abjad.attach(termination, all_but_first[-1])
+
+    return switch
+
+
+def accordion_stems():
+    def stems(argument):
+        selections = abjad.select.leaves(argument, pitched=True)
+
+        stem_down = abjad.LilyPondLiteral(r"\stemDown", "before")
+
+        stem_neutral = abjad.LilyPondLiteral(r"\stemNeutral", "after")
+
+        abjad.attach(stem_down, selections[0])
+
+        abjad.attach(stem_neutral, selections[-1])
+
+    return stems
 
 
 def left_beam(selector=None):

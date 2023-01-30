@@ -99,6 +99,8 @@
         \override MeasureSpanner.font-name = "Bodoni72 Book"
         \override MeasureSpanner.padding = 9
 
+        \override Slur.height-limit = 0.5
+
         \override Staff.thickness = #0.5
 
         \override Stem.stemlet-length = 0.75

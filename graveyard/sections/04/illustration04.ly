@@ -3939,152 +3939,101 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \fff
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak stencil #constante-hairpin
                                     \<
-                                    \glissando
                                     % COMMANDS:
                                     \boxed-markup "Accordion" 1
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''16
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''16
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
                                     ef''32
                                     % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % STOP_BEAM:
                                     ]
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     % OPENING:
                                     % COMMANDS:
                                     \override Staff.Stem.stemlet-length = 0.75
                                     ef''32
                                     % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % START_BEAM:
                                     [
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''16
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
                                     ef''32
                                     % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % STOP_BEAM:
                                     ]
+                                    % SPANNER_STARTS:
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     % OPENING:
                                     % COMMANDS:
                                     \override Staff.Stem.stemlet-length = 0.75
@@ -4094,169 +4043,112 @@
                                     [
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''16
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
                                     ef''16
                                     % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % STOP_BEAM:
                                     ]
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     % OPENING:
                                     % COMMANDS:
                                     \override Staff.Stem.stemlet-length = 0.75
                                     ef''32
                                     % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % START_BEAM:
                                     [
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''16
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''16.
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     ef''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \change Staff = "accordion 1 staff"
                                     % OPENING:
                                     % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
                                     ef''32
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
+                                    % SPANNER_STOPS:
+                                    )
                                     % STOP_BEAM:
                                     ]
+                                    % COMMANDS:
+                                    \change Staff = "accordion 1 staff"
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Beam.stencil = ##f
@@ -4277,192 +4169,127 @@
                                     e''32
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \sfp
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
+                                    ^ \sfp
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
                                     - \tweak stencil #abjad-flared-hairpin
-                                    \<
-                                    \glissando
+                                    ^ \<
+                                    _ (
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
+                                    \change Staff = "accordion 2 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     e''16
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     e''16
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
                                     e''32
                                     % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % STOP_BEAM:
                                     ]
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     % OPENING:
                                     % COMMANDS:
                                     \override Staff.Stem.stemlet-length = 0.75
                                     e''32
                                     % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % START_BEAM:
                                     [
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     e''16
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     e''16.
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
                                     e''32
                                     % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                     % STOP_BEAM:
                                     ]
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 2 staff"
                                     % OPENING:
                                     % COMMANDS:
                                     \override Staff.Stem.stemlet-length = 0.75
                                     e''32
                                     % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                     % START_BEAM:
                                     [
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Dots.staff-position = #2
+                                    \change Staff = "accordion 1 staff"
                                     e''32
-                                    % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \change Staff = "accordion 2 staff"
                                     % OPENING:
                                     % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
                                     e''16
                                     % AFTER:
-                                    % MARKUP:
-                                    ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
+                                    % SPANNER_STOPS:
+                                    )
                                     % STOP_BEAM:
                                     ]
                                     % OPEN_BRACKETS:
@@ -4470,97 +4297,67 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 5 0))
                                     \times 12/13
                                     {
+                                    % OPENING:
+                                        % COMMANDS:
+                                        \once \override TupletBracket.direction = #up
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
                                         % OPENING:
                                         % COMMANDS:
                                         \override Staff.Stem.stemlet-length = 0.75
                                         d''32
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        \glissando
+                                        _ (
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
+                                        d''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
+                                        d''16
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        d''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
+                                        d''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        d''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
+                                        d''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        d''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
+                                        d''16
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        d''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
                                         % OPENING:
                                         % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        d''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        d''16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        d''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        d''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        d''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        d''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        d''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        d''16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        d''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Staff.Stem.stemlet-length
                                         d''32
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
+                                        % SPANNER_STOPS:
+                                        )
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -4570,94 +4367,67 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 4 0))
                                     \times 6/7
                                     {
+                                    % OPENING:
+                                        % COMMANDS:
+                                        \once \override TupletBracket.direction = #up
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
                                         % OPENING:
                                         % COMMANDS:
                                         \override Staff.Stem.stemlet-length = 0.75
                                         ef''16.
                                         % AFTER:
                                         % ARTICULATIONS:
-                                        \fff
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
+                                        ^ \fff
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
                                         - \tweak stencil #constante-hairpin
-                                        \<
-                                        \glissando
+                                        ^ \<
+                                        _ (
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
+                                        ef''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        ef''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
+                                        ef''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        ef''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
+                                        ef''16
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        ef''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
+                                        ef''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        ef''16
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
                                         % OPENING:
                                         % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        ef''16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        ef''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        ef''16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Staff.Stem.stemlet-length
                                         ef''32
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
+                                        % SPANNER_STOPS:
+                                        )
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -4666,76 +4436,55 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 8) (ly:make-duration 5 0))
                                     \times 8/11
                                     {
+                                    % OPENING:
+                                        % COMMANDS:
+                                        \once \override TupletBracket.direction = #up
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
                                         % OPENING:
                                         % COMMANDS:
                                         \override Staff.Stem.stemlet-length = 0.75
                                         cs''32
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        \glissando
+                                        _ (
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
+                                        \change Staff = "accordion 1 staff"
                                         cs''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         cs''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         cs''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         cs''16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         cs''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         cs''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
                                         % OPENING:
                                         % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Staff.Stem.stemlet-length
                                         cs''16.
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
+                                        % SPANNER_STOPS:
+                                        )
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -4744,90 +4493,63 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
                                     \times 2/3
                                     {
+                                    % OPENING:
+                                        % COMMANDS:
+                                        \once \override TupletBracket.direction = #up
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
                                         % OPENING:
                                         % COMMANDS:
                                         \override Staff.Stem.stemlet-length = 0.75
                                         c''32
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        \glissando
+                                        _ (
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
+                                        c''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        c''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
+                                        c''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        c''16
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
+                                        c''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        c''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
+                                        c''16
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
+                                        c''32
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
                                         % OPENING:
                                         % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        c''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        c''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        c''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        c''16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        c''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        c''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        c''16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        c''32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Staff.Stem.stemlet-length
                                         c''32
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
+                                        % SPANNER_STOPS:
+                                        )
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -4837,115 +4559,78 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 17 12) (ly:make-duration 5 0))
                                     \times 12/17
                                     {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
                                         % OPENING:
                                         % COMMANDS:
                                         \override Staff.Stem.stemlet-length = 0.75
                                         a'32
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
-                                        \glissando
+                                        _ (
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
+                                        \change Staff = "accordion 1 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'16.
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
                                         % OPENING:
                                         % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Staff.Stem.stemlet-length
                                         a'32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \!
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
+                                        % SPANNER_STOPS:
+                                        )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
@@ -5169,6 +4854,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 3 0))
                                     \times 3/4
                                     {
+                                    % OPENING:
+                                        % COMMANDS:
+                                        \once \override TupletBracket.direction = #up
                                         r4
                                         % AFTER:
                                         % SPANNER_STARTS:
@@ -5181,65 +4869,40 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \f
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % START_BEAM:
                                         [
                                         % SPANNER_STARTS:
+                                        (
                                         - \tweak stencil #constante-hairpin
                                         \<
-                                        \glissando
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
+                                        \change Staff = "accordion 2 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Staff.Stem.stemlet-length
                                         a'32
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -5250,68 +4913,46 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         % OPENING:
                                         % COMMANDS:
                                         \override Staff.Stem.stemlet-length = 0.75
                                         a'16
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                         % START_BEAM:
                                         [
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Staff.Stem.stemlet-length
                                         a'32
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:
@@ -5322,80 +4963,58 @@
                                     {
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         % OPENING:
                                         % COMMANDS:
                                         \override Staff.Stem.stemlet-length = 0.75
                                         a'32
                                         % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % START_BEAM:
                                         [
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'16.
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 2 staff"
                                         a'16
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 1 }
                                         % BEFORE:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
+                                        \change Staff = "accordion 1 staff"
                                         a'32
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 2 }
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \change Staff = "accordion 2 staff"
                                         % OPENING:
                                         % COMMANDS:
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Staff.Stem.stemlet-length
                                         a'32
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \!
-                                        % MARKUP:
-                                        ^ \markup \fontsize #0.5 { \override #'(circle-padding . 0.25) \circle 3 }
+                                        % SPANNER_STOPS:
+                                        )
                                         % STOP_BEAM:
                                         ]
+                                        % COMMANDS:
+                                        \change Staff = "accordion 1 staff"
                                     % CLOSE_BRACKETS:
                                     }
                                     s1 * 3/8
@@ -5623,39 +5242,50 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "accordion 2 voice"
                                 {
-                                    s1 * 5/8
-                                    s1 * 3/8
-                                    s1 * 1/2
-                                    s1 * 1/16
-                                    s1 * 3/8
-                                    r4.
-                                    r8
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
                                     % OPENING:
                                     % COMMANDS:
-                                    \clef "bass"
-                                    <f, f>8
+                                    \clef "treble"
+                                    s1 * 5/8
+                                    s1 * 3/8
+                                    s1 * 1/2
+                                    s1 * 1/16
+                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.transparent = ##t
+                                    \once \override Rest.transparent = ##t
+                                    r4.
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.transparent = ##t
+                                    \once \override Rest.transparent = ##t
+                                    r8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \stemDown
+                                    f8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
-                                    <f, f>4
-                                    <f, f>4.
-                                    <f, f>8
+                                    f4
+                                    f4.
+                                    f8
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
-                                    <f, f>8
-                                    <f, f>4
-                                    <f, f>4.
+                                    f8
+                                    f4
+                                    f4.
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stemNeutral
                                     % OPEN_BRACKETS:
                                     \tweak edge-height #'(0.7 . 0)
                                     \times 2/3
                                     {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \clef "treble"
                                         <f f' cs''>1
                                         % AFTER:
                                         % ARTICULATIONS:
@@ -5764,15 +5394,21 @@
                                     }
                                     s1 * 1/2
                                     r4.
-                                    % OPENING:
+                                    % BEFORE:
                                     % COMMANDS:
-                                    \clef "bass"
-                                    <g, g>4.
+                                    \stemDown
+                                    g4.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
-                                    <g, g>2
+                                    g2
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stemNeutral
                                     s1 * 3/8
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
                                     <f, f>8.
                                     % BEFORE:
                                     % GROB_OVERRIDES:

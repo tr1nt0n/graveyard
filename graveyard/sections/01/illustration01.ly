@@ -170,11 +170,11 @@
                                         % SPANNER_STARTS:
                                         - \tweak padding #4.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
                                         \startTextSpanTwo
                                         - \tweak padding #8.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "n. rasg., pont." } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "kn. rasg., molto tast." } \hspace #0.5 }
                                         \startTextSpanOne
                                         e2
                                         % AFTER:
@@ -190,7 +190,7 @@
                                         - \tweak padding #8.5
                                         - \abjad-dashed-line-with-arrow
                                         - \tweak bound-details.left.text \markup \concat { \upright { "kn. rasg., molto tast." } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \upright { n. rasg., molto pont. }
+                                        - \tweak bound-details.right.text \markup \upright { "n. rasg., molto pont." }
                                         \startTextSpanOne
                                         e2
                                         e2

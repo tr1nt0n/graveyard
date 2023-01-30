@@ -447,7 +447,7 @@ trinton.make_music(
         right_padding=4,
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=["\\tremolo-moderato", "\\tremolo-stretto"],
         selector=trinton.select_leaves_by_index([0, -2, -2, -1], pitched=True),
         padding=4,
@@ -537,7 +537,7 @@ trinton.make_music(
         padding=10.5,
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=[
             "\\tremolo-largo",
             "\\tremolo-moderato",
@@ -656,7 +656,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, 0, 0, -1, -1]),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=trinton.return_fraction_string_list([(0, 7), (2, 7), (7, 7)]),
         selector=trinton.select_leaves_by_index([0, 2, 2, -1]),
         padding=11.5,
@@ -821,7 +821,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, 1, 1, 1, -1]),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=["\\tremolo-moderato", "\\tremolo-stretto", "\\tremolo-largo"],
         selector=trinton.select_leaves_by_index(
             [
@@ -1213,7 +1213,7 @@ trinton.make_music(
         right_padding=5,
         selector=trinton.select_leaves_by_index([0, 4], pitched=True),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=[
             "\\tremolo-stretto",
             "\\tremolo-moderato",

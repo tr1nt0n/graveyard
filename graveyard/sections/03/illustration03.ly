@@ -1206,7 +1206,7 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 7 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 2 7 \hspace #0.5 } \hspace #0.5 }
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -1333,7 +1333,7 @@
                                     - \tweak padding #4
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
-                                    - \tweak bound-details.right.padding -2.5
+                                    - \tweak bound-details.right.padding -1.5
                                     \startTextSpanOne
                                     ~
                                     \tweak style #'cross
@@ -1554,7 +1554,7 @@
                                     % SPANNER_STARTS:
                                     - \tweak padding #7
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
                                     \startTextSpanOne
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
@@ -2146,7 +2146,7 @@
                                         \>
                                         - \tweak padding #4
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
                                         \startTextSpanOne
                                         - \tweak padding #7
                                         - \abjad-dashed-line-with-hook
@@ -2867,7 +2867,7 @@
                                     % SPANNER_STARTS:
                                     - \tweak padding #3
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
                                     \startTextSpanOne
                                     - \tweak padding #5
                                     - \abjad-dashed-line-with-hook

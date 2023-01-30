@@ -1919,7 +1919,7 @@ trinton.make_music(
         right_padding=4,
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=[
             "\\tremolo-largo",
             "\\tremolo-moderato",
@@ -2175,7 +2175,7 @@ trinton.make_music(
         right_padding=3,
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=[
             "\\tremolo-largo",
             "\\tremolo-moderato",
@@ -2425,7 +2425,7 @@ trinton.make_music(
         right_padding=3,
         selector=trinton.select_leaves_by_index([0, -1]),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=[
             "\\tremolo-largo",
             "\\tremolo-moderato",
@@ -2549,7 +2549,7 @@ trinton.make_music(
         right_padding=3,
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
-    trinton.continuous_spanner_command(
+    trinton.spanner_command(
         strings=[
             "\\tremolo-largo",
             "\\tremolo-moderato",
@@ -3371,12 +3371,18 @@ trinton.make_music(
             abjad.StopHairpin(),
         ],
         selector=trinton.select_leaves_by_index([0, 0, 0, -1]),
+        direction=abjad.UP,
     ),
-    library.color_fingering(),
-    library.glissando(),
-    trinton.notehead_bracket_command(),
     abjad.beam,
+    trinton.notehead_bracket_command(),
+    library.accordion_staff_switching(),
     voice=score["accordion 1 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (27,)),
+    library.change_lines(lines=5, selector=trinton.select_leaves_by_index([0])),
+    voice=score["accordion 2 voice"],
 )
 
 trinton.make_music(
@@ -3480,6 +3486,11 @@ trinton.make_music(
         attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("p")],
         selector=trinton.select_leaves_by_index([0, -1]),
         direction=abjad.UP,
+    ),
+    library.change_lines(
+        lines=1,
+        clef="percussion",
+        selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
     trinton.hooked_spanner_command(
         string="air",

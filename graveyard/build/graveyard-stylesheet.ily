@@ -108,6 +108,8 @@
 
         \override Staff.thickness = #0.5
 
+        \override Slur.height-limit = 1
+
         \override Stem.stemlet-length = 0.75
         \override Stem.thickness = #0.5
         \override Stem.details.beamed-lengths = #'(6)
