@@ -499,7 +499,7 @@ def reset_line_positions(score, voice_names):
         for shard in relevant_shards:
             abjad.attach(
                 abjad.LilyPondLiteral(
-                    r"\once \override Staff.StaffSymbol.line-positions = ##f",
+                    r"\once \override Staff.StaffSymbol.stencil = ##f",
                     "absolute_before",
                 ),
                 shard[0],
@@ -692,10 +692,13 @@ def fermata_measures(score, measures, fermata="ufermata", last_measure=False):
         )
 
         for measure in measures:
-            abjad.attach(start_command, all_measures[measure - 1][0])
-            abjad.attach(clef_whitespace, all_measures[measure - 1][0])
+            relevant_leaf = all_measures[measure - 1][0]
+            next_leaf = abjad.select.with_next_leaf(relevant_leaf)[-1]
+            abjad.attach(start_command, relevant_leaf)
+            if abjad.get.has_indicator(next_leaf, abjad.Clef):
+                abjad.attach(clef_whitespace, relevant_leaf)
             if last_measure is False:
-                abjad.attach(stop_command, all_measures[measure - 1][0])
+                abjad.attach(stop_command, relevant_leaf)
 
     trinton.attach_multiple(
         score=score,
@@ -703,7 +706,7 @@ def fermata_measures(score, measures, fermata="ufermata", last_measure=False):
         leaves=[_ - 1 for _ in measures],
         attachments=[
             abjad.Markup(
-                rf'\markup \huge \center-column {{ \musicglyph "scripts.{fermata}" }} '
+                rf'\markup \huge \center-column {{ \musicglyph "scripts.{fermata}" }}'
             ),
             abjad.LilyPondLiteral(
                 r"\once \override Score.TimeSignature.stencil = ##f",
