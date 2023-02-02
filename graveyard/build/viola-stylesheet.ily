@@ -26,16 +26,25 @@
         \numericTimeSignature
         \type Engraver_group
         \consists Axis_group_engraver
+        \consists Bar_number_engraver
         \consists Time_signature_engraver
 		\consists Mark_engraver
 		\consists Metronome_mark_engraver
 		\consists Text_engraver
 		\consists Text_spanner_engraver
         \consists Measure_spanner_engraver
+        \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
+        \override BarNumber.Y-extent = ##f
+        \override BarNumber.Y-offset = -9.5
+        \override BarNumber.extra-offset = #'(-2 . 4)
+        \override BarNumber.font-size = 2
+        \override BarNumber.padding = 4
+        \override BarNumber.font-name = "Bodoni72 Book"
         \override MetronomeMark.stencil = ##f
         \override TimeSignature.font-size = 6
         \override TimeSignature.break-visibility = #end-of-line-invisible
         \override TimeSignature.transparent = ##t
+        % \override TimeSignature.X-offset = 5
         \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 1) (minimum-distance . 1) (padding . 3) (stretchability . 0))
     }
 
@@ -43,6 +52,7 @@
         \Score
         \numericTimeSignature
         \accepts TimeSignatureContext
+        \remove Bar_number_engraver
         % proportionalNotationDuration = #(ly:make-moment 1 30)
         \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/128)
 
@@ -151,6 +161,8 @@
         fontSize = #-0.25
         \consists Duration_line_engraver
 
+        \override BarLine.bar-extent = #'(-2 . 2)
+
         \override TimeSignature.font-size = 6
         \override TimeSignature.font-name = "Bodoni72"
         \override TimeSignature.whiteout-style = #'outline
@@ -175,6 +187,8 @@
         \type Engraver_group
 
         \override Accidental.stencil = ##f
+
+        \override BarLine.bar-extent = #'(-2.5 . 2.5)
 
         \override Dots.staff-position = #2
 

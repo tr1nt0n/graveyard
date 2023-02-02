@@ -478,6 +478,39 @@ def invisible_tuplet_brackets():
     return command
 
 
+def reset_line_positions(score, voice_names):
+    voices = [score[_] for _ in voice_names]
+
+    line_whitespace = abjad.LilyPondLiteral(
+        r"\once \override Staff.StaffSymbol.transparent = ##t", "absolute_after"
+    )
+
+    for voice in voices:
+        shards = abjad.select.group_by_measure(voice)
+        relevant_shards = []
+        for shard in shards:
+            if (
+                all(isinstance(leaf, abjad.Rest) for leaf in shard)
+                or all(isinstance(leaf, abjad.MultimeasureRest) for leaf in shard)
+                or all(isinstance(leaf, abjad.Skip) for leaf in shard)
+            ):
+                relevant_shards.append(shard)
+
+        for shard in relevant_shards:
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    r"\once \override Staff.StaffSymbol.line-positions = ##f",
+                    "absolute_before",
+                ),
+                shard[0],
+            )
+
+            abjad.attach(
+                line_whitespace,
+                shard[0],
+            )
+
+
 def imbrication_command(pitches):
     def imbricate(argument):
         trinton.imbrication(
@@ -653,8 +686,14 @@ def fermata_measures(score, measures, fermata="ufermata", last_measure=False):
 
         stop_command = abjad.LilyPondLiteral(r"\stopStaff \startStaff", "after")
 
+        clef_whitespace = abjad.LilyPondLiteral(
+            r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+            "absolute_after",
+        )
+
         for measure in measures:
             abjad.attach(start_command, all_measures[measure - 1][0])
+            abjad.attach(clef_whitespace, all_measures[measure - 1][0])
             if last_measure is False:
                 abjad.attach(stop_command, all_measures[measure - 1][0])
 
@@ -675,12 +714,6 @@ def fermata_measures(score, measures, fermata="ufermata", last_measure=False):
             ),
             abjad.LilyPondLiteral(
                 r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
-            ),
-            abjad.LilyPondLiteral(
-                r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
-            ),
-            abjad.LilyPondLiteral(
-                r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "before"
             ),
         ],
     )

@@ -30,7 +30,6 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
@@ -39,8 +38,6 @@
             % AFTER:
             % MARKUP:
             - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -76,7 +73,6 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
@@ -87,7 +83,6 @@
             - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
             % COMMANDS:
             \break
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -104,7 +99,6 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
@@ -113,8 +107,6 @@
             % AFTER:
             % MARKUP:
             - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -173,7 +165,6 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
@@ -182,8 +173,6 @@
             % AFTER:
             % MARKUP:
             - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -360,73 +349,403 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Electric Guitar }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { e. git. }
-                                    s1 * 1/4
-                                    s1 * 5/8
-                                    s1 * 3/16
-                                    % BEFORE:
-                                    % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    s1 * 9/16
-                                    s1 * 7/16
+                                    r1 * 1/8
                                     s1 * 1/8
-                                    s1 * 1/10
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/16
+                                    s1 * 5/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/32
+                                    s1 * 7/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/16
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/20
+                                    s1 * 1/20
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/16
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
                                     s1 * 1/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/4
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/10
-                                    s1 * 3/4
-                                    s1 * 1/2
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/20
+                                    s1 * 1/20
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/8
                                     s1 * 3/8
-                                    s1 * 1/4
-                                    s1 * 3/16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 9/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
                                     s1 * 1/4
-                                    s1 * 5/8
-                                    s1 * 1/2
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/16
                                     s1 * 3/16
-                                    s1 * 13/16
-                                    s1 * 9/16
-                                    s1 * 7/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/16
                                     s1 * 5/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 13/32
+                                    s1 * 13/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/32
+                                    s1 * 7/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/32
+                                    s1 * 5/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/16
+                                    s1 * 3/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/32
+                                    s1 * 5/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/32
+                                    s1 * 5/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/16
+                                    s1 * 5/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/32
+                                    s1 * 7/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/8
                                     s1 * 3/8
-                                    s1 * 1/2
-                                    s1 * 5/16
-                                    s1 * 1/2
-                                    s1 * 5/16
-                                    s1 * 3/16
-                                    s1 * 1/4
-                                    s1 * 5/8
-                                    s1 * 3/16
-                                    s1 * 9/16
-                                    s1 * 7/16
-                                    s1 * 1/4
-                                    s1 * 3/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -553,10 +872,23 @@
                                     ]
                                     % COMMANDS:
                                     \textSpannerUp
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -709,25 +1041,121 @@
                                     ]
                                     % COMMANDS:
                                     \textSpannerUp
-                                    s1 * 1/8
-                                    s1 * 1/10
-                                    s1 * 1/8
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/16
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/16
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/4
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/20
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/20
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/16
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/16
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/10
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/20
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/20
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                     % BEFORE:
                                     % COMMANDS:
                                     \textSpannerDown
@@ -893,11 +1321,38 @@
                                     ]
                                     % COMMANDS:
                                     \textSpannerUp
-                                    s1 * 3/16
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
+                                    r1 * 3/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -988,9 +1443,51 @@
                                     % COMMANDS:
                                     \textSpannerUp
                                     r8
-                                    s1 * 5/8
-                                    s1 * 1/2
-                                    s1 * 3/16
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/16
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 5/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.transparent = ##t
@@ -1035,20 +1532,216 @@
                                     \stopTextSpan
                                     % COMMANDS:
                                     \textSpannerUp
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 5/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/16
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 3/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 5/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 5/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/16
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 5/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 7/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/8
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 3/8
-                                    s1 * 1/2
-                                    s1 * 5/16
-                                    s1 * 1/2
-                                    s1 * 5/16
-                                    s1 * 3/16
-                                    s1 * 1/4
-                                    s1 * 5/8
-                                    s1 * 3/16
-                                    s1 * 9/16
-                                    s1 * 7/16
-                                    s1 * 1/4
-                                    s1 * 3/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1066,71 +1759,403 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "guitar 3 voice"
                                 {
-                                    s1 * 1/4
-                                    s1 * 5/8
-                                    s1 * 3/16
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    s1 * 9/16
-                                    s1 * 7/16
+                                    r1 * 1/8
                                     s1 * 1/8
-                                    s1 * 1/10
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/16
+                                    s1 * 5/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/32
+                                    s1 * 7/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/16
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/20
+                                    s1 * 1/20
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/16
+                                    s1 * 1/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
                                     s1 * 1/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/4
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/10
-                                    s1 * 3/4
-                                    s1 * 1/2
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/20
+                                    s1 * 1/20
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/8
                                     s1 * 3/8
-                                    s1 * 1/4
-                                    s1 * 3/16
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 9/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
                                     s1 * 1/4
-                                    s1 * 5/8
-                                    s1 * 1/2
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/16
                                     s1 * 3/16
-                                    s1 * 13/16
-                                    s1 * 9/16
-                                    s1 * 7/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/16
                                     s1 * 5/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 13/32
+                                    s1 * 13/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/32
+                                    s1 * 7/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/32
+                                    s1 * 5/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/16
+                                    s1 * 3/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/32
+                                    s1 * 5/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/32
+                                    s1 * 5/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/16
+                                    s1 * 5/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/32
+                                    s1 * 7/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/8
                                     s1 * 3/8
-                                    s1 * 1/2
-                                    s1 * 5/16
-                                    s1 * 1/2
-                                    s1 * 5/16
-                                    s1 * 3/16
-                                    s1 * 1/4
-                                    s1 * 5/8
-                                    s1 * 3/16
-                                    s1 * 9/16
-                                    s1 * 7/16
-                                    s1 * 1/4
-                                    s1 * 3/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1312,6 +2337,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
@@ -1486,6 +2514,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/4
                                     % BEFORE:
                                     % COMMANDS:
@@ -1494,6 +2525,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPEN_BRACKETS:
                                     \tweak edge-height #'(0.7 . 0)
                                     \times 4/5
@@ -1641,6 +2675,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % BEFORE:
                                     % COMMANDS:
                                     \fancy-gliss
@@ -2397,6 +3434,8 @@
                                     \stopTextSpanOne
                                     % STOP_BEAM:
                                     ]
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -2557,10 +3596,23 @@
                                     ]
                                     % COMMANDS:
                                     \textSpannerUp
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -2648,25 +3700,121 @@
                                     ]
                                     % COMMANDS:
                                     \textSpannerUp
-                                    s1 * 1/8
-                                    s1 * 1/10
-                                    s1 * 1/8
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/16
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/16
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/4
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/20
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/20
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/16
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/16
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 1/10
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/20
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/20
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                     % BEFORE:
                                     % COMMANDS:
                                     \textSpannerDown
@@ -2870,23 +4018,176 @@
                                     )
                                     % STOP_BEAM:
                                     ]
-                                    s1 * 3/16
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    s1 * 1/16
+                                    r1 * 3/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 3/32
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    s1 * 9/16
-                                    s1 * 1/4
-                                    s1 * 5/8
-                                    s1 * 1/2
-                                    s1 * 3/16
-                                    s1 * 13/16
-                                    s1 * 9/16
-                                    s1 * 7/16
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/16
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 5/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 13/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 13/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 7/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 5/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.transparent = ##t
@@ -2927,9 +4228,51 @@
                                     ]
                                     % COMMANDS:
                                     \textSpannerUp
-                                    s1 * 1/2
-                                    s1 * 5/16
-                                    s1 * 1/2
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 5/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                     % BEFORE:
                                     % COMMANDS:
                                     \textSpannerDown
@@ -2974,14 +4317,126 @@
                                     % ARTICULATIONS:
                                     \!
                                     r32
-                                    s1 * 3/16
-                                    s1 * 1/4
-                                    s1 * 5/8
-                                    s1 * 3/16
-                                    s1 * 9/16
-                                    s1 * 7/16
-                                    s1 * 1/4
-                                    s1 * 3/4
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 5/16
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 5/16
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 3/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 9/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 9/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/32
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 7/32
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 3/8
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 3/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -3156,6 +4611,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % BEFORE:
                                     % COMMANDS:
                                     \fancy-gliss
@@ -3436,6 +4894,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 4
@@ -3458,6 +4919,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPEN_BRACKETS:
                                     \tweak edge-height #'(0.7 . 0)
                                     \times 4/5
@@ -3655,6 +5119,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
@@ -4967,6 +6434,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     <af'''! a'''!>4.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -5101,6 +6571,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/4
                                     % BEFORE:
                                     % COMMANDS:
@@ -5109,6 +6582,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPEN_BRACKETS:
                                     \tweak edge-height #'(0.7 . 0)
                                     \times 4/5
@@ -5309,6 +6785,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     <af'''! a'''!>4..
                                     % AFTER:
                                     % SPANNER_STARTS:
@@ -5937,6 +7416,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 9/16
                                     s1 * 7/16
                                     s1 * 1/8
@@ -5949,6 +7431,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 1
@@ -5991,6 +7476,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/10
                                     s1 * 3/4
                                     s1 * 1/2
@@ -6036,6 +7524,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 9/16
                                     s1 * 1/4
                                     s1 * 5/8

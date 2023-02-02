@@ -72,10 +72,14 @@ trinton.make_music(
         attachments=[
             abjad.StartHairpin("o<"),
             abjad.Dynamic("ffff"),
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)", "after"
+            ),
         ],
         selector=trinton.select_leaves_by_index(
             [
                 0,
+                -1,
                 -1,
             ]
         ),
@@ -278,6 +282,16 @@ trinton.attach_multiple(
         ),
         abjad.LilyPondLiteral(r"\break", "after"),
     ],
+)
+
+library.reset_line_positions(
+    score=score, voice_names=["guitar 2 voice", "viola 1 voice"]
+)
+
+trinton.whiteout_empty_staves(
+    score=score,
+    voice_names=["guitar 1 voice", "guitar 2 voice", "guitar 3 voice", "viola 1 voice"],
+    cutaway="blank",
 )
 
 # make sc file

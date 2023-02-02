@@ -32,6 +32,7 @@
 		\consists Text_engraver
 		\consists Text_spanner_engraver
         \consists Measure_spanner_engraver
+        \consists Bar_number_engraver
         \override MetronomeMark.stencil = ##f
 		\override TimeSignature.X-extent = #'(0 . -25)
         \override TimeSignature.Y-extent = #'(25 . 0)
@@ -44,12 +45,20 @@
         \override TimeSignature.whiteout-style = #'outline
         \override TimeSignature.whiteout = 1
         \override TimeSignature.layer = 4
+        \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
+        \override BarNumber.Y-extent = ##f
+		\override BarNumber.Y-offset = -8
+		\override BarNumber.extra-offset = #'(-2 . 4)
+        \override BarNumber.font-size = 2
+		\override BarNumber.padding = 4
+        \override BarNumber.font-name = "Bodoni72 Book"
     }
 
     \context {
         \Score
         \numericTimeSignature
         \accepts TimeSignatureContext
+        \remove Bar_number_engraver
         proportionalNotationDuration = #(ly:make-moment 1 30)
 
         \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 7) (padding . 7) (stretchability . 28))
@@ -63,14 +72,6 @@
         \override BarLine.transparent = ##t
         % \override BarLine.X-extent = #'(0 . 0)
         \override BarLine.thick-thickness = #8
-
-        \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
-        \override BarNumber.Y-extent = ##f
-		\override BarNumber.Y-offset = 0
-		\override BarNumber.extra-offset = #'(-2 . 4)
-        \override BarNumber.font-size = 2
-		\override BarNumber.padding = 4
-        \override BarNumber.font-name = "Bodoni72 Book"
 
         autoBeaming = ##f
         \override Beam.breakable = ##t
@@ -88,6 +89,8 @@
         \override Clef.layer = 2
         \override Clef.whiteout-style = #'outline
         \override Clef.whiteout = 1
+        % \override Clef.X-extent = ##f
+        % \override Clef.space-alist.first-note = #'(extra-space . 8)
 
         \override DynamicText.font-size = #-2
         \override DynamicText.layer = 2
@@ -107,6 +110,7 @@
         \override MeasureSpanner.padding = 9
 
         \override Staff.thickness = #0.5
+        \override Staff.staff-symbol-interface.width = ##f
 
         \override Slur.height-limit = 1
 
@@ -158,8 +162,10 @@
     \context {
         \Staff
         fontSize = #-0.25
-        \remove Time_signature_engraver
         \consists Duration_line_engraver
+        \remove Time_signature_engraver
+
+        \override BarLine.bar-extent = #'(-2 . 2)
 
         \override DurationLine.style = #'line
         \override DurationLine.thickness = #3
@@ -176,6 +182,8 @@
         \type Engraver_group
 
         \override Accidental.stencil = ##f
+
+        \override BarLine.bar-extent = #'(-2.5 . 2.5)
 
         \override Dots.staff-position = #2
 
@@ -206,6 +214,8 @@
         \type Engraver_group
 
         \override Accidental.stencil = ##f
+
+        \override BarLine.bar-extent = #'(-2.5 . 2.5)
 
         \override StaffSymbol.line-count = #6
 

@@ -66,10 +66,24 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Electric Guitar }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { e. git. }
-                                    s1 * 2
-                                    s1 * 7/3
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1
+                                    s1 * 1
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/6
+                                    s1 * 7/6
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -87,8 +101,36 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "guitar 2 voice"
                                 {
-                                    s1 * 2
-                                    s1 * 7/3
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/6
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 7/6
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -106,8 +148,24 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "guitar 3 voice"
                                 {
-                                    s1 * 2
-                                    s1 * 7/3
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1
+                                    s1 * 1
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/6
+                                    s1 * 7/6
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -207,6 +265,8 @@
                                         % SPANNER_STOPS:
                                         \stopTextSpanOne
                                         \stopTextSpanTwo
+                                        % COMMANDS:
+                                        \once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)
                                     % CLOSE_BRACKETS:
                                     }
                                 % CLOSE_BRACKETS:
@@ -238,12 +298,38 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "viola 1 voice"
                                 {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Rest.transparent = ##t
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Viola }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { vla. }
-                                    s1 * 2
-                                    s1 * 7/3
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 1
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 7/6
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.StaffSymbol.transparent = ##t
+                                    s1 * 7/6
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:

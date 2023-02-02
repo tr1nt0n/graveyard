@@ -1731,7 +1731,6 @@ trinton.make_music(
 )
 
 for voice_name in [
-    "guitar 2 voice",
     "guitar 4 voice",
     "viola 2 voice",
     "accordion 1 voice",
@@ -2003,6 +2002,16 @@ trinton.attach_multiple(
     attachments=[
         abjad.LilyPondLiteral(r"\break", "after"),
     ],
+)
+
+library.reset_line_positions(
+    score=score, voice_names=["guitar 2 voice", "viola 1 voice"]
+)
+
+trinton.whiteout_empty_staves(
+    score=score,
+    voice_names=["guitar 1 voice", "guitar 2 voice", "guitar 3 voice", "viola 1 voice"],
+    cutaway="blank",
 )
 
 # make sc file

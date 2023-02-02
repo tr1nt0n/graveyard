@@ -393,6 +393,21 @@ trinton.make_music(
     voice=score["guitar 4 voice"],
 )
 
+for measure in [3, 4]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        trinton.attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)",
+                    "after",
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([-1]),
+        ),
+        voice=score["guitar 4 voice"],
+    )
+
 # viola music commands
 
 trinton.make_music(
@@ -1173,6 +1188,17 @@ trinton.attach_multiple(
         ),
         abjad.LilyPondLiteral(r"\stopMeasureSpanner", "absolute_after"),
     ],
+)
+
+library.reset_line_positions(
+    score=score,
+    voice_names=["guitar 1 voice", "guitar 2 voice", "guitar 3 voice", "viola 1 voice"],
+)
+
+trinton.whiteout_empty_staves(
+    score=score,
+    voice_names=["guitar 1 voice", "guitar 2 voice", "guitar 3 voice", "viola 1 voice"],
+    cutaway="blank",
 )
 
 # make sc file

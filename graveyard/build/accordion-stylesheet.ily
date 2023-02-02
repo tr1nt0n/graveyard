@@ -153,6 +153,8 @@
         fontSize = #-0.25
         \consists Duration_line_engraver
 
+        \override BarLine.bar-extent = #'(-2 . 2)
+
         \override TimeSignature.font-size = 6
         \override TimeSignature.font-name = "Bodoni72"
         \override TimeSignature.whiteout-style = #'outline
