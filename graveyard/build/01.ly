@@ -97,7 +97,7 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -112,7 +112,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -222,11 +222,11 @@
                                         % SPANNER_STARTS:
                                         - \tweak padding #4.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
                                         \startTextSpanTwo
                                         - \tweak padding #8.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "kn. rasg., molto tast." } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "n. rasg., pont." } \hspace #0.5 }
                                         \startTextSpanOne
                                         e2
                                         % AFTER:
@@ -294,7 +294,7 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -311,7 +311,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t

@@ -45,7 +45,7 @@
             s1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -77,7 +77,7 @@
             s1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -255,7 +255,7 @@
             s1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" } 
+            - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" }
             % COMMANDS:
             \bar "||"
             \break
@@ -295,7 +295,7 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -312,7 +312,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -327,7 +327,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -342,7 +342,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -354,7 +354,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -362,7 +361,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -377,7 +376,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -392,7 +391,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -404,7 +403,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -412,7 +410,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -427,7 +425,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -442,7 +440,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -457,7 +455,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -472,7 +470,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -487,7 +485,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -502,7 +500,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -517,7 +515,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -532,7 +530,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -547,7 +545,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -562,7 +560,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -577,7 +575,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -592,7 +590,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -607,7 +605,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -622,7 +620,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -637,7 +635,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -652,7 +650,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -667,7 +665,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -682,7 +680,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -697,7 +695,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -712,7 +710,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -727,7 +725,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -742,7 +740,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -757,7 +755,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -772,7 +770,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -787,7 +785,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -802,7 +800,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -817,7 +815,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -832,7 +830,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -847,7 +845,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -862,7 +860,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -874,7 +872,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -899,7 +896,7 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -914,7 +911,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -929,7 +926,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -944,7 +941,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -956,7 +953,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -964,7 +960,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -979,7 +975,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -994,7 +990,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1006,7 +1002,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -1014,7 +1009,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1029,7 +1024,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1044,7 +1039,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1059,7 +1054,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1074,7 +1069,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1089,7 +1084,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1104,7 +1099,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1119,7 +1114,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1134,7 +1129,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1149,7 +1144,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1164,7 +1159,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1179,7 +1174,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1194,7 +1189,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1209,7 +1204,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1224,7 +1219,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1239,7 +1234,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1254,7 +1249,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1269,7 +1264,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1284,7 +1279,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1299,7 +1294,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1314,7 +1309,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1329,7 +1324,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1344,7 +1339,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1359,7 +1354,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1374,7 +1369,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1389,7 +1384,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1404,7 +1399,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1419,7 +1414,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1434,7 +1429,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1449,7 +1444,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1464,7 +1459,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1476,7 +1471,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -1501,7 +1495,7 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1516,7 +1510,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1531,7 +1525,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1546,7 +1540,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1558,7 +1552,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -1566,7 +1559,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1616,7 +1609,7 @@
                                     }
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1628,7 +1621,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -1636,7 +1628,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1651,7 +1643,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1666,7 +1658,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1681,7 +1673,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1696,7 +1688,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1711,7 +1703,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1726,7 +1718,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1741,7 +1733,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1756,7 +1748,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1771,7 +1763,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1786,7 +1778,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1801,7 +1793,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1816,7 +1808,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1831,7 +1823,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1846,7 +1838,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1861,7 +1853,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1876,7 +1868,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1891,7 +1883,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1906,7 +1898,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1921,7 +1913,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1936,7 +1928,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1951,7 +1943,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1966,7 +1958,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1981,7 +1973,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -1996,7 +1988,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -2011,7 +2003,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -2026,7 +2018,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -2041,7 +2033,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -2056,7 +2048,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -2071,7 +2063,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -2086,7 +2078,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -2098,7 +2090,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -2185,9 +2176,6 @@
                                     % COMMANDS:
                                     \once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 3/8
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
@@ -2255,9 +2243,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 7/8
                                     s1 * 1
                                     s1 * 7/8
@@ -3291,9 +3276,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -3325,7 +3307,7 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3342,7 +3324,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3357,7 +3339,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3372,7 +3354,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3384,7 +3366,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -3392,7 +3373,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3407,7 +3388,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3422,7 +3403,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3434,7 +3415,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -3442,7 +3422,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3457,7 +3437,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3472,7 +3452,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3487,7 +3467,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3502,7 +3482,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3517,7 +3497,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3532,7 +3512,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3547,7 +3527,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3562,7 +3542,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3577,7 +3557,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3592,7 +3572,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3607,7 +3587,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3622,7 +3602,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3637,7 +3617,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3652,7 +3632,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3667,7 +3647,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3682,7 +3662,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3697,7 +3677,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3712,7 +3692,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3727,7 +3707,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3742,7 +3722,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3757,7 +3737,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3772,7 +3752,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3787,7 +3767,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3802,7 +3782,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3817,7 +3797,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3832,7 +3812,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3847,7 +3827,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3862,7 +3842,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3877,7 +3857,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3892,7 +3872,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -3904,7 +3884,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -3999,9 +3978,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     c'8
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -4028,9 +4004,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     c'8
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -5319,9 +5292,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -5424,9 +5394,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 3/8
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
@@ -5465,9 +5432,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 7/8
                                     s1 * 1
                                     s1 * 7/8
@@ -6615,9 +6579,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -6654,9 +6615,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 3/8
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
@@ -6690,9 +6648,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 7/8
                                     s1 * 1
                                     s1 * 7/8
@@ -6730,9 +6685,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:

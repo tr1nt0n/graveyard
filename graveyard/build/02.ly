@@ -385,9 +385,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -446,9 +443,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -471,9 +465,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -541,9 +532,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -886,7 +874,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -1100,7 +1087,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -1135,7 +1121,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -1350,7 +1335,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -1795,9 +1779,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -1856,9 +1837,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -1881,9 +1859,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -1951,9 +1926,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -2337,9 +2309,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
@@ -2514,9 +2483,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/4
                                     % BEFORE:
                                     % COMMANDS:
@@ -2525,9 +2491,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPEN_BRACKETS:
                                     \tweak edge-height #'(0.7 . 0)
                                     \times 4/5
@@ -2675,9 +2638,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % BEFORE:
                                     % COMMANDS:
                                     \fancy-gliss
@@ -3610,7 +3570,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -3759,7 +3718,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -3794,7 +3752,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -4047,7 +4004,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -4611,9 +4567,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % BEFORE:
                                     % COMMANDS:
                                     \fancy-gliss
@@ -4894,9 +4847,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 4
@@ -4919,9 +4869,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPEN_BRACKETS:
                                     \tweak edge-height #'(0.7 . 0)
                                     \times 4/5
@@ -5119,9 +5066,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
@@ -6434,9 +6378,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     <af'''! a'''!>4.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -6571,9 +6512,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/4
                                     % BEFORE:
                                     % COMMANDS:
@@ -6582,9 +6520,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPEN_BRACKETS:
                                     \tweak edge-height #'(0.7 . 0)
                                     \times 4/5
@@ -6785,9 +6720,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     <af'''! a'''!>4..
                                     % AFTER:
                                     % SPANNER_STARTS:
@@ -7416,9 +7348,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 9/16
                                     s1 * 7/16
                                     s1 * 1/8
@@ -7431,9 +7360,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 1
@@ -7476,9 +7402,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/10
                                     s1 * 3/4
                                     s1 * 1/2
@@ -7524,9 +7447,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 9/16
                                     s1 * 1/4
                                     s1 * 5/8

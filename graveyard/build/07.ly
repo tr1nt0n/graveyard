@@ -41,7 +41,7 @@
             s1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
+            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
             % COMMANDS:
             \bar ":|."
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
@@ -62,7 +62,7 @@
             s1 * 3/32
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.uverylongfermata" } 
+            - \markup \huge \center-column { \musicglyph "scripts.uverylongfermata" }
             % COMMANDS:
             \bar "|."
             \break
@@ -130,9 +130,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -143,9 +140,6 @@
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/64
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 3/64
                                     % AFTER:
                                     % COMMANDS:
@@ -169,7 +163,7 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -184,7 +178,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -199,7 +193,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -211,7 +205,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -219,7 +212,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -228,7 +221,6 @@
                                     r1 * 3/64
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 3/64
                                     % AFTER:
@@ -278,9 +270,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -291,9 +280,6 @@
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/64
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     s1 * 3/64
                                     % AFTER:
                                     % COMMANDS:
@@ -379,7 +365,7 @@
                                         \startTextSpanTwo
                                         - \tweak padding #8.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "kn. rasg., tast." } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "n. rasg., molto tast." } \hspace #0.5 }
                                         \startTextSpan
                                         - \tweak stencil #constante-hairpin
                                         \<
@@ -413,9 +399,6 @@
                                     % COMMANDS:
                                     \once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -423,9 +406,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -457,7 +437,7 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -474,7 +454,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -489,7 +469,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -501,7 +481,6 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 1/32
                                     % AFTER:
@@ -509,7 +488,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.StaffSymbol.line-positions = ##f
+                                    \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -518,7 +497,6 @@
                                     r1 * 3/64
                                     % ABSOLUTE_AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Staff.StaffSymbol.transparent = ##t
                                     s1 * 3/64
                                     % AFTER:
@@ -1733,16 +1711,10 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 3/32
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1815,7 +1787,7 @@
                                         % SPANNER_STARTS:
                                         - \tweak padding #8.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
                                         \startTextSpan
                                         \<
                                         <c'' fs'' b'' cs'''>2
@@ -1860,16 +1832,10 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 3/32
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1924,7 +1890,7 @@
                                         % SPANNER_STARTS:
                                         - \tweak padding #8.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \tremolo-largo \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
                                         \startTextSpan
                                         <d, a>2
                                         % AFTER:
@@ -1962,16 +1928,10 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 3/32
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
