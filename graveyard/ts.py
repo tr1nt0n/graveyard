@@ -59,6 +59,28 @@ section_2_ts.insert(11, (1, 16))
 section_2_ts.insert(17, (1, 16))
 section_2_ts.insert(12, (1, 10))
 
+
+def make_click_ts(section_ts):
+    click_ts = []
+    for ts in section_ts:
+        denom = ts[1]
+        if ts == (1, 16):
+            click_ts.append((4, 8))
+        elif not (denom & (denom - 1) == 0) and denom != 0:
+            new_ts = (ts[0], 8)
+            click_ts.append(new_ts)
+        else:
+            click_ts.append(ts)
+
+    if len(click_ts) != len(section_ts):
+        raise Exception("Incorrect number of measures")
+
+    return click_ts
+
+
+section_2_click_ts = make_click_ts(section_2_ts)
+
+
 # section 3
 
 section_numerators = abjad.sequence.partition_by_counts(
@@ -91,6 +113,8 @@ section_3_ts.insert(17, (1, 10))
 section_3_ts.insert(20, (1, 16))
 section_3_ts.insert(21, (1, 16))
 section_3_ts.append((1, 16))
+
+section_3_click_ts = make_click_ts(section_3_ts)
 
 # section 4
 
@@ -159,6 +183,8 @@ section_4_ts.insert(45, (1, 16))
 section_4_ts.insert(46, (1, 16))
 section_4_ts.insert(47, (1, 16))
 
+section_4_click_ts = make_click_ts(section_4_ts)
+
 # section 6
 
 section_numerators = abjad.sequence.partition_by_counts(
@@ -179,3 +205,5 @@ section_6_ts = trinton.make_ts_pair_list(
 )
 
 section_6_ts.append((1, 16))
+
+section_6_click_ts = make_click_ts(section_6_ts)
