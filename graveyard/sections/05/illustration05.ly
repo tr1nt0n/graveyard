@@ -38,14 +38,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -70,14 +71,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -248,14 +250,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" }
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ushortfermata" }
             % COMMANDS:
             \bar "||"
             \break

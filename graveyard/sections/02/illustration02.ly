@@ -36,14 +36,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -79,14 +80,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
             % COMMANDS:
             \break
             % ABSOLUTE_AFTER:
@@ -105,14 +107,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -171,14 +174,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -1780,11 +1784,7 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/32
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -1838,11 +1838,7 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/32
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -1860,11 +1856,7 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/32
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -1927,11 +1919,7 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/32
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
                                     s1 * 1/32
                                     % AFTER:
                                     % COMMANDS:
@@ -2315,6 +2303,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
@@ -4853,6 +4844,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 4
@@ -4875,6 +4869,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPEN_BRACKETS:
                                     \tweak edge-height #'(0.7 . 0)
                                     \times 4/5
@@ -5072,6 +5069,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
@@ -7366,6 +7366,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_AFTER:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 1

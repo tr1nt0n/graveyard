@@ -25,17 +25,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -80,17 +78,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ushortfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -99,17 +95,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -152,17 +146,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ulongfermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ulongfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -171,17 +163,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.uveryshortfermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.uveryshortfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -190,17 +180,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ushortfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -325,18 +313,16 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             \set Score.repeatCommands = #'((volta "4"))
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ushortfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -346,17 +332,15 @@
             \set Score.repeatCommands = #'((volta #f))
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -365,17 +349,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.uveryshortfermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.uveryshortfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -384,17 +366,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ulongfermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ulongfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -403,17 +383,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ulongfermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ulongfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -422,17 +400,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -441,17 +417,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.uverylongfermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.uverylongfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -460,17 +434,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" } 
-            % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ushortfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -479,19 +451,18 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ushortfermata" } 
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ushortfermata" }
             % COMMANDS:
             \bar "||"
             \break
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:

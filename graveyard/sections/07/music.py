@@ -12,8 +12,6 @@ from graveyard import library
 
 score = library.graveyard_score([(7, 3), (6, 3), (1, 16), (3, 32)])
 
-# fermate
-
 library.fermata_measures(
     score=score, measures=[0], fermata="uverylongfermata", last_measure=True
 )
@@ -284,6 +282,7 @@ trinton.attach_multiple(
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "before"
         ),
+        abjad.LilyPondLiteral(r"\pageBreak", "after"),
     ],
 )
 
@@ -333,6 +332,21 @@ trinton.attach_multiple(
         abjad.LilyPondLiteral(r"\break", "after"),
     ],
 )
+
+trinton.attach_multiple(
+    score=score,
+    voice="Global Context",
+    leaves=[
+        1,
+        2,
+        3,
+    ],
+    attachments=[
+        abjad.LilyPondLiteral(r"\noBreak", "after"),
+    ],
+)
+
+# global whiteouts
 
 library.reset_line_positions(
     score=score, voice_names=["guitar 2 voice", "viola 1 voice"]

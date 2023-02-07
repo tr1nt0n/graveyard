@@ -141,14 +141,15 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ulongfermata" }
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ulongfermata" }
             % COMMANDS:
             \bar "||"
             \break

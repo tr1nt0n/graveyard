@@ -11,17 +11,7 @@ from graveyard import ts
 
 score = library.graveyard_score(ts.section_2_ts)
 
-# fermate
-
-library.fermata_measures(
-    score=score,
-    measures=[
-        4,
-        10,
-        12,
-        19,
-    ],
-)
+# fermata measures
 
 # guitar music commands
 
@@ -3753,6 +3743,18 @@ trinton.attach_multiple(
 #     tempo=((1, 8), 44),
 #     current_directory="/Users/trintonprater/scores/graveyard/graveyard/sections/01",
 # )
+
+# global whiteouts
+
+library.fermata_measures(
+    score=score,
+    measures=[
+        4,
+        10,
+        12,
+        19,
+    ],
+)
 
 library.reset_line_positions(
     score=score, voice_names=["guitar 2 voice", "viola 1 voice"]

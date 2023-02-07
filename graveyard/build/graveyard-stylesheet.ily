@@ -30,9 +30,11 @@
 		\consists Mark_engraver
 		\consists Metronome_mark_engraver
 		\consists Text_engraver
+        \consists Multi_measure_rest_engraver
 		\consists Text_spanner_engraver
         \consists Measure_spanner_engraver
         \consists Bar_number_engraver
+
         \override MetronomeMark.stencil = ##f
 		\override TimeSignature.X-extent = #'(0 . -25)
         \override TimeSignature.Y-extent = #'(25 . 0)

@@ -14,31 +14,6 @@ from itertools import cycle
 
 score = library.graveyard_score(ts.section_3_ts)
 
-# fermate
-
-library.fermata_measures(
-    score=score,
-    measures=[
-        6,
-    ],
-)
-
-library.fermata_measures(
-    score=score,
-    measures=[
-        22,
-    ],
-    fermata="ushortfermata",
-)
-
-library.fermata_measures(
-    score=score,
-    measures=[
-        0,
-    ],
-    fermata="uveryshortfermata",
-)
-
 # guitar music commands
 
 trinton.make_music(
@@ -1358,8 +1333,6 @@ trinton.attach_multiple(
     ],
 )
 
-library.filled_fermata_measures(score=score, measures=[21], fermata="ulongfermata")
-
 trinton.attach_multiple(
     score=score,
     voice="Global Context",
@@ -1522,6 +1495,33 @@ trinton.attach_multiple(
         abjad.LilyPondLiteral(r"\break", "after"),
     ],
 )
+
+# global whiteouts
+
+library.fermata_measures(
+    score=score,
+    measures=[
+        6,
+    ],
+)
+
+library.fermata_measures(
+    score=score,
+    measures=[
+        22,
+    ],
+    fermata="ushortfermata",
+)
+
+library.fermata_measures(
+    score=score,
+    measures=[
+        0,
+    ],
+    fermata="uveryshortfermata",
+)
+
+library.filled_fermata_measures(score=score, measures=[21], fermata="ulongfermata")
 
 library.reset_line_positions(
     score=score, voice_names=["guitar 2 voice", "viola 1 voice"]

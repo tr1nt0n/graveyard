@@ -29,27 +29,33 @@
             % COMMANDS:
             - \tweak padding #8
             \boxed-markup "VII. The Play of Thorns ( iii ) / WIEDER" 3
+            \pageBreak
             % OPENING:
             % COMMANDS:
             #(ly:expect-warning "strange time signature found")
             \time 6/3
             s1 * 2
+            % AFTER:
+            % COMMANDS:
+            \noBreak
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             \set Score.repeatCommands = #'((volta "1"))
             % OPENING:
             % COMMANDS:
             \time 1/16
-            s1 * 1/16
+            R1 * 1/16
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.ufermata" }
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
             % COMMANDS:
             \bar ":|."
+            \noBreak
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:
@@ -60,18 +66,20 @@
             \once \override Score.BarLine.transparent = ##f
             % BEFORE:
             % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
             \set Score.repeatCommands = #'((volta "2"))
             % OPENING:
             % COMMANDS:
             \time 3/32
-            s1 * 3/32
+            R1 * 3/32
             % AFTER:
             % MARKUP:
-            - \markup \huge \center-column { \musicglyph "scripts.uverylongfermata" }
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.uverylongfermata" }
             % COMMANDS:
             \bar "|."
             \break
+            \noBreak
             \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \set Score.repeatCommands = #'((volta #f))
             % ABSOLUTE_AFTER:

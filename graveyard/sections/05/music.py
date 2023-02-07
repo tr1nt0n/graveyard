@@ -51,22 +51,6 @@ score = library.graveyard_score(
     ]
 )
 
-# fermate
-
-library.fermata_measures(
-    score=score,
-    measures=[0],
-    fermata="ushortfermata",
-)
-
-library.fermata_measures(
-    score=score,
-    measures=[
-        4,
-        7,
-    ],
-)
-
 # guitar music commands
 
 trinton.make_music(
@@ -1187,6 +1171,22 @@ trinton.attach_multiple(
             r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
         ),
         abjad.LilyPondLiteral(r"\stopMeasureSpanner", "absolute_after"),
+    ],
+)
+
+# global whiteouts
+
+library.fermata_measures(
+    score=score,
+    measures=[0],
+    fermata="ushortfermata",
+)
+
+library.fermata_measures(
+    score=score,
+    measures=[
+        4,
+        7,
     ],
 )
 

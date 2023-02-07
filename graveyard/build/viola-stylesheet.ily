@@ -30,12 +30,13 @@
         \consists Time_signature_engraver
 		\consists Mark_engraver
 		\consists Metronome_mark_engraver
+        \consists Multi_measure_rest_engraver
 		\consists Text_engraver
 		\consists Text_spanner_engraver
         \consists Measure_spanner_engraver
         \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
         \override BarNumber.Y-extent = ##f
-        \override BarNumber.Y-offset = -9.5
+        \override BarNumber.Y-offset = -7.5
         \override BarNumber.extra-offset = #'(-2 . 4)
         \override BarNumber.font-size = 2
         \override BarNumber.padding = 4
@@ -45,7 +46,7 @@
         \override TimeSignature.break-visibility = #end-of-line-invisible
         \override TimeSignature.transparent = ##t
         % \override TimeSignature.X-offset = 5
-        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 1) (minimum-distance . 1) (padding . 3) (stretchability . 0))
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 1) (minimum-distance . 1) (padding . 0.25) (stretchability . 0))
     }
 
     \context {
