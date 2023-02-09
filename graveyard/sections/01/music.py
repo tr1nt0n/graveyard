@@ -39,7 +39,7 @@ trinton.make_music(
     ),
     evans.PitchHandler([-8]),
     library.change_lines(
-        lines="6",
+        lines=6,
         selector=trinton.select_leaves_by_index([0]),
         clef="percussion",
     ),
@@ -72,14 +72,10 @@ trinton.make_music(
         attachments=[
             abjad.StartHairpin("o<"),
             abjad.Dynamic("ffff"),
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)", "after"
-            ),
         ],
         selector=trinton.select_leaves_by_index(
             [
                 0,
-                -1,
                 -1,
             ]
         ),
@@ -276,9 +272,6 @@ trinton.attach_multiple(
         abjad.BarLine("||"),
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
-        ),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
         ),
         abjad.LilyPondLiteral(r"\break", "after"),
     ],

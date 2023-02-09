@@ -184,6 +184,9 @@
                                         % ABSOLUTE_BEFORE:
                                         % COMMANDS:
                                         \staff-line-count 6
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "percussion"
@@ -259,8 +262,6 @@
                                         % SPANNER_STOPS:
                                         \stopTextSpanOne
                                         \stopTextSpanTwo
-                                        % COMMANDS:
-                                        \once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)
                                     % CLOSE_BRACKETS:
                                     }
                                 % CLOSE_BRACKETS:
@@ -400,6 +401,9 @@
                                                 % ABSOLUTE_BEFORE:
                                                 % COMMANDS:
                                                 \staff-line-count 4
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \override Staff.BarLine.bar-extent = #'(-1.5 . 1.5)
                                                 % OPENING:
                                                 % COMMANDS:
                                                 \clef "percussion"

@@ -10,7 +10,6 @@
             % BEFORE:
             % COMMANDS:
             \bar ".|:"
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % OPENING:
             % COMMANDS:
             #(ly:expect-warning "strange time signature found")
@@ -50,7 +49,6 @@
             % COMMANDS:
             \bar ":|."
             \noBreak
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -74,7 +72,6 @@
             \bar "|."
             \break
             \noBreak
-            \once \override Score.BarLine.bar-extent = #'(-3 . 3)
             \set Score.repeatCommands = #'((volta #f))
             % ABSOLUTE_AFTER:
             % COMMANDS:
@@ -109,6 +106,9 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "guitar 1 voice"
                                 {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -120,6 +120,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -129,6 +132,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -142,6 +148,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -171,6 +180,7 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
@@ -186,6 +196,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
@@ -201,6 +212,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
@@ -220,6 +232,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
@@ -251,6 +264,9 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "guitar 3 voice"
                                 {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -260,6 +276,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -269,6 +288,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -282,6 +304,9 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
@@ -316,6 +341,9 @@
                                         % ABSOLUTE_BEFORE:
                                         % COMMANDS:
                                         \staff-line-count 6
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "percussion"
@@ -395,8 +423,6 @@
                                         % SPANNER_STOPS:
                                         \stopTextSpan
                                         \stopTextSpanTwo
-                                        % COMMANDS:
-                                        \once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:
@@ -405,15 +431,11 @@
                                     s1 * 1/16
                                     % AFTER:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)
                                     \stopStaff \startStaff
                                     % BEFORE:
                                     % COMMANDS:
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 3/32
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -445,6 +467,7 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
@@ -462,6 +485,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
@@ -477,6 +501,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
@@ -496,6 +521,7 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     \once \override Staff.StaffSymbol.stencil = ##f
                                     % BEFORE:
                                     % COMMANDS:
@@ -582,6 +608,9 @@
                                                 % ABSOLUTE_BEFORE:
                                                 % COMMANDS:
                                                 \staff-line-count 4
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \override Staff.BarLine.bar-extent = #'(-1.5 . 1.5)
                                                 % OPENING:
                                                 % COMMANDS:
                                                 \clef "percussion"

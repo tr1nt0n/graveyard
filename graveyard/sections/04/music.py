@@ -1814,9 +1814,6 @@ trinton.attach_multiple(
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "before"
         ),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "before"
-        ),
     ],
 )
 
@@ -1843,9 +1840,6 @@ trinton.attach_multiple(
         abjad.BarLine(":.|.:"),
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
-        ),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
         ),
         abjad.LilyPondLiteral(r"\stopMeasureSpanner", "after"),
         abjad.LilyPondLiteral(
@@ -1876,9 +1870,6 @@ trinton.attach_multiple(
         abjad.BarLine("||"),
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
-        ),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
         ),
         abjad.LilyPondLiteral(r"\break", "after"),
     ],

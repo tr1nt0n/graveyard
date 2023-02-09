@@ -1158,23 +1158,6 @@ trinton.make_music(
     voice=score["guitar 4 voice"],
 )
 
-for measure in [
-    41,
-]:
-    trinton.make_music(
-        lambda _: trinton.select_target(_, (measure,)),
-        trinton.attachment_command(
-            attachments=[
-                abjad.LilyPondLiteral(
-                    r"\once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)",
-                    "after",
-                ),
-            ],
-            selector=trinton.select_leaves_by_index([-1]),
-        ),
-        voice=score["guitar 4 voice"],
-    )
-
 # viola music commands
 
 trinton.make_music(
@@ -3682,9 +3665,6 @@ trinton.attach_multiple(
         abjad.BarLine("||"),
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
-        ),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
         ),
         abjad.LilyPondLiteral(r"\break", "after"),
     ],

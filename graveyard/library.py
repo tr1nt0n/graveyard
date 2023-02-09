@@ -240,9 +240,25 @@ def change_lines(
     clef="treble",
 ):
     def change(argument):
+        _line_to_bar_extent = {
+            1: "(-0.01 . 0.01)",
+            2: "(-0.5 . 0.5)",
+            3: "(-1 . 1)",
+            4: "(-1.5 . 1.5)",
+            5: "(-2 . 2)",
+            6: "(-2.5 . 2.5)",
+        }
+
         selections = selector(argument)
         for selection in selections:
             abjad.attach(abjad.Clef(clef), selection)
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    rf"\override Staff.BarLine.bar-extent = #'{_line_to_bar_extent[lines]}",
+                    site="after",
+                ),
+                selection,
+            )
             abjad.attach(
                 abjad.LilyPondLiteral(
                     rf"\staff-line-count {lines}",
@@ -755,32 +771,6 @@ def fermata_measures(
 
 
 def filled_fermata_measures(score, measures, fermata="ufermata"):
-    # trinton.attach_multiple(
-    #     score=score,
-    #     voice="Global Context",
-    #     leaves=[_ - 1 for _ in measures],
-    #     attachments=[
-    #         abjad.Markup(
-    #             rf'\markup \huge \center-column {{ \musicglyph "scripts.{fermata}" }} '
-    #         ),
-    #         abjad.LilyPondLiteral(
-    #             r"\once \override Score.TimeSignature.stencil = ##f",
-    #             "before",
-    #         ),
-    #         abjad.LilyPondLiteral(
-    #             r"\once \override Score.BarLine.transparent = ##f", "absolute_before"
-    #         ),
-    #         abjad.LilyPondLiteral(
-    #             r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
-    #         ),
-    #         abjad.LilyPondLiteral(
-    #             r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
-    #         ),
-    #         abjad.LilyPondLiteral(
-    #             r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "before"
-    #         ),
-    #     ],
-    # )
     measures = [_ - 1 for _ in measures]
 
     leaves = trinton.make_leaf_selection(

@@ -790,25 +790,6 @@ trinton.make_music(
     ),
 )
 
-for measure in [
-    18,
-    20,
-    21,
-]:
-    trinton.make_music(
-        lambda _: trinton.select_target(_, (measure,)),
-        trinton.attachment_command(
-            attachments=[
-                abjad.LilyPondLiteral(
-                    r"\once \override Staff.BarLine.bar-extent = #'(-2.5 . 2.5)",
-                    "after",
-                ),
-            ],
-            selector=trinton.select_leaves_by_index([-1]),
-        ),
-        voice=score["guitar 4 voice"],
-    )
-
 # viola music commands
 
 for measure, i, preprocessor in zip(
@@ -3139,9 +3120,6 @@ trinton.attach_multiple(
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
         ),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
-        ),
         abjad.LilyPondLiteral(r"\break", "after"),
     ],
 )
@@ -3160,9 +3138,6 @@ trinton.attach_multiple(
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "absolute_before"
         ),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "before"
-        ),
     ],
 )
 
@@ -3176,9 +3151,6 @@ trinton.attach_multiple(
         abjad.BarLine(":|."),
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
-        ),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.BarLine.bar-extent = #'(-3 . 3)", "after"
         ),
         abjad.LilyPondLiteral(r"\stopMeasureSpanner", "absolute_after"),
     ],
