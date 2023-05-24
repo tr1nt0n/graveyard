@@ -1,45 +1,107 @@
+  %! abjad.LilyPondFile._get_format_pieces()
 \version "2.23.14"
+  %! abjad.LilyPondFile._get_format_pieces()
+\language "english"
+  %! abjad.LilyPondFile._get_format_pieces()
+\version "2.23.14"
+  %! abjad.LilyPondFile._get_format_pieces()
 \language "english"
 \include "/Users/trintonprater/scores/graveyard/graveyard/build/graveyard-stylesheet.ily"
 \include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
+  %! abjad.LilyPondFile._get_format_pieces()
 \score
+  %! abjad.LilyPondFile._get_format_pieces()
 {
-    % OPEN_BRACKETS:
     \context Score = "Score"
     <<
-        % OPEN_BRACKETS:
         \context TimeSignatureContext = "Global Context"
         {
-            % BEFORE:
-            % COMMANDS:
             \tempo 8=66
-            % OPENING:
-            % COMMANDS:
             \time 7/8
             s1 * 7/8
-            % OPENING:
-            % COMMANDS:
             \time 6/8
             s1 * 3/4
-        % CLOSE_BRACKETS:
         }
-        % OPEN_BRACKETS:
         \context StaffGroup = "Staff Group"
         <<
-            % OPEN_BRACKETS:
             \context Staff = "sopranovoice staff"
             {
-                % OPEN_BRACKETS:
                 \context Voice = "sopranovoice voice"
                 {
                     s1 * 7/8
                     s1 * 3/4
-                % CLOSE_BRACKETS:
                 }
-            % CLOSE_BRACKETS:
             }
-        % CLOSE_BRACKETS:
+            \context GrandStaff = "sub group 1"
+            <<
+                \context Staff = "accordion 1 staff"
+                {
+                    \context Voice = "accordion 1 voice"
+                    {
+                        <c'' fs'' b'' cs'''>8
+                        - \tenuto
+                        \ffff
+                        - \tweak stencil #abjad-flared-hairpin
+                        \>
+                        <c'' fs'' b'' cs'''>8
+                        - \tenuto
+                        <c'' fs'' b'' cs'''>8
+                        - \tenuto
+                        <c'' fs'' b'' cs'''>8
+                        - \tenuto
+                        <c'' fs'' b'' cs'''>8
+                        - \tenuto
+                        \p
+                        \<
+                        <c'' fs'' b'' cs'''>8
+                        - \tenuto
+                        <c'' fs'' b'' cs'''>8
+                        - \tenuto
+                        \ff
+                        - \tweak circled-tip ##t
+                        \>
+                        <c'' fs'' b'' cs'''>8
+                        - \tenuto
+                        <c'' fs'' b'' cs'''>8
+                        - \tenuto
+                        r8
+                        r8
+                        r8
+                        r8
+                        \!
+                    }
+                }
+                \context Staff = "accordion 2 staff"
+                {
+                    \context Voice = "accordion 2 voice"
+                    {
+                        \clef "bass"
+                        <d, a>8
+                        - \tenuto
+                        <d, a>8
+                        - \tenuto
+                        <d, a>8
+                        - \tenuto
+                        <d, a>8
+                        - \tenuto
+                        <d, a>8
+                        - \tenuto
+                        <d, a>8
+                        - \tenuto
+                        <d, a>8
+                        - \tenuto
+                        <d, a>8
+                        - \tenuto
+                        <d, a>8
+                        - \tenuto
+                        r8
+                        r8
+                        r8
+                        r8
+                    }
+                }
+            >>
         >>
-    % CLOSE_BRACKETS:
     >>
+  %! abjad.LilyPondFile._get_format_pieces()
 }
