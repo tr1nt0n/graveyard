@@ -497,8 +497,13 @@ def invisible_tuplet_brackets():
 def reset_line_positions(score, voice_names):
     voices = [score[_] for _ in voice_names]
 
-    line_whitespace = abjad.LilyPondLiteral(
-        r"\once \override Staff.StaffSymbol.transparent = ##t", "absolute_after"
+    # line_whitespace = abjad.LilyPondLiteral(
+    #     r"\once \override Staff.StaffSymbol.transparent = ##t", "opening"
+    # )
+
+    reset = abjad.LilyPondLiteral(
+        r"\once \revert Staff.StaffSymbol.line-positions",
+        "before"
     )
 
     for voice in voices:
@@ -514,16 +519,8 @@ def reset_line_positions(score, voice_names):
 
         for shard in relevant_shards:
             abjad.attach(
-                abjad.LilyPondLiteral(
-                    r"\once \override Staff.StaffSymbol.stencil = ##f",
-                    "absolute_before",
-                ),
-                shard[0],
-            )
-
-            abjad.attach(
-                line_whitespace,
-                shard[0],
+                reset,
+                shard[0]
             )
 
 
@@ -687,11 +684,11 @@ def fermata_measures(
     measures,
     fermata="ufermata",
     voice_names=[
-        "guitar 1 voice",
-        "guitar 2 voice",
-        "guitar 3 voice",
+        # "guitar 1 voice",
+        # "guitar 2 voice",
+        # "guitar 3 voice",
         "guitar 4 voice",
-        "viola 1 voice",
+        # "viola 1 voice",
         "viola 2 voice",
         "accordion 1 voice",
         "accordion 2 voice",

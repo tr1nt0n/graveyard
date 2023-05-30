@@ -1,17 +1,3 @@
-  %! abjad.LilyPondFile._get_format_pieces()
-\version "2.23.14"
-  %! abjad.LilyPondFile._get_format_pieces()
-\language "english"
-  %! abjad.LilyPondFile._get_format_pieces()
-\version "2.23.14"
-  %! abjad.LilyPondFile._get_format_pieces()
-\language "english"
-\include "/Users/trintonprater/scores/graveyard/graveyard/build/graveyard-stylesheet.ily"
-\include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
-  %! abjad.LilyPondFile._get_format_pieces()
-\score
-  %! abjad.LilyPondFile._get_format_pieces()
-{
     \context Score = "Score"
     <<
         \context TimeSignatureContext = "Global Context"
@@ -90,7 +76,7 @@
             - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
               %! +SCORE
-            \break
+        %%% \break
             \once \override Score.BarLine.transparent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
@@ -112,7 +98,7 @@
             - \tweak padding #8
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }
               %! +SCORE
-            \break
+        %%% \break
             \time 3/16
             s1 * 3/16
             - \tweak padding #8
@@ -127,7 +113,7 @@
             \time 7/16
             s1 * 7/16
               %! +SCORE
-            \break
+        %%% \break
             \time 5/16
             s1 * 5/16
             - \tweak padding #9.5
@@ -147,7 +133,7 @@
             \time 5/16
             s1 * 5/16
               %! +SCORE
-            \break
+        %%% \break
             \time 3/16
             s1 * 3/16
             - \tweak padding #8
@@ -5006,4 +4992,3 @@
         }
     >>
   %! abjad.LilyPondFile._get_format_pieces()
-}

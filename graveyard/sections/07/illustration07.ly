@@ -25,6 +25,7 @@
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             - \tweak padding #8
             \boxed-markup "VII. The Play of Thorns ( iii ) / WIEDER" 3
+              %! +SCORE
             \pageBreak
             #(ly:expect-warning "strange time signature found")
             \time 6/3
@@ -69,46 +70,27 @@
                             {
                                 \context Voice = "guitar 1 voice"
                                 {
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Electric Guitar }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { e. git. }
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/3
-                                      %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 2
-                                      %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/32
-                                      %! +SCORE
                                     \stopStaff \startStaff
                                 }
                             }
@@ -119,53 +101,30 @@
                             {
                                 \context Voice = "guitar 2 voice"
                                 {
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Staff.StaffSymbol.stencil = ##f
-                                      %! +SCORE
+                                    \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/3
-                                      %! +SCORE
                                     \stopStaff \startStaff
-                                    \once \override Staff.StaffSymbol.transparent = ##t
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Staff.StaffSymbol.stencil = ##f
-                                      %! +SCORE
+                                    \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 2
-                                      %! +SCORE
                                     \stopStaff \startStaff
-                                    \once \override Staff.StaffSymbol.transparent = ##t
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Staff.StaffSymbol.stencil = ##f
+                                    \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    \once \override Staff.StaffSymbol.transparent = ##t
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Staff.StaffSymbol.stencil = ##f
+                                    \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/32
-                                      %! +SCORE
                                     \stopStaff \startStaff
-                                    \once \override Staff.StaffSymbol.transparent = ##t
                                 }
                             }
                         }
@@ -175,44 +134,25 @@
                             {
                                 \context Voice = "guitar 3 voice"
                                 {
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/3
-                                      %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 2
-                                      %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/32
-                                      %! +SCORE
                                     \stopStaff \startStaff
                                 }
                             }
@@ -227,6 +167,7 @@
                                     \times 2/3
                                     {
                                         \staff-line-count 6
+                                        \once \revert Staff.BarLine.bar-extent
                                         \clef "percussion"
                                         e2
                                         \ffff
@@ -309,55 +250,32 @@
                             {
                                 \context Voice = "viola 1 voice"
                                 {
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Staff.StaffSymbol.stencil = ##f
+                                    \once \revert Staff.StaffSymbol.line-positions
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Viola }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { vla. }
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/3
-                                      %! +SCORE
                                     \stopStaff \startStaff
-                                    \once \override Staff.StaffSymbol.transparent = ##t
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Staff.StaffSymbol.stencil = ##f
-                                      %! +SCORE
+                                    \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 2
-                                      %! +SCORE
                                     \stopStaff \startStaff
-                                    \once \override Staff.StaffSymbol.transparent = ##t
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Staff.StaffSymbol.stencil = ##f
+                                    \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    \once \override Staff.StaffSymbol.transparent = ##t
-                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Staff.StaffSymbol.stencil = ##f
+                                    \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/32
-                                      %! +SCORE
                                     \stopStaff \startStaff
-                                    \once \override Staff.StaffSymbol.transparent = ##t
                                 }
                             }
                         }

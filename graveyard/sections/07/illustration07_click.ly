@@ -34,70 +34,81 @@
             }
             \context GrandStaff = "sub group 1"
             <<
-                \context Staff = "accordion 1 staff"
+                \context Staff = "viola 1 staff"
                 {
-                    \context Voice = "accordion 1 voice"
+                    \context Voice = "viola 1 voice"
                     {
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
+                        s1 * 7/8
+                        s1 * 3/4
+                    }
+                }
+                \context Staff = "viola 2 staff"
+                {
+                    \context Voice = "viola 2 voice"
+                    {
+                        \staff-line-count 4
+                        \clef "percussion"
+                        \tweak style #'cross
+                        g16
                         \ffff
+                        - \tweak padding #8
+                        - \abjad-dashed-line-with-hook
+                        - \tweak bound-details.left.text \markup \concat { \upright { "legno bat." } \hspace #0.5 }
+                        - \tweak bound-details.right.padding -8
+                        \startTextSpan
                         - \tweak stencil #abjad-flared-hairpin
                         \>
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
+                        \override Staff.BarLine.bar-extent = #'(-1.5 . 1.5)
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
                         \p
                         \<
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
                         \ff
                         - \tweak circled-tip ##t
                         \>
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        r8
-                        r8
-                        r8
-                        r8
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \stopTextSpan
+                        r16
+                        r16
+                        r16
+                        r16
+                        r16
+                        r16
+                        r16
                         \!
-                    }
-                }
-                \context Staff = "accordion 2 staff"
-                {
-                    \context Voice = "accordion 2 voice"
-                    {
-                        \clef "bass"
-                        <d, a>8
-                        - \tenuto
-                        <d, a>8
-                        - \tenuto
-                        <d, a>8
-                        - \tenuto
-                        <d, a>8
-                        - \tenuto
-                        <d, a>8
-                        - \tenuto
-                        <d, a>8
-                        - \tenuto
-                        <d, a>8
-                        - \tenuto
-                        <d, a>8
-                        - \tenuto
-                        <d, a>8
-                        - \tenuto
-                        r8
-                        r8
-                        r8
-                        r8
                     }
                 }
             >>

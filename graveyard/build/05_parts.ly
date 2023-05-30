@@ -3131,25 +3131,25 @@
                                         - \tweak bound-details.right.text \markup \upright { "Shout chant" }
                                         \startTextSpanTwo
                                           %! +SCORE
-                                        - \tweak padding #6
+                                    %%% - \tweak padding #6
                                           %! +SCORE
-                                        - \abjad-dashed-line-with-hook
-                                          %! +SCORE
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
-                                          %! +SCORE
-                                        - \tweak bound-details.right.padding -2
-                                          %! +SCORE
-                                        \startTextSpanOne
-                                          %! +PARTS
-                                    %%% - \tweak padding #9
-                                          %! +PARTS
                                     %%% - \abjad-dashed-line-with-hook
-                                          %! +PARTS
-                                    %%% - \tweak bound-details.left.text \markup \concat { { \center-column { \line { While drumming, chant at any speed, } \line { "\"There are no dry bones here,\"" } \line { in your first language } } } \hspace #0.5 }
-                                          %! +PARTS
+                                          %! +SCORE
+                                    %%% - \tweak bound-details.left.text \markup \concat { \upright { "While drumming, chant at any speed, \"There are no dry bones here,\" in your first language" } \hspace #0.5 }
+                                          %! +SCORE
                                     %%% - \tweak bound-details.right.padding -2
+                                          %! +SCORE
+                                    %%% \startTextSpanOne
                                           %! +PARTS
-                                    %%% \startTextSpan
+                                        - \tweak padding #9
+                                          %! +PARTS
+                                        - \abjad-dashed-line-with-hook
+                                          %! +PARTS
+                                        - \tweak bound-details.left.text \markup \concat { { \center-column { \line { While drumming, chant at any speed, } \line { "\"There are no dry bones here,\"" } \line { in your first language } } } \hspace #0.5 }
+                                          %! +PARTS
+                                        - \tweak bound-details.right.padding -2
+                                          %! +PARTS
+                                        \startTextSpan
                                     }
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 3 0))
                                     \times 4/5
@@ -3317,9 +3317,9 @@
                                     \mf
                                     c'16
                                       %! +PARTS
-                                %%% \stopTextSpan
+                                    \stopTextSpan
                                       %! +SCORE
-                                    \stopTextSpanOne
+                                %%% \stopTextSpanOne
                                     ]
                                     \once \override TupletBracket.stencil = ##f
                                     \once \override TupletNumber.stencil = ##f

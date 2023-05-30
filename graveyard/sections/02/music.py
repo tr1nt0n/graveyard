@@ -52,6 +52,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=4,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -112,6 +113,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=4,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -223,7 +225,7 @@ for measures, padding in zip([(1, 3), (5, 6)], [5, 20]):
             selector=trinton.select_leaves_by_index([0]),
         ),
         trinton.hooked_spanner_command(
-            string="IV",
+            string="VI",
             selector=trinton.select_leaves_by_index([0, -1]),
             padding=7.5,
             right_padding=padding,
@@ -354,7 +356,7 @@ trinton.make_music(
     ),
     trinton.transparent_noteheads(trinton.pleaves(exclude=[0, -1])),
     trinton.hooked_spanner_command(
-        string="IV",
+        string="VI",
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=7.5,
         right_padding=10,
@@ -436,6 +438,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=4,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -485,7 +488,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1, -1], pitched=True),
     ),
     trinton.hooked_spanner_command(
-        string="IV",
+        string="VI",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         padding=8,
         right_padding=4,
@@ -577,6 +580,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         padding=4,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -927,6 +931,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         padding=4,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.invisible_rests(),
     trinton.notehead_bracket_command(),
@@ -1210,6 +1215,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=4,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -1321,6 +1327,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=4,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -1480,6 +1487,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 29]),
         padding=4,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -2371,6 +2379,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         padding=4,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.linear_attachment_command(
         attachments=[abjad.StartSlur(), abjad.StopSlur()],
@@ -2486,6 +2495,7 @@ trinton.make_music(
         padding=4,
         right_padding=4,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.linear_attachment_command(
         attachments=[abjad.StartSlur(), abjad.StopSlur()],
@@ -3695,6 +3705,7 @@ trinton.attach_multiple(
     attachments=[
         abjad.LilyPondLiteral(r"\break", "after"),
     ],
+    tag=abjad.Tag("+SCORE")
 )
 
 trinton.attach_multiple(
@@ -3744,6 +3755,7 @@ trinton.whiteout_empty_staves(
     score=score,
     voice_names=["guitar 1 voice", "guitar 2 voice", "guitar 3 voice", "viola 1 voice"],
     cutaway="blank",
+    tag=None
 )
 
 # parts

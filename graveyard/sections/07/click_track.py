@@ -13,8 +13,8 @@ from graveyard import library
 score = trinton.make_empty_score(
     instruments=[
         abjad.SopranoVoice(),
-        abjad.Accordion(),
-        abjad.Accordion(),
+        abjad.Viola(),
+        abjad.Viola(),
     ],
     groups=[
         1,
@@ -30,43 +30,22 @@ trinton.attach(
     direction=abjad.UP,
 )
 
-for voice_name in ["accordion 1 voice", "accordion 2 voice"]:
-    trinton.make_music(
-        lambda _: trinton.select_target(_, (1, 2)),
-        evans.RhythmHandler(
-            evans.tuplet(
-                [
-                    (
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                    )
-                ],
-            ),
-        ),
-        trinton.force_rest(selector=trinton.ranged_selector(ranges=[range(9, 13)])),
-        trinton.fuse_tuplet_rests_command(),
-        trinton.attachment_command(
-            attachments=[abjad.Articulation("tenuto")],
-            selector=trinton.pleaves(),
-        ),
-        voice=score[voice_name],
-        preprocessor=trinton.fuse_preprocessor((2,)),
-    )
+# viola music commands
+
+tuplet = [1 for _ in range(26)]
+
+tuplet = tuple(tuplet)
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 2)),
-    evans.PitchHandler([["c''", "fs''", "b''", "cs'''"]]),
+    evans.RhythmHandler(
+        evans.tuplet(
+            [tuplet],
+        )
+    ),
+    trinton.force_rest(selector=trinton.ranged_selector([range(19, 26)])),
+    trinton.fuse_tuplet_rests_command(),
+    evans.PitchHandler([-5]),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("ffff"),
@@ -77,18 +56,39 @@ trinton.make_music(
             abjad.StartHairpin(">o"),
             abjad.StopHairpin(),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 4, 4, 6, 6, -1]),
+        selector=trinton.select_leaves_by_index(
+            [0, 0, 8, 8, 13, 13, -1],
+        ),
     ),
-    voice=score["accordion 1 voice"],
-)
-
-trinton.make_music(
-    lambda _: trinton.select_target(_, (1, 2)),
-    evans.PitchHandler([["d,", "a"]]),
-    trinton.attachment_command(
-        attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
+    trinton.hooked_spanner_command(
+        string="legno bat.",
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        padding=8,
+        right_padding=8,
     ),
-    voice=score["accordion 2 voice"],
+    trinton.change_notehead_command(
+        notehead="cross",
+        selector=trinton.pleaves(),
+    ),
+    library.change_lines(
+        lines=4,
+        selector=trinton.select_leaves_by_index([0]),
+        clef="percussion",
+    ),
+    # evans.GettatoHandler(
+    #     number_of_attacks=[
+    #         3,
+    #         4,
+    #         4,
+    #         3,
+    #         4,
+    #         3,
+    #         3,
+    #         4,
+    #     ],
+    # ),
+    voice=score["viola 2 voice"],
+    preprocessor=trinton.fuse_preprocessor((2,)),
 )
 
 trinton.render_file(

@@ -32,74 +32,70 @@
                     s1 * 7/8
                 }
             }
-            \context GrandStaff = "sub group 1"
-            <<
-                \context Staff = "accordion 1 staff"
+            \context Staff = "viola staff"
+            {
+                \context Voice = "viola voice"
                 {
-                    \context Voice = "accordion 1 voice"
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \times 1/1
                     {
-                        r8
-                        r8
-                        r8
-                        r8
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
+                        \clef "altovarC"
+                        r4.
+                        \staff-line-count 4
+                        \clef "percussion"
+                        \tweak style #'cross
+                        g16
                         - \tweak circled-tip ##t
                         \<
-                        - \tweak padding #7
-                        - \abjad-dashed-line-with-arrow
-                        - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
-                        - \tweak bound-details.right.text \tremolo-largo
+                        - \tweak padding #8
+                        - \abjad-dashed-line-with-hook
+                        - \tweak bound-details.left.text \markup \concat { \upright { "legno bat." } \hspace #0.5 }
+                        - \tweak bound-details.right.padding -6
                         \startTextSpan
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        \stopTextSpan
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
-                        <c'' fs'' b'' cs'''>8
-                        - \tenuto
+                        \override Staff.BarLine.bar-extent = #'(-1.5 . 1.5)
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
+                        \tweak style #'cross
+                        g16
                         \ffff
+                        \tweak style #'cross
+                        g16
+                        \stopTextSpan
                     }
                 }
-                \context Staff = "accordion 2 staff"
-                {
-                    \context Voice = "accordion 2 voice"
-                    {
-                        r8
-                        r8
-                        r8
-                        r8
-                        c'8
-                        - \tenuto
-                        c'8
-                        - \tenuto
-                        c'8
-                        - \tenuto
-                        c'8
-                        - \tenuto
-                        c'8
-                        - \tenuto
-                        c'8
-                        - \tenuto
-                        c'8
-                        - \tenuto
-                        c'8
-                        - \tenuto
-                        c'8
-                        - \tenuto
-                    }
-                }
-            >>
+            }
         >>
     >>
   %! abjad.LilyPondFile._get_format_pieces()

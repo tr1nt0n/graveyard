@@ -1,17 +1,3 @@
-  %! abjad.LilyPondFile._get_format_pieces()
-\version "2.23.14"
-  %! abjad.LilyPondFile._get_format_pieces()
-\language "english"
-  %! abjad.LilyPondFile._get_format_pieces()
-\version "2.23.14"
-  %! abjad.LilyPondFile._get_format_pieces()
-\language "english"
-\include "/Users/trintonprater/scores/graveyard/graveyard/build/graveyard-stylesheet.ily"
-\include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
-  %! abjad.LilyPondFile._get_format_pieces()
-\score
-  %! abjad.LilyPondFile._get_format_pieces()
-{
     \context Score = "Score"
     <<
         \context TimeSignatureContext = "Global Context"
@@ -137,7 +123,7 @@
             \time 3/8
             s1 * 3/8
               %! +SCORE
-            \break
+        %%% \break
             \tweak text "×3" \startMeasureSpanner
             \bar ".|:"
             \once \override Score.BarLine.transparent = ##f
@@ -4066,4 +4052,3 @@
         }
     >>
   %! abjad.LilyPondFile._get_format_pieces()
-}

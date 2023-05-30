@@ -45,7 +45,7 @@
             \time 10/32
             s1 * 5/16
               %! +SCORE
-            \break
+        %%% \break
             \tweak text "×5" \startMeasureSpanner
             \bar ".|:"
             \once \override Score.BarLine.transparent = ##f
@@ -81,7 +81,7 @@
             s1 * 1/10
             \bar ":|."
               %! +SCORE
-            \break
+        %%% \break
             \once \override Score.BarLine.transparent = ##f
             \stopMeasureSpanner
             \set Score.repeatCommands = #'((volta #f))

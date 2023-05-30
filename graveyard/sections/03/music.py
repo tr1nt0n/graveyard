@@ -209,6 +209,7 @@ trinton.make_music(
         padding=4,
         right_padding=7,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.notehead_bracket_command(),
     trinton.beam_groups(),
@@ -350,6 +351,7 @@ trinton.make_music(
         padding=4,
         right_padding=4,
         direction="down",
+        style="dashed-line-with-up-hook"
     ),
     trinton.beam_groups(),
     trinton.invisible_rests(),
@@ -575,6 +577,15 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (11,)),
     library.change_lines(
         lines=5, clef="altovarC", selector=trinton.select_leaves_by_index([0])
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(
+                r"\once \revert Staff.BarLine.bar-extent",
+                "before"
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0])
     ),
     voice=score["viola 2 voice"],
 )
@@ -1467,6 +1478,7 @@ trinton.attach_multiple(
     attachments=[
         abjad.LilyPondLiteral(r"\break", "after"),
     ],
+    tag=abjad.Tag("+SCORE")
 )
 
 # global whiteouts
@@ -1504,6 +1516,7 @@ trinton.whiteout_empty_staves(
     score=score,
     voice_names=["guitar 1 voice", "guitar 2 voice", "guitar 3 voice", "viola 1 voice"],
     cutaway="blank",
+    tag=None
 )
 
 # make sc file

@@ -12,12 +12,12 @@
     \removeWithTag #'voice7
     \removeWithTag #'voice8
         {
-            \include "01.ly"
-            \include "02.ly"
-            \include "03.ly"
-            \include "04.ly"
-            \include "05.ly"
-            \include "06.ly"
-            \include "07.ly"
+            \include "01_parts.ly"
+            \include "02_parts.ly"
+            \include "03_parts.ly"
+            \include "04_parts.ly"
+            \include "05_parts.ly"
+            \include "06_parts.ly"
+            \include "07_parts.ly"
         }
 }

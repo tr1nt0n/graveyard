@@ -984,13 +984,14 @@ for voice_name, leaf in zip(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (20, 28)),
-    # trinton.hooked_spanner_command(
-    #     string=r"""\markup { \center-column { \line { While drumming, chant at any speed, } \line { "\"There are no dry bones here,\"" } \line { in your first language } } }""",
-    #     selector=trinton.select_leaves_by_index([39, -1]),
-    #     padding=9,
-    #     right_padding=2,
-    #     full_string=True,
-    # ),
+    trinton.hooked_spanner_command(
+        string=r"""\markup { \center-column { \line { While drumming, chant at any speed, } \line { "\"There are no dry bones here,\"" } \line { in your first language } } }""",
+        selector=trinton.select_leaves_by_index([39, -1]),
+        padding=9,
+        right_padding=2,
+        full_string=True,
+        tag=abjad.Tag("+PARTS")
+    ),
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index([39, -1]),
         id="One",
@@ -999,6 +1000,7 @@ trinton.make_music(
         style="dashed-line-with-hook",
         padding=6,
         right_padding=2,
+        tag=abjad.Tag("+SCORE")
     ),
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index([39, -15]),
@@ -1175,6 +1177,7 @@ trinton.whiteout_empty_staves(
     score=score,
     voice_names=["guitar 1 voice", "guitar 2 voice", "guitar 3 voice", "viola 1 voice"],
     cutaway="blank",
+    tag=None
 )
 
 # make sc file
