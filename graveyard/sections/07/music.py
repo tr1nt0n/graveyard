@@ -78,10 +78,7 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            abjad.LilyPondLiteral(
-                r"\once \revert Staff.BarLine.bar-extent",
-                "before"
-            ),
+            abjad.LilyPondLiteral(r"\once \revert Staff.BarLine.bar-extent", "before"),
             abjad.Dynamic("ffff"),
             abjad.StartHairpin("|>"),
             abjad.Dynamic("p"),
@@ -278,7 +275,7 @@ trinton.attach_multiple(
     attachments=[
         abjad.LilyPondLiteral(r"\pageBreak", "after"),
     ],
-    tag=abjad.Tag("+SCORE")
+    tag=abjad.Tag("+SCORE"),
 )
 
 trinton.attach_multiple(
@@ -345,7 +342,7 @@ trinton.whiteout_empty_staves(
     score=score,
     voice_names=["guitar 1 voice", "guitar 2 voice", "guitar 3 voice", "viola 1 voice"],
     cutaway="blank",
-    tag=None
+    tag=None,
 )
 
 # make sc file

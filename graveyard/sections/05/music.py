@@ -982,6 +982,8 @@ for voice_name, leaf in zip(
         voice=score[voice_name],
     )
 
+# Auf dem Deckel mit Styroporkugeln
+
 trinton.make_music(
     lambda _: trinton.select_target(_, (20, 28)),
     trinton.hooked_spanner_command(
@@ -990,7 +992,7 @@ trinton.make_music(
         padding=9,
         right_padding=2,
         full_string=True,
-        tag=abjad.Tag("+PARTS")
+        tag=abjad.Tag("+PARTS"),
     ),
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index([39, -1]),
@@ -1000,7 +1002,7 @@ trinton.make_music(
         style="dashed-line-with-hook",
         padding=6,
         right_padding=2,
-        tag=abjad.Tag("+SCORE")
+        tag=abjad.Tag("+SCORE"),
     ),
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index([39, -15]),
@@ -1177,7 +1179,7 @@ trinton.whiteout_empty_staves(
     score=score,
     voice_names=["guitar 1 voice", "guitar 2 voice", "guitar 3 voice", "viola 1 voice"],
     cutaway="blank",
-    tag=None
+    tag=None,
 )
 
 # make sc file

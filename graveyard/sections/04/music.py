@@ -73,7 +73,7 @@ trinton.make_music(
         padding=4,
         right_padding=2,
         direction="down",
-        style="dashed-line-with-up-hook"
+        style="dashed-line-with-up-hook",
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -186,7 +186,7 @@ trinton.make_music(
         padding=4,
         right_padding=2,
         direction="down",
-        style="dashed-line-with-up-hook"
+        style="dashed-line-with-up-hook",
     ),
     abjad.beam,
     voice=score["guitar 2 voice"],
@@ -227,7 +227,7 @@ trinton.make_music(
         padding=4,
         right_padding=2,
         direction="down",
-        style="dashed-line-with-up-hook"
+        style="dashed-line-with-up-hook",
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -314,7 +314,7 @@ trinton.make_music(
         padding=4,
         right_padding=5,
         direction="down",
-        style="dashed-line-with-up-hook"
+        style="dashed-line-with-up-hook",
     ),
     trinton.linear_attachment_command(
         attachments=[abjad.Dynamic("p"), abjad.StartHairpin("<"), abjad.Dynamic("fff")],
@@ -801,7 +801,7 @@ trinton.make_music(
         padding=4,
         right_padding=2,
         direction="down",
-        style="dashed-line-with-up-hook"
+        style="dashed-line-with-up-hook",
     ),
     abjad.beam,
     voice=score["guitar 2 voice"],
@@ -936,7 +936,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=4,
         direction="down",
-        style="dashed-line-with-up-hook"
+        style="dashed-line-with-up-hook",
     ),
     abjad.beam,
     voice=score["guitar 2 voice"],
@@ -1131,10 +1131,7 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            abjad.LilyPondLiteral(
-                r"\once \revert Staff.BarLine.bar-extent",
-                "before"
-            ),
+            abjad.LilyPondLiteral(r"\once \revert Staff.BarLine.bar-extent", "before"),
             abjad.Dynamic("ffff"),
             abjad.StartHairpin("--"),
             abjad.StopHairpin(),
@@ -1740,6 +1737,7 @@ for voice_name in [
 trinton.make_music(
     lambda _: trinton.select_target(_, (39,)),
     evans.RhythmHandler(evans.tuplet([(7, 1)])),
+    trinton.respell_tuplets(),
     evans.PitchHandler([["f,", "f"]]),
     library.glissando(),
     trinton.arrow_spanner_command(
@@ -1985,7 +1983,7 @@ trinton.attach_multiple(
     attachments=[
         abjad.LilyPondLiteral(r"\break", "after"),
     ],
-    tag=abjad.Tag("+SCORE")
+    tag=abjad.Tag("+SCORE"),
 )
 
 # global whiteouts
@@ -2014,7 +2012,7 @@ trinton.whiteout_empty_staves(
     score=score,
     voice_names=["guitar 1 voice", "guitar 2 voice", "guitar 3 voice", "viola 1 voice"],
     cutaway="blank",
-    tag=None
+    tag=None,
 )
 
 # make sc file

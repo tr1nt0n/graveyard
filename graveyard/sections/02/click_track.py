@@ -346,7 +346,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.attachment_command(
-        attachments=[abjad.Markup(r"\markup { tap }")],
+        attachments=[abjad.Markup(r"\markup { ring }")],
         selector=trinton.pleaves(),
         direction=abjad.UP,
     ),
@@ -580,7 +580,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.attachment_command(
-        attachments=[abjad.Markup(r"\markup { tap }")],
+        attachments=[abjad.Markup(r"\markup { ring }")],
         selector=trinton.pleaves(),
         direction=abjad.UP,
     ),
@@ -873,7 +873,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.hooked_spanner_command(
-        string="tap",
+        string="ring",
         padding=6,
         right_padding=4,
         selector=trinton.select_leaves_by_index([0, -1]),
@@ -1129,7 +1129,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.hooked_spanner_command(
-        string="tap",
+        string="ring",
         padding=7,
         right_padding=3,
         selector=trinton.select_leaves_by_index([0, -1]),
@@ -1379,7 +1379,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.hooked_spanner_command(
-        string="tap",
+        string="ring",
         padding=7,
         right_padding=3,
         selector=trinton.select_leaves_by_index([0, -1]),
@@ -1503,7 +1503,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.hooked_spanner_command(
-        string="tap",
+        string="ring",
         padding=7,
         right_padding=3,
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),

@@ -774,12 +774,9 @@ trinton.make_music(
     ),
     trinton.attachment_command(
         attachments=[
-            abjad.LilyPondLiteral(
-                r"\once \revert Staff.BarLine.bar-extent",
-                "before"
-            ),
+            abjad.LilyPondLiteral(r"\once \revert Staff.BarLine.bar-extent", "before"),
         ],
-        selector=trinton.select_leaves_by_index([0])
+        selector=trinton.select_leaves_by_index([0]),
     ),
     trinton.notehead_bracket_command(),
     trinton.beam_durations(
@@ -3181,7 +3178,7 @@ trinton.whiteout_empty_staves(
     score=score,
     voice_names=["guitar 1 voice", "guitar 2 voice", "guitar 3 voice", "viola 1 voice"],
     cutaway="blank",
-    tag=None
+    tag=None,
 )
 
 # make sc file

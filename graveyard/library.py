@@ -497,13 +497,8 @@ def invisible_tuplet_brackets():
 def reset_line_positions(score, voice_names):
     voices = [score[_] for _ in voice_names]
 
-    # line_whitespace = abjad.LilyPondLiteral(
-    #     r"\once \override Staff.StaffSymbol.transparent = ##t", "opening"
-    # )
-
     reset = abjad.LilyPondLiteral(
-        r"\once \revert Staff.StaffSymbol.line-positions",
-        "before"
+        r"\once \revert Staff.StaffSymbol.line-positions", "before"
     )
 
     for voice in voices:
@@ -518,10 +513,7 @@ def reset_line_positions(score, voice_names):
                 relevant_shards.append(shard)
 
         for shard in relevant_shards:
-            abjad.attach(
-                reset,
-                shard[0]
-            )
+            abjad.attach(reset, shard[0])
 
 
 def imbrication_command(pitches):

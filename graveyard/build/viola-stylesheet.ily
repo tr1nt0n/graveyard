@@ -9,6 +9,8 @@
 \include "/Users/trintonprater/trinton/lilypond/trinton-markups.ily"
 \include "/Users/trintonprater/abjad-ext-microtones/abjadext/microtones/lilypond/ekmelos-ji-accidental-markups.ily"
 
+afterGraceFraction = #(cons 15 16)
+
 \header {
     dedication = \markup \fontsize #3 \center-column {\line \override #'(font-name . "Bodoni72 Book Italic") { { to } \override #'(font-name . "Bodoni72 Book") { Tracy } } \fontsize #0.25 \with-color #white "."}
     title = \markup \override #'(font-name . "Bodoni72 Book") \fontsize #8 \center-column { \line { G r a v e y a r d \hspace #3 D i r t } \fontsize #0.01 \with-color #white "."}

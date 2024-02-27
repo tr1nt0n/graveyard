@@ -317,7 +317,6 @@ trinton.make_music(
 )
 
 
-
 trinton.render_file(
     score=score,
     segment_path="/Users/trintonprater/scores/graveyard/graveyard/sections/04",

@@ -46,12 +46,19 @@
             s1 * 5/16
               %! +SCORE
             \break
+            \once \override Score.BarLine.transparent = ##f
+            \once \override MultiMeasureRest.transparent = ##t
+            \once \override Score.TimeSignature.stencil = ##f
+            \time 1/16
+            R1 * 1/16
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
+            \stopTextSpan
+            \once \override Score.BarLine.transparent = ##f
             \tweak text "×5" \startMeasureSpanner
             \bar ".|:"
             \once \override Score.BarLine.transparent = ##f
             \time 1/8
             s1 * 1/8
-            \stopTextSpan
             #(ly:expect-warning "strange time signature found")
             \time 1/10
             s1 * 1/10
@@ -117,6 +124,13 @@
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"66" } }
             \time 10/32
             s1 * 5/16
+            \once \override Score.BarLine.transparent = ##f
+            \once \override MultiMeasureRest.transparent = ##t
+            \once \override Score.TimeSignature.stencil = ##f
+            \time 1/16
+            R1 * 1/16
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
+            \once \override Score.BarLine.transparent = ##f
             \time 12/32
             s1 * 3/8
             \time 10/32
@@ -130,9 +144,16 @@
             \startTextSpan
             \time 13/32
             s1 * 13/32
+            \once \override Score.BarLine.transparent = ##f
+            \once \override MultiMeasureRest.transparent = ##t
+            \once \override Score.TimeSignature.stencil = ##f
+            \time 1/16
+            R1 * 1/16
+            - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ulongfermata" }
+            \stopTextSpan
+            \once \override Score.BarLine.transparent = ##f
             \time 10/32
             s1 * 5/16
-            \stopTextSpan
             \time 12/32
             s1 * 3/8
             \time 10/32
@@ -166,161 +187,211 @@
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Electric Guitar }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { e. git. }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 15/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
@@ -336,108 +407,133 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \once \revert Staff.StaffSymbol.line-positions
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 15/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
@@ -472,42 +568,56 @@
                                     \once \override Rest.transparent = ##t
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \once \revert Staff.StaffSymbol.line-positions
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
@@ -547,24 +657,35 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \once \revert Staff.StaffSymbol.line-positions
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
@@ -579,161 +700,211 @@
                                 {
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 15/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
@@ -835,8 +1006,12 @@
                                         af16
                                         ef'16
                                         - \accent
+                                        \ff
                                         ]
                                     }
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
                                     b8
                                     - \marcato
                                     \fff
@@ -941,6 +1116,9 @@
                                     \stopStaff \startStaff
                                     s1 * 13/32
                                     s1 * 5/16
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
                                     s1 * 3/8
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) (ly:make-duration 5 0))
@@ -1014,6 +1192,9 @@
                                     ]
                                     r4
                                     r16
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
                                     s1 * 5/16
                                     r16.
                                     r16
@@ -1074,84 +1255,105 @@
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Viola }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { vla. }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \once \revert Staff.StaffSymbol.line-positions
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 15/32
                                     \stopStaff \startStaff
@@ -1164,7 +1366,7 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 7 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 7 } \hspace #0.5 }
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -1177,8 +1379,8 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 2 7 \hspace #0.5 } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 7 7 \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 2 7 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 7 7 }
                                     \startTextSpan
                                     g'32
                                     \!
@@ -1188,102 +1390,133 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/10
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \once \revert Staff.StaffSymbol.line-positions
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/32
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \once \revert Staff.StaffSymbol.line-positions
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/16
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
@@ -1300,6 +1533,7 @@
                                     s1 * 5/16
                                     s1 * 3/8
                                     s1 * 5/16
+                                    \boxed-markup "Viola" 1
                                     r16.
                                     \staff-line-count 4
                                     \clef "percussion"
@@ -1312,7 +1546,7 @@
                                     \startTextSpanOne
                                     - \tweak padding #6
                                     - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "ring" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -4
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
@@ -1348,7 +1582,7 @@
                                     [
                                     - \tweak padding #10.5
                                     - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "ring" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     - \tweak padding #7
@@ -1379,7 +1613,7 @@
                                     \startTextSpanOne
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
-                                    \times 15/18
+                                    \times 5/6
                                     {
                                         b8
                                         \pp
@@ -1429,7 +1663,7 @@
                                     \startTextSpanOne
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
-                                    \times 10/12
+                                    \times 5/6
                                     {
                                         g8
                                         \pp
@@ -1501,12 +1735,15 @@
                                         \stopTextSpanOne
                                         ]
                                     }
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
                                     <<
                                         \context Voice = "On_Beat_Grace_Container"
                                         {
                                               %! abjad.on_beat_grace_container(1)
                                             \set fontSize = #-4
-                                            \slash
+                                            \my-hack-slash
                                             \voiceOne
                                             d''16 * 4/25
                                             - \downbow
@@ -1522,6 +1759,8 @@
                                         \context Voice = "viola 2 voice Anchor"
                                         {
                                             \staff-line-count 5
+                                            \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+                                            \once \revert Staff.BarLine.bar-extent
                                             \once \revert Staff.BarLine.bar-extent
                                             \clef "altovarC"
                                             \voiceTwo
@@ -1532,6 +1771,7 @@
                                             - \tweak stencil #constante-hairpin
                                             \<
                                             \override Staff.BarLine.bar-extent = #'(-2 . 2)
+                                            \once \override Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-3 . 0)
                                         }
                                     >>
                                     \tweak edge-height #'(0.7 . 0)
@@ -1542,7 +1782,7 @@
                                             {
                                                   %! abjad.on_beat_grace_container(1)
                                                 \set fontSize = #-4
-                                                \slash
+                                                \my-hack-slash
                                                 \voiceOne
                                                 d''16 * 1/5
                                                 - \downbow
@@ -1568,7 +1808,7 @@
                                         {
                                               %! abjad.on_beat_grace_container(1)
                                             \set fontSize = #-4
-                                            \slash
+                                            \my-hack-slash
                                             \voiceOne
                                             d''16 * 4/25
                                             - \downbow
@@ -1674,7 +1914,7 @@
                                             {
                                                   %! abjad.on_beat_grace_container(1)
                                                 \set fontSize = #-4
-                                                \slash
+                                                \my-hack-slash
                                                 \voiceOne
                                                 d''16 * 1/5
                                                 - \downbow
@@ -1689,6 +1929,7 @@
                                             }
                                             \context Voice = "viola 2 voice Anchor"
                                             {
+                                                \once \revert Staff.BarLine.bar-extent
                                                 \voiceTwo
                                                 <d' d''>8
                                                 - \marcato
@@ -1696,6 +1937,7 @@
                                                 [
                                                 - \tweak stencil #constante-hairpin
                                                 \<
+                                                \once \override Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-3 . 0)
                                             }
                                         >>
                                     }
@@ -1707,7 +1949,7 @@
                                             {
                                                   %! abjad.on_beat_grace_container(1)
                                                 \set fontSize = #-4
-                                                \slash
+                                                \my-hack-slash
                                                 \voiceOne
                                                 d''16 * 1/5
                                                 - \downbow
@@ -1804,10 +2046,15 @@
                                     c'32
                                     \stopTextSpan
                                     ]
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 11) (ly:make-duration 4 0))
                                     \times 11/12
                                     {
+                                        \revert Staff.BarLine.bar-extent
                                         \staff-line-count 4
                                         \clef "percussion"
                                         \tweak style #'cross
@@ -1821,7 +2068,7 @@
                                         \startTextSpanOne
                                         - \tweak padding #7
                                         - \abjad-dashed-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "ring" } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -5
                                         \startTextSpan
                                         \override Staff.BarLine.bar-extent = #'(-1.5 . 1.5)
@@ -1882,6 +2129,11 @@
                                     c'8
                                     \ff
                                     \stopTextSpan
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    \revert Staff.BarLine.bar-extent
                                     \staff-line-count 4
                                     \clef "percussion"
                                     \tweak style #'cross
@@ -1889,7 +2141,7 @@
                                     :128
                                     \p
                                     - \abjad-dashed-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \upright { "tap" } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "ring" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
@@ -1996,7 +2248,11 @@
                                     c'16
                                     - \accent
                                     c'16
+                                    \ff
                                     ]
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
                                     c'8
                                     - \marcato
                                     \fff
@@ -2067,6 +2323,7 @@
                                     \once \override Stem.stencil = ##f
                                     \once \override StemTremolo.X-offset = 0.8
                                     \once \override StemTremolo.Y-offset = 1.5
+                                    \once \override Tie.stencil = ##f
                                     c'16
                                     :128
                                     \mp
@@ -2088,7 +2345,6 @@
                                     - \tweak padding #3
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "bellow" } \hspace #0.5 }
-                                    - \tweak bound-details.right.padding -4
                                     \startTextSpan
                                     \revert Staff.Stem.stemlet-length
                                     c'32
@@ -2096,24 +2352,55 @@
                                     \f
                                     ]
                                     r32
+                                    \afterGrace
                                     c'8..
                                     :64
                                     \mf
-                                    - \tweak circled-tip ##t
                                     \>
-                                    ~
+                                    {
+                                        \once \override Stem.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.no-ledgers = ##t
+                                        \once \override Accidental.stencil = ##f
+                                        \once \override NoteHead.transparent = ##t
+                                        c'16
+                                        \p
+                                        \stopTextSpan
+                                    }
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
+                                    \afterGrace
                                     c'4.
                                     :32
-                                    \stopTextSpan
+                                    \p
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    - \tweak padding #3
+                                    - \abjad-dashed-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \upright { "bellow" } \hspace #0.5 }
+                                    \startTextSpan
+                                    {
+                                        \once \override Stem.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.no-ledgers = ##t
+                                        \once \override Accidental.stencil = ##f
+                                        \once \override NoteHead.transparent = ##t
+                                        c'16
+                                        \!
+                                        \stopTextSpan
+                                    }
                                     s1 * 5/16
-                                    \!
                                     s1 * 11/32
                                     s1 * 13/32
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
                                     \tweak style #'cross
                                     c'16.
                                     :128
                                     \p
-                                    - \tweak padding #3
+                                    - \tweak padding #3.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "key" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1
@@ -2201,6 +2488,9 @@
                                     s1 * 5/16
                                     s1 * 3/8
                                     s1 * 5/16
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
                                     s1 * 1/8
                                     s1 * 1/10
                                     s1 * 1/8
@@ -2253,11 +2543,11 @@
                                     - \tweak padding #3
                                     - \abjad-dashed-line-with-arrow
                                     - \tweak bound-details.left.text \markup \concat { \tremolo-stretto \hspace #0.5 }
+                                    - \tweak bound-details.right.text \tremolo-moderato
                                     \startTextSpanOne
                                     - \tweak padding #5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "key" } \hspace #0.5 }
-                                    - \tweak bound-details.right.padding -5
                                     \startTextSpan
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
@@ -2265,8 +2555,24 @@
                                     \tweak style #'cross
                                     c'16.
                                     ~
+                                    \afterGrace
                                     \tweak style #'cross
                                     c'16
+                                    {
+                                        \once \override Stem.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.no-ledgers = ##t
+                                        \once \override Accidental.stencil = ##f
+                                        \once \override NoteHead.transparent = ##t
+                                        \tweak style #'cross
+                                        c'16
+                                        \mp
+                                        \stopTextSpan
+                                        \stopTextSpanOne
+                                    }
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 11) (ly:make-duration 4 0))
                                     \times 11/12
@@ -2274,7 +2580,6 @@
                                         \tweak style #'cross
                                         c'4
                                         \mp
-                                        \stopTextSpanOne
                                         - \tweak circled-tip ##t
                                         \>
                                         - \tweak padding #3
@@ -2282,6 +2587,11 @@
                                         - \tweak bound-details.left.text \markup \concat { \tremolo-moderato \hspace #0.5 }
                                         - \tweak bound-details.right.text \tremolo-stretto
                                         \startTextSpanOne
+                                        - \tweak padding #5
+                                        - \abjad-dashed-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \upright { "key" } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -5
+                                        \startTextSpan
                                         \tweak style #'cross
                                         c'8
                                         - \accent
@@ -2333,10 +2643,13 @@
                                         \!
                                         \stopTextSpan
                                     }
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    s1 * 1/16
+                                    \stopStaff \startStaff
                                     \tweak style #'cross
                                     c'16.
                                     :128
-                                    - \tweak padding #3
+                                    - \tweak padding #3.5
                                     - \abjad-dashed-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \upright { "key" } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1
