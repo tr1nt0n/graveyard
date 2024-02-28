@@ -20,9 +20,9 @@ afterGraceFraction = #(cons 15 16)
 
 \layout {
     \accidentalStyle neo-modern
-    ragged-bottom = ##t
+    % ragged-bottom = ##t
     ragged-last = ##t
-    ragged-right = ##t
+    % ragged-right = ##t
     \context {
         \name TimeSignatureContext
         \numericTimeSignature

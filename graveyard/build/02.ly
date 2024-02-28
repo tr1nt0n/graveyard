@@ -18,6 +18,7 @@
             \time 1/16
             R1 * 1/16
             - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
+            \break
             \once \override Score.BarLine.transparent = ##f
             \time 9/16
             s1 * 9/16
@@ -39,6 +40,7 @@
             \time 1/16
             R1 * 1/16
             - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ufermata" }
+            \break
             \break
             \once \override Score.BarLine.transparent = ##f
             \time 4/16

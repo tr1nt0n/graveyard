@@ -2840,6 +2840,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     \clef "percussion"
                                     c'16
                                     - \accent
@@ -2859,6 +2861,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -2871,6 +2875,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -2887,6 +2893,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -2899,6 +2907,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -2908,6 +2918,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -3220,6 +3232,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     \clef "percussion"
                                     c'16
                                     - \accent
@@ -3235,6 +3249,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -3244,6 +3260,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -3253,6 +3271,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -3262,6 +3282,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -3271,6 +3293,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -3281,6 +3305,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -3291,6 +3317,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato
@@ -3301,6 +3329,8 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     - \staccato

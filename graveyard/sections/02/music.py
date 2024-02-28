@@ -3684,6 +3684,18 @@ trinton.attach_multiple(
     tag=abjad.Tag("+SCORE"),
 )
 
+# trinton.attach_multiple(
+#     score=score,
+#     voice="Global Context",
+#     leaves=[
+#         3, 9
+#     ],
+#     attachments=[
+#         abjad.LilyPondLiteral(r"\break", site="after"),
+#     ],
+#     tag=abjad.Tag("+PARTS"),
+# )
+
 trinton.attach_multiple(
     score=score,
     voice="Global Context",

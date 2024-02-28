@@ -2003,6 +2003,8 @@
                                         ]
                                     }
                                     \revert TupletNumber.text
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     \fff
@@ -2050,6 +2052,8 @@
                                     c'16
                                     \stopTextSpanOne
                                     ]
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     [
@@ -2230,6 +2234,28 @@
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
                                         \once \override Tie.stencil = ##f
+                                          %! +PARTS
+                                    %%% \revert Staff.BarLine.bar-extent
+                                          %! +PARTS
+                                    %%% \revert Staff.BarLine.bar-extent
+                                          %! +PARTS
+                                    %%% \revert Staff.BarLine.bar-extent
+                                          %! +PARTS
+                                    %%% \revert Staff.BarLine.bar-extent
+                                          %! +PARTS
+                                    %%% \revert Staff.BarLine.bar-extent
+                                          %! +PARTS
+                                    %%% \revert Staff.BarLine.bar-extent
+                                          %! +PARTS
+                                    %%% \revert Staff.BarLine.bar-extent
+                                          %! +PARTS
+                                    %%% \revert Staff.BarLine.bar-extent
+                                          %! +PARTS
+                                    %%% \revert Staff.BarLine.bar-extent
+                                          %! +PARTS
+                                    %%% \revert Staff.BarLine.bar-extent
+                                          %! +PARTS
+                                    %%% \revert Staff.BarLine.bar-extent
                                         c'\breve..
                                           %! abjad.glissando(7)
                                         - \abjad-zero-padding-glissando
@@ -2280,6 +2306,8 @@
                                         \laissezVibrer
                                     }
                                     \revert TupletNumber.text
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 1/16
                                     \stopStaff \startStaff
@@ -2750,6 +2778,8 @@
                                     c'8
                                     ]
                                     s1 * 3/16
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 1/16
                                     \stopStaff \startStaff
@@ -2767,6 +2797,8 @@
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 1/16
                                     \stopStaff \startStaff
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     c'8
                                     - \accent
                                     \ff
@@ -3596,6 +3628,8 @@
                                     c'16
                                     \!
                                     ]
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     s1 * 1/16
                                     \once \override Beam.stencil = ##f
                                     \once \override Dots.stencil = ##f
@@ -3603,9 +3637,13 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \marcato
                                     \fff
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     s1 * 1/16
                                     \once \override Beam.stencil = ##f
                                     \once \override Dots.stencil = ##f
@@ -3613,9 +3651,13 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \marcato
                                     \fff
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     s1 * 1/16
                                     \once \override Beam.stencil = ##f
                                     \once \override Dots.stencil = ##f
@@ -3623,9 +3665,13 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \marcato
                                     \fff
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     s1 * 1/16
                                     \once \override Beam.stencil = ##f
                                     \once \override Dots.stencil = ##f
@@ -3633,9 +3679,13 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \marcato
                                     \fff
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     s1 * 1/16
                                     \once \override Beam.stencil = ##f
                                     \once \override Dots.stencil = ##f
@@ -3643,9 +3693,13 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \marcato
                                     \fff
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     s1 * 1/16
                                     \override TupletNumber.text = \markup { "37\"" }
                                     \times 4/7
@@ -3692,6 +3746,8 @@
                                         \laissezVibrer
                                     }
                                     \revert TupletNumber.text
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 1/16
                                     \stopStaff \startStaff
@@ -4359,11 +4415,19 @@
                                         ]
                                     }
                                     \revert TupletNumber.text
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     c'16
                                     - \accent
                                     \fff
                                     \stopTextSpanTwo
                                     [
+                                      %! +PARTS
+                                %%% \override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)
+                                      %! +PARTS
+                                %%% \override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)
                                     c'16
                                     \mf
                                     ]
@@ -4380,8 +4444,16 @@
                                     [
                                     c'16
                                     \mf
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     c'16
                                     ]
+                                      %! +PARTS
+                                %%% \override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)
+                                      %! +PARTS
+                                %%% \override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)
                                     c'16
                                     - \accent
                                     \fff
@@ -4409,7 +4481,23 @@
                                       %! +SCORE
                                     \stopTextSpanOne
                                     ]
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
+                                      %! +PARTS
+                                %%% \revert Staff.BarLine.bar-extent
                                     s1 * 7/16
+                                      %! +PARTS
+                                %%% \override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)
+                                      %! +PARTS
+                                %%% \override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)
+                                      %! +PARTS
+                                %%% \override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)
+                                      %! +PARTS
+                                %%% \override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)
                                     \once \override TupletBracket.stencil = ##f
                                     \once \override TupletNumber.stencil = ##f
                                     \tweak text #tuplet-number::calc-fraction-text

@@ -1354,6 +1354,23 @@ trinton.make_music(
     preprocessor=trinton.fuse_preprocessor((2, 2)),
 )
 
+# beautification
+
+for measure in [22, 23, 26, 31]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        trinton.attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.BarLine.bar-extent", site="before"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0]),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        voice=score["viola 2 voice"],
+    )
+
 # globals
 
 library.write_instrument_names(score=score)

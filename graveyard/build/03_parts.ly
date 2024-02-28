@@ -2002,7 +2002,11 @@
                                     \mf
                                     \stopTextSpan
                                     ]
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     s1 * 1/16
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 1/16
                                     \stopStaff \startStaff
@@ -2046,6 +2050,8 @@
                                     c'32
                                     \stopTextSpan
                                     ]
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 1/16
                                     \stopStaff \startStaff
@@ -2129,6 +2135,8 @@
                                     c'8
                                     \ff
                                     \stopTextSpan
+                                      %! +PARTS
+                                    \revert Staff.BarLine.bar-extent
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     s1 * 1/16
                                     \stopStaff \startStaff

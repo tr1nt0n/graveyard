@@ -56,8 +56,8 @@ afterGraceFraction = #(cons 15 16)
         \numericTimeSignature
         \accepts TimeSignatureContext
         \remove Bar_number_engraver
-        % proportionalNotationDuration = #(ly:make-moment 1 30)
-        \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/128)
+        proportionalNotationDuration = #(ly:make-moment 1 30)
+        % \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/128)
 
         \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 2) (minimum distance . 2) (padding . 8) (stretchability . 0))
 

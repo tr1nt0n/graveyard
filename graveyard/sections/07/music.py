@@ -271,16 +271,6 @@ trinton.attach_multiple(
 trinton.attach_multiple(
     score=score,
     voice="Global Context",
-    leaves=[0],
-    attachments=[
-        abjad.LilyPondLiteral(r"\pageBreak", "after"),
-    ],
-    tag=abjad.Tag("+SCORE"),
-)
-
-trinton.attach_multiple(
-    score=score,
-    voice="Global Context",
     leaves=[
         2,
     ],

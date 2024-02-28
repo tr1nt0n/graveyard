@@ -1061,6 +1061,62 @@ for voice_name in library.main_voice_names:
         abjad.select.tuplets(score[voice_name])[-1]
     ).TupletNumber.text = r'\markup { "37\"" }'
 
+
+# beautification
+
+for measure in [4, 8, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 58]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        trinton.attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.BarLine.bar-extent", site="before"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0]),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        voice=score["viola 2 voice"],
+    )
+
+for measure in [27, 29, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 58]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        trinton.attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.BarLine.bar-extent", site="before"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0]),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        voice=score["guitar 4 voice"],
+    )
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (27, 29)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(r"\revert Staff.BarLine.bar-extent", site="before"),
+            abjad.LilyPondLiteral(
+                r"\override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)",
+                site="absolute_after",
+            ),
+            abjad.LilyPondLiteral(r"\revert Staff.BarLine.bar-extent", site="before"),
+            abjad.LilyPondLiteral(
+                r"\override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)",
+                site="absolute_after",
+            ),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [0, 6, -1, -1],
+        ),
+        tag=abjad.Tag("+PARTS"),
+    ),
+    voice=score["accordion 1 voice"],
+)
+
 # globals
 
 library.write_instrument_names(score=score)

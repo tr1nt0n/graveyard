@@ -25,8 +25,6 @@
             ^ \markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"44" } }
             - \tweak padding #8
             \boxed-markup "VII. The Play of Thorns ( iii ) / WIEDER" 3
-              %! +SCORE
-            \pageBreak
             #(ly:expect-warning "strange time signature found")
             \time 6/3
             s1 * 2
