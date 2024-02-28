@@ -1,9 +1,9 @@
   %! abjad.LilyPondFile._get_format_pieces()
-\version "2.23.14"
+\version "2.23.81"
   %! abjad.LilyPondFile._get_format_pieces()
 \language "english"
   %! abjad.LilyPondFile._get_format_pieces()
-\version "2.23.14"
+\version "2.23.81"
   %! abjad.LilyPondFile._get_format_pieces()
 \language "english"
 \include "/Users/trintonprater/scores/graveyard/graveyard/build/graveyard-stylesheet.ily"
@@ -87,7 +87,7 @@
             R1 * 1/16
             - \markup \center-column { \abs-fontsize #10 \musicglyph "scripts.ulongfermata" }
             \bar "||"
-            \break
+            \pageBreak
             \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
         }
@@ -301,11 +301,13 @@
                                     r4
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 9/8
                                     \stopStaff \startStaff
@@ -338,11 +340,13 @@
                                     r4
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
@@ -390,17 +394,19 @@
                                     r8
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 9/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/4
                                     \stopStaff \startStaff
                                     r2
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
-                                    \times 2/3
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 4) (ly:make-duration 4 0))
+                                    \times 4/6
                                     {
                                         b64
                                         \laissezVibrer
@@ -465,8 +471,8 @@
                                     r4
                                     r4
                                     r8
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
-                                    \times 2/3
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 4) (ly:make-duration 4 0))
+                                    \times 4/6
                                     {
                                         b64
                                         \laissezVibrer
@@ -529,6 +535,7 @@
                                     r4
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/8
                                     \stopStaff \startStaff
@@ -616,16 +623,19 @@
                                     \revert TupletNumber.text
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
@@ -641,126 +651,147 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 9/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 9/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 9/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
@@ -775,106 +806,127 @@
                                 {
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 9/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 9/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/4
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 13/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 9/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
@@ -897,6 +949,7 @@
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
                                         \clef "treble"
                                         <cs' d' cs'' e''>\breve.
                                         ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-4;4-o;3-6;2-5;1-o;" }
@@ -910,6 +963,7 @@
                                         \once \override NoteHead.duration-log = 2
                                         \once \override NoteHead.no-ledgers = ##t
                                         \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
                                         \once \override NoteHead.transparent = ##t
                                         <cs' d' cs'' e''>16
                                     }
@@ -917,69 +971,15 @@
                                     r4
                                     \once \override TupletBracket.stencil = ##f
                                     \once \override TupletNumber.stencil = ##f
-                                    \times 32/49
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 64/49
                                     {
                                         \once \override Beam.stencil = ##f
                                         \once \override Dots.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
-                                        <cs' d' cs'' e''>2.
-                                        ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-4;4-o;3-6;2-5;1-o;" }
-                                        - \abjad-zero-padding-glissando
-                                        \glissando
-                                        \once \override Accidental.stencil = ##f
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
-                                        \once \override NoteHead.no-ledgers = ##t
-                                        \once \override Stem.stencil = ##f
-                                        \once \override NoteHead.transparent = ##t
-                                        <cs' d' cs'' e''>64
-                                    }
-                                    r4.
-                                    r4
-                                    s1 * 5/4
-                                    s1 * 9/8
-                                    r4.
-                                    \once \override TupletBracket.stencil = ##f
-                                    \once \override TupletNumber.stencil = ##f
-                                    \times 32/49
-                                    {
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
-                                        \once \override Stem.stencil = ##f
-                                        <bf' d'' af'' b''>8.
-                                        ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-x;4-8;3-7;2-9;1-7;" }
-                                        - \abjad-zero-padding-glissando
-                                        \glissando
-                                        \once \override Accidental.stencil = ##f
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
-                                        \once \override NoteHead.no-ledgers = ##t
-                                        \once \override Stem.stencil = ##f
-                                        \once \override NoteHead.transparent = ##t
-                                        <bf' d'' af'' b''>256
-                                    }
-                                    r8
-                                    r4
-                                    s1 * 3/2
-                                    s1 * 1
-                                    r4.
-                                    \once \override TupletBracket.stencil = ##f
-                                    \once \override TupletNumber.stencil = ##f
-                                    \times 32/49
-                                    {
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
-                                        \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
                                         <cs' d' cs'' e''>4.
                                         ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-4;4-o;3-6;2-5;1-o;" }
                                         - \abjad-zero-padding-glissando
@@ -991,51 +991,28 @@
                                         \once \override NoteHead.duration-log = 2
                                         \once \override NoteHead.no-ledgers = ##t
                                         \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
                                         \once \override NoteHead.transparent = ##t
                                         <cs' d' cs'' e''>128
                                     }
-                                    r8
-                                    s1 * 9/8
+                                    r4.
+                                    r4
                                     s1 * 5/4
-                                    r2
+                                    s1 * 9/8
+                                    r4.
                                     \once \override TupletBracket.stencil = ##f
                                     \once \override TupletNumber.stencil = ##f
-                                    \times 32/49
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 64/49
                                     {
                                         \once \override Beam.stencil = ##f
                                         \once \override Dots.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
-                                        <e d' e' c'' e'' f''>4.
-                                        ^ \markup \override #'(size . 1.5) { \fret-diagram "6-o;5-7;4-o;3-5;2-6;1-o;" }
-                                        - \abjad-zero-padding-glissando
-                                        \glissando
-                                        \once \override Accidental.stencil = ##f
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
-                                        \once \override NoteHead.no-ledgers = ##t
-                                        \once \override Stem.stencil = ##f
-                                        \once \override NoteHead.transparent = ##t
-                                        <e d' e' c'' e'' f''>128
-                                    }
-                                    r4
-                                    r2..
-                                    r4
-                                    r4
-                                    r8
-                                    \once \override TupletBracket.stencil = ##f
-                                    \once \override TupletNumber.stencil = ##f
-                                    \times 32/49
-                                    {
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
-                                        \once \override Stem.stencil = ##f
-                                        <bf' d'' af'' b''>4.
+                                        \once \override Tie.stencil = ##f
+                                        \once \override TupletBracket.bracket-visibility = ##f
+                                        <bf' d'' af'' b''>16.
                                         ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-x;4-8;3-7;2-9;1-7;" }
                                         - \abjad-zero-padding-glissando
                                         \glissando
@@ -1046,8 +1023,101 @@
                                         \once \override NoteHead.duration-log = 2
                                         \once \override NoteHead.no-ledgers = ##t
                                         \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
                                         \once \override NoteHead.transparent = ##t
-                                        <bf' d'' af'' b''>128
+                                        <bf' d'' af'' b''>512
+                                    }
+                                    r8
+                                    r4
+                                    s1 * 3/2
+                                    s1 * 1
+                                    r4.
+                                    \once \override TupletBracket.stencil = ##f
+                                    \once \override TupletNumber.stencil = ##f
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 64/49
+                                    {
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
+                                        \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        <cs' d' cs'' e''>8.
+                                        ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-4;4-o;3-6;2-5;1-o;" }
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        \once \override Accidental.stencil = ##f
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
+                                        \once \override NoteHead.no-ledgers = ##t
+                                        \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        \once \override NoteHead.transparent = ##t
+                                        <cs' d' cs'' e''>256
+                                    }
+                                    r8
+                                    s1 * 9/8
+                                    s1 * 5/4
+                                    r2
+                                    \once \override TupletBracket.stencil = ##f
+                                    \once \override TupletNumber.stencil = ##f
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 64/49
+                                    {
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
+                                        \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        <e d' e' c'' e'' f''>8.
+                                        ^ \markup \override #'(size . 1.5) { \fret-diagram "6-o;5-7;4-o;3-5;2-6;1-o;" }
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        \once \override Accidental.stencil = ##f
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
+                                        \once \override NoteHead.no-ledgers = ##t
+                                        \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        \once \override NoteHead.transparent = ##t
+                                        <e d' e' c'' e'' f''>256
+                                    }
+                                    r4
+                                    r2..
+                                    r4
+                                    r4
+                                    r8
+                                    \once \override TupletBracket.stencil = ##f
+                                    \once \override TupletNumber.stencil = ##f
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \times 64/49
+                                    {
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
+                                        \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        <bf' d'' af'' b''>8.
+                                        ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-x;4-8;3-7;2-9;1-7;" }
+                                        - \abjad-zero-padding-glissando
+                                        \glissando
+                                        \once \override Accidental.stencil = ##f
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
+                                        \once \override NoteHead.no-ledgers = ##t
+                                        \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        \once \override NoteHead.transparent = ##t
+                                        <bf' d'' af'' b''>256
                                     }
                                     r2.
                                     r4
@@ -1063,6 +1133,7 @@
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
                                         <cs' d' cs'' e''>1.
                                         ^ \markup \override #'(size . 1.5) { \fret-diagram "6-x;5-4;4-o;3-6;2-5;1-o;" }
                                         - \abjad-zero-padding-glissando
@@ -1074,6 +1145,7 @@
                                         \once \override NoteHead.duration-log = 2
                                         \once \override NoteHead.no-ledgers = ##t
                                         \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
                                         \once \override NoteHead.transparent = ##t
                                         <cs' d' cs'' e''>32
                                     }
@@ -1113,8 +1185,8 @@
                                     \pp
                                     ]
                                     \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 3 0))
-                                    \times 20/16
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 10) (ly:make-duration 4 0))
+                                    \times 10/8
                                     {
                                         \arpeggioArrowDown
                                         <d' a'>4
@@ -1150,7 +1222,7 @@
                                     }
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 3 0))
-                                    \times 12/16
+                                    \times 3/4
                                     {
                                         \arpeggioArrowUp
                                         <b f'>4
@@ -1216,8 +1288,8 @@
                                     \pp
                                     ]
                                     \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 3 0))
-                                    \times 20/16
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 10) (ly:make-duration 4 0))
+                                    \times 10/8
                                     {
                                         \arpeggioArrowUp
                                         <f' a'>4
@@ -1305,6 +1377,7 @@
                                     \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Viola }
                                     \set GrandStaff.shortInstrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { vla. }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
@@ -1317,7 +1390,7 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 } \hspace #0.5 }
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -1348,8 +1421,8 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 9 \hspace #0.5 } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 1 9 \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 9 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 1 9 }
                                     \startTextSpan
                                     \once \override Dots.staff-position = #2
                                       %! abjad.glissando(1)
@@ -1377,12 +1450,13 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/8
                                     \stopStaff \startStaff
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 3 0))
-                                    \times 14/12
+                                    \times 7/6
                                     {
                                         a4
                                         - \downbow
@@ -1391,7 +1465,7 @@
                                         \glissando
                                         - \tweak padding #15
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 } \hspace #0.5 }
                                         \startTextSpan
                                         - \tweak stencil #constante-hairpin
                                         \<
@@ -1402,7 +1476,7 @@
                                         \glissando
                                         - \tweak padding #15
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 9 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 9 } \hspace #0.5 }
                                         \startTextSpan
                                         e'8.
                                         - \downbow
@@ -1413,8 +1487,8 @@
                                         \glissando
                                         - \tweak padding #15
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 9 \hspace #0.5 } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 7 9 \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 9 } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 7 9 }
                                         \startTextSpan
                                         g16
                                         \!
@@ -1425,6 +1499,7 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 5/4
                                     \stopStaff \startStaff
@@ -1441,7 +1516,7 @@
                                         \glissando
                                         - \tweak padding #14.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 7 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 7 } \hspace #0.5 }
                                         \startTextSpan
                                         \>
                                         ef'8
@@ -1455,7 +1530,7 @@
                                         \glissando
                                         - \tweak padding #14.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 6 7 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 6 7 } \hspace #0.5 }
                                         \startTextSpan
                                         g4.
                                         - \downbow
@@ -1465,8 +1540,8 @@
                                         \glissando
                                         - \tweak padding #14.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 7 \hspace #0.5 } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 7 7 \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 7 } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 7 7 }
                                         \startTextSpan
                                         a'8
                                         \ff
@@ -1476,6 +1551,7 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 7/8
                                     \stopStaff \startStaff
@@ -1487,7 +1563,7 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 2 5 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 2 5 } \hspace #0.5 }
                                     \startTextSpan
                                     \>
                                     a'8
@@ -1499,8 +1575,8 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 5 5 \hspace #0.5 } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 0 5 \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 5 5 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 0 5 }
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -1514,7 +1590,7 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 5 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 5 } \hspace #0.5 }
                                     \startTextSpan
                                     f'8
                                     \stopTextSpan
@@ -1522,8 +1598,8 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 5 \hspace #0.5 } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 5 5 \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 5 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 5 5 }
                                     \startTextSpan
                                     \<
                                     bf16
@@ -1538,7 +1614,7 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 7 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 7 } \hspace #0.5 }
                                     \startTextSpan
                                     f'8
                                     \stopTextSpan
@@ -1547,8 +1623,8 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 7 \hspace #0.5 } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 1 7 \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 7 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 1 7 }
                                     \startTextSpan
                                     \<
                                     f16
@@ -1563,8 +1639,8 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 \hspace #0.5 } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 2 9 \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 2 9 }
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -1575,6 +1651,7 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
@@ -1587,8 +1664,8 @@
                                     \glissando
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 5 \hspace #0.5 } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 2 5 \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 5 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 2 5 }
                                     \startTextSpan
                                     g'16
                                     )
@@ -1601,7 +1678,7 @@
                                     \glissando
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 9 9 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 9 9 } \hspace #0.5 }
                                     \startTextSpan
                                     a'8
                                     \stopTextSpan
@@ -1612,7 +1689,7 @@
                                     \>
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 2 9 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 2 9 } \hspace #0.5 }
                                     \startTextSpan
                                     a16
                                     \sff
@@ -1622,7 +1699,7 @@
                                     \glissando
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 9 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 9 } \hspace #0.5 }
                                     \startTextSpan
                                     f'8.
                                     - \downbow
@@ -1633,8 +1710,8 @@
                                     \glissando
                                     - \tweak padding #12
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 \hspace #0.5 } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 9 9 \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 9 9 }
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -1646,12 +1723,13 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 9/8
                                     \stopStaff \startStaff
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 2 0))
-                                    \times 20/16
+                                    \times 5/4
                                     {
                                         af4
                                         - \upbow
@@ -1661,7 +1739,7 @@
                                         \glissando
                                         - \tweak padding #14
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 9 9 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 9 9 } \hspace #0.5 }
                                         \startTextSpan
                                         - \tweak stencil #constante-hairpin
                                         \<
@@ -1672,7 +1750,7 @@
                                         \glissando
                                         - \tweak padding #14
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 9 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 9 } \hspace #0.5 }
                                         \startTextSpan
                                         d'4..
                                         - \downbow
@@ -1683,8 +1761,8 @@
                                         \glissando
                                         - \tweak padding #14
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 \hspace #0.5 } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 9 9 \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 9 } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 9 9 }
                                         \startTextSpan
                                         - \tweak stencil #constante-hairpin
                                         \<
@@ -1696,12 +1774,13 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 13) (ly:make-duration 3 0))
-                                    \times 26/24
+                                    \times 13/12
                                     {
                                         fs16
                                         - \downbow
@@ -1712,7 +1791,7 @@
                                         \glissando
                                         - \tweak padding #13.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 7 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 7 } \hspace #0.5 }
                                         \startTextSpan
                                         - \tweak stencil #constante-hairpin
                                         \<
@@ -1725,7 +1804,7 @@
                                         \glissando
                                         - \tweak padding #13.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 7 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 7 } \hspace #0.5 }
                                         \startTextSpan
                                         \>
                                         fs'16
@@ -1744,7 +1823,7 @@
                                         \glissando
                                         - \tweak padding #13.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 7 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 7 7 } \hspace #0.5 }
                                         \startTextSpan
                                         \<
                                         c'16
@@ -1762,7 +1841,7 @@
                                         \glissando
                                         - \tweak padding #13.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 6 7 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 6 7 } \hspace #0.5 }
                                         \startTextSpan
                                         ef'16
                                         - \abjad-zero-padding-glissando
@@ -1786,8 +1865,8 @@
                                         \>
                                         - \tweak padding #13.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 7 \hspace #0.5 } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 2 7 \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 7 } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 2 7 }
                                         \startTextSpan
                                         f16
                                         - \abjad-zero-padding-glissando
@@ -1804,12 +1883,13 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 9/8
                                     \stopStaff \startStaff
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 3 0))
-                                    \times 14/12
+                                    \times 7/6
                                     {
                                         e'4
                                         - \downbow
@@ -1818,7 +1898,7 @@
                                         \glissando
                                         - \tweak padding #14.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 5 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 5 } \hspace #0.5 }
                                         \startTextSpan
                                         - \tweak stencil #constante-hairpin
                                         \<
@@ -1829,7 +1909,7 @@
                                         \glissando
                                         - \tweak padding #14.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 5 \hspace #0.5 } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 4 5 } \hspace #0.5 }
                                         \startTextSpan
                                         e'8.
                                         - \downbow
@@ -1840,8 +1920,8 @@
                                         \glissando
                                         - \tweak padding #14.5
                                         - \abjad-dashed-line-with-arrow
-                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 5 \hspace #0.5 } \hspace #0.5 }
-                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 5 5 \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 1 5 } \hspace #0.5 }
+                                        - \tweak bound-details.right.text \markup \concat { \upright \fraction 5 5 }
                                         \startTextSpan
                                         af16
                                         \!
@@ -1852,6 +1932,7 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
@@ -1865,7 +1946,7 @@
                                     \glissando
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \<
                                     \once \override Dots.staff-position = #2
@@ -1882,7 +1963,7 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \once \override Dots.staff-position = #2
                                     fs'16
@@ -1890,7 +1971,7 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \once \override Dots.staff-position = #2
                                     fs'16
@@ -1899,7 +1980,7 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \>
                                     \once \override Dots.staff-position = #2
@@ -1908,7 +1989,7 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \once \override Dots.staff-position = #2
                                     fs'16
@@ -1916,7 +1997,7 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \once \override Dots.staff-position = #2
                                     fs'16
@@ -1924,7 +2005,7 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \once \override Dots.staff-position = #2
                                     fs'16
@@ -1933,7 +2014,7 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \<
                                     \once \override Dots.staff-position = #2
@@ -1942,7 +2023,7 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \once \override Dots.staff-position = #2
                                     fs'16
@@ -1950,7 +2031,7 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \once \override Dots.staff-position = #2
                                     fs'16
@@ -1959,7 +2040,7 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \>
                                     \once \override Dots.staff-position = #2
@@ -1968,7 +2049,7 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 \hspace #0.5 } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 3 3 } \hspace #0.5 }
                                     \startTextSpan
                                     \once \override Dots.staff-position = #2
                                     fs'16
@@ -1976,8 +2057,8 @@
                                     \stopTextSpan
                                     - \tweak padding #11.5
                                     - \abjad-dashed-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 \hspace #0.5 } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 3 3 \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \concat { \upright \fraction 0 3 } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \concat { \upright \fraction 3 3 }
                                     \startTextSpan
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
@@ -1995,18 +2076,21 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 11/8
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
                                     \stopStaff \startStaff
                                     \once \override Staff.BarLine.transparent = ##f
                                     \once \revert Staff.StaffSymbol.line-positions
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/16
                                     \stopStaff \startStaff
@@ -2063,33 +2147,39 @@
                                                     :64
                                                 }
                                             }
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
-                                            \times 4/7
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 4 0))
+                                            \times 8/7
                                             {
-                                                bqs8
+                                                bqs16
                                                 )
                                                 \glissando
-                                                cs''8
+                                                cs''16
                                                 \fff
-                                                aqf'8
+                                                aqf'16
                                                 \mp
                                                 (
                                                 - \tweak stencil #constante-hairpin
                                                 \<
-                                                cqs'8
-                                                eqs'16.
-                                                )
-                                                b'16.
-                                                \fff
-                                                bf16.
-                                                \p
-                                                (
-                                                \<
-                                                \glissando
-                                                eqf16.
-                                                \ff
-                                                )
-                                                ]
+                                                cqs'16
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 4 0))
+                                                \times 3/4
+                                                {
+                                                    eqs'16
+                                                    )
+                                                    b'16
+                                                    \fff
+                                                    bf16
+                                                    \p
+                                                    (
+                                                    \<
+                                                    \glissando
+                                                    eqf16
+                                                    \ff
+                                                    )
+                                                    ]
+                                                }
                                             }
                                         }
                                         \context Voice = "v1"
@@ -2127,29 +2217,31 @@
                                                     s8.
                                                 }
                                             }
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
-                                            \times 4/7
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 4 0))
+                                            \times 8/7
                                             {
-                                                s8
-                                                  %! rmakers.beam_groups()
-                                                \set stemLeftBeamCount = 1
-                                                  %! rmakers.beam_groups()
-                                                \set stemRightBeamCount = 1
-                                                cs''8
+                                                s16
+                                                cs''16
                                                 - \marcato
-                                                s8
-                                                s8
-                                                s16.
-                                                  %! rmakers.beam_groups()
-                                                \set stemLeftBeamCount = 2
-                                                  %! rmakers.beam_groups()
-                                                \set stemRightBeamCount = 2
-                                                b'16.
-                                                - \marcato
-                                                s16.
-                                                s16.
-                                                  %! rmakers.beam_groups()
-                                                ]
+                                                s16
+                                                s16
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 4 0))
+                                                \times 3/4
+                                                {
+                                                    s16
+                                                      %! rmakers.beam_groups()
+                                                    \set stemLeftBeamCount = 2
+                                                      %! rmakers.beam_groups()
+                                                    \set stemRightBeamCount = 2
+                                                    b'16
+                                                    - \marcato
+                                                    s16
+                                                    s16
+                                                      %! rmakers.beam_groups()
+                                                    ]
+                                                }
                                             }
                                         }
                                     >>
@@ -2182,22 +2274,22 @@
                                                 fqs8
                                                 \stopTextSpan
                                                 \tweak text #tuplet-number::calc-fraction-text
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 4 0))
-                                                \times 5/8
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 10) (ly:make-duration 5 0))
+                                                \times 10/8
                                                 {
-                                                    gqf8
+                                                    gqf16
                                                     \p
                                                     )
                                                     [
                                                     \<
                                                     \glissando
-                                                    d''8
+                                                    d''16
                                                     \fff
                                                     \>
                                                     \glissando
-                                                    gqs8
+                                                    gqs16
                                                     (
-                                                    eqs8
+                                                    eqs16
                                                     \p
                                                     - \tweak stencil #constante-hairpin
                                                     \<
@@ -2256,20 +2348,20 @@
                                                 s8
                                                 s8
                                                 \tweak text #tuplet-number::calc-fraction-text
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 4 0))
-                                                \times 5/8
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 10) (ly:make-duration 5 0))
+                                                \times 10/8
                                                 {
-                                                    s8
+                                                    s16
                                                       %! rmakers.beam_groups()
                                                     [
                                                       %! rmakers.beam_groups()
-                                                    \set stemLeftBeamCount = 1
+                                                    \set stemLeftBeamCount = 2
                                                       %! rmakers.beam_groups()
-                                                    \set stemRightBeamCount = 1
-                                                    d''8
+                                                    \set stemRightBeamCount = 2
+                                                    d''16
                                                     - \marcato
-                                                    s8
-                                                    s8
+                                                    s16
+                                                    s16
                                                 }
                                             }
                                             \tweak text #tuplet-number::calc-fraction-text
@@ -2313,40 +2405,46 @@
                                         \context Voice = "viola 2 voice temp"
                                         {
                                             \tweak text #tuplet-number::calc-fraction-text
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) (ly:make-duration 3 0))
-                                            \times 6/11
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 12) (ly:make-duration 4 0))
+                                            \times 12/11
                                             {
                                                 \voiceTwo
                                                 \clef "altovarC"
-                                                d''4
+                                                d''8
                                                 \fff
+                                                [
                                                 - \tweak stencil #constante-hairpin
                                                 \<
-                                                fs'4
+                                                fs'8
                                                 \f
                                                 (
                                                 - \tweak stencil #constante-hairpin
                                                 \<
-                                                bqs4
+                                                bqs8
                                                 )
-                                                cs''4
+                                                cs''8
                                                 \fp
                                                 \<
-                                                f'16.
-                                                :128
-                                                \ff
-                                                [
-                                                (
-                                                - \tweak circled-tip ##t
-                                                - \tweak stencil #abjad-flared-hairpin
-                                                \>
-                                                g'16.
-                                                :128
-                                                eqs'16.
-                                                :128
-                                                )
-                                                b'16.
-                                                \fff
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 4 0))
+                                                \times 3/4
+                                                {
+                                                    f'16
+                                                    :128
+                                                    \ff
+                                                    [
+                                                    (
+                                                    - \tweak circled-tip ##t
+                                                    - \tweak stencil #abjad-flared-hairpin
+                                                    \>
+                                                    g'16
+                                                    :128
+                                                    eqs'16
+                                                    :128
+                                                    )
+                                                    b'16
+                                                    \fff
+                                                }
                                             }
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 3 0))
                                             \times 4/5
@@ -2389,28 +2487,34 @@
                                         }
                                         {
                                             \tweak text #tuplet-number::calc-fraction-text
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) (ly:make-duration 3 0))
-                                            \times 6/11
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 12) (ly:make-duration 4 0))
+                                            \times 12/11
                                             {
                                                 \voiceOne
                                                 \clef "altovarC"
-                                                d''4
+                                                d''8
                                                 - \marcato
-                                                s4
-                                                s4
-                                                cs''4
-                                                - \marcato
-                                                s16.
-                                                  %! rmakers.beam_groups()
                                                 [
-                                                s16.
-                                                s16.
-                                                  %! rmakers.beam_groups()
-                                                \set stemLeftBeamCount = 2
-                                                  %! rmakers.beam_groups()
-                                                \set stemRightBeamCount = 1
-                                                b'16.
+                                                s8
+                                                s8
+                                                cs''8
                                                 - \marcato
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 4 0))
+                                                \times 3/4
+                                                {
+                                                    s16
+                                                      %! rmakers.beam_groups()
+                                                    [
+                                                    s16
+                                                    s16
+                                                      %! rmakers.beam_groups()
+                                                    \set stemLeftBeamCount = 2
+                                                      %! rmakers.beam_groups()
+                                                    \set stemRightBeamCount = 1
+                                                    b'16
+                                                    - \marcato
+                                                }
                                             }
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 3 0))
                                             \times 4/5
@@ -2446,49 +2550,46 @@
                                         \context Voice = "viola 2 voice temp"
                                         {
                                             \tweak text #tuplet-number::calc-fraction-text
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 7) (ly:make-duration 4 0))
-                                            \times 7/13
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 14) (ly:make-duration 5 0))
+                                            \times 14/13
                                             {
                                                 \voiceTwo
                                                 \clef "altovarC"
-                                                d''16
+                                                d''32
                                                 \fff
                                                 [
                                                 - \tweak circled-tip ##t
                                                 - \tweak stencil #abjad-flared-hairpin
                                                 \>
-                                                af'16
+                                                af'32
                                                 (
-                                                eqs'16
+                                                eqs'32
                                                 )
-                                                ]
-                                                bf'4..
+                                                bf'8..
                                                 \fff
                                                 - \tweak stencil #constante-hairpin
                                                 \<
-                                                bqf32
+                                                bqf64
                                                 \mp
                                                 ^ \staccato
-                                                [
                                                 (
-                                                cs'32
+                                                cs'64
                                                 ^ \staccato
-                                                aqs16.
+                                                aqs32.
                                                 \<
-                                                bqs32
+                                                bqs64
                                                 )
                                             }
                                             \tweak text #tuplet-number::calc-fraction-text
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 7) (ly:make-duration 4 0))
-                                            \times 7/13
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 14) (ly:make-duration 5 0))
+                                            \times 14/13
                                             {
-                                                c''16
+                                                c''32
                                                 \fff
-                                                dqf'16
+                                                dqf'32
                                                 ^ \staccato
-                                                ]
                                                 (
-                                                cs4..
+                                                cs8..
                                                 \fp
                                                 ^ \accent
                                                 - \tweak padding #4
@@ -2498,26 +2599,25 @@
                                                 \startTextSpan
                                                 - \tweak stencil #abjad-flared-hairpin
                                                 \<
-                                                dqs'8.
+                                                dqs'16.
                                                 \mf
                                                 )
                                                 \stopTextSpan
-                                                [
                                                 \<
                                                 \glissando
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 6 0))
                                                 \times 2/3
                                                 {
-                                                    d''64
+                                                    d''128
                                                     \fff
                                                     - \tweak stencil #constante-hairpin
                                                     \<
-                                                    d32.
+                                                    d64.
                                                     ^ \staccato
                                                     (
-                                                    ef64
+                                                    ef128
                                                     ^ \staccato
-                                                    cs64
+                                                    cs128
                                                     \!
                                                     ^ \accent
                                                     ^ \staccato
@@ -2534,53 +2634,53 @@
                                         }
                                         {
                                             \tweak text #tuplet-number::calc-fraction-text
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 7) (ly:make-duration 4 0))
-                                            \times 7/13
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 14) (ly:make-duration 5 0))
+                                            \times 14/13
                                             {
                                                   %! rmakers.beam_groups()
                                                 \set stemLeftBeamCount = 0
                                                   %! rmakers.beam_groups()
-                                                \set stemRightBeamCount = 2
+                                                \set stemRightBeamCount = 3
                                                 \voiceOne
                                                 \clef "altovarC"
-                                                d''16
+                                                d''32
                                                 - \marcato
                                                   %! rmakers.beam_groups()
                                                 [
-                                                s16
-                                                s16
+                                                s32
+                                                s32
                                                   %! rmakers.beam_groups()
-                                                ]
-                                                bf'4..
+                                                \set stemLeftBeamCount = 1
+                                                  %! rmakers.beam_groups()
+                                                \set stemRightBeamCount = 1
+                                                bf'8..
                                                 - \marcato
-                                                s32
-                                                  %! rmakers.beam_groups()
-                                                [
-                                                s32
-                                                s16.
-                                                s32
+                                                s64
+                                                s64
+                                                s32.
+                                                s64
                                             }
                                             \tweak text #tuplet-number::calc-fraction-text
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 7) (ly:make-duration 4 0))
-                                            \times 7/13
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 14) (ly:make-duration 5 0))
+                                            \times 14/13
                                             {
-                                                c''16
+                                                c''32
                                                 - \marcato
-                                                s16
-                                                s4..
-                                                s8.
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
+                                                s32
+                                                s8..
+                                                s16.
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 6 0))
                                                 \times 2/3
                                                 {
                                                       %! rmakers.beam_groups()
                                                     \set stemLeftBeamCount = 1
                                                       %! rmakers.beam_groups()
-                                                    \set stemRightBeamCount = 4
-                                                    d''64
+                                                    \set stemRightBeamCount = 5
+                                                    d''128
                                                     - \marcato
-                                                    s32.
-                                                    s64
-                                                    s64
+                                                    s64.
+                                                    s128
+                                                    s128
                                                       %! rmakers.beam_groups()
                                                     ]
                                                 }
@@ -2612,8 +2712,8 @@
                                                 \glissando
                                                 af'16
                                                 )
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
-                                                \times 2/3
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 4) (ly:make-duration 6 0))
+                                                \times 4/6
                                                 {
                                                     b'32.
                                                     \fff
@@ -2627,8 +2727,9 @@
                                                     cs''64
                                                 }
                                             }
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 4 1))
-                                            \times 4/5
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 12) (ly:make-duration 5 0))
+                                            \times 12/15
                                             {
                                                 b'8..
                                                 \pp
@@ -2648,20 +2749,25 @@
                                                 \<
                                                 f'32
                                                 )
-                                                d''64.
-                                                \fff
-                                                dqs'64.
-                                                \mp
-                                                ^ \staccato
-                                                (
-                                                \<
-                                                eqf'64.
-                                                ^ \staccato
-                                                gqf64.
-                                                \f
-                                                ^ \tenuto
-                                                )
-                                                ]
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 5 0))
+                                                \times 3/4
+                                                {
+                                                    d''32
+                                                    \fff
+                                                    dqs'32
+                                                    \mp
+                                                    ^ \staccato
+                                                    (
+                                                    \<
+                                                    eqf'32
+                                                    ^ \staccato
+                                                    gqf32
+                                                    \f
+                                                    ^ \tenuto
+                                                    )
+                                                    ]
+                                                }
                                             }
                                         }
                                         \context Voice = "v1"
@@ -2682,8 +2788,8 @@
                                                 s4..
                                                 s8.
                                                 s16
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
-                                                \times 2/3
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 4) (ly:make-duration 6 0))
+                                                \times 4/6
                                                 {
                                                       %! rmakers.beam_groups()
                                                     \set stemLeftBeamCount = 0
@@ -2703,24 +2809,30 @@
                                                     - \marcato
                                                 }
                                             }
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 4 1))
-                                            \times 4/5
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 12) (ly:make-duration 5 0))
+                                            \times 12/15
                                             {
                                                 s8..
                                                 s16.
                                                 s32
                                                 s32
-                                                  %! rmakers.beam_groups()
-                                                \set stemLeftBeamCount = 3
-                                                  %! rmakers.beam_groups()
-                                                \set stemRightBeamCount = 4
-                                                d''64.
-                                                - \marcato
-                                                s64.
-                                                s64.
-                                                s64.
-                                                  %! rmakers.beam_groups()
-                                                ]
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 5 0))
+                                                \times 3/4
+                                                {
+                                                      %! rmakers.beam_groups()
+                                                    \set stemLeftBeamCount = 1
+                                                      %! rmakers.beam_groups()
+                                                    \set stemRightBeamCount = 3
+                                                    d''32
+                                                    - \marcato
+                                                    s32
+                                                    s32
+                                                    s32
+                                                      %! rmakers.beam_groups()
+                                                    ]
+                                                }
                                             }
                                         }
                                     >>
@@ -2735,21 +2847,20 @@
                                         \context Voice = "viola 2 voice temp"
                                         {
                                             \tweak text #tuplet-number::calc-fraction-text
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) (ly:make-duration 3 0))
-                                            \times 5/9
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 10) (ly:make-duration 4 0))
+                                            \times 10/9
                                             {
                                                 \voiceTwo
                                                 \clef "altovarC"
-                                                bf'4.
+                                                bf'8.
                                                 \ff
-                                                af8
+                                                [
+                                                af16
                                                 \f
                                                 ^ \accent
-                                                [
                                                 (
-                                                bf8
-                                                ]
-                                                aqf4.
+                                                bf16
+                                                aqf8.
                                                 \p
                                                 )
                                                 - \tweak padding #5
@@ -2759,38 +2870,38 @@
                                                 \startTextSpan
                                                 \<
                                                 \glissando
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 6 0))
                                                 \times 4/5
                                                 {
-                                                    c''64
+                                                    c''128
                                                     \ff
                                                     \stopTextSpan
                                                     [
                                                     - \tweak stencil #constante-hairpin
                                                     \<
-                                                    aqs'64
+                                                    aqs'128
                                                     ^ \staccato
                                                     (
-                                                    eqf'64
+                                                    eqf'128
                                                     ^ \staccato
-                                                    gqs'16..
+                                                    gqs'32..
                                                     \>
                                                 }
                                             }
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
-                                            \times 4/7
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 4 0))
+                                            \times 8/7
                                             {
-                                                eqs'8
+                                                eqs'16
                                                 \mp
                                                 )
                                                 \<
                                                 \glissando
-                                                d''8
+                                                d''16
                                                 \ff
-                                                ]
                                                 \>
                                                 \glissando
-                                                aqf4.
+                                                aqf8.
                                                 (
                                                 - \tweak padding #5
                                                 - \abjad-dashed-line-with-hook
@@ -2798,26 +2909,25 @@
                                                 - \tweak bound-details.right.padding -1
                                                 \startTextSpan
                                                 \glissando
-                                                d'8
+                                                d'16
                                                 \mp
                                                 \stopTextSpan
-                                                [
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
                                                 \times 2/3
                                                 {
-                                                    dqs'64
+                                                    dqs'128
                                                     \f
                                                     ^ \staccato
                                                     )
-                                                    cs''64
+                                                    cs''128
                                                     \fff
-                                                    cs'16..
+                                                    cs'32..
                                                     :128
                                                     \p
                                                     (
                                                     - \tweak circled-tip ##t
                                                     \>
-                                                    dqf'32.
+                                                    dqf'64.
                                                     \!
                                                     )
                                                     ]
@@ -2832,53 +2942,54 @@
                                         }
                                         {
                                             \tweak text #tuplet-number::calc-fraction-text
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) (ly:make-duration 3 0))
-                                            \times 5/9
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 10) (ly:make-duration 4 0))
+                                            \times 10/9
                                             {
                                                 \voiceOne
                                                 \clef "altovarC"
-                                                bf'4.
+                                                bf'8.
                                                 - \marcato
-                                                s8
-                                                s8
-                                                s4.
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
+                                                [
+                                                s16
+                                                s16
+                                                s8.
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 6 0))
                                                 \times 4/5
                                                 {
                                                       %! rmakers.beam_groups()
                                                     \set stemLeftBeamCount = 0
                                                       %! rmakers.beam_groups()
-                                                    \set stemRightBeamCount = 4
-                                                    c''64
+                                                    \set stemRightBeamCount = 5
+                                                    c''128
                                                     - \marcato
                                                       %! rmakers.beam_groups()
                                                     [
-                                                    s64
-                                                    s64
-                                                    s16..
+                                                    s128
+                                                    s128
+                                                    s32..
                                                 }
                                             }
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
-                                            \times 4/7
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 4 0))
+                                            \times 8/7
                                             {
-                                                s8
-                                                d''8
+                                                s16
+                                                d''16
                                                 - \marcato
-                                                ]
-                                                s4.
-                                                s8
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                                s8.
+                                                s16
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
                                                 \times 2/3
                                                 {
-                                                    s64
+                                                    s128
                                                       %! rmakers.beam_groups()
-                                                    \set stemLeftBeamCount = 4
+                                                    \set stemLeftBeamCount = 5
                                                       %! rmakers.beam_groups()
-                                                    \set stemRightBeamCount = 2
-                                                    cs''64
+                                                    \set stemRightBeamCount = 3
+                                                    cs''128
                                                     - \marcato
-                                                    s16..
-                                                    s32.
+                                                    s32..
+                                                    s64.
                                                       %! rmakers.beam_groups()
                                                     ]
                                                 }
@@ -2888,7 +2999,7 @@
                                     \oneVoice
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 2 0))
-                                    \times 15/12
+                                    \times 5/4
                                     {
                                         \clef "treble"
                                         <cqs'' af''>2
@@ -2897,74 +3008,74 @@
                                     <<
                                         \context Voice = "viola 2 voice temp"
                                         {
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
-                                            \times 4/7
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 4 0))
+                                            \times 8/7
                                             {
                                                 \voiceTwo
                                                 \clef "altovarC"
-                                                b'8
+                                                b'16
                                                 \ff
-                                                af4.
+                                                [
+                                                af8.
                                                 \p
                                                 (
                                                 \<
                                                 \glissando
-                                                eqs8
+                                                eqs16
                                                 \mf
-                                                [
-                                                g8
+                                                g16
                                                 - \tweak stencil #abjad-flared-hairpin
                                                 \<
                                                 \glissando
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
                                                 \times 2/3
                                                 {
-                                                    eqf'64
+                                                    eqf'128
                                                     \ff
                                                     ^ \staccato
                                                     )
                                                     [
-                                                    cs''16..
-                                                    eqs'32.
+                                                    cs''32..
+                                                    eqs'64.
                                                     ^ \staccato
                                                     (
-                                                    e'64
+                                                    e'128
                                                     ^ \staccato
                                                     )
-                                                    ]
                                                 }
                                             }
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
-                                            \times 4/7
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 4 0))
+                                            \times 8/7
                                             {
-                                                d''4.
+                                                d''8.
                                                 \fff
                                                 - \tweak stencil #constante-hairpin
                                                 \<
-                                                ef'8
+                                                ef'16
                                                 \p
-                                                [
                                                 (
                                                 \>
-                                                dqs'8
-                                                c'8
-                                                :64
+                                                dqs'16
+                                                c'16
+                                                :128
                                                 \ppp
                                                 )
                                                 \<
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
                                                 \times 2/3
                                                 {
-                                                    bf'16..
+                                                    bf'32..
                                                     \ff
                                                     - \tweak stencil #constante-hairpin
                                                     \<
-                                                    dqf'32.
+                                                    dqf'64.
                                                     ^ \tenuto
                                                     (
-                                                    b64
+                                                    b128
                                                     ^ \staccato
-                                                    dqf'64
+                                                    dqf'128
                                                     \!
                                                     ^ \staccato
                                                     )
@@ -2979,52 +3090,55 @@
                                             \override TupletNumber.stencil = ##f
                                         }
                                         {
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
-                                            \times 4/7
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 4 0))
+                                            \times 8/7
                                             {
                                                 \voiceOne
                                                 \clef "altovarC"
-                                                b'8
+                                                b'16
                                                 - \marcato
-                                                s4.
-                                                s8
-                                                s8
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                                [
+                                                s8.
+                                                s16
+                                                s16
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
                                                 \times 2/3
                                                 {
-                                                    s64
+                                                    s128
                                                       %! rmakers.beam_groups()
                                                     [
                                                       %! rmakers.beam_groups()
-                                                    \set stemLeftBeamCount = 2
+                                                    \set stemLeftBeamCount = 3
                                                       %! rmakers.beam_groups()
-                                                    \set stemRightBeamCount = 2
-                                                    cs''16..
+                                                    \set stemRightBeamCount = 3
+                                                    cs''32..
                                                     - \marcato
-                                                    s32.
-                                                    s64
+                                                    s64.
+                                                    s128
                                                 }
                                             }
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) (ly:make-duration 3 0))
-                                            \times 4/7
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 4 0))
+                                            \times 8/7
                                             {
-                                                d''4.
+                                                d''8.
                                                 - \marcato
-                                                s8
-                                                s8
-                                                s8
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                                s16
+                                                s16
+                                                s16
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 5 0))
                                                 \times 2/3
                                                 {
                                                       %! rmakers.beam_groups()
                                                     \set stemLeftBeamCount = 1
                                                       %! rmakers.beam_groups()
-                                                    \set stemRightBeamCount = 2
-                                                    bf'16..
+                                                    \set stemRightBeamCount = 3
+                                                    bf'32..
                                                     - \marcato
-                                                    s32.
-                                                    s64
-                                                    s64
+                                                    s64.
+                                                    s128
+                                                    s128
                                                       %! rmakers.beam_groups()
                                                     ]
                                                 }
@@ -3034,7 +3148,7 @@
                                     \oneVoice
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 13) (ly:make-duration 3 0))
-                                    \times 91/84
+                                    \times 13/12
                                     {
                                         \clef "treble"
                                         <eqf'' gqs''>2
@@ -3045,41 +3159,41 @@
                                         \context Voice = "viola 2 voice temp"
                                         {
                                             \tweak text #tuplet-number::calc-fraction-text
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) (ly:make-duration 4 0))
-                                            \times 6/11
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 12) (ly:make-duration 5 0))
+                                            \times 12/11
                                             {
                                                 \voiceTwo
                                                 \clef "altovarC"
-                                                c''16
+                                                c''32
                                                 \f
                                                 [
                                                 - \tweak stencil #constante-hairpin
                                                 \<
-                                                f'16
+                                                f'32
                                                 ^ \accent
                                                 ^ \staccato
                                                 (
-                                                cs'16
+                                                cs'32
                                                 ^ \accent
                                                 ^ \staccato
-                                                fs16
+                                                fs32
                                                 ^ \accent
                                                 ^ \staccato
                                                 \tweak text #tuplet-number::calc-fraction-text
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 4 0))
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 5 0))
                                                 \times 7/8
                                                 {
-                                                    bqs8.
+                                                    bqs16.
                                                     \pp
                                                     )
                                                     [
-                                                    d''16
+                                                    d''32
                                                     \f
                                                     - \tweak stencil #constante-hairpin
                                                     \<
-                                                    cs''16
+                                                    cs''32
                                                     (
-                                                    af'8.
+                                                    af'16.
                                                     \mp
                                                     - \tweak circled-tip ##t
                                                     \>
@@ -3112,17 +3226,22 @@
                                                 \glissando
                                                 eqs8
                                                 \glissando
-                                                fs16.
-                                                \glissando
-                                                eqf16.
-                                                )
-                                                \stopTextSpan
-                                                b'16.
-                                                \f
-                                                f16.
-                                                \ppp
-                                                ^ \staccato
-                                                ]
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 3 0))
+                                                \times 3/4
+                                                {
+                                                    fs8
+                                                    \glissando
+                                                    eqf8
+                                                    )
+                                                    \stopTextSpan
+                                                    b'8
+                                                    \f
+                                                    f8
+                                                    \ppp
+                                                    ^ \staccato
+                                                    ]
+                                                }
                                             }
                                         }
                                         \context Voice = "v1"
@@ -3133,32 +3252,32 @@
                                         }
                                         {
                                             \tweak text #tuplet-number::calc-fraction-text
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) (ly:make-duration 4 0))
-                                            \times 6/11
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 12) (ly:make-duration 5 0))
+                                            \times 12/11
                                             {
                                                 \voiceOne
                                                 \clef "altovarC"
-                                                c''16
+                                                c''32
                                                 - \marcato
                                                 [
-                                                s16
-                                                s16
-                                                s16
+                                                s32
+                                                s32
+                                                s32
                                                 \tweak text #tuplet-number::calc-fraction-text
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 4 0))
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 5 0))
                                                 \times 7/8
                                                 {
-                                                    s8.
+                                                    s16.
                                                       %! rmakers.beam_groups()
                                                     [
                                                       %! rmakers.beam_groups()
-                                                    \set stemLeftBeamCount = 1
+                                                    \set stemLeftBeamCount = 2
                                                       %! rmakers.beam_groups()
-                                                    \set stemRightBeamCount = 2
-                                                    d''16
+                                                    \set stemRightBeamCount = 3
+                                                    d''32
                                                     - \marcato
-                                                    s16
-                                                    s8.
+                                                    s32
+                                                    s16.
                                                 }
                                             }
                                             \tweak text #tuplet-number::calc-fraction-text
@@ -3166,25 +3285,26 @@
                                             \times 6/7
                                             {
                                                 s8
-                                                  %! rmakers.beam_groups()
-                                                \set stemLeftBeamCount = 1
-                                                  %! rmakers.beam_groups()
-                                                \set stemRightBeamCount = 1
                                                 cs''8
                                                 - \marcato
                                                 s8
                                                 s8
-                                                s16.
-                                                s16.
-                                                  %! rmakers.beam_groups()
-                                                \set stemLeftBeamCount = 2
-                                                  %! rmakers.beam_groups()
-                                                \set stemRightBeamCount = 2
-                                                b'16.
-                                                - \marcato
-                                                s16.
-                                                  %! rmakers.beam_groups()
-                                                ]
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 3 0))
+                                                \times 3/4
+                                                {
+                                                    s8
+                                                    s8
+                                                      %! rmakers.beam_groups()
+                                                    \set stemLeftBeamCount = 1
+                                                      %! rmakers.beam_groups()
+                                                    \set stemRightBeamCount = 1
+                                                    b'8
+                                                    - \marcato
+                                                    s8
+                                                      %! rmakers.beam_groups()
+                                                    ]
+                                                }
                                             }
                                         }
                                     >>
@@ -3221,25 +3341,25 @@
                                                 \mp
                                                 )
                                                 \tweak text #tuplet-number::calc-fraction-text
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 4 0))
-                                                \times 5/8
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 10) (ly:make-duration 5 0))
+                                                \times 10/8
                                                 {
-                                                    d''8
+                                                    d''16
                                                     \ff
                                                     [
-                                                    dqs8
+                                                    dqs16
                                                     \mp
                                                     (
                                                     \<
                                                     \glissando
-                                                    af8
+                                                    af16
                                                     \glissando
-                                                    dqf8
+                                                    dqf16
                                                     \glissando
                                                 }
                                             }
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
-                                            \times 2/3
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 4) (ly:make-duration 4 0))
+                                            \times 4/6
                                             {
                                                 g16
                                                 )
@@ -3287,24 +3407,24 @@
                                                 s8
                                                 s8
                                                 \tweak text #tuplet-number::calc-fraction-text
-                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 4 0))
-                                                \times 5/8
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 10) (ly:make-duration 5 0))
+                                                \times 10/8
                                                 {
                                                       %! rmakers.beam_groups()
                                                     \set stemLeftBeamCount = 0
                                                       %! rmakers.beam_groups()
-                                                    \set stemRightBeamCount = 1
-                                                    d''8
+                                                    \set stemRightBeamCount = 2
+                                                    d''16
                                                     - \marcato
                                                       %! rmakers.beam_groups()
                                                     [
-                                                    s8
-                                                    s8
-                                                    s8
+                                                    s16
+                                                    s16
+                                                    s16
                                                 }
                                             }
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
-                                            \times 2/3
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 4) (ly:make-duration 4 0))
+                                            \times 4/6
                                             {
                                                 s16
                                                   %! rmakers.beam_groups()
@@ -3400,7 +3520,7 @@
                                 {
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 2 0))
-                                    \times 14/16
+                                    \times 7/8
                                     {
                                         \staff-line-count 5
                                         \set GrandStaff.instrumentName = \markup \override #'(font-name . "Bodoni72 Book Italic") { Accordion }
@@ -3465,20 +3585,20 @@
                                     r2.
                                     r8
                                     \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) (ly:make-duration 3 0))
-                                    \times 10/16
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 10) (ly:make-duration 4 0))
+                                    \times 10/8
                                     {
-                                        fs2
+                                        fs4
                                         (
                                         - \tweak circled-tip ##t
                                         \<
                                         \glissando
-                                        fqs4..
+                                        fqs8..
                                         \pp
                                         - \tweak circled-tip ##t
                                         \>
                                         \glissando
-                                        fs16
+                                        fs32
                                         \!
                                         )
                                     }
@@ -3488,7 +3608,7 @@
                                     r4
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 3 0))
-                                    \times 20/24
+                                    \times 5/6
                                     {
                                         f4
                                         (
@@ -3535,7 +3655,7 @@
                                     s1 * 1
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) (ly:make-duration 3 0))
-                                    \times 14/16
+                                    \times 7/8
                                     {
                                         f2
                                         (
@@ -3693,7 +3813,7 @@
                                     }
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 3 0))
-                                    \times 15/18
+                                    \times 5/6
                                     {
                                         ef,4
                                         ^ \pp
@@ -3787,7 +3907,7 @@
                                     }
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 3 0))
-                                    \times 15/18
+                                    \times 5/6
                                     {
                                         d,4
                                         ^ \pp

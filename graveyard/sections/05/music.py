@@ -46,6 +46,26 @@ score = library.graveyard_score(
         (8, 16),
         (7, 16),
         (8, 16),
+        (7, 16),
+        (8, 16),
+        (7, 16),
+        (8, 16),
+        (7, 16),
+        (8, 16),
+        (7, 16),
+        (8, 16),
+        (7, 16),
+        (1, 16),
+        (1, 16),
+        (1, 16),
+        (1, 16),
+        (1, 16),
+        (1, 16),
+        (1, 16),
+        (1, 16),
+        (1, 16),
+        (1, 16),
+        (1, 16),
         (7, 4),
         (1, 16),
     ]
@@ -284,7 +304,7 @@ trinton.make_music(
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (27, 33)),
+    lambda _: trinton.select_target(_, (27, 38)),
     evans.RhythmHandler(
         evans.talea(
             [
@@ -326,7 +346,7 @@ trinton.make_music(
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (29, 33)),
+    lambda _: trinton.select_target(_, (29, 38)),
     trinton.detach_command(
         detachments=[abjad.Dynamic],
         selector=trinton.pleaves(),
@@ -339,19 +359,20 @@ trinton.make_music(
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (34, 37)),
+    lambda _: trinton.select_target(_, (40, 57)),
     evans.RhythmHandler(
         evans.tuplet(
-            [(48, 1)],
+            [(1,), (48, 1)],
             treat_tuplets=False,
         )
     ),
     trinton.noteheads_only(),
     trinton.glissando_command(
         selector=trinton.ranged_selector(
-            ranges=[range(0, 4)],
+            ranges=[range(0, 3)],
             nested=True,
         ),
+        zero_padding=True,
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -361,18 +382,18 @@ trinton.make_music(
             abjad.StopHairpin(),
             abjad.LaissezVibrer(),
         ],
-        selector=trinton.select_leaves_by_index([0, 2, 2, -1, -1]),
+        selector=trinton.select_leaves_by_index([0, 1, 1, -1, -1]),
     ),
     library.boxed_markup(
-        string="Zhongbo w/ bow ( accented rearticulations )",
+        string="Zhongbo w/ bow",
         selector=trinton.select_leaves_by_index([0]),
     ),
     voice=score["guitar 4 voice"],
-    preprocessor=trinton.fuse_preprocessor((3, 1)),
+    preprocessor=trinton.fuse_preprocessor((17, 1)),
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (34, 36)),
+    lambda _: trinton.select_target(_, (34, 56)),
     library.invisible_tuplet_brackets(),
     voice=score["guitar 4 voice"],
 )
@@ -568,7 +589,7 @@ trinton.make_music(
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (27, 36)),
+    lambda _: trinton.select_target(_, (27, 45)),
     evans.RhythmHandler(
         evans.talea(
             [
@@ -610,7 +631,7 @@ trinton.make_music(
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (34, 36)),
+    lambda _: trinton.select_target(_, (34, 45)),
     trinton.detach_command(
         detachments=[abjad.Dynamic],
         selector=trinton.pleaves(),
@@ -622,8 +643,26 @@ trinton.make_music(
     voice=score["viola 2 voice"],
 )
 
+for measure in [
+    47,
+    49,
+    51,
+    53,
+    55,
+]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        evans.RhythmHandler(evans.talea([1], 16)),
+        trinton.noteheads_only(),
+        trinton.attachment_command(
+            attachments=[abjad.Articulation("marcato"), abjad.Dynamic("fff")],
+            selector=trinton.pleaves(),
+        ),
+        voice=score["viola 2 voice"],
+    )
+
 trinton.make_music(
-    lambda _: trinton.select_target(_, (37,)),
+    lambda _: trinton.select_target(_, (57,)),
     evans.RhythmHandler(
         evans.tuplet(
             [(48, 1)],
@@ -636,6 +675,7 @@ trinton.make_music(
             ranges=[range(0, 2)],
             nested=True,
         ),
+        zero_padding=True,
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -647,7 +687,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 0, -1, -1]),
     ),
     library.boxed_markup(
-        string="Zhongbo w/ bow ( accented rearticulations )",
+        string="Zhongbo w/ bow",
         selector=trinton.select_leaves_by_index([0]),
     ),
     voice=score["viola 2 voice"],
@@ -911,19 +951,20 @@ trinton.make_music(
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (29, 37)),
+    lambda _: trinton.select_target(_, (30, 57)),
     evans.RhythmHandler(
         evans.tuplet(
-            [(48, 1)],
+            [(1,), (48, 1)],
             treat_tuplets=False,
         )
     ),
     trinton.noteheads_only(),
     trinton.glissando_command(
         selector=trinton.ranged_selector(
-            ranges=[range(0, 4)],
+            ranges=[range(0, 3)],
             nested=True,
         ),
+        zero_padding=True,
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -933,18 +974,20 @@ trinton.make_music(
             abjad.StopHairpin(),
             abjad.LaissezVibrer(),
         ],
-        selector=trinton.select_leaves_by_index([0, 2, 2, -1, -1]),
+        selector=trinton.select_logical_ties_by_index(
+            [0, 1, 1, -1, -1], first=True, pitched=True
+        ),
     ),
     library.boxed_markup(
-        string="Zhongbo w/ bow ( accented rearticulations )",
+        string="Zhongbo w/ bow",
         selector=trinton.select_leaves_by_index([0]),
     ),
     voice=score["accordion 1 voice"],
-    preprocessor=trinton.fuse_preprocessor((8, 1)),
+    preprocessor=trinton.fuse_preprocessor((27, 1)),
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (29, 36)),
+    lambda _: trinton.select_target(_, (29, 56)),
     library.invisible_tuplet_brackets(),
     voice=score["accordion 1 voice"],
 )
@@ -965,7 +1008,7 @@ for voice_name, leaf in zip(
         trinton.id_spanner_command(
             selector=trinton.select_leaves_by_index([leaf, -1]),
             id="One",
-            left_text='While drumming, chant at any speed, \\"There are no dry bones here,\\" in your first language',
+            left_text='While drumming, begin clamoring, \\"There are no dry bones here,\\" in your first language',
             right_text=None,
             style="dashed-line-with-hook",
             padding=6,
@@ -974,20 +1017,18 @@ for voice_name, leaf in zip(
         trinton.id_spanner_command(
             selector=trinton.select_leaves_by_index([leaf, -15]),
             id="Two",
-            left_text="Whisper chant",
-            right_text="Shout chant",
+            left_text="Whisper",
+            right_text="Shout",
             style="dashed-line-with-arrow",
             padding=4,
         ),
         voice=score[voice_name],
     )
 
-# Auf dem Deckel mit Styroporkugeln
-
 trinton.make_music(
     lambda _: trinton.select_target(_, (20, 28)),
     trinton.hooked_spanner_command(
-        string=r"""\markup { \center-column { \line { While drumming, chant at any speed, } \line { "\"There are no dry bones here,\"" } \line { in your first language } } }""",
+        string=r"""\markup { \center-column { \line { While drumming, begin clamoring, } \line { "\"There are no dry bones here,\"" } \line { in your first language } } }""",
         selector=trinton.select_leaves_by_index([39, -1]),
         padding=9,
         right_padding=2,
@@ -997,7 +1038,7 @@ trinton.make_music(
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index([39, -1]),
         id="One",
-        left_text='While drumming, chant at any speed, \\"There are no dry bones here,\\" in your first language',
+        left_text='While drumming, begin clamoring, \\"There are no dry bones here,\\" in your first language',
         right_text=None,
         style="dashed-line-with-hook",
         padding=6,
@@ -1007,8 +1048,8 @@ trinton.make_music(
     trinton.id_spanner_command(
         selector=trinton.select_leaves_by_index([39, -15]),
         id="Two",
-        left_text="Whisper chant",
-        right_text="Shout chant",
+        left_text="Whisper",
+        right_text="Shout",
         style="dashed-line-with-arrow",
         padding=4,
     ),
@@ -1086,7 +1127,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Markup(
-                r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #0 { \hspace #1.5 \center-column { \line { 4th time, stop chanting. } \line { 6th time, continue chanting. } \line { 7th time, stop drumming. } \line { 9th time, continue drumming. } } }""",
+                r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #0 { \hspace #1.5 \column { \line { 3× speech + drumming } \line { 2× drumming only } \line { 4× speech + drumming } } }""",
             ),
         ],
         selector=trinton.select_leaves_by_index(
@@ -1095,15 +1136,30 @@ trinton.make_music(
             ]
         ),
         direction=abjad.UP,
+        tag=abjad.Tag("+SCORE"),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.Markup(
+                r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #0 { \column { \line { 3× speech + drumming } \line { 2× drumming only } \line { 4× speech + drumming } } }""",
+            ),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+            ]
+        ),
+        direction=abjad.UP,
+        tag=abjad.Tag("+PARTS"),
     ),
     voice=score["Global Context"],
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (33, 36)),
+    lambda _: trinton.select_target(_, (33, 45)),
     trinton.arrow_spanner_command(
         l_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"121" } }',
-        r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"77" } }',
+        r_string=r'\markup { \abs-fontsize #12 \concat { \abjad-metronome-mark-markup #3 #0 #1.5 #"16.5" } }',
         selector=trinton.select_leaves_by_index([0, -1]),
         padding=9.5,
         tempo=True,
@@ -1154,11 +1210,33 @@ trinton.attach_multiple(
     ],
 )
 
+for measure in [
+    47,
+    49,
+    51,
+    53,
+    55,
+]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        trinton.attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\once \override Score.TimeSignature.stencil = ##f", site="before"
+                )
+            ],
+            selector=trinton.select_leaves_by_index([0]),
+        ),
+        voice=score["Global Context"],
+    )
+
 # global whiteouts
 
 library.fermata_measures(
     score=score,
-    measures=[0],
+    measures=[
+        0,
+    ],
     fermata="ushortfermata",
 )
 
@@ -1168,6 +1246,46 @@ library.fermata_measures(
         4,
         7,
     ],
+)
+
+library.filled_fermata_measures(
+    score=score,
+    measures=[
+        46,
+    ],
+    fermata="uveryshortfermata",
+)
+
+library.filled_fermata_measures(
+    score=score,
+    measures=[
+        48,
+    ],
+    fermata="ushortfermata",
+)
+
+library.filled_fermata_measures(
+    score=score,
+    measures=[
+        50,
+        56,
+    ],
+)
+
+library.filled_fermata_measures(
+    score=score,
+    measures=[
+        52,
+    ],
+    fermata="ulongfermata",
+)
+
+library.filled_fermata_measures(
+    score=score,
+    measures=[
+        54,
+    ],
+    fermata="uverylongfermata",
 )
 
 library.reset_line_positions(

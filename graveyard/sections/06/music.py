@@ -4,6 +4,7 @@ import evans
 import trinton
 from abjadext import rmakers
 from abjadext import microtones
+from fractions import Fraction
 from graveyard import library
 from graveyard import rhythm
 from graveyard import ts
@@ -119,7 +120,11 @@ trinton.make_music(
         )
     ),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
@@ -174,7 +179,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (3, 4)),
     evans.RhythmHandler(evans.tuplet([(48, 1)], treat_tuplets=False)),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
@@ -224,7 +233,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (7,)),
     evans.RhythmHandler(evans.even_division([64], treat_tuplets=False)),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
@@ -269,7 +282,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (7,)),
     evans.RhythmHandler(evans.tuplet([(48, 1)], treat_tuplets=False)),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
@@ -310,7 +327,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (10,)),
     evans.RhythmHandler(evans.even_division([64], treat_tuplets=False)),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
@@ -359,7 +380,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (10,)),
     evans.RhythmHandler(evans.tuplet([(48, 1)], treat_tuplets=False)),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
@@ -405,7 +430,11 @@ trinton.make_music(
         evans.even_division([64], extra_counts=[8], treat_tuplets=False)
     ),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
@@ -453,7 +482,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (13,)),
     evans.RhythmHandler(evans.tuplet([(48, 1)], treat_tuplets=False)),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
@@ -501,7 +534,11 @@ trinton.make_music(
         evans.even_division([64], extra_counts=[8], treat_tuplets=False)
     ),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
@@ -540,7 +577,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (14, 15)),
     evans.RhythmHandler(evans.tuplet([(24, 1), (48, 1)], treat_tuplets=False)),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(
         boundary_depth=-2,
     ),
@@ -666,10 +707,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (19, 20)),
     evans.RhythmHandler(evans.tuplet([(8, 7, 1)])),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    trinton.call_rmaker(
-        rmaker=rmakers.force_augmentation,
-        selector=trinton.select_tuplets_by_index([0, 2]),
-    ),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.PitchHandler(
         [
             [-8, -1],
@@ -784,7 +826,8 @@ trinton.make_music(
             (1, 4),
             (5, 8),
             (3, 8),
-        ]
+        ],
+        preprolated=False,
     ),
     voice=score["guitar 4 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
@@ -828,7 +871,8 @@ for measure, i, preprocessor in zip(
         evans.RhythmHandler(
             evans.RTMMaker(rtm=trinton.rotated_sequence(rhythm.rtm_list, i))
         ),
-        trinton.treat_tuplets(),
+        rmakers.rewrite_dots,
+        trinton.respell_tuplets_command(rewrite_brackets=False),
         trinton.notehead_bracket_command(),
         trinton.attachment_command(
             attachments=[abjad.Clef("altovarC")],
@@ -879,7 +923,9 @@ for measure in [
                 ]
             )
         ),
-        trinton.treat_tuplets(),
+        # trinton.treat_tuplets(),
+        rmakers.rewrite_dots,
+        trinton.respell_tuplets_command(rewrite_brackets=False),
         evans.RewriteMeterCommand(boundary_depth=-2),
         trinton.notehead_bracket_command(),
         voice=score["viola 2 voice"],
@@ -905,7 +951,9 @@ for measure in [
                 ]
             )
         ),
-        trinton.treat_tuplets(),
+        # trinton.treat_tuplets(),
+        rmakers.rewrite_dots,
+        trinton.respell_tuplets_command(rewrite_brackets=False),
         evans.RewriteMeterCommand(boundary_depth=-2),
         trinton.notehead_bracket_command(),
         voice=score["viola 2 voice"],
@@ -1880,7 +1928,8 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (2,)),
     evans.RhythmHandler(evans.talea([6, 2, 3, 1], 16)),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler([9, 7, 2, -3]),
     trinton.glissando_command(
         selector=trinton.ranged_selector(
@@ -1917,8 +1966,8 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (4,)),
     evans.RhythmHandler(evans.tuplet([(4, 4, 3, 1)])),
-    rmakers.force_augmentation,
-    trinton.treat_tuplets(),
+    rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler([-3, 6, 4, -5]),
     trinton.attachment_command(
         attachments=[abjad.Glissando(zero_padding=True)],
@@ -1943,7 +1992,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, 0, 1, 2, 2, -1, -1]),
     ),
-    trinton.notehead_bracket_command(),
+    # trinton.notehead_bracket_command(),
     abjad.beam,
     voice=score["viola 1 voice"],
 )
@@ -1951,7 +2000,8 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (6,)),
     evans.RhythmHandler(evans.tuplet([(1, 1, 2, 3, 1)])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler([9, 3, 7, -5, 9]),
     trinton.attachment_command(
         attachments=[abjad.Glissando(zero_padding=True)],
@@ -2004,7 +2054,8 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (8,)),
     evans.RhythmHandler(evans.talea([3, 2, 1, 3, 2, 1, 4, 2, 1, 4, 1], 16)),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(
         [
             3,
@@ -2149,6 +2200,8 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (10,)),
     evans.RhythmHandler(evans.talea([3, 1, 1, 2, 1, 3, 1], 16)),
+    rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler([0, 7, 0, 9, -3, 5, 9]),
     trinton.attachment_command(
         attachments=[abjad.Glissando(zero_padding=True)],
@@ -2233,8 +2286,8 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (12,)),
     evans.RhythmHandler(evans.tuplet([(4, 4, 7, 1)])),
-    rmakers.force_augmentation,
-    trinton.treat_tuplets(),
+    rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(
         [
             -4,
@@ -2277,7 +2330,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 1, 2, 3, 0, 2, 0, 0, 2, 2, -1]),
     ),
-    trinton.notehead_bracket_command(),
+    # trinton.notehead_bracket_command(),
     voice=score["viola 1 voice"],
 )
 
@@ -2307,8 +2360,8 @@ trinton.make_music(
             ],
         )
     ),
-    rmakers.force_augmentation,
-    trinton.treat_tuplets(),
+    rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(
         [
             -6,
@@ -2394,7 +2447,7 @@ trinton.make_music(
             [0, 4, 5, 11, 12, -1, 0, 5, 12, 0, 0, 2, 5, 5, 7, 7, 8, 12, 12, 12, -1]
         ),
     ),
-    trinton.notehead_bracket_command(),
+    # trinton.notehead_bracket_command(),
     abjad.beam,
     voice=score["viola 1 voice"],
 )
@@ -2406,8 +2459,8 @@ trinton.make_music(
             [(4, 4, 3, 1)],
         )
     ),
-    rmakers.force_augmentation,
-    trinton.treat_tuplets(),
+    rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(
         [
             4,
@@ -2454,7 +2507,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([2, 3, 0, 1, 2, 0, 0, -1]),
     ),
-    trinton.notehead_bracket_command(),
+    # trinton.notehead_bracket_command(),
     abjad.beam,
     voice=score["viola 1 voice"],
 )
@@ -2466,6 +2519,8 @@ trinton.make_music(
             [16],
         )
     ),
+    rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(
         [
             6,
@@ -2559,11 +2614,21 @@ trinton.make_music(
     voice=score["viola 1 voice"],
 )
 
+for tuplet in abjad.select.tuplets(score["viola 1 voice"]):
+    prolation = tuplet.implied_prolation
+    numerator = prolation.denominator
+    denominator = prolation.numerator
+    new_multiplier = Fraction(denominator, numerator)
+    tuplet.multiplier = (new_multiplier.numerator, new_multiplier.denominator)
+    trinton.notehead_bracket_command()(tuplet)
+
 # accordion music commands
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 2)),
     evans.RhythmHandler(evans.tuplet([(8, 7, 1)])),
+    rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(),
     evans.PitchHandler(
         [
             -7,
@@ -2625,7 +2690,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (4,)),
     evans.RhythmHandler(evans.tuplet([(8, 7, 1)], treat_tuplets=False)),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(
         [
@@ -2672,7 +2741,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (5,)),
     evans.RhythmHandler(evans.tuplet([(8, 7, 1)], treat_tuplets=False)),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(
         [
@@ -2725,7 +2798,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (9, 10)),
     evans.RhythmHandler(evans.tuplet([(8, 7, 1)], treat_tuplets=False)),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(
         [
@@ -2790,7 +2867,11 @@ trinton.make_music(
             ]
         )
     ),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler([-7, -7.5]),
     trinton.linear_attachment_command(
@@ -2849,7 +2930,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (13,)),
     evans.RhythmHandler(evans.tuplet([(8, 8, 7, 1)], treat_tuplets=False)),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0, -1])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler([1, 0.5]),
     trinton.linear_attachment_command(
@@ -2902,6 +2987,11 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (18,)),
     evans.RhythmHandler(evans.tuplet([(8, 7, 1)])),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.PitchHandler(
         [
             -7,
@@ -2952,7 +3042,11 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (19, 20)),
     evans.RhythmHandler(evans.tuplet([(-3, 1)])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(
         [
@@ -2990,7 +3084,11 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (19, 20)),
     evans.RhythmHandler(evans.tuplet([(1, 1, 1)])),
-    trinton.treat_tuplets(),
+    rmakers.rewrite_rest_filled,
+    rmakers.rewrite_dots,
+    rmakers.trivialize,
+    rmakers.extract_trivial,
+    trinton.respell_tuplets_command(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(
         [
@@ -3057,7 +3155,8 @@ trinton.make_music(
             (1, 4),
             (5, 8),
             (3, 8),
-        ]
+        ],
+        preprolated=False,
     ),
     trinton.notehead_bracket_command(),
     voice=score["accordion 2 voice"],
@@ -3126,8 +3225,19 @@ trinton.attach_multiple(
         abjad.LilyPondLiteral(
             r"\once \override Score.BarLine.transparent = ##f", "absolute_after"
         ),
-        abjad.LilyPondLiteral(r"\break", "after"),
     ],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (21,)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(r"\pageBreak", site="after"),
+        ],
+        selector=trinton.select_leaves_by_index([-1]),
+        tag=abjad.Tag("+SCORE"),
+    ),
+    voice=score["Global Context"],
 )
 
 trinton.attach_multiple(

@@ -4210,11 +4210,10 @@
                                     }
                                     \revert TupletNumber.text
                                     <f, f>16
-                                    \clef "treble"
-                                    <g! cs''!>4
-                                    <f! f'! cs''!>4.
-                                    <f! f'! cs''!>4.
-                                    <g! cs''!>4
+                                    <g,! cs'!>4
+                                    <f,! f! cs'!>4.
+                                    <f,! f! cs'!>4.
+                                    <g,! cs'!>4
                                     \breathe
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 3 0))

@@ -1680,13 +1680,9 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (37,)),
-    trinton.attachment_command(
-        attachments=[abjad.Clef("treble")],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-            ]
-        ),
+    trinton.octavation(
+        octave=-1,
+        selector=trinton.pleaves(),
     ),
     voice=score["accordion 2 voice"],
 )
@@ -1719,6 +1715,12 @@ trinton.make_music(
     voice=score["accordion 1 voice"],
 )
 
+trinton.make_music(
+    lambda _: trinton.select_target(_, (38,)),
+    trinton.octavation(octave=-1, selector=trinton.pleaves()),
+    voice=score["accordion 2 voice"],
+)
+
 for voice_name in [
     "guitar 4 voice",
     "viola 2 voice",
@@ -1737,7 +1739,7 @@ for voice_name in [
 trinton.make_music(
     lambda _: trinton.select_target(_, (39,)),
     evans.RhythmHandler(evans.tuplet([(7, 1)])),
-    trinton.respell_tuplets(),
+    trinton.respell_tuplets_command(),
     evans.PitchHandler([["f,", "f"]]),
     library.glissando(),
     trinton.arrow_spanner_command(
